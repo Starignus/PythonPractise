@@ -227,7 +227,8 @@ $ ./example_conditional.py
 ```
 
 Flow of the code:
-<img src="Flow_Conditional.png" alt="Conditional" style="width: 100px;"/>
+
+<img src="Flow_Conditional.png" alt="Conditional" style="width: 80px;"/>
 
 A __loop statement__ allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement:
 
@@ -251,6 +252,7 @@ $ ./example_while_loop.py
 ```
 
 Flow of the code:
+
 <img src="while_loop.png" alt="Conditional" style="width: 120px;"/>
 
 Loops (repeated steps) have _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.
