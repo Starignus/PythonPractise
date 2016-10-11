@@ -55,6 +55,8 @@ _Note_: // is the floor division in which the digits after the decimal point are
 >>> 'abc' + 'fgb' # strings
 ```
 Comparison operators:
+
+
 | Name        | Syntax     |
 | :-------------: |:-------------|
 | < | Less than|
