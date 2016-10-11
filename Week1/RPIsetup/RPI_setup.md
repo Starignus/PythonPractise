@@ -141,6 +141,7 @@ Follow the instructions. Then we can access using our laptop or any other deskto
 <img src="weaved_connected.png" alt="weaved" style="width: 400px;"/>
 
 Then we click to one of the devices:
+
 <img src="weaved_ssh.png" alt="weaved" style="width: 400px;"/>
 
 Then we copy the command to our laptop or desktop terminal to access to our RPi terminal:
