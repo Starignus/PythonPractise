@@ -249,7 +249,7 @@ $ ./example_while_loop.py
 ```
 
 Flow of the code:
-<img src="while_loop.png" alt="Conditional" style="width: 100px;"/>
+<img src="while_loop.png" alt="Conditional" style="width: 120px;"/>
 
 Loops (repeated steps) have _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.
 
