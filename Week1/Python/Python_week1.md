@@ -255,7 +255,7 @@ Flow of the code:
 
 <img src="while_loop.png" alt="Conditional" style="width: 120px;"/>
 
-Loops (repeated steps) have _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.
+Loops (repeated steps) ha‰ve _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.
 
 __For loop__ executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
 
