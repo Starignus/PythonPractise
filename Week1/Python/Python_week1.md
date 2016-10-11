@@ -199,12 +199,209 @@ $ python example_fllow.py
 The other is to give the script the access permissions to be an executable file through the [chomod](https://en.wikipedia.org/wiki/Chmod) linux command:  
 
 ``` bash
-$ chmod +x example_fllow.py
+$ chmod u+x example_fllow.py
 $ ./example_fllow.py
+```
+No let's do an example where we have a __conditional__ that implies a decision making about a situation. Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:
 
+<img src="decision_making.jpg" alt="Conditional" style="width: 200px;"/>
+
+``` bash
+$ nano example_conditional.py
+```
+Now let's add the code:
+```python
+#!/usr/bin/env python
+x = 5
+if x < 10:
+    print 'Smaller'
+elif x > 20:
+    print 'Bigger'          
+print 'Finis' #outside conditional
+```
+``` bash
+$ chmod u+x example_conditional.py
+$ ./example_conditional.py
 ```
 
+Flow of the code:
+<img src="Flow_Conditional.png" alt="Conditional" style="width: 100px;"/>
 
+A __loop statement__ allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement:
+
+<img src="loop_architecture.jpg" alt="Conditional" style="width: 200px;"/>
+
+__While loop__ repeats a statement or group of statements while a given condition is _TRUE_. It tests the condition before executing the loop body.
+
+Now let's add the code to ur script called _example_while_loop.py_:
+```python
+#!/usr/bin/env python
+n = 5
+while n > 0:
+    print n
+    n = n - 1
+print 'Blastoff!' #outside loop
+```
+Before running, remember to give the permissions:
+``` bash
+$ chmod u+x example_while_loop.py
+$ ./example_while_loop.py
+```
+
+Flow of the code:
+<img src="while_loop.png" alt="Conditional" style="width: 100px;"/>
+
+Loops (repeated steps) have _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.
+
+__For loop__ executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+
+Now let's add the code to ur script called _example_for_loop.py_:
+```python
+#!/usr/bin/env python
+
+# Area of a circle = pi * r**2
+
+# Library
+import numpy as np
+
+# List are called interables
+list = [1, 2, 3, 4, 5, 6]
+
+for radius in list:
+    area = np.pi * radius ** 2
+    print "The area of a circle of radius ", radius
+    print "cm is", area, "cm^2"
+print "Finished to calculate the areas of circles"
+```
+``` bash
+$ chmod u+x example_for_loop.py
+$ ./example_for_loop.py
+```
+Here we are importing the [Numpy library](http://www.numpy.org/)
+that is the fundamental package for scientific computing with Python. We are adding a short alias to the library to call its methods, in this case the value of Pi.
+
+##### Functions
+
+A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.
+
+Now, let's make a function that can be used in the for loop example.
+
+``` bash
+$ nano example_function_circle_area.py
+```
+```python
+##!/usr/bin/env python
+
+# Area of a circle = pi * r**2
+
+# Library Numpy
+import numpy as np
+
+
+def area_circle(radius):
+    'Function that calculates the area of a circle'
+    area = np.pi * radius ** 2
+    return area
+
+# List are called interables
+list = [1, 2, 3, 4, 5, 6]
+
+for radius in list:
+    area = area_circle(radius)
+    print "The area of a circle of radius ", radius
+    print "cm is", area, "cm^2"
+print "Finished to calculate the areas of circles"
+```
+``` bash
+$ chmod u+x example_function_circle_area.py
+$./example_function_circle_area.py
+```
+
+We can see that we get the same result but it is more organise and we can use the function in other section of our code.
+
+Now let's ask the user to provide a list:
+``` bash
+$ nano example_function_circle_area_user_1.py
+```
+```python
+# Area of a circle = pi * r**2
+
+# Library Numpy
+import numpy as np
+# Library to Safely evaluate an expression node
+# or a string containing a Python expression
+import ast
+
+# List are called interables
+list_raw = raw_input('Provide a list of radius in cm like \
+[3, 2, 12, 6]: \n')
+list = ast.literal_eval(list_raw)
+
+
+def area_circle(radius):
+    'Function that calculates the area of a circle'
+    area = np.pi * radius ** 2
+    return area
+
+
+for radius in list:
+    area = area_circle(radius)
+    print "The area of a circle of radius ", radius
+    print "cm is", area, "cm^2"
+print "Finished to calculate the areas of circles"
+```
+``` bash
+$ chmod u+x example_function_circle_area_user_1.py
+$./example_function_circle_area_user_1.py
+```
+
+If we do not use the [ast library](https://docs.python.org/2/library/ast.html) to evaluate a string containing a python expression (in this case a list), we will get an error since Python will interpret like a string type and not a list type.
+
+A second way to do it is by using the [sys module](https://docs.python.org/2/library/sys.html) which provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
+
+Now let's ask the user to provide a list by passing directly the strings:
+``` bash
+$ nano example_function_circle_area_user_2.py
+```
+``` python
+#!/usr/bin/env python
+
+# Usage instructions:
+# ./example_function_circle_area_user_2.py "[1, 2, 3]"
+
+# Area of a circle = pi * r**2
+
+# Library Numpy
+import numpy as np
+# Library to Safely evaluate an expression node
+# or a string containing a Python expression
+import ast
+# Module provides access to some variables
+# used or maintained by the interpreter
+import sys
+
+
+list_raw = sys.argv[1]
+list = ast.literal_eval(list_raw)
+
+
+def area_circle(radius):
+    'Function that calculates the area of a circle'
+    area = np.pi * radius ** 2
+    return area
+
+
+for radius in list:
+    area = area_circle(radius)
+    print "The area of a circle of radius ", radius
+    print "cm is", area, "cm^2"
+print "Finished to calculate the areas of circles"
+```
+
+``` bash
+$ chmod u+x example_function_circle_area_user_1.py
+$./example_function_circle_area_user_2.py "[1, 2, 3]"
+```
 
 
 References [ [1](https://www.tutorialspoint.com/python/), Charles Severance course: Python for everybody]
