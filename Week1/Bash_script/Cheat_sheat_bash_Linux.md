@@ -11,7 +11,19 @@ To escape from the manual, just type: *q*
 
 <img src="File_commands.png" alt="File commands" style="width: 300px;"/>
 
-Examples:
+Examples - Create a File:
+``` bash
+$ nano file.txt
+Method 1: In nano editor:
+1. echo "Hello World!"
+2. "ctrl + x", and save
+Method 2: Using cat:
+1. cat >file2.txt
+2. type in "Hello Universe!"
+3. "ctrl + d"
+```
+
+Examples - working with directories:
 ``` bash
 $ ls
 $ ls -al
@@ -20,9 +32,13 @@ $ pwd
 $ mkdir codes
 $ mkdir temp temp1
 $ mkdir temp2/ok
+$ cat file.txt
+$ cat file.txt file2.txt > fileOut.txt
 $ rm file.txt
 $ rm -r temp2/ok
 $ rm -r temp2
+$ df -h
+$ 
 ```
 
 **Note:** **rm \*** it is a dangerous command that should be use with care, you might lose all your work!!
