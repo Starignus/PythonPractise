@@ -5,19 +5,19 @@
 * Each team should get a monitor, keyboard and mouse.
 * Insert the mini SD card in the Raspberry Pi , connect the mouse and keyboard in the USB ports, and the display with provided HDMI-DVI cable. Then,  using Y-cable, power it up by plugging in the charger.
 * The operative system starts. Then, click on the __terminal__ icon next to the menu to open it.
-* Then you need to run some commands on it as root user to configure the Raspberry Pi (RPi). The **root user** has the permission to modify files or default settings as administrator providing the root password. The **root user** is **pi** and the default **root password** is **raspberry**. First we will make stronger the password as follows:
+* Then you need to run some commands on it as root user to configure the Raspberry Pi (RPi). The **root user** has the permission to modify files or default settings as administrator providing the root password. The **root user** is **pi** and the default **root password** is **raspberry**. First we will make stronger the password, but first we will change some default set ups:
 
 ``` bash
 $ sudo raspi-config
 ```
-* The *sudo* command presides all the linux commands when executing any other linux command as root user.
+**Note:** To execute any Linux command as root user, the *sudo* command presides the Linux command.
 
 * The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.
 
 <img src="raspi_config.png" alt="screen" style="width: 400px;"/>
 
 * Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Internationalisation Options --> Change the Keyboard Layout__. Then we choose generic 105 key, and then UK.
-* Also we change the timezone in tis menu.
+* Also we have option to change the timezone from this menu.
 
 <img src="Internationalisation.png" alt="screen" style="width: 400px;">
 
