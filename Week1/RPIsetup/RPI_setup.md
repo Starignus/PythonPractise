@@ -1,6 +1,6 @@
 # Setting up your Raspberry Pi 3 Model B
 
-##### Starting Set up
+### Starting Set up
 
 * Each team should get a monitor, keyboard and mouse.
 * Insert the mini SD card in the Raspberry Pi , connect the mouse and keyboard in the USB ports, and the display with provided HDMI-DVI cable. Then,  using Y-cable, power it up by plugging in the charger.
@@ -30,7 +30,7 @@ $ sudo raspi-config
 * An optional step is to change the hostname in the same advance menu.
 * Then we restart the RPi.
 
-##### Setting WiFi from Imperial College network
+### Setting WiFi from Imperial College network
 
 * First we can use a command to check the different internet connections available on our system: _ifconfig_ or _ifconfig -a_. This command allow us also to see the IP addresses assigned to our RPi. The _wlan0_, indicates the status of the WiFi, and _eth0_ shows the status of the Ethernet (wired) connection).
 * You will see there is no IP assigned to our PRI, therefore to set up the WiFi we need to modify a configuration file, but first we need to back it up:
@@ -97,7 +97,7 @@ $ history -c
 ```
 Then we reboot again the RPi to check that the password was properly set up.
 
-##### Installing Python
+### Installing Python
 
 To install Linux packages in our system we must use the command: ```sudo apt-get install name_of_package```.
 
