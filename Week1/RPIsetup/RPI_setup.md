@@ -73,7 +73,7 @@ the wpa_supplicant.conf.
 $ nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-The default text editor installed in the RPi is _nano_. We can install also _vim_ or _vi_ to have another text editor option.
+The default text editor installed in the RPi is _nano_. We can install also _vim_ or _vi_ to have another option of a text editor.
 
 In the line where with your "YOUR_PASSWORD" we replaced with the string we generated as hexadecimal characters, and we add the 'hash:'-prefix), e.g.
 
@@ -99,7 +99,7 @@ Then we reboot again the RPi to check that the password was properly set up.
 
 ### Installing Python
 
-To install Linux packages in our system we must use the command: ```sudo apt-get install name_of_package```.
+To install Linux packages in our system we must use the command: ```sudo apt-get install name_of_package```. The installation could take some minutes.
 
 **Installing C lib needed by Python:**
 ```bash
@@ -157,3 +157,5 @@ This one will give us the IP address. Then, we can login to the RPi as:
 ```bash
 ssh pi@192.31.123.122
 ```
+
+**Note:** The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date: ``` sudo apt-get -y update && sudo apt-get -y upgrade```.
