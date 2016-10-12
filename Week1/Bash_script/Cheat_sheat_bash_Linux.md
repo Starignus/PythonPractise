@@ -11,19 +11,24 @@ To escape from the manual, just type: *q*
 
 <img src="File_commands.png" alt="File commands" style="width: 300px;"/>
 
-Examples - Create a File:
+**Examples - Create a File:**
+**Method 1:** Using nano editor:
 ``` bash
 $ nano file.txt
-Method 1: In nano editor:
-1. echo "Hello World!"
-2. "ctrl + x", and save
-Method 2: Using cat:
-1. cat >file2.txt
-2. type in "Hello Universe!"
-3. "ctrl + d"
 ```
+Then you will get the screen editor where you can type in e.g. type ```echo "Hello World!"```.
 
-Examples - working with directories:
+To save your changes and exit the editor type:
+**ctrl + x** and choose **Yes** to save your changes.
+**Method 2:** Using **cat** command.
+```bash
+$ cat >file2.txt
+"Hello Universe!"
+```
+To exit press: **ctrl + d"**.
+
+
+**Examples - working with directories:**
 ``` bash
 $ ls
 $ ls -al
@@ -38,7 +43,7 @@ $ rm file.txt
 $ rm -r temp2/ok
 $ rm -r temp2
 $ df -h
-$ 
+$
 ```
 
 **Note:** **rm \*** it is a dangerous command that should be use with care, you might lose all your work!!
