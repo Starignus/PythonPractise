@@ -11,23 +11,6 @@ To escape from the manual, just type: *q*
 
 <img src="File_commands.png" alt="File commands" style="width: 300px;"/>
 
-**Examples - Create a File:**
-**Method 1:** Using nano editor:
-``` bash
-$ nano file.txt
-```
-Then you will get the screen editor where you can type in e.g. type ```echo "Hello World!"```.
-
-To save your changes and exit the editor type:
-**ctrl + x** and choose **Yes** to save your changes.
-**Method 2:** Using **cat** command.
-```bash
-$ cat >file2.txt
-"Hello Universe!"
-```
-To exit press: **ctrl + d"**.
-
-
 **Examples - working with directories:**
 ``` bash
 $ ls
@@ -43,15 +26,44 @@ $ rm file.txt
 $ rm -r temp2/ok
 $ rm -r temp2
 $ df -h
-$
 ```
 
 **Note:** **rm \*** it is a dangerous command that should be use with care, you might lose all your work!!
+
+##### Examples - Create a File:**
+**Method 1:** Using nano editor:
+``` bash
+$ nano file.txt
+```
+Then you will get the screen editor where you can type in e.g. type ```echo "Hello World!"```.
+
+To save your changes and exit the editor type:
+**ctrl + x** and choose **Yes** to save your changes.
+**Method 2:** Using **cat** command.
+```bash
+$ cat >file2.txt
+"Hello Universe!"
+```
+To exit press: **ctrl + d"**.
 ### Directory
 
 <img src="Directory_access.png" alt="Directory Access" style="width: 300px;"/>
 
+### Disk usage
 
+<img src="Disk_usage.png" alt="Disk_usage" style="width: 300px;"/>
 
+### File transfer and Remote Access
+<img src="Remote_access.png
+" alt="Remote_access" style="width: 300px;"/>
+
+### Search
+<img src="Search.png" alt="Search" style="width: 300px;"/>
+
+### System
+<img src="System.png" alt="System" style="width: 300px;"/>
+
+### Process Related
+<img src="Process_related.png" alt="Process_related" style="width: 300px;"/>
 
 [Reference](https://drive.google.com/drive/u/0/folders/0B_LZEs2baSXxb0FwcXRLeGRrV2c)
