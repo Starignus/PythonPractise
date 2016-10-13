@@ -148,13 +148,13 @@ sudo apt-get -y install vim
 ### Remote access to your RPi
 **Weaved** services connect you easily and securely to your Pi from a mobile app, browser window and a terminal. Control remote computers using tcp hosts such as SSH. You will be able to connect to your RPi from laptop or desktop at home. The free weaved account allows for 10 registered services and 30 minute connections on up to 1 concurrent service(s).
 
-**Installing weaved:**
+###### Installing weaved:
 Manage network devices remotely using [weaved](http://www.weaved.com/) service. To install:
 ```bash
 sudo apt-get -y install weavedconnectd
 ```
 
-**Weaved configuration:**
+###### Weaved configuration:
 
 * To configure weaved in our RPi, first we need to open an account in [weaved](http://www.weaved.com/) website. You can register from your laptop or desktop. Once you have it, from your Rpi terminal you will execute a command to link your RPi to your weaved account:
 ```bash
@@ -182,7 +182,7 @@ You will now return to the main menu, where you can see your Weaved Service Conn
 
 <img src="Pi-installer-menu-051.png" alt="menu5" style="width: 300px;"/>
 
-**Accessing from your laptop**
+###### Accessing from your laptop
 
 We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:
 
