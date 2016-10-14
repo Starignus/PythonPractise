@@ -6,10 +6,10 @@ copyright_name: strignus
 description: Python / Raspberry Pi Learning!"
 baseurl: "/PythonPractise/"
 url: "https://starignus.github.io/PythonPractise/"
-twitter_username: @starignus
-github_username:  starignus
-facebook_username:  StartBootstrap
-email_username:  ariadna@starignus.com
+twitter_username: starignus
+github_username:  starignus/PythonPractise
+facebook_username:  starignus
+email_username:  ariadna@starignus.com, j.pang10@alumni.imperial.ac.uk 
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID

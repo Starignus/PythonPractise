@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "Man must explore, and this is exploration at its greatest"
-subtitle:   "Problems look mighty small from 150 miles up"
+title:      "Setting your Raspberry Pi at Imperial College"
+subtitle:   "A step-by-step guide"
 date:       2014-09-24 12:00:00
-author:     "Start Bootstrap"
+author:     "Ariadna B. R. & Jing P"
 header-img: "img/post-bg-06.jpg"
 ---
 
