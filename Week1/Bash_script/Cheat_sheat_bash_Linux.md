@@ -66,4 +66,18 @@ To exit press: **ctrl + d"**.
 ### Process Related
 <img src="Process_related.png" alt="Process_related" style="width: 300px;"/>
 
+### Virtual terminal (Screen)
+
+|Screen command| Description|
+|:-------------|:-----------|
+| ```screen -S name_of_terminal```    | Assigning name to the virtual terminal or screen session.|
+|```screen -ls``` | List all the virtual sessions or screens opened. |
+|```screen -X -S name_of_terminal quit```| Kill an specific virtual terminal.|
+|```screen -r name_of_terminal```| Attach to the virtual terminal or screen.|
+| Press “Ctrl-A” and “d“ | Detach from virtual terminal  or screen.|
+| Press "Ctrl-A” and “K” | This command will leave and kill the virtual terminal or screen |
+| Press “Ctrl-A” and “n“ | Switching to the next virtual terminal or screen.|
+|Press “Ctrl-A” and “p“ | Switching to the previous virtual terminal or screen|
+
+
 [Reference](https://drive.google.com/drive/u/0/folders/0B_LZEs2baSXxb0FwcXRLeGRrV2c)

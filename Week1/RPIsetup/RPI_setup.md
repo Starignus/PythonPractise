@@ -145,16 +145,16 @@ sudo pip install --upgrade pip
 ```bash
 sudo apt-get -y install vim
 ```
-### Remote access to your RPi
+### Remote connection to your Raspberry Pi
 **Weaved** services connect you easily and securely to your Pi from a mobile app, browser window and a terminal. Control remote computers using tcp hosts such as SSH. You will be able to connect to your RPi from laptop or desktop at home. The free weaved account allows for 10 registered services and 30 minute connections on up to 1 concurrent service(s).
 
-###### Installing weaved:
+##### Installing weaved:
 Manage network devices remotely using [weaved](http://www.weaved.com/) service. To install:
 ```bash
 sudo apt-get -y install weavedconnectd
 ```
 
-###### Weaved configuration:
+##### Weaved configuration:
 
 * To configure weaved in our RPi, first we need to open an account in [weaved](http://www.weaved.com/) website. You can register from your laptop or desktop. Once you have it, from your Rpi terminal you will execute a command to link your RPi to your weaved account:
 ```bash
@@ -182,7 +182,7 @@ You will now return to the main menu, where you can see your Weaved Service Conn
 
 <img src="Pi-installer-menu-051.png" alt="menu5" style="width: 300px;"/>
 
-###### Accessing from your laptop
+##### Accessing from your laptop
 
 We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:
 
@@ -196,4 +196,55 @@ Then we copy the command after *For pi username*, in this example it is: ```ssh 
 
 Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore!
 
-**Note:** Remember you can just be connected during 30 minutes, after that time you have to connect again to your account and do the same procedure. To know more about more advance details of how connect remotely go to the [advance guide](Advance_remoteconection.md):
+### Virtual terminal
+
+Remember you can just be connected during 30 minutes using **weaved**, after that time you have to connect again to your account and do the same procedure we explained in the previous section. Therefore we will show you how a *virtual terminal* can help you when you are working on your RPi.
+
+**Screen** is a full-screen software program allows you to use multiple windows (virtual VT100 terminals) in Unix. It offers a user to open several separate terminal instances inside a one single terminal window manager.
+
+The screen application is very useful, if you are dealing with multiple programs from a command line interface and for separating programs from the terminal shell. It also allows you to share your sessions with others users and detach/attach terminal sessions.
+
+##### When to use screen?
+
+One of the advantages of *Screen*, is that you can detach it. Then, you can restore it without losing anything you have done on the *Screen*. One of the typical scenario where *Screen* is of great help is when you are in the middle of SSH session and you want to download a file, update the operative, or transfer a big file to your RPi. The process could be 2 hours long. If you disconnect the SSH session, or suddenly the connection lost by accident, then the download process will stop. You have to start from the beginning again. To avoid that, we can use screen and detach it.
+
+###### Installing screen
+The screen program allows you to use multiple windows (virtual VT100 terminals) in Unix. If your local computer crashes, or you are connected remotely and lose the connection, the processes or login sessions you establish through screen don't get lost.
+
+```bash
+sudo apt-get -y install screen
+```
+###### Some Examples to use screen
+
+* When you are in your terminal, you can create a *screen* or virtual terminal e.g. we will name the screen *mysession*:
+
+<img src="Screen_terminal.png" alt="screen1" style="width: 400px;"/>
+
+* Then you will be automatically attached to your screen or virtual terminal, that from now on we will call just *screen*. You can execute now commands and work in the terminal:
+
+<img src="Screen_new_attached.png" alt="screen2" style="width: 400px;"/>
+
+* You can detach from the *screen* by pressing “Ctrl-A” and “d“. Then we will go to our terminal outside the *screen* session. Then we can check the list of *screens*:
+
+<img src="Screen_list.png" alt="screen3" style="width: 400px;"/>
+
+* We get the list and the screen ID. If we want to attach to a particular *screen*:
+
+<img src="Screen_attaching.png" alt="screen4" style="width: 400px;"/>
+
+###### Basic commands to work with the virtual terminals
+
+|Screen command| Description|
+|:-------------|:-----------|
+| ```screen -S name_of_terminal```    | Assigning name to the virtual terminal or screen session.|
+|```screen -ls``` | List all the virtual sessions or screens opened. |
+|```screen -X -S name_of_terminal quit```| Kill an specific virtual terminal.|
+|```screen -r name_of_terminal```| Attach to the virtual terminal or screen.|
+| Press “Ctrl-A” and “d“ | Detach from virtual terminal  or screen.|
+| Press "Ctrl-A” and “K” | This command will leave and kill the virtual terminal or screen |
+| Press “Ctrl-A” and “n“ | Switching to the next virtual terminal or screen.|
+|Press “Ctrl-A” and “p“ | Switching to the previous virtual terminal or screen|
+
+For more examples go to the [link](http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) or ask the instructors.
+
+To know more about more advance details of how connect remotely go to the [advance guide](Advance_remoteconection.md):
