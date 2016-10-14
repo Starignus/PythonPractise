@@ -200,10 +200,10 @@ Then, you are connected from your laptop to your RPi!! You don't need the displa
 
 FOr PC, you will need to use Putty to connect. Click here to go to the website to download Putty: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html .
 
-<img src="Putty.jpg" alt="weaved" style="width: 400px;"/>
+<img src="Putty.JPG" alt="weaved" style="width: 400px;"/>
 
 Once downloaded, double click on the downlaoded "putty.exe" and you will see the window looks like below:
-<img src="PuttyConnect.jpg" alt="weaved" style="width: 400px;"/>
+<img src="PuttyConnect.JPG" alt="weaved" style="width: 400px;"/>
 
 Insert the server address and port obtained from Weaved.com and connect!
 
