@@ -217,6 +217,8 @@ Insert the server address and port obtained from Weaved.com into Putty and conne
 
 When asked for username and password, please use your RPi username and password to log-in. (Please note, this is not weaved username and password).
 
+To exit your putty session, type "exit" and enter.
+
 ### Virtual terminal
 
 Remember you can just be connected during 30 minutes using **weaved**, after that time you have to connect again to your account and do the same procedure we explained in the previous section. Therefore we will show you how a *virtual terminal* can help you when you are working on your RPi.
