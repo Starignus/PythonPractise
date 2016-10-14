@@ -182,7 +182,7 @@ You will now return to the main menu, where you can see your Weaved Service Conn
 
 <img src="Pi-installer-menu-051.png" alt="menu5" style="width: 300px;"/>
 
-### Accessing from your laptop (MAC)
+### Accessing from your computer (Linux or Mac OS X)
 
 We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:
 
@@ -192,17 +192,18 @@ In your case you will have just one item with a Type SSH as in the first line at
 
 <img src="weaved_ssh.png" alt="weaved" style="width: 400px;"/>
 
-Then we copy the command after *For pi username*, in this example it is: ```ssh -l pi proxy71.weaved.com -p 34644```. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to [install a SSH and Telnet client](http://www.chiark.greenend.org.uk/~sgtatham/putty/).),
+Then we copy the command after *For pi username*, in this example it is: ```ssh -l pi proxy71.weaved.com -p 34644```. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to [install a SSH and Telnet client](http://www.chiark.greenend.org.uk/~sgtatham/putty/)).
 
 Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore!
 
-### Accessing from your laptop (PC)
+### Accessing from your computer (Windows)
 
-FOr PC, you will need to use Putty to connect. Click here to go to the website to download Putty: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html .
+If your computer operative  system is Windows, to access remotely you will need to install PuTTY, which  is a free implementation of SSH and Telnet for Windows and Unix platforms. To download it click [here]( http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 <img src="Putty.JPG" alt="weaved" style="width: 400px;"/>
 
-Once downloaded, double click on the downlaoded "putty.exe" and you will see the window looks like below:
+Once downloaded, double click on the **putty.exe** and you will see the window looks like below:
+
 <img src="PuttyConnect.JPG" alt="weaved" style="width: 400px;"/>
 
 Then, if you login to your weaved account,  you will get a list of the services linked to your devices:
@@ -272,15 +273,16 @@ For more examples go to the [link](http://www.tecmint.com/screen-command-example
 
 To know more about more advance details of how connect remotely go to the [advance guide](Advance_remoteconection.md):
 
-##### Some useful tips and troubleshooting guides
+## Some useful tips and troubleshooting guides
 
 ### Backup RPi Image
 
 It is useful and advisable to backup a working copy of your RPi image. For example, make a backup copy after setting up WiFi and update the library, the next time the wifi is not working, you can reformat the SD card and reinsert this backup copy to revert back to previous version. After this, your RPI get to connect back to WiFi right away like before. Here are the steps:
 
-#### For Backing UP:
-#### For Windows:
-1. Download Win 32 Disk Imager if none installed on your computer: https://sourceforge.net/projects/win32diskimager/
+#### For Backing up:
+
+##### For Windows
+1. Download Win 32 Disk Imager if none installed on your computer [here]( https://sourceforge.net/projects/win32diskimager/)
 2. Insert the SDCard into your computer (e.g. via card reader or SD card slot if your computer has one).
 3. Open Win 32 Disk Imager. Select a location and give a file name for the backup image.
 4. Select the right drive.
@@ -289,8 +291,8 @@ It is useful and advisable to backup a working copy of your RPi image. For examp
 
 #### For replacing the image on the SD Card:
 #### For Windows:
-1. Download SDFormatter if none installed: https://www.sdcard.org/downloads/formatter_4/.
-2. Download Win 32 Disk Imager if none installed: https://sourceforge.net/projects/win32diskimager/
-3. Use SDFormatter to format the sdcard. Please be careful and make sure you select the correct drive letter.
-4. Use SDFormatter to reimage the backed up image into the SD card. I.e. select the file name, the drive letter of the sd card, and then click Write. Please be careful that the correct drive letter is selected. If you wish to install a fresh Raspbian OS, you can download it from www.raspberrypi.org.
+1. Download SDFormatter if none installed [here](https://www.sdcard.org/downloads/formatter_4/).
+2. Download Win 32 Disk Imager if none installed [here](https://sourceforge.net/projects/win32diskimager/)
+3. Use SDFormatter to format the SD card. Please be careful and make sure you select the correct drive letter.
+4. Use SDFormatter to re-image the backed up image into the SD card. I.e. select the file name, the drive letter of the SD card, and then click Write. Please be careful that the correct drive letter is selected. If you wish to install a fresh Raspbian OS, you can download it [here](www.raspberrypi.org).
 5. Once this is done, a new image has been rewritten on your SD Card!
