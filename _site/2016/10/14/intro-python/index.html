@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Python / Raspberry Pi Learning!"">
+
+    <title>Introduction to Python - Gizmo workshop</title>
+
+    <link rel="canonical" href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/intro-python/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/PythonPractise//css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/PythonPractise//css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/PythonPractise//css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="https://starignus.github.io/PythonPractise//feed.xml" title="Gizmo workshop" />
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/PythonPractise//">Gizmo workshop</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/PythonPractise//">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/PythonPractise//about/">About Gizmo</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/PythonPractise//contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/PythonPractise//img/post-bg-04.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Introduction to Python</h1>
+                    
+                    <h2 class="subheading">An eassy start</h2>
+                    
+                    <span class="meta">Posted by Ariadna Blanca Romero & Jing Sheng Pang on October 14, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h1 id="introduction-to-python">Introduction to Python</h1>
+
+<h4 id="about-python-language">About Python Language</h4>
+
+<p>Remember that you are intelligent and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, in order for you to communicate instructions to the computer it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.</p>
+
+<p>Python can be <strong>asy to pick up and friendly to learn</strong>. <a href="https://www.python.org/">Python</a> is a <strong>general-purpose</strong> interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.</p>
+
+<h4 id="basic-practise">Basic Practise</h4>
+
+<p>Let’s get familiar with python by playing in the terminal in the interactive mode (you type a line at a time and the interpreter responds). You invoke the interpreter and brings up the following prompt:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span><span class="n">python</span>
+<span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">9</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Sep</span> <span class="mi">17</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mo">04</span><span class="p">)</span>
+<span class="p">[</span><span class="n">GCC</span> <span class="mf">4.9</span><span class="o">.</span><span class="mi">2</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux2</span>
+<span class="n">Type</span> <span class="s">"help"</span><span class="p">,</span> <span class="s">"copyright"</span><span class="p">,</span> <span class="s">"credits"</span> <span class="ow">or</span> <span class="s">"license"</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre>
+</div>
+
+<p>Strings, integers, and floating points:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="s">"Hello, Python!"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>         <span class="c"># Integer assignment</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1005.00</span>   <span class="c"># Floating points</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span> <span class="c"># A string</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">x</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">y</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">name</span>
+</code></pre>
+</div>
+
+<p>In Python, the <a href="https://en.wikibooks.org/wiki/Python_Programming/Basic_Math">standard order of operations</a> are evaluated from left to right following order (memorized by many as PEMDAS):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th style="text-align: center">Syntax</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>P</strong>arentheses</td>
+      <td style="text-align: center">( … )</td>
+      <td style="text-align: left">Happening before operating on anything else.</td>
+    </tr>
+    <tr>
+      <td><strong>E</strong>xponents</td>
+      <td style="text-align: center">**</td>
+      <td style="text-align: left">An exponent is a simply short multiplication or division, it should be evaluated before them.</td>
+    </tr>
+    <tr>
+      <td><strong>M</strong>ultiplication and <strong>D</strong>ivision</td>
+      <td style="text-align: center">* /</td>
+      <td style="text-align: left">Multiplication is rapid addition and must happen first.</td>
+    </tr>
+    <tr>
+      <td><strong>A</strong>ddition and <strong>S</strong>ubtraction</td>
+      <td style="text-align: center">+ -</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note</em>: // is the floor division in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span>  <span class="c"># First division and then Multiplication</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">3.0</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mf">11.0</span><span class="o">//</span><span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">11.0</span><span class="o">//</span><span class="mi">3</span> <span class="c"># Result floored (rounded away from zero)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mf">11.0</span><span class="o">/</span><span class="mi">3</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">5.25</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">%</span><span class="mi">7</span> <span class="c"># Remainder of a division</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'abc'</span> <span class="o">+</span> <span class="s">'fgb'</span> <span class="c"># strings</span>
+</code></pre>
+</div>
+
+<p>Comparison operators:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Name</th>
+      <th style="text-align: left">Syntax</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">&lt;</td>
+      <td style="text-align: left">Less than</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">&gt;</td>
+      <td style="text-align: left">Greater than</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">&lt;=</td>
+      <td style="text-align: left">Less than or equal to</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">&gt;=</td>
+      <td style="text-align: left">Greater than or equal to</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">==</td>
+      <td style="text-align: left">Equal to</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">!=</td>
+      <td style="text-align: left">Not equal to</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span>  
+<span class="bp">False</span>
+<span class="c"># We got a boolean</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"a"</span> <span class="o">&lt;</span> <span class="s">"aa"</span>
+<span class="bp">True</span>
+</code></pre>
+</div>
+
+<h4 id="data-types">Data Types</h4>
+<p>The data stored in memory can be of different types, python has 5 types: <strong>Numbers, Strings, List, Tuple, and Dictionary</strong>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c"># numbers</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c"># String</span>
+</code></pre>
+</div>
+
+<p><strong>Strings</strong> in Python are set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes.</p>
+
+<p>A subsets of strings can be taken using the slice operator ([] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p>
+
+<p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">string</span> <span class="o">=</span> <span class="s">'Hello World!'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span>          <span class="c"># Prints complete string</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c"># Prints first character of the string</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>     <span class="c"># Prints characters starting from 3rd to 5th</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>      <span class="c"># Prints string starting from 3rd character</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span> <span class="o">*</span> <span class="mi">2</span>      <span class="c"># Prints string two times</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span> <span class="o">+</span> <span class="s">"TEST"</span> <span class="c"># Prints concatenated string</span>
+</code></pre>
+</div>
+
+<p><strong>Lists</strong> are the most versatile data types in Python. A list contains items separated by commas and enclosed within square brackets ([])—similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.</p>
+
+<p>The values stored in a list can be accessed using the slice operator ([] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span> <span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tinylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="s">'john'</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">list</span>          <span class="c"># Prints complete list</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c"># Prints first element of the list</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>     <span class="c"># Prints elements starting from 2nd till 3rd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>      <span class="c"># Prints elements starting from 3rd element</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">tinylist</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c"># Prints list two times</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">list</span> <span class="o">+</span> <span class="n">tinylist</span> <span class="c"># Prints concatenated lists</span>
+</code></pre>
+</div>
+
+<p>A <strong>tuple</strong> is another sequence data type that is similar to the list. It consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p>
+
+<p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated—<strong>immutable</strong>. Tuples can be thought of as read-only lists.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">)</span>
+<span class="n">tinytuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s">'john'</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">tuple</span>           <span class="c"># Prints complete list</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>        <span class="c"># Prints first element of the list</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>      <span class="c"># Prints elements starting from 2nd till 3rd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>       <span class="c"># Prints elements starting from 3rd element</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">tinytuple</span> <span class="o">*</span> <span class="mi">2</span>   <span class="c"># Prints list two times</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">tuple</span> <span class="o">+</span> <span class="n">tinytuple</span> <span class="c"># Prints concatenated lists</span>
+</code></pre>
+</div>
+
+<p>Invalid operations on a tuple but valid on a list:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>    <span class="c"># Invalid syntax with tuple</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>     <span class="c"># Valid syntax with list</span>
+</code></pre>
+</div>
+
+<p>Python’s <strong>dictionaries</strong> are kind of hash table type. They work like associative arrays and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+Dictionaries are enclosed by curly braces ({}) and values can be assigned and accessed using square braces ([]).</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="s">'one'</span><span class="p">]</span> <span class="o">=</span> <span class="s">"This is one"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>     <span class="o">=</span> <span class="s">"This is two"</span>
+<span class="c"># keys are: name, code and dept; values are: john, 6734 and sales</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tinydict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'john'</span><span class="p">,</span><span class="s">'code'</span><span class="p">:</span><span class="mi">6734</span><span class="p">,</span> <span class="s">'dept'</span><span class="p">:</span> <span class="s">'sales'</span><span class="p">}</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="s">'one'</span><span class="p">]</span>       <span class="c"># Prints value for 'one' key</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>           <span class="c"># Prints value for 2 key</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">tinydict</span>          <span class="c"># Prints complete dictionary</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">tinydict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>   <span class="c"># Prints all the keys</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">tinydict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="c"># Prints all the values</span>
+</code></pre>
+</div>
+
+<p>To quit the Python interpreter:
+<code class="highlighter-rouge">python
+&gt;&gt;&gt; quit()
+</code></p>
+
+<h4 id="scripts">Scripts</h4>
+
+<p>A Script is a sequence of statements (lines) into a file using a text editor and tell Python interpreter to execute the statements in the file.</p>
+
+<ul>
+  <li>We can write a program in our script like a recipe or installation of a software. At the end of the day, a program is a <strong>sequence</strong> of steps to be done in order.</li>
+  <li>Some of the steps can be <strong>conditional</strong>, that means that sometimes they can be skiped.</li>
+  <li>Sometimes a step of group of steps are to be <strong>repeated</strong>.</li>
+  <li>Sometimes we store a set of steps that will be use over an over again in several parts of the program (<strong>functions</strong>).</li>
+</ul>
+
+<p><strong>Note:</strong> Have a look on the code <a href="https://www.python.org/dev/peps/pep-0008/#indentation">style guide</a> for a good coding practise. As a fist good practise, do not name files or folders with space in between: Auful! –&gt; example 1.py; Great! –&gt; <strong>example_1.py, exampleOne.py, example_one.py</strong></p>
+
+<p>We will make a simple script:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">pwd</span>
+<span class="gp">$ </span>/home/pi
+<span class="gp">$ </span>mkdir codes/python_examples
+<span class="gp">$ </span><span class="nb">cd </span>codes/python_examples
+<span class="gp">$ </span>nano example_fllow.py
+</code></pre>
+</div>
+
+<p>Then you can type in the editor:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">print</span> <span class="n">x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="k">print</span>
+</code></pre>
+</div>
+
+<p>When a program is running, it flows from one step to the next.</p>
+
+<p>Close the text editor and then you can execute it on two ways:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>python example_fllow.py
+</code></pre>
+</div>
+
+<p>The other is to give the script the access permissions to be an executable file through the <a href="https://en.wikipedia.org/wiki/Chmod">chomod</a> linux command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_fllow.py
+<span class="gp">$ </span>./example_fllow.py
+</code></pre>
+</div>
+<p>No let’s do an example where we have a <strong>conditional</strong> that implies a decision making about a situation. Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_conditional.py
+</code></pre>
+</div>
+
+<p>Now let’s add the code:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'Smaller'</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'Bigger'</span>          
+<span class="k">print</span> <span class="s">'Finis'</span> <span class="c">#outside conditional</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_conditional.py
+<span class="gp">$ </span>./example_conditional.py
+</code></pre>
+</div>
+
+<p>A <strong>loop statement</strong> allows us to execute a statement or group of statements multiple times.</p>
+
+<p><strong>While loop</strong> repeats a statement or group of statements while a given condition is <em>TRUE</em>. It tests the condition before executing the loop body.</p>
+
+<p>Now let’s add the code to ur script called <em>example_while_loop.py</em>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">n</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">print</span> <span class="s">'Blastoff!'</span> <span class="c">#outside loop</span>
+</code></pre>
+</div>
+
+<p>Before running, remember to give the permissions:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_while_loop.py
+<span class="gp">$ </span>./example_while_loop.py
+</code></pre>
+</div>
+
+<!---Flow of the code:
+
+<img src="https://starignus.github.io/PythonPractise//assets/while_loop.png" alt="Conditional" style="width: 120px;"/> -->
+
+<p>Loops (repeated steps) ha‰ve <em>iteration variables</em> that change each time through a loop (like <em>n</em>).  Often these <em>iteration variables</em> go through a sequence of numbers.</p>
+
+<p><strong>For loop</strong> executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p>
+
+<p>Now let’s add the code to ur script called <em>example_for_loop.py</em>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+
+<span class="s">'Area of a circle = pi * r**2'</span>
+
+<span class="s">'Library'</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="s">'List are called interables'</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">print</span> <span class="s">"The area of a circle of radius "</span><span class="p">,</span> <span class="n">radius</span>
+    <span class="k">print</span> <span class="s">"cm is"</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="s">"cm^2"</span>
+<span class="k">print</span> <span class="s">"Finished to calculate the areas of circles"</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_for_loop.py
+<span class="gp">$ </span>./example_for_loop.py
+</code></pre>
+</div>
+
+<p>Here we are importing the <a href="http://www.numpy.org/">Numpy library</a>
+that is the fundamental package for scientific computing with Python. We are adding a short alias to the library to call its methods, in this case the value of Pi.</p>
+
+<h5 id="functions">Functions</h5>
+
+<p>A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.</p>
+
+<p>Now, let’s make a function that can be used in the for loop example.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_function_circle_area.py
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">##!/usr/bin/env python</span>
+<span class="s">'Area of a circle = pi * r**2'</span>
+
+<span class="s">'Library Numpy'</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+
+<span class="k">def</span> <span class="nf">area_circle</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="s">'Function that calculates the area of a circle'</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+<span class="s">'List are called interables'</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">area_circle</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">"The area of a circle of radius "</span><span class="p">,</span> <span class="n">radius</span>
+    <span class="k">print</span> <span class="s">"cm is"</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="s">"cm^2"</span>
+<span class="k">print</span> <span class="s">"Finished to calculate the areas of circles"</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_function_circle_area.py
+<span class="nv">$.</span>/example_function_circle_area.py
+</code></pre>
+</div>
+
+<p>We can see that we get the same result but it is more organise and we can use the function in other section of our code.</p>
+
+<p>Now let’s ask the user to provide a list:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_function_circle_area_user_1.py
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'Area of a circle = pi * r**2'</span>
+
+<span class="s">'Library Numpy'</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="s">'Library to Safely evaluate an expression node'</span>
+<span class="s">'or a string containing a Python expression'</span>
+<span class="kn">import</span> <span class="nn">ast</span>
+
+<span class="s">'List are called interables'</span>
+<span class="n">list_raw</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">'Provide a list of radius in cm like </span><span class="se">\
+</span><span class="s">[3, 2, 12, 6]: </span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">list_raw</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">area_circle</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="s">'Function that calculates the area of a circle'</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+
+<span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">area_circle</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">"The area of a circle of radius "</span><span class="p">,</span> <span class="n">radius</span>
+    <span class="k">print</span> <span class="s">"cm is"</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="s">"cm^2"</span>
+<span class="k">print</span> <span class="s">"Finished to calculate the areas of circles"</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_function_circle_area_user_1.py
+<span class="nv">$.</span>/example_function_circle_area_user_1.py
+</code></pre>
+</div>
+
+<p>If we do not use the <a href="https://docs.python.org/2/library/ast.html">ast library</a> to evaluate a string containing a python expression (in this case a list), we will get an error since Python will interpret like a string type and not a list type.</p>
+
+<p>A second way to do it is by using the <a href="https://docs.python.org/2/library/sys.html">sys module</a> which provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.</p>
+
+<p>Now let’s ask the user to provide a list by passing directly the strings:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_function_circle_area_user_2.py
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+
+<span class="s">''' Usage instructions:
+./example_function_circle_area_user_2.py "[1, 2, 3]'''</span>
+
+<span class="s">'Area of a circle = pi * r**2'</span>
+
+<span class="s">'Library Numpy'</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="s">'Library to Safely evaluate an expression node'</span>
+<span class="s">'or a string containing a Python expression'</span>
+<span class="kn">import</span> <span class="nn">ast</span>
+<span class="s">'Module provides access to some variables'</span>
+<span class="s">'used or maintained by the interpreter'</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="n">list_raw</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">list_raw</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">area_circle</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="s">'Function that calculates the area of a circle'</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+
+<span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">area_circle</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">"The area of a circle of radius "</span><span class="p">,</span> <span class="n">radius</span>
+    <span class="k">print</span> <span class="s">"cm is"</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="s">"cm^2"</span>
+<span class="k">print</span> <span class="s">"Finished to calculate the areas of circles"</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_function_circle_area_user_1.py
+<span class="nv">$.</span>/example_function_circle_area_user_2.py <span class="s2">"[1, 2, 3]"</span>
+</code></pre>
+</div>
+
+<p>You can download the pdf version <a href="https://github.com/Starignus/PythonPractise/raw/master/Week1/Python/Python_week1.pdf">here</a>.</p>
+
+<p>References [ <a href="https://www.tutorialspoint.com/python/">1</a>, <a href="https://www.coursera.org/learn/python">Charles Severance course: Python for everybody</a>]</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/PythonPractise/2016/10/14/RPisetup/" data-toggle="tooltip" data-placement="top" title="Setting your Raspberry Pi at Imperial College">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/PythonPractise//feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/starignus">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/starignus">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/starignus/PythonPractise">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:ariadna@starignus.com, j.pang10@alumni.imperial.ac.uk">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; strignus 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/PythonPractise//js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/PythonPractise//js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/PythonPractise//js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>
