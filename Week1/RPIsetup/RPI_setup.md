@@ -182,7 +182,7 @@ You will now return to the main menu, where you can see your Weaved Service Conn
 
 <img src="Pi-installer-menu-051.png" alt="menu5" style="width: 300px;"/>
 
-##### Accessing from your laptop (MAC)
+### Accessing from your laptop (MAC)
 
 We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:
 
@@ -196,7 +196,7 @@ Then we copy the command after *For pi username*, in this example it is: ```ssh 
 
 Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore!
 
-##### Accessing from your laptop (PC)
+### Accessing from your laptop (PC)
 
 FOr PC, you will need to use Putty to connect. Click here to go to the website to download Putty: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html .
 
@@ -205,7 +205,15 @@ FOr PC, you will need to use Putty to connect. Click here to go to the website t
 Once downloaded, double click on the downlaoded "putty.exe" and you will see the window looks like below:
 <img src="PuttyConnect.JPG" alt="weaved" style="width: 400px;"/>
 
-Insert the server address and port obtained from Weaved.com and connect!
+Then, if you login to your weaved account,  you will get a list of the services linked to your devices:
+
+<img src="weaved_connected.png" alt="weaved" style="width: 400px;"/>
+
+In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:  
+
+<img src="weaved_ssh.png" alt="weaved" style="width: 400px;"/>
+
+Insert the server address and port obtained from Weaved.com into Putty and connect!
 
 When asked for username and password, please use your RPi username and password to log-in. (Please note, this is not weaved username and password).
 
