@@ -23,7 +23,9 @@ $ sudo raspi-config
 
 * The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.
 
-<img src="raspi_config.png" alt="screen" style="width: 400px;"/>
+<!---<img src="raspi_config.png" alt="screen" style="width: 400px;"/> -->
+
+![My helpful screenshot]({{ site.url }}/assets/raspi_config.png)
 
 * Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Internationalisation Options --> Change the Keyboard Layout__. Then we choose generic 105 key, and then UK.
 * Also we have option to change the timezone from this menu.
@@ -247,6 +249,7 @@ The screen program allows you to use multiple windows (virtual VT100 terminals) 
 ```bash
 sudo apt-get -y install screen
 ```
+
 ###### Some Examples to use screen
 
 * When you are in your terminal, you can create a *screen* or virtual terminal e.g. we will name the screen *mysession*:
