@@ -38,5 +38,5 @@ If are programing in your laptop and you want to transfer it to test your code i
 
 **Note:** The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date:
 ``` bash
-$ ‰sudo apt-get -y update && sudo apt-get -y upgrade
+$ sudo apt-get -y update && sudo apt-get -y upgrade
 ```
