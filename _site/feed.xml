@@ -1,4 +1,369 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-14T22:13:09+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Setting your Raspberry Pi at Imperial College</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2014/09/24/man-must-explore/" rel="alternate" type="text/html" title="Setting your Raspberry Pi at Imperial College" /><published>2014-09-24T13:00:00+01:00</published><updated>2014-09-24T13:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2014/09/24/man-must-explore</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2014/09/24/man-must-explore/">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-14T23:13:37+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Setting your Raspberry Pi at Imperial College</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/RPisetup/" rel="alternate" type="text/html" title="Setting your Raspberry Pi at Imperial College" /><published>2016-10-14T13:00:00+01:00</published><updated>2016-10-14T13:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/RPisetup</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/RPisetup/">&lt;h1 id=&quot;setting-up-your-raspberry-pi-3-model-b&quot;&gt;Setting up your Raspberry Pi 3 Model B&lt;/h1&gt;
+
+&lt;h3 id=&quot;starting-set-up&quot;&gt;Starting Set up&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each team should get a monitor, keyboard and mouse.&lt;/li&gt;
+  &lt;li&gt;Insert the mini SD card in the Raspberry Pi , connect the mouse and keyboard in the USB ports, and the display with provided HDMI-DVI cable. Then,  using Y-cable, power it up by plugging in the charger.&lt;/li&gt;
+  &lt;li&gt;The operative system starts. Then, click on the &lt;strong&gt;terminal&lt;/strong&gt; icon next to the menu to open it.&lt;/li&gt;
+  &lt;li&gt;Then you need to run some commands on it as root user to configure the Raspberry Pi (RPi). The &lt;strong&gt;root user&lt;/strong&gt; has the permission to modify files or default settings as administrator providing the root password. The &lt;strong&gt;root user&lt;/strong&gt; is &lt;strong&gt;pi&lt;/strong&gt; and the default &lt;strong&gt;root password&lt;/strong&gt; is &lt;strong&gt;raspberry&lt;/strong&gt;. First we will make stronger the password, but first we will change some default set ups:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; To execute any Linux command as root user, the &lt;em&gt;sudo&lt;/em&gt; command presides the Linux command.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;raspi_config.png&quot; alt=&quot;screen&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: &lt;strong&gt;Internationalisation Options –&amp;gt; Change the Keyboard Layout&lt;/strong&gt;. Then we choose generic 105 key, and then UK.&lt;/li&gt;
+  &lt;li&gt;Also we have option to change the timezone from this menu.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Internationalisation.png&quot; alt=&quot;screen&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;To change the password, we return to the main menu and choose the second option. We have to set the new password and do not reboot the RPi yet.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We check that the &lt;a href=&quot;https://en.wikipedia.org/wiki/Secure_Shell&quot;&gt;ssh&lt;/a&gt; for remote network communications is enabled (security shell cryptographic network protocol). We access to the &lt;strong&gt;Advance Options –&amp;gt; SSH&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/advance_opt.png&quot; alt=&quot;screen&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An optional step is to change the hostname in the same advance menu.&lt;/li&gt;
+  &lt;li&gt;Then we restart the RPi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;setting-wifi-from-imperial-college-network&quot;&gt;Setting WiFi from Imperial College network&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You will see there is no IP assigned to our PRI, therefore to set up the WiFi we need to modify a configuration file, but first we need to back it up:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf_backup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then we will edit the &lt;em&gt;wpa_supplicant.conf&lt;/em&gt;:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+&lt;/code&gt;
+The default text editor installed in the RPi is &lt;em&gt;nano&lt;/em&gt;. We can install also &lt;em&gt;vim&lt;/em&gt; or &lt;em&gt;vi&lt;/em&gt; to have another option of a text editor.&lt;/p&gt;
+
+&lt;p&gt;This file should just have the next line at the beginning:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we add to the content of &lt;em&gt;wpa_supplicant.conf&lt;/em&gt; the lines after # IC (&lt;strong&gt;the configuration is case sensitive, so make sure you do not have typos&lt;/strong&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;ctrl_interface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/var/run/wpa_supplicant &lt;span class=&quot;nv&quot;&gt;GROUP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;netdev
+&lt;span class=&quot;nv&quot;&gt;update_config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+
+
+&lt;span class=&quot;c&quot;&gt;# IC&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;network&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;ssid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Imperial-WPA&quot;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;proto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;RSN
+        &lt;span class=&quot;nv&quot;&gt;key_mgmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;WPA-EAP
+        &lt;span class=&quot;nv&quot;&gt;pairwise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;CCMP
+        &lt;span class=&quot;nv&quot;&gt;auth_alg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;OPEN
+        &lt;span class=&quot;nv&quot;&gt;eap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;PEAP
+        &lt;span class=&quot;nv&quot;&gt;identity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ic&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\C&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;OLLEGE_USERNAME&quot;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;YOUR_PASSWORD&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This is the Imperial College configuration in which you have to replace “COLLEGE_USERNAME” with a valid college username, please do not store your password in plain text, but we will change it after verifying that the WiFi is working. Reboot the system if it is necessary.
+&lt;strong&gt;Note:&lt;/strong&gt; In case you are working with your team, and you do not want to show your password, just leave the field blank and follow the next steeps to encrypt your password before setting it up in the &lt;em&gt;wpa_supplicant.conf&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Encrypting Password&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to not store the password in a plain text we &lt;strong&gt;encrypt&lt;/strong&gt; our password with an &lt;strong&gt;MD4 hash generated&lt;/strong&gt; from the corresponding college password. You can generate the hash like this with the next Linux command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;s1&quot;&gt;'YOUR_PASSWORD'&lt;/span&gt; | iconv -t utf16le | openssl md4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This command will display the encrypted password on your terminal like:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+$ (stdin)= a6c71eedc2eacbca84003336a4a62a1c
+&lt;/code&gt;
+Then you can copy the string that was generated in your terminal screen similar to the one of the example above: a6c71eedc2eacbca84003336a4a62a1c.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Also you can save the hash from your password in a file and then read its content:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+$ echo -n 'YOUR_PASSWORD' | iconv -t utf16le | openssl md4 &amp;gt; hash.txt
+$ cat hash.txt
+&lt;/code&gt;
+The &lt;em&gt;cat&lt;/em&gt; command is used to read and concatenate files.&lt;/p&gt;
+
+&lt;p&gt;Then open the &lt;em&gt;wpa_supplicant.conf&lt;/em&gt; to add the hashed password you generate:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;In the password field replace “YOUR_PASSWORD” with the string you generated as hexadecimal characters, and we add the ‘hash:’-prefix) in the similar fashion as in the example bellow:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# IC&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;network&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;ssid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Imperial-WPA&quot;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;proto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;RSN
+        &lt;span class=&quot;nv&quot;&gt;key_mgmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;WPA-EAP
+        &lt;span class=&quot;nv&quot;&gt;pairwise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;CCMP
+        &lt;span class=&quot;nv&quot;&gt;auth_alg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;OPEN
+        &lt;span class=&quot;nv&quot;&gt;eap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;PEAP
+        &lt;span class=&quot;nv&quot;&gt;identity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ic&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\C&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;OLLEGE_USERNAME&quot;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;:a6c71eedc2eacbca84003336a4a62a1c
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;A last security step to do is to remove the bash history, with all the commands we had typed on the terminal. Therefore, we do it like:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+$ history -w
+$ history -c
+&lt;/code&gt;
+Then we reboot again the RPi to check that the password was properly set up.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-python&quot;&gt;Installing Python&lt;/h3&gt;
+
+&lt;p&gt;To install Linux packages in our system we must use the command: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install name_of_package&lt;/code&gt;. The installation could take some minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Updating operative system&lt;/strong&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+sudo apt-get update
+&lt;/code&gt;
+&lt;strong&gt;Installing C lib needed by Python:&lt;/strong&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+sudo apt-get -y install libffi-dev
+sudo apt-get -y install libssl-dev
+&lt;/code&gt;
+&lt;strong&gt;Installing Python:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get -y install build-essential python-dev python-openssl
+sudo apt-get -y install python-setuptools
+sudo apt-get -y remove --purge python-pip
+sudo apt-get -y install python-pip
+sudo pip install --upgrade pip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Installing other text editor:&lt;/strong&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+sudo apt-get -y install vim
+&lt;/code&gt;
+### Remote connection to your Raspberry Pi
+&lt;strong&gt;Weaved&lt;/strong&gt; services connect you easily and securely to your Pi from a mobile app, browser window and a terminal. Control remote computers using tcp hosts such as SSH. You will be able to connect to your RPi from laptop or desktop at home. The free weaved account allows for 10 registered services and 30 minute connections on up to 1 concurrent service(s).&lt;/p&gt;
+
+&lt;h5 id=&quot;installing-weaved&quot;&gt;Installing weaved:&lt;/h5&gt;
+&lt;p&gt;Manage network devices remotely using &lt;a href=&quot;http://www.weaved.com/&quot;&gt;weaved&lt;/a&gt; service. To install:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+sudo apt-get -y install weavedconnectd
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;weaved-configuration&quot;&gt;Weaved configuration:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To configure weaved in our RPi, first we need to open an account in &lt;a href=&quot;http://www.weaved.com/&quot;&gt;weaved&lt;/a&gt; website. You can register from your laptop or desktop. Once you have it, from your Rpi terminal you will execute a command to link your RPi to your weaved account:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+sudo weavedinstaller
+&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Enter your Weaved account username and password. Next, you will see this menu:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Pi-installer-menu.png&quot; alt=&quot;menu1&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initially you won’t have any Weaved services installed, so the upper part is empty.  Enter &lt;strong&gt;1&lt;/strong&gt; to attach Weaved to an existing TCP service (host) on your Raspberry Pi.  You should now see the following screen:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Pi-installer-menu-02.png&quot; alt=&quot;menu2&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter &lt;strong&gt;1&lt;/strong&gt; for SSH.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Next, we accept the default port (&lt;strong&gt;y&lt;/strong&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Pi-installer-menu-03.png&quot; alt=&quot;menu3&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The installer confirms your choice and asks you to give this connection a name (you can make it up, but remember to make a name easy for you to identify a specific RPi in case you have more than one attached to the weaved service.):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Pi-installer-menu-04.png&quot; alt=&quot;menu4&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You will now return to the main menu, where you can see your Weaved Service Connection installed, then enter &lt;strong&gt;3&lt;/strong&gt; to exit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Pi-installer-menu-051.png&quot; alt=&quot;menu5&quot; style=&quot;width: 300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;accessing-from-your-computer-linux-or-mac-os-x&quot;&gt;Accessing from your computer (Linux or Mac OS X)&lt;/h3&gt;
+
+&lt;p&gt;We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/weaved_connected.png&quot; alt=&quot;weaved&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/weaved_ssh.png&quot; alt=&quot;weaved&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we copy the command after &lt;em&gt;For pi username&lt;/em&gt;, in this example it is: &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh -l pi proxy71.weaved.com -p 34644&lt;/code&gt;. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to &lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/putty/&quot;&gt;install a SSH and Telnet client&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Then, you are connected from your laptop to your RPi!! You don’t need the display and mouse anymore!&lt;/p&gt;
+
+&lt;h3 id=&quot;accessing-from-your-computer-windows&quot;&gt;Accessing from your computer (Windows)&lt;/h3&gt;
+
+&lt;p&gt;If your computer operative  system is Windows, to access remotely you will need to install PuTTY, which  is a free implementation of SSH and Telnet for Windows and Unix platforms. To download it click &lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Putty.JPG&quot; alt=&quot;weaved&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once downloaded, double click on the &lt;strong&gt;putty.exe&lt;/strong&gt; and you will see the window looks like below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/PuttyConnect.JPG&quot; alt=&quot;weaved&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, if you login to your weaved account,  you will get a list of the services linked to your devices:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/weaved_connected.png&quot; alt=&quot;weaved&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/weaved_ssh.png&quot; alt=&quot;weaved&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Insert the server address and port obtained from Weaved.com into Putty and connect!&lt;/p&gt;
+
+&lt;p&gt;When asked for username and password, please use your RPi username and password to log-in. (Please note, this is not weaved username and password).&lt;/p&gt;
+
+&lt;p&gt;To exit your putty session, type “exit” and enter.&lt;/p&gt;
+
+&lt;h3 id=&quot;virtual-terminal&quot;&gt;Virtual terminal&lt;/h3&gt;
+
+&lt;p&gt;Remember you can just be connected during 30 minutes using &lt;strong&gt;weaved&lt;/strong&gt;, after that time you have to connect again to your account and do the same procedure we explained in the previous section. Therefore we will show you how a &lt;em&gt;virtual terminal&lt;/em&gt; can help you when you are working on your RPi.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Screen&lt;/strong&gt; is a full-screen software program allows you to use multiple windows (virtual VT100 terminals) in Unix. It offers a user to open several separate terminal instances inside a one single terminal window manager.&lt;/p&gt;
+
+&lt;p&gt;The screen application is very useful, if you are dealing with multiple programs from a command line interface and for separating programs from the terminal shell. It also allows you to share your sessions with others users and detach/attach terminal sessions.&lt;/p&gt;
+
+&lt;h5 id=&quot;when-to-use-screen&quot;&gt;When to use screen?&lt;/h5&gt;
+
+&lt;p&gt;One of the advantages of &lt;em&gt;Screen&lt;/em&gt;, is that you can detach it. Then, you can restore it without losing anything you have done on the &lt;em&gt;Screen&lt;/em&gt;. One of the typical scenario where &lt;em&gt;Screen&lt;/em&gt; is of great help is when you are in the middle of SSH session and you want to download a file, update the operative, or transfer a big file to your RPi. The process could be 2 hours long. If you disconnect the SSH session, or suddenly the connection lost by accident, then the download process will stop. You have to start from the beginning again. To avoid that, we can use screen and detach it.&lt;/p&gt;
+
+&lt;h6 id=&quot;installing-screen&quot;&gt;Installing screen&lt;/h6&gt;
+&lt;p&gt;The screen program allows you to use multiple windows (virtual VT100 terminals) in Unix. If your local computer crashes, or you are connected remotely and lose the connection, the processes or login sessions you establish through screen don’t get lost.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get -y install screen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;###### Some Examples to use screen&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When you are in your terminal, you can create a &lt;em&gt;screen&lt;/em&gt; or virtual terminal e.g. we will name the screen &lt;em&gt;mysession&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Screen_terminal.png&quot; alt=&quot;screen1&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then you will be automatically attached to your screen or virtual terminal, that from now on we will call just &lt;em&gt;screen&lt;/em&gt;. You can execute now commands and work in the terminal:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Screen_new_attached.png&quot; alt=&quot;screen2&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You can detach from the &lt;em&gt;screen&lt;/em&gt; by pressing “Ctrl-A” and “d“. Then we will go to our terminal outside the &lt;em&gt;screen&lt;/em&gt; session. Then we can check the list of &lt;em&gt;screens&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Screen_list.png&quot; alt=&quot;screen3&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We get the list and the screen ID. If we want to attach to a particular &lt;em&gt;screen&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;Week1/RPIsetup/Screen_attaching.png&quot; alt=&quot;screen4&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;basic-commands-to-work-with-the-virtual-terminals&quot;&gt;Basic commands to work with the virtual terminals&lt;/h6&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Screen command&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;screen -S name_of_terminal&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Assigning name to the virtual terminal or screen session.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;screen -ls&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;List all the virtual sessions or screens opened.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;screen -X -S name_of_terminal quit&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Kill an specific virtual terminal.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;screen -r name_of_terminal&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Attach to the virtual terminal or screen.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Press “Ctrl-A” and “d“&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Detach from virtual terminal  or screen.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Press “Ctrl-A” and “K”&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;This command will leave and kill the virtual terminal or screen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Press “Ctrl-A” and “n“&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Switching to the next virtual terminal or screen.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Press “Ctrl-A” and “p“&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Switching to the previous virtual terminal or screen&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For more examples go to the &lt;a href=&quot;http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/&quot;&gt;link&lt;/a&gt; or ask the instructors.&lt;/p&gt;
+
+&lt;p&gt;To know more about more advance details of how connect remotely go to the &lt;a href=&quot;Advance_remoteconection.md&quot;&gt;advance guide&lt;/a&gt;:&lt;/p&gt;
+
+&lt;h2 id=&quot;some-useful-tips-and-troubleshooting-guides&quot;&gt;Some useful tips and troubleshooting guides&lt;/h2&gt;
+
+&lt;h3 id=&quot;backup-rpi-image&quot;&gt;Backup RPi Image&lt;/h3&gt;
+
+&lt;p&gt;It is useful and advisable to backup a working copy of your RPi image. For example, make a backup copy after setting up WiFi and update the library, the next time the wifi is not working, you can reformat the SD card and reinsert this backup copy to revert back to previous version. After this, your RPI get to connect back to WiFi right away like before. Here are the steps:&lt;/p&gt;
+
+&lt;h4 id=&quot;for-backing-up&quot;&gt;For Backing up&lt;/h4&gt;
+
+&lt;h5 id=&quot;for-windows&quot;&gt;For Windows&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download Win 32 Disk Imager if none installed on your computer &lt;a href=&quot;https://sourceforge.net/projects/win32diskimager/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Insert the SDCard into your computer (e.g. via card reader or SD card slot if your computer has one).&lt;/li&gt;
+  &lt;li&gt;Open Win 32 Disk Imager. Select a location and give a file name for the backup image.&lt;/li&gt;
+  &lt;li&gt;Select the right drive.&lt;/li&gt;
+  &lt;li&gt;Click Read.&lt;/li&gt;
+  &lt;li&gt;Once done, keep this backup copy safe. Please note that the size of the backup is the same size of your SD Card. SO please be mindful that it will take a considerable amount of disk space.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;for-replacing-the-image-on-the-sd-card&quot;&gt;For replacing the image on the SD Card&lt;/h4&gt;
+
+&lt;h4 id=&quot;for-windows-1&quot;&gt;For Windows:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download SDFormatter if none installed &lt;a href=&quot;https://www.sdcard.org/downloads/formatter_4/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Download Win 32 Disk Imager if none installed &lt;a href=&quot;https://sourceforge.net/projects/win32diskimager/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Use SDFormatter to format the SD card. Please be careful and make sure you select the correct drive letter.&lt;/li&gt;
+  &lt;li&gt;Use SDFormatter to re-image the backed up image into the SD card. I.e. select the file name, the drive letter of the SD card, and then click Write. Please be careful that the correct drive letter is selected. If you wish to install a fresh Raspbian OS, you can download it &lt;a href=&quot;www.raspberrypi.org&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Once this is done, a new image has been rewritten on your SD Card!&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Ariadna Blanca Romero &amp; Jing Sheng Pang</name></author><summary>Setting up your Raspberry Pi 3 Model B</summary></entry><entry><title>Setting your Raspberry Pi at Imperial College</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2014/09/24/man-must-explore/" rel="alternate" type="text/html" title="Setting your Raspberry Pi at Imperial College" /><published>2014-09-24T13:00:00+01:00</published><updated>2014-09-24T13:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2014/09/24/man-must-explore</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2014/09/24/man-must-explore/">&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
 
