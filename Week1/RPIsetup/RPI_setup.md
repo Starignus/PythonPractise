@@ -268,8 +268,8 @@ To know more about more advance details of how connect remotely go to the [advan
 
 It is useful and advisable to backup a working copy of your RPi image. For example, make a backup copy after setting up WiFi and update the library, the next time the wifi is not working, you can reformat the SD card and reinsert this backup copy to revert back to previous version. After this, your RPI get to connect back to WiFi right away like before. Here are the steps:
 
-For Backing UP:
-For Windows:
+#### For Backing UP:
+#### For Windows:
 1. Download Win 32 Disk Imager if none installed on your computer: https://sourceforge.net/projects/win32diskimager/
 2. Insert the SDCard into your computer (e.g. via card reader or SD card slot if your computer has one).
 3. Open Win 32 Disk Imager. Select a location and give a file name for the backup image.
@@ -277,8 +277,8 @@ For Windows:
 5. Click Read.
 6. Once done, keep this backup copy safe. Please note that the size of the backup is the same size of your SD Card. SO please be mindful that it will take a considerable amount of disk space.
 
-For replacing the image on the SD Card:
-For Windows:
+#### For replacing the image on the SD Card:
+#### For Windows:
 1. Download SDFormatter if none installed: https://www.sdcard.org/downloads/formatter_4/.
 2. Download Win 32 Disk Imager if none installed: https://sourceforge.net/projects/win32diskimager/
 3. Use SDFormatter to format the sdcard. Please be careful and make sure you select the correct drive letter.
