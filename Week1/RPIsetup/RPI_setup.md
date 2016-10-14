@@ -289,8 +289,9 @@ It is useful and advisable to backup a working copy of your RPi image. For examp
 5. Click Read.
 6. Once done, keep this backup copy safe. Please note that the size of the backup is the same size of your SD Card. SO please be mindful that it will take a considerable amount of disk space.
 
-#### For replacing the image on the SD Card:
-#### For Windows:
+#### For replacing the image on the SD Card
+
+#### For Windows
 1. Download SDFormatter if none installed [here](https://www.sdcard.org/downloads/formatter_4/).
 2. Download Win 32 Disk Imager if none installed [here](https://sourceforge.net/projects/win32diskimager/)
 3. Use SDFormatter to format the SD card. Please be careful and make sure you select the correct drive letter.
