@@ -1,5 +1,5 @@
 # Site settings
-title: Gizmo workshop
+title: Gizmo Workshop
 header-img: img/home-bg.jpg
 email: ablancar@ic.ac.uk, j.pang10@alumni.imperial.ac.uk
 copyright_name: strignus
@@ -9,7 +9,7 @@ url: "https://starignus.github.io/PythonPractise/"
 twitter_username: starignus
 github_username:  starignus/PythonPractise
 facebook_username:  starignus
-email_username:  ariadna@starignus.com, j.pang10@alumni.imperial.ac.uk 
+email_username:  ariadna@starignus.com, j.pang10@alumni.imperial.ac.uk
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
