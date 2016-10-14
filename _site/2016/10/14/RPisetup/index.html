@@ -124,16 +124,16 @@
   <li>The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.</li>
 </ul>
 
-<!---<img src="raspi_config.png" alt="screen" style="width: 400px;"/> -->
+<p><img src="https://starignus.github.io/PythonPractise//assets/raspi_config.png" alt="screen" style="width: 800px;" /></p>
 
-<p><img src="https://starignus.github.io/PythonPractise//assets/raspi_config.png" alt="My helpful screenshot" /></p>
+<!---![My helpful screenshot](https://starignus.github.io/PythonPractise//assets/raspi_config.png) -->
 
 <ul>
   <li>Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: <strong>Internationalisation Options –&gt; Change the Keyboard Layout</strong>. Then we choose generic 105 key, and then UK.</li>
   <li>Also we have option to change the timezone from this menu.</li>
 </ul>
 
-<p><img src="Internationalisation.png" alt="screen" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Internationalisation.png" alt="screen" style="width: 800px;" /></p>
 
 <ul>
   <li>
@@ -144,7 +144,7 @@
   </li>
 </ul>
 
-<p><img src="Week1/RPIsetup/advance_opt.png" alt="screen" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/advance_opt.png" alt="screen" style="width: 800px;" /></p>
 
 <ul>
   <li>An optional step is to change the hostname in the same advance menu.</li>
@@ -287,13 +287,13 @@ sudo weavedinstaller
   <li>Enter your Weaved account username and password. Next, you will see this menu:</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Pi-installer-menu.png" alt="menu1" style="width: 300px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Pi-installer-menu.png" alt="menu1" style="width: 700px;" /></p>
 
 <ul>
   <li>Initially you won’t have any Weaved services installed, so the upper part is empty.  Enter <strong>1</strong> to attach Weaved to an existing TCP service (host) on your Raspberry Pi.  You should now see the following screen:</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Pi-installer-menu-02.png" alt="menu2" style="width: 300px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Pi-installer-menu-02.png" alt="menu2" style="width: 700px;" /></p>
 
 <p>Enter <strong>1</strong> for SSH.</p>
 
@@ -301,27 +301,27 @@ sudo weavedinstaller
   <li>Next, we accept the default port (<strong>y</strong>).</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Pi-installer-menu-03.png" alt="menu3" style="width: 300px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Pi-installer-menu-03.png" alt="menu3" style="width: 700px;" /></p>
 
 <ul>
   <li>The installer confirms your choice and asks you to give this connection a name (you can make it up, but remember to make a name easy for you to identify a specific RPi in case you have more than one attached to the weaved service.):</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Pi-installer-menu-04.png" alt="menu4" style="width: 300px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Pi-installer-menu-04.png" alt="menu4" style="width: 700px;" /></p>
 
 <p>You will now return to the main menu, where you can see your Weaved Service Connection installed, then enter <strong>3</strong> to exit.</p>
 
-<p><img src="Week1/RPIsetup/Pi-installer-menu-051.png" alt="menu5" style="width: 300px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Pi-installer-menu-051.png" alt="menu5" style="width: 700px;" /></p>
 
 <h3 id="accessing-from-your-computer-linux-or-mac-os-x">Accessing from your computer (Linux or Mac OS X)</h3>
 
 <p>We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:</p>
 
-<p><img src="Week1/RPIsetup/weaved_connected.png" alt="weaved" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/weaved_connected.png" alt="weaved" style="width: 700px;" /></p>
 
 <p>In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:</p>
 
-<p><img src="Week1/RPIsetup/weaved_ssh.png" alt="weaved" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/weaved_ssh.png" alt="weaved" style="width: 500px;" /></p>
 
 <p>Then we copy the command after <em>For pi username</em>, in this example it is: <code class="highlighter-rouge">ssh -l pi proxy71.weaved.com -p 34644</code>. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">install a SSH and Telnet client</a>).</p>
 
@@ -331,19 +331,19 @@ sudo weavedinstaller
 
 <p>If your computer operative  system is Windows, to access remotely you will need to install PuTTY, which  is a free implementation of SSH and Telnet for Windows and Unix platforms. To download it click <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">here</a>.</p>
 
-<p><img src="Week1/RPIsetup/Putty.JPG" alt="weaved" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Putty.JPG" alt="weaved" style="width: 700px;" /></p>
 
 <p>Once downloaded, double click on the <strong>putty.exe</strong> and you will see the window looks like below:</p>
 
-<p><img src="Week1/RPIsetup/PuttyConnect.JPG" alt="weaved" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/PuttyConnect.JPG" alt="weaved" style="width: 500px;" /></p>
 
 <p>Then, if you login to your weaved account,  you will get a list of the services linked to your devices:</p>
 
-<p><img src="Week1/RPIsetup/weaved_connected.png" alt="weaved" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/weaved_connected.png" alt="weaved" style="width: 800px;" /></p>
 
 <p>In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:</p>
 
-<p><img src="Week1/RPIsetup/weaved_ssh.png" alt="weaved" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/weaved_ssh.png" alt="weaved" style="width: 500px;" /></p>
 
 <p>Insert the server address and port obtained from Weaved.com into Putty and connect!</p>
 
@@ -376,25 +376,25 @@ sudo weavedinstaller
   <li>When you are in your terminal, you can create a <em>screen</em> or virtual terminal e.g. we will name the screen <em>mysession</em>:</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Screen_terminal.png" alt="screen1" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Screen_terminal.png" alt="screen1" style="width: 800px;" /></p>
 
 <ul>
   <li>Then you will be automatically attached to your screen or virtual terminal, that from now on we will call just <em>screen</em>. You can execute now commands and work in the terminal:</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Screen_new_attached.png" alt="screen2" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Screen_new_attached.png" alt="screen2" style="width: 800px;" /></p>
 
 <ul>
   <li>You can detach from the <em>screen</em> by pressing “Ctrl-A” and “d“. Then we will go to our terminal outside the <em>screen</em> session. Then we can check the list of <em>screens</em>:</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Screen_list.png" alt="screen3" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Screen_list.png" alt="screen3" style="width: 800px;" /></p>
 
 <ul>
   <li>We get the list and the screen ID. If we want to attach to a particular <em>screen</em>:</li>
 </ul>
 
-<p><img src="Week1/RPIsetup/Screen_attaching.png" alt="screen4" style="width: 400px;" /></p>
+<p><img src="https://starignus.github.io/PythonPractise//assets/Screen_attaching.png" alt="screen4" style="width: 800px;" /></p>
 
 <h6 id="basic-commands-to-work-with-the-virtual-terminals">Basic commands to work with the virtual terminals</h6>
 

@@ -23,20 +23,20 @@ $ sudo raspi-config
 
 * The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.
 
-<!---<img src="raspi_config.png" alt="screen" style="width: 400px;"/> -->
+<img src="{{site.url}}/assets/raspi_config.png" alt="screen" style="width: 800px;"/> 
 
-![My helpful screenshot]({{ site.url }}/assets/raspi_config.png)
+<!---![My helpful screenshot]({{site.url}}/assets/raspi_config.png) -->
 
 * Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Internationalisation Options --> Change the Keyboard Layout__. Then we choose generic 105 key, and then UK.
 * Also we have option to change the timezone from this menu.
 
-<img src="Internationalisation.png" alt="screen" style="width: 400px;">
+<img src="{{site.url}}/assets/Internationalisation.png" alt="screen" style="width: 800px;">
 
  * To change the password, we return to the main menu and choose the second option. We have to set the new password and do not reboot the RPi yet.
 
 *  We check that the [ssh](https://en.wikipedia.org/wiki/Secure_Shell) for remote network communications is enabled (security shell cryptographic network protocol). We access to the __Advance Options --> SSH__.
 
-<img src="Week1/RPIsetup/advance_opt.png" alt="screen" style="width: 400px;">
+<img src="{{site.url}}/assets/advance_opt.png" alt="screen" style="width: 800px;">
 
 * An optional step is to change the hostname in the same advance menu.
 * Then we restart the RPi.
@@ -173,35 +173,35 @@ sudo weavedinstaller
 ```
 * Enter your Weaved account username and password. Next, you will see this menu:
 
-<img src="Week1/RPIsetup/Pi-installer-menu.png" alt="menu1" style="width: 300px;"/>
+<img src="{{site.url}}/assets/Pi-installer-menu.png" alt="menu1" style="width: 700px;"/>
 
 * Initially you won’t have any Weaved services installed, so the upper part is empty.  Enter **1** to attach Weaved to an existing TCP service (host) on your Raspberry Pi.  You should now see the following screen:
 
-<img src="Week1/RPIsetup/Pi-installer-menu-02.png" alt="menu2" style="width: 300px;"/>
+<img src="{{site.url}}/assets/Pi-installer-menu-02.png" alt="menu2" style="width: 700px;"/>
 
 Enter **1** for SSH.
 
 * Next, we accept the default port (**y**).
 
-<img src="Week1/RPIsetup/Pi-installer-menu-03.png" alt="menu3" style="width: 300px;"/>
+<img src="{{site.url}}/assets/Pi-installer-menu-03.png" alt="menu3" style="width: 700px;"/>
 
 * The installer confirms your choice and asks you to give this connection a name (you can make it up, but remember to make a name easy for you to identify a specific RPi in case you have more than one attached to the weaved service.):
 
-<img src="Week1/RPIsetup/Pi-installer-menu-04.png" alt="menu4" style="width: 300px;"/>
+<img src="{{site.url}}/assets/Pi-installer-menu-04.png" alt="menu4" style="width: 700px;"/>
 
 You will now return to the main menu, where you can see your Weaved Service Connection installed, then enter **3** to exit.
 
-<img src="Week1/RPIsetup/Pi-installer-menu-051.png" alt="menu5" style="width: 300px;"/>
+<img src="{{site.url}}/assets/Pi-installer-menu-051.png" alt="menu5" style="width: 700px;"/>
 
 ### Accessing from your computer (Linux or Mac OS X)
 
 We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:
 
-<img src="Week1/RPIsetup/weaved_connected.png" alt="weaved" style="width: 400px;"/>
+<img src="{{site.url}}/assets/weaved_connected.png" alt="weaved" style="width: 700px;"/>
 
 In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:  
 
-<img src="Week1/RPIsetup/weaved_ssh.png" alt="weaved" style="width: 400px;"/>
+<img src="{{site.url}}/assets/weaved_ssh.png" alt="weaved" style="width: 500px;"/>
 
 Then we copy the command after *For pi username*, in this example it is: ```ssh -l pi proxy71.weaved.com -p 34644```. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to [install a SSH and Telnet client](http://www.chiark.greenend.org.uk/~sgtatham/putty/)).
 
@@ -211,19 +211,19 @@ Then, you are connected from your laptop to your RPi!! You don't need the displa
 
 If your computer operative  system is Windows, to access remotely you will need to install PuTTY, which  is a free implementation of SSH and Telnet for Windows and Unix platforms. To download it click [here]( http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
-<img src="Week1/RPIsetup/Putty.JPG" alt="weaved" style="width: 400px;"/>
+<img src="{{site.url}}/assets/Putty.JPG" alt="weaved" style="width: 700px;"/>
 
 Once downloaded, double click on the **putty.exe** and you will see the window looks like below:
 
-<img src="Week1/RPIsetup/PuttyConnect.JPG" alt="weaved" style="width: 400px;"/>
+<img src="{{site.url}}/assets/PuttyConnect.JPG" alt="weaved" style="width: 500px;"/>
 
 Then, if you login to your weaved account,  you will get a list of the services linked to your devices:
 
-<img src="Week1/RPIsetup/weaved_connected.png" alt="weaved" style="width: 400px;"/>
+<img src="{{site.url}}/assets/weaved_connected.png" alt="weaved" style="width: 800px;"/>
 
 In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:  
 
-<img src="Week1/RPIsetup/weaved_ssh.png" alt="weaved" style="width: 400px;"/>
+<img src="{{site.url}}/assets/weaved_ssh.png" alt="weaved" style="width: 500px;"/>
 
 Insert the server address and port obtained from Weaved.com into Putty and connect!
 
@@ -254,19 +254,19 @@ sudo apt-get -y install screen
 
 * When you are in your terminal, you can create a *screen* or virtual terminal e.g. we will name the screen *mysession*:
 
-<img src="Week1/RPIsetup/Screen_terminal.png" alt="screen1" style="width: 400px;"/>
+<img src="{{site.url}}/assets/Screen_terminal.png" alt="screen1" style="width: 800px;"/>
 
 * Then you will be automatically attached to your screen or virtual terminal, that from now on we will call just *screen*. You can execute now commands and work in the terminal:
 
-<img src="Week1/RPIsetup/Screen_new_attached.png" alt="screen2" style="width: 400px;"/>
+<img src="{{site.url}}/assets/Screen_new_attached.png" alt="screen2" style="width: 800px;"/>
 
 * You can detach from the *screen* by pressing “Ctrl-A” and “d“. Then we will go to our terminal outside the *screen* session. Then we can check the list of *screens*:
 
-<img src="Week1/RPIsetup/Screen_list.png" alt="screen3" style="width: 400px;"/>
+<img src="{{site.url}}/assets/Screen_list.png" alt="screen3" style="width: 800px;"/>
 
 * We get the list and the screen ID. If we want to attach to a particular *screen*:
 
-<img src="Week1/RPIsetup/Screen_attaching.png" alt="screen4" style="width: 400px;"/>
+<img src="{{site.url}}/assets/Screen_attaching.png" alt="screen4" style="width: 800px;"/>
 
 ###### Basic commands to work with the virtual terminals
 
