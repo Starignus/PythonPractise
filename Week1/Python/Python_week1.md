@@ -4,7 +4,7 @@
 
 Remember that you are intelligent and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, in order for you to communicate instructions to the computer it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.
 
-Python can be **asy to pick up and friendly to learn**. [Python](https://www.python.org/) is a **general-purpose** interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.  
+Python can be **easy to pick up and friendly to learn**. [Python](https://www.python.org/) is a **general-purpose** interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.  
 
 #### Basic Practise
 
