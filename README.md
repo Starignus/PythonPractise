@@ -16,4 +16,4 @@ $git clone https://github.com/Starignus/PythonPractise.git
 * [Week 1 Program in PDF.](Week1/Week1_Programme.pdf)
 * [Raspberry Pi set up](Week1/RPIsetup/RPI_setup.md)
   * [Advance remote access notes.](Week1/RPIsetup/Advance_remoteconection.md)
-* [Linux (Bash) commands cheat sheet.](Bash_script/Cheat_sheat_bash_Linux.md)
+* [Linux (Bash) commands cheat sheet.](Week1/Bash_script/Cheat_sheat_bash_Linux.md)
