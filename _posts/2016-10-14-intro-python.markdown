@@ -14,7 +14,7 @@ header-img: "img/post-bg-04.jpg"
 
 Remember that you are intelligent and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, in order for you to communicate instructions to the computer it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.
 
-Python can be **asy to pick up and friendly to learn**. [Python](https://www.python.org/) is a **general-purpose** interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.  
+Python can be **easy to pick up and friendly to learn**. [Python](https://www.python.org/) is a **general-purpose** interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.  
 
 #### Basic Practise
 
@@ -212,7 +212,9 @@ x = x + 2
 print
 ```
 
-When a program is running, it flows from one step to the next.  
+When a program is running, it flows from one step to the next. As programmers, we set up “paths” for the program to follow.
+
+<img src="{{site.url}}/assets/Flow_1.png" alt="flow" style="width: 200px;"/>
 
 Close the text editor and then you can execute it on two ways:
 
@@ -226,8 +228,9 @@ The other is to give the script the access permissions to be an executable file 
 $ chmod u+x example_fllow.py
 $ ./example_fllow.py
 ```
-No let's do an example where we have a __conditional__ that implies a decision making about a situation. Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. 
+No let's do an example where we have a __conditional__ that implies a decision making about a situation. Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:
 
+<img src="{{site.url}}/assets/decision_making.jpg" alt="decision" style="width: 200px;"/>
 
 ``` bash
 $ nano example_conditional.py
@@ -250,7 +253,13 @@ $ chmod u+x example_conditional.py
 $ ./example_conditional.py
 ```
 
+Flow of the code:
+
+<img src="{{site.url}}/assets/Flow_Conditional.png" alt="conditional" style="width: 200px;"/>
+
 A __loop statement__ allows us to execute a statement or group of statements multiple times.
+
+<img src="{{site.url}}/assets/loop_architecture.jpg" alt="loop" style="width: 200px;"/>
 
 __While loop__ repeats a statement or group of statements while a given condition is _TRUE_. It tests the condition before executing the loop body.
 
@@ -272,9 +281,9 @@ $ chmod u+x example_while_loop.py
 $ ./example_while_loop.py
 ```
 
-<!---Flow of the code:
+Flow of the code:
 
-<img src="{{site.url}}/assets/while_loop.png" alt="Conditional" style="width: 120px;"/> -->
+<img src="{{site.url}}/assets/while_loop.png" alt="while" style="width: 200px;"/>
 
 Loops (repeated steps) ha‰ve _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.
 
