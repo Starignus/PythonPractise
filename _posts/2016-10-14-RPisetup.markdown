@@ -303,7 +303,7 @@ It is useful and advisable to backup a working copy of your RPi image. For examp
 
 #### For replacing the image on the SD Card
 
-#### For Windows and Mac OS
+##### For Windows and Mac OS
 1. Download SDFormatter if none installed [here](https://www.sdcard.org/downloads/formatter_4/).
 2. Download Win 32 Disk Imager if none installed [here](https://sourceforge.net/projects/win32diskimager/) or Etcher For Mac [here](https://www.etcher.io).
 3. Use SDFormatter to format the SD card. Please be careful and make sure you select the correct drive letter.
