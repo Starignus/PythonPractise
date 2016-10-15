@@ -9,7 +9,7 @@ $cd /name/of/folder
 $git clone https://github.com/Starignus/PythonPractise.git
 ```
 
-#### Direct links to the guides to access from the browser:
+#### Direct links to access guides from the browser:
 
 ##### Week 1:
 
