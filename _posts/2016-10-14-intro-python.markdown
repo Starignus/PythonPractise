@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Introduction to Python"
-subtitle:   "An eassy start"
+subtitle:   "An easy start"
 date:       2016-10-14 11:00:00
 author:     "Ariadna Blanca Romero & Jing Sheng Pang"
 header-img: "img/post-bg-04.jpg"
