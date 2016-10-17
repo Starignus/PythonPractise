@@ -67,6 +67,7 @@ Once establish the connection through SFTP, we can transfer files as:
 Instead a terminal, we can use to transfer files using a software that mounts any remote server storage as a local disk in the Finder.app on Mac and the File Explorer on Windows. We suggest:
 
 * [Cyberduck](https://cyberduck.io/?l=en)
+
 <img src="cyberduck.png" alt="weaved" style="width: 400px;"/>
 
 **Foot Note:** The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date:
