@@ -4,7 +4,7 @@
 
 We can use a command to check the different internet connections available on our system: _ifconfig_ or _ifconfig -a_.
 ```bash
-ifconfig
+$ ifconfig
 ```
 This command allows to know the IP addresses assigned to our RPi. The _wlan0_, indicates the status of the WiFi, and _eth0_ shows the status of the Ethernet (wired) connection). In the next screen shoot shows an example of a RPi connected to the internet using the ethernet port. The red oval shows where to find the IP address assigned to the RPi.
 
@@ -12,7 +12,7 @@ This command allows to know the IP addresses assigned to our RPi. The _wlan0_, i
 
 If you do not know what is an **IP address**, please go to the next [link](https://www.youtube.com/watch?v=7_-qWlvQQtY) for a quick explanation. The IPs can be dynamic or static, but what is the difference? When a device is assigned a static IP address, the address does not change. Most devices use dynamic IP addresses, which are assigned by the network when they connect and change over time.
 
-### Why I need to know my IP address?
+### Why do I need to know my IP address?
 We already know how to connect through weaved service, but we know the connection last just 30 minutes and lets just to work on a terminal session at the time. Therefore, with the help of weave and another command we can connect to or RPi for longer and using multiple terminals.
 
 * First connect as usual to your weaved account and then connect to your RPi using the terminal of your laptop of desktop as you already did when you [set up weaved](RPI_setup.md).
