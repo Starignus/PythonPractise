@@ -17,10 +17,13 @@ We already know how to connect through weaved service, but we know the connectio
 
 * First connect as usual to your weaved account and then connect to your RPi using the terminal of your laptop of desktop as you already did when you [set up weaved](RPI_setup.md).
 * Then, you need to know the IP address assigned to your RPi:
+*
 ```bash
-ifconfig
+$ ifconfig
 ```
+
 Once you know the IP (e.g. your IP is 192.31.123.122), you can access using other terminal to the RPi as:
+
 ```bash
 $ ssh pi@192.31.123.122
 ```
@@ -29,7 +32,8 @@ Remember that the **root username** is **pi**, the syntax for the ssh command is
 **Note:** Since at Imperial network the IPs are dynamic, the IP is constantly changing, so could be that the IP changes in a day or hours (could be sometimes longer) and you need to repeat the procedure using weaved.
 
 ##### Copying files from my laptop to my RPi
-If are programing in your laptop and you want to transfer it to test your code in your RPi, you can use this commands:
+
+If are programing in your laptop and you want to transfer it to test your code in your RPi, you can use these command lines:
 
 | Commands| Description| Example| Syntax|
 |:---------|:----------|:---------|:-------|
