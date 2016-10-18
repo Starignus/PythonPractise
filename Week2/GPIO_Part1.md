@@ -30,7 +30,7 @@ The next table shows all 40 pins on the P1 header, including any special functio
 
 In the next table we show other numbering system  along with the ones we showed above: Pi pin header numbers and element14 given names: wiringPi numbers, Python numbers, and related silkscreen on the wedge. The Broadcom pin numbers in the table are relate to RPi Model 2 and later only.
 
-<img src="Pi_pin_header_numbers.png" alt="pin" style="width: 200px;"/>
+<img src="Pi_pin_header_numbers.png" alt="pin" style="width: 300px;"/>
 
 This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some [PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) (“analog output”).
 
