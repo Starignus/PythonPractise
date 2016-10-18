@@ -90,7 +90,17 @@ The default ```pi``` user on Raspbian is a sudoer. This gives the ability to run
 
 ## Optional
 
-The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date, so we leave the command here for you to use un the future:
+The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date.
+
+In order to avoid problems due to connectivity in our terminal session when updating and upgrading the operative system, we can open a Screen session as explained in the first week at the end of the [RPI setup  section](Week1/RPIsetup/RPI_setup.md).
+so we leave the command here for you to use un the future:
+
+1. Starting a *Screen*:
+```
+$ sudo screen -S session1
+```
+
+2. Once in the *Screen* session:
 ``` bash
 $ sudo apt-get -y update && sudo apt-get -y upgrade
 ```
