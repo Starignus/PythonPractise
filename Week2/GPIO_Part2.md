@@ -4,7 +4,7 @@
 
  The **DC+Stepper Motor HAT from Adafruit** is a perfect add-on for any motor project as it can drive up to 4 DC or 2 Stepper motors with full PWM speed control. However, the Raspberry Pi does not have a lot of PWM pins, we use a fully-dedicated PWM driver chip onboard to both control motor direction and speed. This chip handles all the motor and speed controls over 12C. Only two GPIO pins (SDA & SCL) are required to drive the multiple motors, and since it is 12C you can also connect any other 12C devices or HATs to the same pins.
 
- ##### Features:
+##### Features:
 
  * 4 H-Bridges: TB6612 MOSFET chipset provides 1.2A per bridge (3A brief peak) with thermal shutdown protection, internal kickback protection diodes. Can run motors on 4.5VDC to 13.5VDC.
  * **Up to 4 bi-directional DC motors** with individual 8-bit speed selection (so, about 0.5% resolution).
@@ -24,4 +24,4 @@ Once the motor HAT is assembled, we place it on top so that the short pins of th
 
  <img src="raspberry_pi_place.jpg" alt="rpi-hat" style="width: 400px;"/>
 
- 
+ ## Powering Motors
