@@ -70,6 +70,24 @@ Instead a terminal, we can use to transfer files using a software that mounts an
 
 <img src="cyberduck.png" alt="weaved" style="width: 400px;"/>
 
+## Creating and deleting a new user
+
+You can create additional users on your Raspbian installation with the ```adduser``` command.
+
+Enter ```sudo adduser bob``` and you will be prompted for a password for the new user *bob*. Leave this blank if you do not want a password. However, we recommend that each user get a password to access remotely in the future, for example:
+
+```bash
+$ ssh bob@123.343.1.105
+```
+
+You can delete a user on your system with the command ```userdel```. Apply the ```-r``` flag to remove their home folder too:
+
+```bash
+sudo userdel -r bob
+```
+
+The default ```pi``` user on Raspbian is a sudoer. This gives the ability to run commands as root when preceded by ```sudo```, and to switch to the root user with ```sudo su```.
+
 **Foot Note:** The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date:
 ``` bash
 $ sudo apt-get -y update && sudo apt-get -y upgrade
