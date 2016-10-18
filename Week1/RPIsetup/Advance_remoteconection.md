@@ -88,7 +88,9 @@ sudo userdel -r bob
 
 The default ```pi``` user on Raspbian is a sudoer. This gives the ability to run commands as root when preceded by ```sudo```, and to switch to the root user with ```sudo su```.
 
-**Foot Note:** The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date:
+## Optional
+
+The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date, so we leave the command here for you to use un the future:
 ``` bash
 $ sudo apt-get -y update && sudo apt-get -y upgrade
 ```
