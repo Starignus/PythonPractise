@@ -2,7 +2,9 @@
 
 ## Overview
 
- The **DC+Stepper Motor HAT from Adafruit** is a perfect add-on for any motor project as it can drive up to 4 DC or 2 Stepper motors with full PWM speed control. However, the Raspberry Pi does not have a lot of PWM pins, we use a fully-dedicated PWM driver chip onboard to both control motor direction and speed. This chip handles all the motor and speed controls over 12C. Only two GPIO pins (SDA & SCL) are required to drive the multiple motors, and since it is 12C you can also connect any other 12C devices or HATs to the same pins.
+ The **DC+Stepper Motor HAT from Adafruit** is a perfect add-on for any motor project as it can drive up to 4 DC or 2 Stepper motors with full PWM speed control. However, the Raspberry Pi does not have a lot of PWM pins, we use a fully-dedicated PWM driver chip onboard to both control motor direction and speed. This chip handles all the motor and speed controls over I2C. Only two GPIO pins (SDA & SCL) are required to drive the multiple motors, and since it is I2C you can also connect any other I2C devices or HATs to the same pins.
+
+**Note:** [I2C]((https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)) is a very commonly used standard designed to allow one chip to talk to another. So, since the Raspberry Pi can talk I2C we can connect it to a variety of I2C capable chips and modules.
 
 ##### Features:
 
@@ -41,3 +43,127 @@ The motor driver chips that come with the kit are designed to provide up to **1.
 Therefore, you can use a 9V 1A, 12V 1A, or 12V 5A DC regulated switching power adapter. In case you want to make it portable, you can use a big Lead Acid or multiple-AA NiMH battery pack of 4 to 8 batteries to vary the voltage from about 6V to 12V as your motors require.
 
 <img src="raspberry_pi_powerplug.jpg" alt="hat-power" style="width: 400px;"/>
+
+## Connecting DC Motors
+
+To connect a motor, simply solder two wires to the terminals and then connect them to either the **M1, M2, M3**, or **M4**. If your motor is running 'backwards' from the way you like, just swap the wires in the terminal block. For this demo, please connect it to **M3**.
+
+<img src="raspberry_pi_dcmotor.jpg" alt="hat-power" style="width: 400px;"/>
+
+## Installing Software
+
+We can download the Python library to control DC and stepper motors. Before you start, we need to install the **python smbus library** as well as 'git'. For the latter, execute the following command:
+
+```bash
+$ sudo apt-get install python-smbus git
+ ```
+
+Now, we download the code as:
+
+```bash
+$ cd code
+$ git clone https://github.com/adafruit/Adafruit-Motor-HAT-Python-Library.git
+$ cd Adafruit-Motor-HAT-Python-Library
+$ sudo python setup.py install
+```
+
+Now you can get started with testing to  watch your motor spin back and forth. First access to:
+
+```bash
+$ cd Adafruit-Motor-HAT-Python/examples
+$ nano DCTest.py
+```
+Here you will see the code which shows you everything the MotorHAT library can do and how to do it.
+
+#### DC motor control
+
+1. Start with importing at least these libraries:
+
+```python
+#!/usr/bin/python
+from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+
+import time
+import atexit
+```
+
+2. The MotorHAT library contains a few different classes, one is the MotorHAT class itself which is the main PWM controller. You'll always need to create an object, and set the address. By default the address is 0x60 (see the stacking HAT page on why you may want to change the address)
+
+```python
+# create a default object, no changes to I2C address or frequency
+mh = Adafruit_MotorHAT(addr=0x60)
+```
+
+3. The PWM driver is 'free running' - that means that even if the python code or Pi linux kernel crashes, the PWM driver will still continue to work. This is good because it lets the Pi focus on linuxy things while the PWM driver does its PWMy things. But it means that the motors DO NOT STOP when the python code quits
+For that reason, we strongly recommend this 'at exit' code when using DC motors, it will do its best to shut down all the motors.
+
+```python
+# recommended for auto-disabling motors on shutdown!
+def turnOffMotors():
+	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
+
+atexit.register(turnOffMotors)
+```
+
+#### Creating the DC motor object
+
+4. OK now that you have the motor HAT object, note that each HAT can control up to 4 motors. And you can have multiple HATs!
+To create the actual DC motor object, you can request it from the MotorHAT object you created above with getMotor(num) with a value between 1 and 4, for the terminal number that the motor is attached to
+
+```python
+myMotor = mh.getMotor(3)
+```
+
+DC motors are simple beasts, you can basically only set the speed and direction
+
+#### Setting DC Motor Speed
+
+5. To set the speed, call setSpeed(speed) where speed varies from 0 (off) to 255 (maximum!). This is the PWM duty cycle of the motor
+
+```python
+# set the speed to start, from 0 (off) to 255 (max speed)
+myMotor.setSpeed(150)
+```
+
+#### Setting DC Motor Direction
+
+6. To set the direction, call run(direction) where direction is a constant from one of the following:
+  * Adafruit_MotorHAT.FORWARD - DC motor spins forward
+  * Adafruit_MotorHAT.BACKWARD - DC motor spins forward
+  * Adafruit_MotorHAT.RELEASE - DC motor is 'off', not spinning but will also not hold its place.
+
+```python
+while (True):
+	print "Forward! "
+	myMotor.run(Adafruit_MotorHAT.FORWARD)
+
+	print "\tSpeed up..."
+	for i in range(255):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "\tSlow down..."
+	for i in reversed(range(255)):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "Backward! "
+	myMotor.run(Adafruit_MotorHAT.BACKWARD)
+
+	print "\tSpeed up..."
+	for i in range(255):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "\tSlow down..."
+	for i in reversed(range(255)):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "Release"
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	time.sleep(1.0)
+```
