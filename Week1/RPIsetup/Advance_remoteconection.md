@@ -96,8 +96,7 @@ The default ```pi``` user on Raspbian is a sudoer. This gives the ability to run
 
 The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date.
 
-In order to avoid problems due to connectivity in our terminal session when updating and upgrading the operative system, we can open a Screen session as explained in the first week at the end of the [RPI setup  section](Week1/RPIsetup/RPI_setup.md).
-so we leave the command here for you to use un the future:
+In order to avoid problems due to connectivity in our terminal session when updating and upgrading the operative system, we can open a Screen session as explained in the first week at the end of the [RPI setup  section](Week1/RPIsetup/RPI_setup.md). It is recommended to use *Screen* in case the internet connection is interrupted, the update will continue on the Pi and therefore not damaging the library. We leave the command here for you to use un the future:
 
 1. Starting a *Screen*:
 ```
@@ -108,3 +107,5 @@ $ sudo screen -S session1
 ``` bash
 $ sudo apt-get -y update && sudo apt-get -y upgrade
 ```
+
+3. You can then press "Ctrl + A", then press "d" to detach from screen. the update and upgrade will then continue to run in the background as long as the RPi still has the internet connection and power.
