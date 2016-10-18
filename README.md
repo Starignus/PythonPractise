@@ -17,3 +17,7 @@ $git clone https://github.com/Starignus/PythonPractise.git
 * [Raspberry Pi set up](Week1/RPIsetup/RPI_setup.md)
   * [Advance remote access notes.](Week1/RPIsetup/Advance_remoteconection.md)
 * [Linux (Bash) commands cheat sheet.](Week1/Bash_script/Cheat_sheat_bash_Linux.md)
+
+##### Week 2:
+* [Remote Access in practise](Week1/RPIsetup/Advance_remoteconection.md)
+* [GPIO-Part 1](Week2/GPIO_Part1.md)

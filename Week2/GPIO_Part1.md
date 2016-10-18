@@ -42,7 +42,7 @@ Before starting with our practise, we will revise the difference between **analo
 
 * In **digital technology**, translation of information is into binary format (zero or one) where each bit is representative of two distinct amplitudes.
 
-<img src="analog_digital.png" alt="pin" style="width: 500px;"/>
+<img src="analog_digital.png" alt="pin" style="width: 300px;"/>
 
 #### Comparison chart
 
@@ -64,6 +64,124 @@ Before starting with our practise, we will revise the difference between **analo
 |**Cost**|Low cost and portable.|	Cost is high and not easily portable.|
 |**Impedance**|	Low	|High order of 100 megaohm|
 |**Errors**|Analog instruments usually have a scale which is cramped at lower end and give considerable observational errors.|	Digital instruments are free from observational errors like parallax and approximation errors.|
+
+## Hardware Setup
+
+We start assembling the circuit as show in the diagram bellow. We will use two LEDs to test the output functionality (digital and PWM-Pulse-width Modulation), and a button to test the input.
+
+<img src="pracise_1.png" alt="pinboard" style="width: 400px;"/>
+
+In the next table you will see which RPi's pins we are suing:
+
+##### Leds
+
+| Broadcom chip-specific numbers| P1 Pin Number|
+|:----------|:----------|
+|GPIO 18|12|
+|GPIO 23|16|
+
+##### Button
+
+| Broadcom chip-specific numbers| P1 Pin Number|
+|:----------|:----------|
+|GPIO 17|11|
+
+##### Ground
+| Broadcom chip-specific numbers| P1 Pin Number|
+|:----------|:----------|
+|Ground|6|
+
+
+## Python (RPi.GPIO) API Example
+
+We will use the **RPi.GPIO module** as the driving force behind our Python examples. These Python files and source is included with Raspbian, so assuming you are running the latest Linux distribution, you do not need to download anything to get started. Let's see an example:
+
+1. From your terminal in your laptop connect to your RPi.
+2. Create a folder call "code", then a file call "blinker.py":
+
+```bash
+$ mkdir code
+$ cd code
+$ touch blinker.py
+```
+3. Then we open it with our text editor:
+
+```bash
+$ nano blinker.py
+```
+
+4. Then, copy the next code in your text editor. This code assumes we have set up he circuit as we arranged above.
+
+```python
+#!/usr/bin/env python
+
+
+# External module imports GPIO
+import RPi.GPIO as GPIO
+# Library to slow or give a rest to the script
+import time
+
+
+# Pin definiton using Broadcom scheme
+# PWM (“Analog”)
+pwmPin = 18 # Broadcom pin 18 (P1 pin 12)
+# Led
+ledPin = 23 # Broadcom pin 23 (P1 pin 16)
+# Button
+butPin = 17 # Broadcom pin 17 (P1 pin 11)
+
+dc = 95 # duty cycle (0 i.e 0%/LOW and 100 ie.e 100%/HIGH) for PWM pin
+
+
+# Pin Setup:
+GPIO.setmode(GPIO.BCM) # Broadcom pin-numbering scheme
+GPIO.setup(ledPin, GPIO.OUT) # LED pin set as output
+GPIO.setup(pwmPin, GPIO.OUT) # PWM pin set as output
+# PWM (“Analog”) Output
+pwm = GPIO.PWM(pwmPin, 50)  # Initialize PWM on pwmPin 100Hz frequency
+GPIO.setup(butPin, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Button pin set as input w/ pull-up resistors
+
+
+# Initial state for LEDs:
+GPIO.output(ledPin, GPIO.LOW)
+# This function set an initial value of the frequency
+pwm.start(dc)
+
+
+print("Here we go! Press CTRL+C to exit")
+try:
+    while 1:
+        # The input() function will return either a True or False indicating whether the pin is HIGH or LOW.
+        if GPIO.input(butPin): # button is released
+            pwm.ChangeDutyCycle(dc) # Adjust the value of the PWM output
+            GPIO.output(ledPin, GPIO.LOW)
+        else: # button is pressed:
+            pwm.ChangeDutyCycle(100-dc)
+            GPIO.output(ledPin, GPIO.HIGH)
+            # Delay of 75 milliseconds
+            time.sleep(0.075)
+            GPIO.output(ledPin, GPIO.LOW)
+            # Delay of 75 milliseconds
+            time.sleep(0.075)
+except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
+    pwm.stop() # stop PWM
+    GPIO.cleanup() # cleanup all GPIO
+```
+
+5. Running the script needs administrator privileges because the RPi.GPIO module requires it. So we run the following commands:
+
+To make the script an executable:
+
+```bash
+$ sudo chmod u+x blinker.py
+$ ./blinker.py
+```
+With the code running, press the button to turn on the digital LED. The PWM-ing LED will invert its brightness when you press the button as well.
+
+## Python (RPi.GPIO) API: Overview of the basic function calls used in our example.
+
+
+
 
 
 ## Suggested readings
