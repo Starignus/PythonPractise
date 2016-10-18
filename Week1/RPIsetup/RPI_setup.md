@@ -156,7 +156,7 @@ sudo apt-get -y install weavedconnectd
 
 ##### Weaved configuration:
 
-* To configure weaved in our RPi, first we need to open an account in [weaved](http://www.weaved.com/) website. You can register from your laptop or desktop. Once you have it, from your Rpi terminal you will execute a command to link your RPi to your weaved account:
+* To configure weaved in our RPi, first we need to open an account in [weaved](https://developer.weaved.com/portal/login.php) website. You can register from your laptop or desktop. Once you have it, from your Rpi terminal you will execute a command to link your RPi to your weaved account:
 ```bash
 sudo weavedinstaller
 ```
