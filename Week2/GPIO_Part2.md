@@ -167,3 +167,5 @@ while (True):
 	myMotor.run(Adafruit_MotorHAT.RELEASE)
 	time.sleep(1.0)
 ```
+
+Reference[[1](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/overview)]
