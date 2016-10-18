@@ -24,4 +24,20 @@ Once the motor HAT is assembled, we place it on top so that the short pins of th
 
  <img src="raspberry_pi_place.jpg" alt="rpi-hat" style="width: 400px;"/>
 
- ## Powering Motors
+## Powering Motors
+
+Note the HAT does not power the Raspberry Pi, and we strongly recommend having two separate power supplies - one for the RPi and one for the motors, as motors can put a lot of noise onto a power supply and it could cause stability problems.
+
+##### Voltage requirements
+
+The motor controllers on this HAT are designed to run from **5V to 12V**. Therefore, the first important thing is to verify the voltage specifications for the motor. Some small hobby motors are only intended to run at 1.5V (**MOST 1.5-3V MOTORS WILL NOT WORK or will be damaged by 5V power**), but its just as common to have 6-12V motors.
+
+##### Current requirements
+
+The motor driver chips that come with the kit are designed to provide up to **1.2 A per motor**, with 3A peak current. Note that once you head towards 2A you will probably want to put a heat-sink on the motor driver, otherwise you will get thermal failure, possibly burning out the chip.
+
+**Am important thing you can not run motors off of a 9V battery so don't waste your time/batteries!**
+
+Therefore, you can use a 9V 1A, 12V 1A, or 12V 5A DC regulated switching power adapter. In case you want to make it portable, you can use a big Lead Acid or multiple-AA NiMH battery pack of 4 to 8 batteries to vary the voltage from about 6V to 12V as your motors require.
+
+<img src="raspberry_pi_powerplug.jpg" alt="hat-power" style="width: 400px;"/>
