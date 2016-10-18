@@ -70,6 +70,10 @@ Instead a terminal, we can use to transfer files using a software that mounts an
 
 <img src="cyberduck.png" alt="weaved" style="width: 400px;"/>
 
+* For just Windows you can use: [WinSCP](https://winscp.net/eng/index.php)
+
+<img src="WinSCPPortable.png" alt="weaved" style="width: 400px;"/>
+
 ## Creating and deleting a new user
 
 You can create additional users on your Raspbian installation with the ```adduser``` command.
