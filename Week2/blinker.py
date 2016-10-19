@@ -8,7 +8,7 @@ import time
 
 
 # Pin definiton using Broadcom scheme
-# PWM (“Analog”)
+# PWM ("Analog")
 pwmPin = 18  # Broadcom pin 18 (P1 pin 12)
 # Led
 ledPin = 23  # Broadcom pin 23 (P1 pin 16)
@@ -22,7 +22,7 @@ dc = 95  # duty cycle (0 i.e 0%/LOW and 100 ie.e 100%/HIGH) for PWM pin
 GPIO.setmode(GPIO.BCM)  # Broadcom pin-numbering scheme
 GPIO.setup(ledPin, GPIO.OUT)  # LED pin set as output
 GPIO.setup(pwmPin, GPIO.OUT)  # PWM pin set as output
-# PWM (“Analog”) Output
+# PWM ("Analog") Output
 pwm = GPIO.PWM(pwmPin, 50)  # Initialize PWM on pwmPin 100Hz frequency
 # Button pin set as input w/ pull-up resistors
 GPIO.setup(butPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
