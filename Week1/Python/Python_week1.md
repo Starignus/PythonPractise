@@ -188,7 +188,7 @@ Then you can type in the editor:
 x = 2
 print x
 x = x + 2
-print
+print x
 ```
 When a program is running, it flows from one step to the next.  As programmers, we set up “paths” for the program to follow.
 
