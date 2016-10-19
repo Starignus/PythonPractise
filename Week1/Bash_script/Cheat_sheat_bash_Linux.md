@@ -19,7 +19,7 @@ $ ls -alrt
 $ pwd
 $ mkdir codes
 $ mkdir temp temp1
-$ mkdir temp2/ok
+$ mkdir -p temp2/ok
 $ cat file.txt
 $ cat file.txt file2.txt > fileOut.txt
 $ rm file.txt
