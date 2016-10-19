@@ -22,4 +22,4 @@ $git clone https://github.com/Starignus/PythonPractise.git
 * [Remote Access in practise](Week1/RPIsetup/Advance_remoteconection.md)
 * [Warming up in Python](Week1/Python/Python_week1.md)
 * [GPIO-Part 1](Week2/GPIO_Part1.md)
-* [GPIO-Part 2](Week2/GPIO_Part2.md)
+* [GPIO-Part 2](Week2/GPIO_Part2_MotorHAT.md)
