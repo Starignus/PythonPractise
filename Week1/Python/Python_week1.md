@@ -294,7 +294,7 @@ Now, let's make a function that can be used in the for loop example.
 $ nano example_function_circle_area.py
 ```
 ```python
-##!/usr/bin/env python
+#!/usr/bin/env python
 
 # Area of a circle = pi * r**2
 
