@@ -2,6 +2,7 @@
 
 Here you will see a summary of the common commands use in Linux (Unix) environment. We will just give examples of the ones we will use more frequently during the workshop. This commands can't be used in Windows environment unless you use a [Linux emulator](https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwi5tb-ijtPPAhWD7hoKHdyTA-IQFggmMAE&url=https%3A%2F%2Fwww.cygwin.com%2F&usg=AFQjCNHet6tpyafCXeYZCDWdFVdg2_A4IQ&sig2=jK-xBiPuohBaZkfcHhnHUw).
 If you need information in the terminal about an specific Linux/Unix command you can type a command line on the terminal:
+
 ```Bash
 $ man ls
 ```
@@ -32,6 +33,7 @@ $ df -h
 
 ##### Examples - Create a File:**
 **Method 1:** Using nano editor:
+
 ``` bash
 $ nano file.txt
 ```
@@ -54,16 +56,19 @@ To exit press: **ctrl + d"**.
 <img src="Disk_usage.png" alt="Disk_usage" style="width: 300px;"/>
 
 ### File transfer and Remote Access
-<img src="Remote_access.png
-" alt="Remote_access" style="width: 300px;"/>
+
+<img src="Remote_access.png" alt="Remote_access" style="width: 300px;"/>
 
 ### Search
+
 <img src="Search.png" alt="Search" style="width: 300px;"/>
 
 ### System
+
 <img src="System.png" alt="System" style="width: 300px;"/>
 
 ### Process Related
+
 <img src="Process_related.png" alt="Process_related" style="width: 300px;"/>
 
 ### Virtual terminal (Screen)
