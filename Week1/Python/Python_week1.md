@@ -1,5 +1,6 @@
 # Introduction to Python
 
+
 #### About Python Language  
 
 Remember that you are intelligent and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, in order for you to communicate instructions to the computer it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.
