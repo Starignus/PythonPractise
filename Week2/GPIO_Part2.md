@@ -87,14 +87,14 @@ import time
 import atexit
 ```
 
-2. The MotorHAT library contains a few different classes, one is the MotorHAT class itself which is the main PWM controller. You'll always need to create an object, and set the address. By default the address is 0x60 (see the stacking HAT page on why you may want to change the address)
+2. The MotorHAT library contains a few different classes, one is the **MotorHAT class** itself which is the main PWM controller. You always need to create an object, and set the address (or frequency). By default the address is 0x60. We can change this address, but for now we are not going to do it.
 
 ```python
 # create a default object, no changes to I2C address or frequency
 mh = Adafruit_MotorHAT(addr=0x60)
 ```
 
-3. The PWM driver is 'free running' - that means that even if the python code or Pi linux kernel crashes, the PWM driver will still continue to work. This is good because it lets the Pi focus on linuxy things while the PWM driver does its PWMy things. But it means that the motors DO NOT STOP when the python code quits
+3. The PWM driver is 'free running' - that means that even if the python code or Pi linux kernel crashes, the PWM driver will still continue to work. But it means that the motors **DO NOT STOP** when the python code quits
 For that reason, we strongly recommend this 'at exit' code when using DC motors, it will do its best to shut down all the motors.
 
 ```python
@@ -110,18 +110,19 @@ atexit.register(turnOffMotors)
 
 #### Creating the DC motor object
 
-4. OK now that you have the motor HAT object, note that each HAT can control up to 4 motors. And you can have multiple HATs!
-To create the actual DC motor object, you can request it from the MotorHAT object you created above with getMotor(num) with a value between 1 and 4, for the terminal number that the motor is attached to
+4. Now that you have the motor HAT object, note that each HAT can control up to 4 motors. That means you can have multiple HATs running.
+To create the actual DC motor object, you can request it from the MotorHAT object you created above with ``getMotor(num)`` with a value between 1 and 4, for the terminal number that the motor is attached to
 
 ```python
+# In this case is M3
 myMotor = mh.getMotor(3)
 ```
 
-DC motors are simple beasts, you can basically only set the speed and direction
+DC motors are simple beasts, you can basically only set the speed and direction.
 
 #### Setting DC Motor Speed
 
-5. To set the speed, call setSpeed(speed) where speed varies from 0 (off) to 255 (maximum!). This is the PWM duty cycle of the motor
+5. To set the speed, call ``setSpeed(speed)`` where speed varies from 0 (off) to 255 (Maximum). This is the PWM duty cycle of the motor.
 
 ```python
 # set the speed to start, from 0 (off) to 255 (max speed)
@@ -130,10 +131,11 @@ myMotor.setSpeed(150)
 
 #### Setting DC Motor Direction
 
-6. To set the direction, call run(direction) where direction is a constant from one of the following:
-  * Adafruit_MotorHAT.FORWARD - DC motor spins forward
-  * Adafruit_MotorHAT.BACKWARD - DC motor spins forward
-  * Adafruit_MotorHAT.RELEASE - DC motor is 'off', not spinning but will also not hold its place.
+6. To set the direction, we use the funciton ``run(direction)`` where direction is a constant from one of the following:
+7.
+  * ```Adafruit_MotorHAT.FORWARD``` - DC motor spins forward.
+  * ```Adafruit_MotorHAT.BACKWARD``` - DC motor spins backward.
+  * ```Adafruit_MotorHAT.RELEASE``` - DC motor is 'off', not spinning but will also not hold its place.
 
 ```python
 while (True):
@@ -141,11 +143,14 @@ while (True):
 	myMotor.run(Adafruit_MotorHAT.FORWARD)
 
 	print "\tSpeed up..."
+  # This will loop from 0-254
 	for i in range(255):
 		myMotor.setSpeed(i)
+    # It will stop 10 ms
 		time.sleep(0.01)
 
 	print "\tSlow down..."
+  # This will loop from 244-0
 	for i in reversed(range(255)):
 		myMotor.setSpeed(i)
 		time.sleep(0.01)
