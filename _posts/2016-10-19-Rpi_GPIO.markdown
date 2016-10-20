@@ -25,7 +25,7 @@ Your Raspberry Pi is more than just a small computer, it is a hardware prototypi
 
 Raspberry has its GPIO over a standard male header on the board. From the first models to the latest, the header has expanded from 26 pins to 40 pins while maintaining the original pinout.
 
-<img src="{{site.url}}/assets/rpi_old_new_pin.jpg" alt="rpi" style="width: 400px;"/>
+<img src="{{ site.url }}/assets/rpi_old_new_pin.jpg" alt="rpi" style="width: 400px;"/>
 
 There are (at least) two, different numbering schemes you may encounter when referencing **Pi pin numbers**:
 
@@ -36,7 +36,7 @@ You can use use either number-system, but when you are programming how to use th
 
 The next table shows all 40 pins on the P1 header, including any special function they may have, and their dual numbers:
 
-<img src="{{site.url}}/assets/header_pinout.jpg" alt="pin" style="width: 400px;"/>
+<img src="{{ site.url }}/assets/header_pinout.jpg" alt="pin" style="width: 400px;"/>
 
 In the next table we show other numbering system  along with the ones we showed above: Pi pin header numbers and element14 given names: wiringPi numbers, Python numbers, and related silkscreen on the wedge. The Broadcom pin numbers in the table are relate to RPi Model 2 and later only.
 

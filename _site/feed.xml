@@ -1,4 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-20T12:59:30+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo Workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Raspberry Pi GPIO</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO/" rel="alternate" type="text/html" title="Raspberry Pi GPIO" /><published>2016-10-19T14:00:00+01:00</published><updated>2016-10-19T14:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO/">&lt;h1 id=&quot;raspberry-pi-gpio-part-1&quot;&gt;Raspberry Pi GPIO-Part 1&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-20T13:12:21+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo Workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Adafruit DC Motor HAT for Raspberry Pi</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/" rel="alternate" type="text/html" title="Adafruit DC Motor HAT for Raspberry Pi" /><published>2016-10-19T15:00:00+01:00</published><updated>2016-10-19T15:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/">&lt;h1 id=&quot;raspberry-pi-gpio-part-2-adafruit-dc-motor-hat-for-raspberry-pi&quot;&gt;Raspberry Pi GPIO-Part 2: Adafruit DC Motor HAT for Raspberry Pi&lt;/h1&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;The &lt;strong&gt;DC+Stepper Motor HAT from Adafruit&lt;/strong&gt; is a perfect add-on for any motor project as it can drive up to 4 DC or 2 Stepper motors with full PWM speed control. However, the Raspberry Pi does not have a lot of PWM pins, we use a fully-dedicated PWM driver chip onboard to both control motor direction and speed. This chip handles all the motor and speed controls over I2C. Only two GPIO pins (SDA &amp;amp; SCL) are required to drive the multiple motors, and since it is I2C you can also connect any other I2C devices or HATs to the same pins.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;a href=&quot;(https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)&quot;&gt;I2C&lt;/a&gt; is a very commonly used standard designed to allow one chip to talk to another. So, since the Raspberry Pi can talk I2C we can connect it to a variety of I2C capable chips and modules.&lt;/p&gt;
+
+&lt;h5 id=&quot;features&quot;&gt;Features:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;4 H-Bridges: TB6612 MOSFET chipset provides 1.2A per bridge (3A brief peak) with thermal shutdown protection, internal kickback protection diodes. Can run motors on 4.5VDC to 13.5VDC.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Up to 4 bi-directional DC motors&lt;/strong&gt; with individual 8-bit speed selection (so, about 0.5% resolution).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Up to 2 stepper motors&lt;/strong&gt; (unipolar or bipolar) with single coil, double coil, interleaved or micro-stepping.&lt;/li&gt;
+  &lt;li&gt;Big terminal block connectors to easily hook up wires (18-26AWG) and power.&lt;/li&gt;
+  &lt;li&gt;Polarity protected 2-pin terminal block and jumper to connect external 5-12VDC power.&lt;/li&gt;
+  &lt;li&gt;Install the easy-to-use Python library.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;assembly&quot;&gt;Assembly&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The Motor HAT&lt;/strong&gt; comes with an assembled and tested HAT, terminal blocks, and 2x20 plain header. Some soldering is required to assemble the headers on. Here we leave a link with a &lt;a href=&quot;https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly&quot;&gt;step-by-step&lt;/a&gt; guide of how to solder the headers and a video to show you &lt;a href=&quot;https://www.youtube.com/watch?v=QKbJxytERvg&quot;&gt;tips on soldering&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/raspberry_pi_2348_top_ORIG.jpg&quot; alt=&quot;rpi&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the motor HAT is assembled, we place it on top so that the short pins of the 2x20 header line up with the pads on the HAT.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/raspberry_pi_place.jpg&quot; alt=&quot;rpi-hat&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;powering-motors&quot;&gt;Powering Motors&lt;/h2&gt;
+
+&lt;p&gt;Note the HAT does not power the Raspberry Pi, and we strongly recommend having two separate power supplies - one for the RPi and one for the motors, as motors can put a lot of noise onto a power supply and it could cause stability problems.&lt;/p&gt;
+
+&lt;h5 id=&quot;voltage-requirements&quot;&gt;Voltage requirements&lt;/h5&gt;
+
+&lt;p&gt;The motor controllers on this HAT are designed to run from &lt;strong&gt;5V to 12V&lt;/strong&gt;. Therefore, the first important thing is to verify the voltage specifications for the motor. Some small hobby motors are only intended to run at 1.5V (&lt;strong&gt;MOST 1.5-3V MOTORS WILL NOT WORK or will be damaged by 5V power&lt;/strong&gt;), but its just as common to have 6-12V motors.&lt;/p&gt;
+
+&lt;h5 id=&quot;current-requirements&quot;&gt;Current requirements&lt;/h5&gt;
+
+&lt;p&gt;The motor driver chips that come with the kit are designed to provide up to &lt;strong&gt;1.2 A per motor&lt;/strong&gt;, with 3A peak current. Note that once you head towards 2A you will probably want to put a heat-sink on the motor driver, otherwise you will get thermal failure, possibly burning out the chip.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Am important thing you can not run motors off of a 9V battery so don’t waste your time/batteries!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore, you can use a 9V 1A, 12V 1A, or 12V 5A DC regulated switching power adapter. In case you want to make it portable, you can use a big Lead Acid or multiple-AA NiMH battery pack of 4 to 8 batteries to vary the voltage from about 6V to 12V as your motors require.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/raspberry_pi_powerplug.jpg&quot; alt=&quot;hat-power&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;connecting-dc-motors&quot;&gt;Connecting DC Motors&lt;/h2&gt;
+
+&lt;p&gt;To connect a motor, simply solder two wires to the terminals and then connect them to either the &lt;strong&gt;M1, M2, M3&lt;/strong&gt;, or &lt;strong&gt;M4&lt;/strong&gt;. If your motor is running ‘backwards’ from the way you like, just swap the wires in the terminal block. For this demo, please connect it to &lt;strong&gt;M3&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/raspberry_pi_dcmotor.jpg&quot; alt=&quot;hat-power&quot; style=&quot;width: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-software&quot;&gt;Installing Software&lt;/h2&gt;
+
+&lt;p&gt;We can download the Python library to control DC and stepper motors. Before you start, we need to install the &lt;strong&gt;python smbus library&lt;/strong&gt; as well as ‘git’. For the latter, execute the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get install python-smbus git
+ &lt;span class=&quot;sb&quot;&gt;```&lt;/span&gt;
+
+Now, we download the code as:
+
+&lt;span class=&quot;sb&quot;&gt;```&lt;/span&gt;bash
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;code
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/adafruit/Adafruit-Motor-HAT-Python-Library.git
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Adafruit-Motor-HAT-Python-Library
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo python setup.py install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now you can get started with testing to  watch your motor spin back and forth. First access to:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Adafruit-Motor-HAT-Python/examples
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;nano DCTest.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Here you will see the code which shows you everything the MotorHAT library can do and how to do it.&lt;/p&gt;
+
+&lt;h4 id=&quot;dc-motor-control&quot;&gt;DC motor control&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start with importing at least these libraries:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Adafruit_MotorHAT&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Adafruit_DCMotor&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;atexit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The MotorHAT library contains a few different classes, one is the &lt;strong&gt;MotorHAT class&lt;/strong&gt; itself which is the main PWM controller. You always need to create an object, and set the address (or frequency). By default the address is 0x60. We can change this address, but for now we are not going to do it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# create a default object, no changes to I2C address or frequency&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The PWM driver is ‘free running’ - that means that even if the python code or Pi linux kernel crashes, the PWM driver will still continue to work. But it means that the motors &lt;strong&gt;DO NOT STOP&lt;/strong&gt; when the python code quits
+For that reason, we strongly recommend this ‘at exit’ code when using DC motors, it will do its best to shut down all the motors.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# recommended for auto-disabling motors on shutdown!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;turnOffMotors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RELEASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RELEASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RELEASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RELEASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;atexit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;turnOffMotors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;creating-the-dc-motor-object&quot;&gt;Creating the DC motor object&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Now that you have the motor HAT object, note that each HAT can control up to 4 motors. That means you can have multiple HATs running.
+To create the actual DC motor object, you can request it from the MotorHAT object you created above with &lt;code class=&quot;highlighter-rouge&quot;&gt;getMotor(num)&lt;/code&gt; with a value between 1 and 4, for the terminal number that the motor is attached to&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# In this case is M3&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getMotor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;DC motors are simple beasts, you can basically only set the speed and direction.&lt;/p&gt;
+
+&lt;h4 id=&quot;setting-dc-motor-speed&quot;&gt;Setting DC Motor Speed&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;To set the speed, call &lt;code class=&quot;highlighter-rouge&quot;&gt;setSpeed(speed)&lt;/code&gt; where speed varies from 0 (off) to 255 (Maximum). This is the PWM duty cycle of the motor.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# set the speed to start, from 0 (off) to 255 (max speed)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;setting-dc-motor-direction&quot;&gt;Setting DC Motor Direction&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;To set the direction, we use the funciton &lt;code class=&quot;highlighter-rouge&quot;&gt;run(direction)&lt;/code&gt; where direction is a constant from one of the following:
+7.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Adafruit_MotorHAT.FORWARD&lt;/code&gt; - DC motor spins forward.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Adafruit_MotorHAT.BACKWARD&lt;/code&gt; - DC motor spins backward.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Adafruit_MotorHAT.RELEASE&lt;/code&gt; - DC motor is ‘off’, not spinning but will also not hold its place.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Forward! &quot;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FORWARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Speed up...&quot;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# This will loop from 0-254&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# It will stop 10 ms&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Slow down...&quot;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# This will loop from 244-0&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Backward! &quot;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BACKWARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Speed up...&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Slow down...&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Release&quot;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;myMotor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adafruit_MotorHAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RELEASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Reference[&lt;a href=&quot;https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/overview&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;</content><author><name>Ariadna Blanca Romero &amp; Jing Sheng Pang</name></author><summary>Raspberry Pi GPIO-Part 2: Adafruit DC Motor HAT for Raspberry Pi</summary></entry><entry><title>Raspberry Pi GPIO</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO/" rel="alternate" type="text/html" title="Raspberry Pi GPIO" /><published>2016-10-19T14:00:00+01:00</published><updated>2016-10-19T14:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO/">&lt;h1 id=&quot;raspberry-pi-gpio-part-1&quot;&gt;Raspberry Pi GPIO-Part 1&lt;/h1&gt;
 
 &lt;p&gt;Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has &lt;strong&gt;bi-directional I/O pins&lt;/strong&gt;, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi’s I/O lines requires a bit or programming. You can use a &lt;a href=&quot;http://elinux.org/RPi_Low-level_peripherals#GPIO_Code_examples&quot;&gt;variety of programing languages&lt;/a&gt;, but we decided to use a really solid, easy tools for driving I/O: &lt;strong&gt;Python&lt;/strong&gt;.&lt;/p&gt;
 
