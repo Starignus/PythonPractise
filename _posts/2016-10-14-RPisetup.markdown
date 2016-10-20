@@ -2,7 +2,7 @@
 layout:     post
 title:      "Setting your Raspberry Pi at Imperial College"
 subtitle:   "A step-by-step guide"
-date:       2016-10-14 12:00:00
+date:       2016-10-14 11:00:00
 author:     "Ariadna Blanca Romero & Jing Sheng Pang"
 header-img: "img/post-bg-02.jpg"
 ---

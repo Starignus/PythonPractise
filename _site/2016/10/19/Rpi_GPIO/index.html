@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Python / Raspberry Pi Learning!"">
+
+    <title>Raspberry Pi GPIO - Gizmo Workshop</title>
+
+    <link rel="canonical" href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/Rpi_GPIO/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/PythonPractise//css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/PythonPractise//css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/PythonPractise//css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="https://starignus.github.io/PythonPractise//feed.xml" title="Gizmo Workshop" />
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/PythonPractise//">Gizmo Workshop</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/PythonPractise//">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/PythonPractise//about/">About Gizmo</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/PythonPractise//contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/PythonPractise//img/post-bg-05.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Raspberry Pi GPIO</h1>
+                    
+                    <h2 class="subheading">Your first project</h2>
+                    
+                    <span class="meta">Posted by Ariadna Blanca Romero & Jing Sheng Pang on October 19, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h1 id="raspberry-pi-gpio-part-1">Raspberry Pi GPIO-Part 1</h1>
+
+<p>Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has <strong>bi-directional I/O pins</strong>, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi’s I/O lines requires a bit or programming. You can use a <a href="http://elinux.org/RPi_Low-level_peripherals#GPIO_Code_examples">variety of programing languages</a>, but we decided to use a really solid, easy tools for driving I/O: <strong>Python</strong>.</p>
+
+<h2 id="material-needed">Material needed</h2>
+
+<ul>
+  <li>Raspberry Pi 3 B</li>
+  <li><a href="https://www.sparkfun.com/products/12002?_ga=1.251311686.1915117394.1476705504">Breadboard</a></li>
+  <li><a href="https://www.sparkfun.com/products/12794">Jumper Wires(M/F)</a></li>
+  <li><a href="https://www.sparkfun.com/products/9190?_ga=1.213562324.1915117394.1476705504">Momentary Pushbutton Switch</a></li>
+  <li><a href="https://www.sparkfun.com/products/11507?_ga=1.213562324.1915117394.1476705504">2 Resistors</a></li>
+  <li><a href="https://www.sparkfun.com/products/9590?_ga=1.213548756.1915117394.1476705504">2 LEDs</a></li>
+</ul>
+
+<h2 id="gpio-pinout">GPIO Pinout</h2>
+
+<p>Raspberry has its GPIO over a standard male header on the board. From the first models to the latest, the header has expanded from 26 pins to 40 pins while maintaining the original pinout.</p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/rpi_old_new_pin.jpg" alt="rpi" style="width: 400px;" /></p>
+
+<p>There are (at least) two, different numbering schemes you may encounter when referencing <strong>Pi pin numbers</strong>:</p>
+
+<ol>
+  <li><strong>Broadcom chip-specific</strong> pin numbers.</li>
+  <li><strong>P1 physical</strong> pin numbers.</li>
+</ol>
+
+<p>You can use use either number-system, but when you are programming how to use the pins, it require that you declare which scheme you are using at the very beginning of your program. We will see this later.</p>
+
+<p>The next table shows all 40 pins on the P1 header, including any special function they may have, and their dual numbers:</p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/header_pinout.jpg" alt="pin" style="width: 400px;" /></p>
+
+<p>In the next table we show other numbering system  along with the ones we showed above: Pi pin header numbers and element14 given names: wiringPi numbers, Python numbers, and related silkscreen on the wedge. The Broadcom pin numbers in the table are relate to RPi Model 2 and later only.</p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/Pi_pin_header_numbers.png" alt="pin" style="width: 300px;" /></p>
+
+<p>This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also <a href="https://learn.sparkfun.com/tutorials/serial-communication">Serial (UART)</a>, <a href="https://learn.sparkfun.com/tutorials/i2c">I2C</a>, <a href="https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi">SPI</a>, and even some <a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation">PWM</a> (“analog output”).</p>
+
+<h3 id="analog-vs-digital">Analog vs. Digital</h3>
+
+<p>Before starting with our practise, we will revise the difference between <strong>analog</strong> and <strong>digital</strong> signals. Both are used to transmit information, usually through <strong>electric signals</strong>. In both these technologies, the information, such as any audio or video, is transformed into electric signals. The <strong>difference between analog and digital</strong>:</p>
+
+<ul>
+  <li>
+    <p>In <strong>analog technology</strong>, information is translated into electric pulses of varying amplitude.</p>
+  </li>
+  <li>
+    <p>In <strong>digital technology</strong>, translation of information is into binary format (zero or one) where each bit is representative of two distinct amplitudes.</p>
+  </li>
+</ul>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/analog_digital.png" alt="pin" style="width: 300px;" /></p>
+
+<h4 id="comparison-chart">Comparison chart</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Analog</th>
+      <th style="text-align: left">Digital</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Signal</strong></td>
+      <td style="text-align: left">Analog signal is a continuous signal which represents physical measurements.</td>
+      <td style="text-align: left">Digital signals are discrete time signals generated by digital modulation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Waves</strong></td>
+      <td style="text-align: left">Denoted by sine waves.</td>
+      <td style="text-align: left">Denoted by square waves.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Representation</strong></td>
+      <td style="text-align: left">Uses continuous range of values to represent information.</td>
+      <td style="text-align: left">Uses discrete or discontinuous values to represent information.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Example</strong></td>
+      <td style="text-align: left">Human voice in air, analog electronic devices.</td>
+      <td style="text-align: left">Computers, CDs, DVDs, and other digital electronic devices.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Technology</strong></td>
+      <td style="text-align: left">Analog technology records waveforms as they are.</td>
+      <td style="text-align: left">Samples analog waveforms into a limited set of numbers and records them.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Data transmissions</strong></td>
+      <td style="text-align: left">Subjected to deterioration by noise during transmission and write/read cycle.</td>
+      <td style="text-align: left">Can be noise-immune without deterioration during transmission and write/read cycle.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Response to Noise</strong></td>
+      <td style="text-align: left">More likely to get affected reducing accuracy</td>
+      <td style="text-align: left">Less affected since noise response are analog in nature</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Flexibility</strong></td>
+      <td style="text-align: left">Analog hardware is not flexible.</td>
+      <td style="text-align: left">Digital hardware is flexible in implementation.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Uses</strong></td>
+      <td style="text-align: left">Can be used in analog devices only. Best suited for audio and video transmission.</td>
+      <td style="text-align: left">Best suited for Computing and digital electronics.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Applications</strong></td>
+      <td style="text-align: left">Thermometer</td>
+      <td style="text-align: left">PCs, PDAs</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Bandwidth</strong></td>
+      <td style="text-align: left">Analog signal processing can be done in real time and consumes less bandwidth.</td>
+      <td style="text-align: left">There is no guarantee that digital signal processing can be done in real time and consumes more bandwidth to carry out the same information.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Memory</strong></td>
+      <td style="text-align: left">Stored in the form of wave signal.</td>
+      <td style="text-align: left">Stored in the form of binary bit.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Power</strong></td>
+      <td style="text-align: left">Analog instrument draws large power.</td>
+      <td style="text-align: left">Digital instrument drawS only negligible power.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Cost</strong></td>
+      <td style="text-align: left">Low cost and portable.</td>
+      <td style="text-align: left">Cost is high and not easily portable.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Impedance</strong></td>
+      <td style="text-align: left">Low</td>
+      <td style="text-align: left">High order of 100 megaohm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Errors</strong></td>
+      <td style="text-align: left">Analog instruments usually have a scale which is cramped at lower end and give considerable observational errors.</td>
+      <td style="text-align: left">Digital instruments are free from observational errors like parallax and approximation errors.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="hardware-setup">Hardware Setup</h2>
+
+<p>We start assembling the circuit as show in the diagram bellow. We will use two LEDs to test the output functionality (digital and PWM-Pulse-width Modulation), and a button to test the input.</p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/pracise_1.png" alt="pinboard" style="width: 400px;" /></p>
+
+<p>In the next table you will see which RPi’s pins we are suing:</p>
+
+<h5 id="leds">Leds</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Broadcom chip-specific numbers</th>
+      <th style="text-align: left">P1 Pin Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">GPIO 18</td>
+      <td style="text-align: left">12</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GPIO 23</td>
+      <td style="text-align: left">16</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="button">Button</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Broadcom chip-specific numbers</th>
+      <th style="text-align: left">P1 Pin Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">GPIO 17</td>
+      <td style="text-align: left">11</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="ground">Ground</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Broadcom chip-specific numbers</th>
+      <th style="text-align: left">P1 Pin Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Ground</td>
+      <td style="text-align: left">6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="python-rpigpio-api-example">Python (RPi.GPIO) API Example</h2>
+
+<p>We will use the <strong>RPi.GPIO module</strong> as the driving force behind our Python examples. These Python files and source is included with Raspbian, so assuming you are running the latest Linux distribution, you do not need to download anything to get started. Let’s see an example:</p>
+
+<ol>
+  <li>From your terminal in your laptop connect to your RPi.</li>
+  <li>Create a folder call “code”, then a file call “blinker.py”:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir code
+<span class="gp">$ </span><span class="nb">cd </span>code
+<span class="gp">$ </span>touch blinker.py
+</code></pre>
+</div>
+<ol>
+  <li>Then we open it with our text editor:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano blinker.py
+</code></pre>
+</div>
+
+<ol>
+  <li>Then, copy the next code in your text editor. This code assumes we have set up he circuit as we arranged above.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+
+
+<span class="c"># External module imports GPIO</span>
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
+<span class="c"># Library to slow or give a rest to the script</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="c"># Pin definiton using Broadcom scheme</span>
+<span class="c"># PWM (Analog)</span>
+<span class="n">pwmPin</span> <span class="o">=</span> <span class="mi">18</span>  <span class="c"># Broadcom pin 18 (P1 pin 12)</span>
+<span class="c"># Led</span>
+<span class="n">ledPin</span> <span class="o">=</span> <span class="mi">23</span>  <span class="c"># Broadcom pin 23 (P1 pin 16)</span>
+<span class="c"># Button</span>
+<span class="n">butPin</span> <span class="o">=</span> <span class="mi">17</span>  <span class="c"># Broadcom pin 17 (P1 pin 11)</span>
+
+<span class="n">dc</span> <span class="o">=</span> <span class="mi">95</span>  <span class="c"># duty cycle (0 i.e 0%/LOW and 100 ie.e 100%/HIGH) for PWM pin</span>
+
+
+<span class="c"># Pin Setup:</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>  <span class="c"># Broadcom pin-numbering scheme</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>  <span class="c"># LED pin set as output</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">pwmPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>  <span class="c"># PWM pin set as output</span>
+<span class="c"># PWM (Analog) Output</span>
+<span class="n">pwm</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">pwmPin</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>  <span class="c"># Initialize PWM on pwmPin 100Hz frequency</span>
+<span class="c"># Button pin set as input w/ pull-up resistors</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">butPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">pull_up_down</span><span class="o">=</span><span class="n">GPIO</span><span class="o">.</span><span class="n">PUD_UP</span><span class="p">)</span>
+
+
+<span class="c"># Initial state for LEDs:</span>
+<span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
+<span class="c"># This function set an initial value of the frequency</span>
+<span class="n">pwm</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">dc</span><span class="p">)</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Here we go! Press CTRL+C to exit"</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c"># The input() function will return either a True or False</span>
+        <span class="c"># indicating whether the pin is HIGH or LOW.</span>
+        <span class="k">if</span> <span class="n">GPIO</span><span class="o">.</span><span class="nb">input</span><span class="p">(</span><span class="n">butPin</span><span class="p">):</span>  <span class="c"># button is released</span>
+            <span class="n">pwm</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="n">dc</span><span class="p">)</span>  <span class="c"># Adjust the value of the PWM output</span>
+            <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c"># button is pressed:</span>
+            <span class="n">pwm</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">dc</span><span class="p">)</span>
+            <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">HIGH</span><span class="p">)</span>
+            <span class="c"># Delay of 75 milliseconds</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.075</span><span class="p">)</span>
+            <span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">LOW</span><span class="p">)</span>
+            <span class="c"># Delay of 75 milliseconds</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.075</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">KeyboardInterrupt</span><span class="p">:</span>  <span class="c"># If CTRL+C is pressed, exit cleanly:</span>
+    <span class="n">pwm</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>  <span class="c"># stop PWM</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>  <span class="c"># cleanup all GPIO</span>
+
+</code></pre>
+</div>
+
+<ol>
+  <li>Running the script needs administrator privileges because the RPi.GPIO module requires it. So we run the following commands:</li>
+</ol>
+
+<p>To make the script an executable:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo chmod u+x blinker.py
+<span class="gp">$ </span>./blinker.py
+</code></pre>
+</div>
+
+<p>With the code running, press the button to turn on the digital LED. The PWM-ing LED will invert its brightness when you press the button as well.</p>
+
+<h2 id="python-rpigpio-api-overview-of-the-basic-function-calls-used-in-our-example">Python (RPi.GPIO) API: Overview of the basic function calls used in our example.</h2>
+
+<h3 id="setup-section">Setup Section</h3>
+
+<ul>
+  <li>When we use python to control our GPIO pins, we always need to import the corresponding Python module, which goes at the top of the script:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="kn">as</span> <span class="nn">GPIO</span>
+</code></pre>
+</div>
+<p>In here, we are giving a shorter name to the module “GPIO”, in order to call the module through our script.</p>
+
+<ul>
+  <li>It is important to define which of the two <strong>pin-numbering schemes</strong> you want to use:
+    <ol>
+      <li><code class="highlighter-rouge">GPIO.BOARD</code>– <strong>Board numbering scheme</strong>. The pin numbers follow the <strong>pin numbers on header P1</strong>.</li>
+      <li><code class="highlighter-rouge">GPIO.BCM</code> – <strong>Broadcom chip-specific pin numbers</strong>. These pin numbers follow the lower-level numbering system defined by the Raspberry Pi’s Broadcom-chip brain.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>To specify in your code which number-system is being used, use the <code class="highlighter-rouge">GPIO.setmode()</code> function as:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BCM</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>This will activate the Broadcom-chip specific pin numbers.</p>
+
+<h3 id="setting-a-pin-mode">Setting a Pin Mode</h3>
+
+<p>You have to declare a “pin mode” before you can use it as either an input or output. To set a pin mode, use the <code class="highlighter-rouge">setup([pin], [GPIO.IN, GPIO.OUT]</code> function. So, if you want to set pin 18 (in the BCM) or 12 (in the BOARD) as an output, for example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="output">Output</h3>
+
+<h4 id="digital-output">Digital Output</h4>
+
+<p>To write a pin high or low, use the <code class="highlighter-rouge">GPIO.output([pin], [GPIO.LOW, GPIO.HIGH])</code> function. For example, if you want to set pin 18 (in the BCM) high:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">GPIO</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">HIGH</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Writing a pin to <code class="highlighter-rouge">GPIO.HIGH</code> will drive it to 3.3V, and <code class="highlighter-rouge">GPIO.LOW</code> will set it to 0V. For the lazy, alternative to <code class="highlighter-rouge">GPIO.HIGH</code> and <code class="highlighter-rouge">GPIO.LOW</code>, you can use either <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">True</code>, <code class="highlighter-rouge">0</code> or <code class="highlighter-rouge">False</code> to set a pin value.</p>
+
+<h4 id="pulse-width-modulation-pwm-analog-output">Pulse-width Modulation (PWM-“Analog”) Output</h4>
+
+<p>To initialize PWM, use <code class="highlighter-rouge">GPIO.PWM([pin], [frequency])</code> function. To make the rest of your script-writing easier you can assign that instance to a variable. Then use <code class="highlighter-rouge">pwm.start([duty cycle])</code> function to set an initial value. For example, we can set PWM pin up with a frequency of 1kHz, and set that output to a 50% duty cycle:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">pwm</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">pwm</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>To adjust the value of the PWM output, use the <code class="highlighter-rouge">pwm.ChangeDutyCycle([duty cycle])</code> function. <code class="highlighter-rouge">[duty cycle]</code> can be any value between 0 (i.e 0%/LOW) and 100 (ie.e 100%/HIGH). So to set a pin to 75% on, for example, you could write:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">pwm</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>To turn PWM on that pin off, use the <code class="highlighter-rouge">pwm.stop()</code> command. Just don’t forget to set the pin as an output before you use it for PWM.</p>
+
+<h3 id="inputs">Inputs</h3>
+
+<p>If a pin is configured as an input, you can use the <code class="highlighter-rouge">GPIO.input([pin])</code> function to read its value. The <code class="highlighter-rouge">input()</code> function will return either a <code class="highlighter-rouge">True</code> or <code class="highlighter-rouge">False</code> indicating whether the pin is HIGH or LOW. You can use an if statement to test this. For example, in the next lines of code the GPIO library will read pin 17 (in the BCM) and print whether it is being read as HIGH or LOW:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">GPIO</span><span class="o">.</span><span class="nb">input</span><span class="p">(</span><span class="mi">17</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Pin 11 is HIGH"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Pin 11 is LOW"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>#### Pull-Up/Down Resistors</p>
+
+<p>In the the <code class="highlighter-rouge">GPIO.setup()</code> function, we saw above, where we declared whether a pin was an input or output, we can use a third parameter to set pull-up or pull-down resistors: <code class="highlighter-rouge">pull_up_down=GPIO.PUD_UP</code> or <code class="highlighter-rouge">pull_up_down=GPIO.PUD_DOWN</code>. For example, to use a pull-up resistor on GPIO 17 (in the BCM), write this into your setup:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">pull_up_down</span><span class="o">=</span><span class="n">GPIO</span><span class="o">.</span><span class="n">PUD_UP</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>If nothing is declared in that third value, both pull-resistors will be disabled.</p>
+
+<h3 id="others">Others</h3>
+
+<h4 id="setting-up-delays">Setting up delays</h4>
+
+<p>If you need to slow down your Python script, you can add delays by incorporating the <a href="https://docs.python.org/2/library/time.html">time module</a> at the top of your script as:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
+</code></pre>
+</div>
+
+<p>Then, you can use <code class="highlighter-rouge">time.sleep([seconds])</code> to give your script a rest. You can use decimals to precisely set your delay. For example, to delay 250 milliseconds, write:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="garbage-collecting">Garbage Collecting</h3>
+
+<p>Once your script has run its course, be kind to the next process that might use your GPIOs by cleaning up after yourself. Use the <code class="highlighter-rouge">GPIO.cleanup()</code> command at the end of your script to release any resources your script may be using. Your RPi will survive if you forget to add this command, but it is good practice to include wherever you can.</p>
+
+<h2 id="suggested-readings">Suggested readings</h2>
+
+<ul>
+  <li><a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation">Pulse-Width Modulation</a> – You can use PWM to dim LEDs or send signals to servo motors. The RPi has a single PWM-capable pin.</li>
+  <li><a href="https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds">Light-Emitting Diodes (LEDs)</a> – To test the output capabilities of the Pi we will use some Leds.</li>
+  <li><a href="https://learn.sparkfun.com/tutorials/switch-basics">Switch Basics</a> – To test inputs to the Pi, we will use buttons and switches.</li>
+  <li><a href="https://learn.sparkfun.com/tutorials/pull-up-resistors">Pull-Up Resistors</a> – The Pi has internal pull-up (and pull-down) resistors. These are very handy when you are interfacing buttons with the little computer.</li>
+</ul>
+
+<p><strong>References</strong>[<a href="http://www.diffen.com/difference/Analog_vs_Digital">1</a>, <a href="https://learn.sparkfun.com/tutorials/raspberry-gpio">2</a>]</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/PythonPractise/2016/10/19/BashCommands/" data-toggle="tooltip" data-placement="top" title="Cheat Sheet Bash Commands">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/PythonPractise//feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/starignus">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/starignus">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/starignus/PythonPractise">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:ariadna@starignus.com, j.pang10@alumni.imperial.ac.uk">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; starignus 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/PythonPractise//js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/PythonPractise//js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/PythonPractise//js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>

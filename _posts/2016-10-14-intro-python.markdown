@@ -2,7 +2,7 @@
 layout:     post
 title:      "Introduction to Python"
 subtitle:   "An easy start"
-date:       2016-10-14 11:00:00
+date:       2016-10-14 12:00:00
 author:     "Ariadna Blanca Romero & Jing Sheng Pang"
 header-img: "img/post-bg-04.jpg"
 ---
@@ -209,7 +209,7 @@ Then you can type in the editor:
 x = 2
 print x
 x = x + 2
-print
+print x
 ```
 
 When a program is running, it flows from one step to the next. As programmers, we set up “paths” for the program to follow.

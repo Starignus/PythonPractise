@@ -2,7 +2,7 @@
 layout:     post
 title:      "Cheat Sheet Bash Commands"
 subtitle:   "Basic Practise"
-date:       2016-10-19 15:00:00
+date:       2016-10-19 12:00:00
 author:     "Ariadna Blanca Romero & Jing Sheng Pang"
 header-img: "img/post-bg-01.jpg"
 ---
@@ -19,7 +19,7 @@ To escape from the manual, just type: *q*
 
 ### File Commands
 
-<img src="{{ site.url }}/assets/File_commands.png" alt="screen" style="width: 300px;">
+<img src="{{site.url}}/assets/File_commands.png" alt="files" style="width: 300px;">
 
 **Examples - working with directories:**
 
@@ -79,6 +79,7 @@ To exit press: **ctrl + d"**.
 <img src="{{site.url}}/assets/System.png" alt="System" style="width: 300px;"/>
 
 ### Process Related
+
 <img src="{{site.url}}/assets/Process_related.png" alt="Process_related" style="width: 300px;"/>
 
 ### Virtual terminal (Screen)
