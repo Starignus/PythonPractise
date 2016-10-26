@@ -159,22 +159,50 @@
 
 <h2 id="installing-software">Installing Software</h2>
 
-<p>We can download the Python library to control DC and stepper motors. Before you start, we need to install the <strong>python smbus library</strong> as well as ‘git’. For the latter, execute the following command:</p>
+<ul>
+  <li>We can download the Python library to control DC and stepper motors. Before you start, we need to install the <strong>python smbus library</strong> as well as ‘git’. For the latter, execute the following command:</li>
+</ul>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install python-smbus git
- <span class="sb">```</span>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install python-smbus
+</code></pre>
+</div>
 
-Now, we download the code as:
+<ul>
+  <li>Now, we download the code as:</li>
+</ul>
 
-<span class="sb">```</span>bash
-<span class="gp">$ </span><span class="nb">cd </span>code
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd </span>code
 <span class="gp">$ </span>git clone https://github.com/adafruit/Adafruit-Motor-HAT-Python-Library.git
 <span class="gp">$ </span><span class="nb">cd </span>Adafruit-Motor-HAT-Python-Library
 <span class="gp">$ </span>sudo python setup.py install
 </code></pre>
 </div>
 
-<p>Now you can get started with testing to  watch your motor spin back and forth. First access to:</p>
+<ul>
+  <li>Before going further to the next step, we need to configuring the I2C if has not been done yet. Run:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo raspi-config
+</code></pre>
+</div>
+
+<p>and follow the prompts to install I2C support for the ARM core and linux kernel:</p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/I2C_1.png" alt="I2C_1" style="width: 400px;" /></p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/I2C_2.png" alt="I2C_2" style="width: 400px;" /></p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/I2C_3.png" alt="I2C_3" style="width: 400px;" /></p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/I2C_4.png" alt="I2C_4" style="width: 400px;" /></p>
+
+<p><img src="https://starignus.github.io/PythonPractise//assets/I2C_5.png" alt="I2C_5" style="width: 400px;" /></p>
+
+<p><strong>Then reboot!</strong></p>
+
+<ul>
+  <li>Now you can get started with testing to  watch your motor spin back and forth. First access to:</li>
+</ul>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd </span>Adafruit-Motor-HAT-Python/examples
 <span class="gp">$ </span>nano DCTest.py

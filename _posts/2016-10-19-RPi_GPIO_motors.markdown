@@ -99,7 +99,6 @@ sudo raspi-config
 
 __Then reboot!__
 
-
 * Now you can get started with testing to  watch your motor spin back and forth. First access to:
 
 ```bash
