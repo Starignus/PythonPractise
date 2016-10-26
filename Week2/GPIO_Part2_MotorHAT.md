@@ -55,7 +55,7 @@ To connect a motor, simply solder two wires to the terminals and then connect th
 We can download the Python library to control DC and stepper motors. Before you start, we need to install the **python smbus library** as well as 'git'. For the latter, execute the following command:
 
 ```bash
-$ sudo apt-get install python-smbus git
+$ sudo apt-get install python-smbus
  ```
 
 Now, we download the code as:
