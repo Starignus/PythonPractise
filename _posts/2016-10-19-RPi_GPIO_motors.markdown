@@ -62,14 +62,14 @@ To connect a motor, simply solder two wires to the terminals and then connect th
 
 ## Installing Software
 
-We can download the Python library to control DC and stepper motors. Before you start, we need to install the **python smbus library** as well as 'git'. For the latter, execute the following command:
+* We can download the Python library to control DC and stepper motors. Before you start, we need to install the **python smbus library** as well as 'git'. For the latter, execute the following command:
 
 
 ```bash
 $ sudo apt-get install python-smbus
 ```
 
-Now, we download the code as:
+* Now, we download the code as:
 
 
 ```bash
@@ -79,7 +79,28 @@ $ cd Adafruit-Motor-HAT-Python-Library
 $ sudo python setup.py install
 ```
 
-Now you can get started with testing to  watch your motor spin back and forth. First access to:
+* Before going further to the next step, we need to configuring the I2C if has not been done yet. Run:
+
+``` bash
+sudo raspi-config
+```
+
+ and follow the prompts to install I2C support for the ARM core and linux kernel:
+
+ <img src="{{ site.url }}/assets/I2C_1.png" alt="I2C_1" style="width: 400px;"/>
+
+ <img src="{{ site.url }}/assets/I2C_2.png" alt="I2C_2" style="width: 400px;"/>
+
+ <img src="{{ site.url }}/assets/I2C_3.png" alt="I2C_3" style="width: 400px;"/>
+
+ <img src="{{ site.url }}/assets/I2C_4.png" alt="I2C_4" style="width: 400px;"/>
+
+ <img src="{{ site.url }}/assets/I2C_5.png" alt="I2C_5" style="width: 400px;"/>
+
+__Then reboot!__
+
+
+* Now you can get started with testing to  watch your motor spin back and forth. First access to:
 
 ```bash
 $ cd Adafruit-Motor-HAT-Python/examples
