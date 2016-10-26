@@ -87,15 +87,15 @@ sudo raspi-config
 
  and follow the prompts to install I2C support for the ARM core and linux kernel:
 
- <img src="{{ site.url }}/assets/I2C_1.png" alt="I2C_1" style="width: 400px;"/>
+ <img src="{{ site.url }}/assets/I2C_1.png" alt="I2C_1" style="width: 550px;"/>
 
- <img src="{{ site.url }}/assets/I2C_2.png" alt="I2C_2" style="width: 400px;"/>
+ <img src="{{ site.url }}/assets/I2C_2.png" alt="I2C_2" style="width: 550px;"/>
 
- <img src="{{ site.url }}/assets/I2C_3.png" alt="I2C_3" style="width: 400px;"/>
+ <img src="{{ site.url }}/assets/I2C_3.png" alt="I2C_3" style="width: 550px;"/>
 
- <img src="{{ site.url }}/assets/I2C_4.png" alt="I2C_4" style="width: 400px;"/>
+ <img src="{{ site.url }}/assets/I2C_4.png" alt="I2C_4" style="width: 550px;"/>
 
- <img src="{{ site.url }}/assets/I2C_5.png" alt="I2C_5" style="width: 400px;"/>
+ <img src="{{ site.url }}/assets/I2C_5.png" alt="I2C_5" style="width: 550px;"/>
 
 __Then reboot!__
 
