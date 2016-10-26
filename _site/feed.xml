@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-26T18:52:24+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo Workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Adafruit DC Motor HAT for Raspberry Pi</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/" rel="alternate" type="text/html" title="Adafruit DC Motor HAT for Raspberry Pi" /><published>2016-10-19T15:00:00+01:00</published><updated>2016-10-19T15:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/">&lt;h1 id=&quot;raspberry-pi-gpio-part-2-adafruit-dc-motor-hat-for-raspberry-pi&quot;&gt;Raspberry Pi GPIO-Part 2: Adafruit DC Motor HAT for Raspberry Pi&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-26T18:53:36+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo Workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Adafruit DC Motor HAT for Raspberry Pi</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/" rel="alternate" type="text/html" title="Adafruit DC Motor HAT for Raspberry Pi" /><published>2016-10-19T15:00:00+01:00</published><updated>2016-10-19T15:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/">&lt;h1 id=&quot;raspberry-pi-gpio-part-2-adafruit-dc-motor-hat-for-raspberry-pi&quot;&gt;Raspberry Pi GPIO-Part 2: Adafruit DC Motor HAT for Raspberry Pi&lt;/h1&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
@@ -82,15 +82,15 @@
 
 &lt;p&gt;and follow the prompts to install I2C support for the ARM core and linux kernel:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_1.png&quot; alt=&quot;I2C_1&quot; style=&quot;width: 550px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_1.png&quot; alt=&quot;I2C_1&quot; style=&quot;width: 650px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_2.png&quot; alt=&quot;I2C_2&quot; style=&quot;width: 550px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_2.png&quot; alt=&quot;I2C_2&quot; style=&quot;width: 650px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_3.png&quot; alt=&quot;I2C_3&quot; style=&quot;width: 550px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_3.png&quot; alt=&quot;I2C_3&quot; style=&quot;width: 650px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_4.png&quot; alt=&quot;I2C_4&quot; style=&quot;width: 550px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_4.png&quot; alt=&quot;I2C_4&quot; style=&quot;width: 650px;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_5.png&quot; alt=&quot;I2C_5&quot; style=&quot;width: 550px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/I2C_5.png&quot; alt=&quot;I2C_5&quot; style=&quot;width: 650px;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Then reboot!&lt;/strong&gt;&lt;/p&gt;
 
