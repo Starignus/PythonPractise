@@ -106,15 +106,15 @@
 
 				<h1 id="introduction-to-python">Introduction to Python</h1>
 
-<h4 id="about-python-language">About Python Language</h4>
+<h3 id="about-python-language">About Python Language</h3>
 
-<p>Remember that you are intelligent and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, in order for you to communicate instructions to the computer it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.</p>
+<p>Remember that you are intelligent, and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, for you to communicate instructions on the computer, it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.</p>
 
-<p>Python can be <strong>easy to pick up and friendly to learn</strong>. <a href="https://www.python.org/">Python</a> is a <strong>general-purpose</strong> interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.</p>
+<p>Python can be <strong>easy to pick up and friendly to learn</strong>. <a href="https://www.python.org/">Python</a> is a <strong>general-purpose</strong> interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course, we will use 2.7 since it is the most common or popular used.</p>
 
 <h4 id="basic-practise">Basic Practise</h4>
 
-<p>Let’s get familiar with python by playing in the terminal in the interactive mode (you type a line at a time and the interpreter responds). You invoke the interpreter and brings up the following prompt:</p>
+<p>Let’s get familiar with Python by playing in the terminal in the interactive mode (you type a line at a time, and the interpreter responds). You invoke the interpreter and brings up the following prompt:</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span><span class="n">python</span>
 <span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">9</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Sep</span> <span class="mi">17</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mo">04</span><span class="p">)</span>
@@ -124,19 +124,17 @@
 </code></pre>
 </div>
 
-<p>Strings, integers, and floating points:</p>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="s">"Hello, Python!"</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>         <span class="c"># Integer assignment</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1005.00</span>   <span class="c"># Floating points</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span> <span class="c"># A string</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">x</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">y</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">name</span>
-</code></pre>
-</div>
-
-<p>In Python, the <a href="https://en.wikibooks.org/wiki/Python_Programming/Basic_Math">standard order of operations</a> are evaluated from left to right following order (memorized by many as PEMDAS):</p>
+<p>Strings, integers, and floating points:
+<code class="highlighter-rouge">python
+&gt;&gt;&gt; print "Hello, Python!"
+&gt;&gt;&gt; x = 1         # Integer assignment
+&gt;&gt;&gt; y = 1005.00   # Floating points
+&gt;&gt;&gt; name = "John" # A string
+&gt;&gt;&gt; print x
+&gt;&gt;&gt; print y
+&gt;&gt;&gt; print name
+</code>
+In Python, the <a href="https://en.wikibooks.org/wiki/Python_Programming/Basic_Math">standard order of operations</a> are evaluated from left to right following order (memorised by many as PEMDAS):</p>
 
 <table>
   <thead>
@@ -170,25 +168,23 @@
   </tbody>
 </table>
 
-<p><em>Note</em>: // is the floor division in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero.</p>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span>  <span class="c"># First division and then Multiplication</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mf">3.0</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mf">3.0</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span><span class="o">**</span><span class="mi">8</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mf">11.0</span><span class="o">//</span><span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mf">11.0</span><span class="o">//</span><span class="mi">3</span> <span class="c"># Result floored (rounded away from zero)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mf">11.0</span><span class="o">/</span><span class="mi">3</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">5.25</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span><span class="o">%</span><span class="mi">7</span> <span class="c"># Remainder of a division</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s">'abc'</span> <span class="o">+</span> <span class="s">'fgb'</span> <span class="c"># strings</span>
-</code></pre>
-</div>
-
-<p>Comparison operators:</p>
+<p><em>Note</em>: // is the floor division in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero.
+<code class="highlighter-rouge">python
+&gt;&gt;&gt; 3/4 * 5  # First division and then Multiplication
+&gt;&gt;&gt; 3.0 / 4 * 5
+&gt;&gt;&gt; (3.0 / 4) * 4
+&gt;&gt;&gt; 2**8
+&gt;&gt;&gt; -11.0//3
+&gt;&gt;&gt; 11.0//3 # Result floored (rounded away from zero)
+&gt;&gt;&gt; -11.0/3  
+&gt;&gt;&gt; z = float(5)
+&gt;&gt;&gt; z
+&gt;&gt;&gt; z = int(5.25)
+&gt;&gt;&gt; z
+&gt;&gt;&gt; 10%7 # Remainder of a division
+&gt;&gt;&gt; 'abc' + 'fgb' # strings
+</code>
+Comparison operators:</p>
 
 <table>
   <thead>
@@ -236,21 +232,20 @@
 <span class="bp">True</span>
 </code></pre>
 </div>
+<p>##### Data Types</p>
 
-<h4 id="data-types">Data Types</h4>
-<p>The data stored in memory can be of different types, python has 5 types: <strong>Numbers, Strings, List, Tuple, and Dictionary</strong>.</p>
+<p>The data stored in memory can be of different types; Python has five: <strong>Numbers, Strings, List, Tuple, and Dictionary</strong>.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c"># numbers</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c"># String</span>
 </code></pre>
 </div>
+<p><strong>Strings</strong> in Python are a set of characters represented by the quotation marks. Python allows for either pair of single or double quotes.</p>
 
-<p><strong>Strings</strong> in Python are set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes.</p>
+<p>Subsets of strings can be taken using the slice operator ([] and [:] ) with indexes starting at 0 at the beginning of the string and working their way from -1 to the end.</p>
 
-<p>A subsets of strings can be taken using the slice operator ([] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p>
-
-<p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example:</p>
+<p>The plus (+) sign is the string concatenation operator, and the asterisk (*) is the repetition operator. For example:</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">string</span> <span class="o">=</span> <span class="s">'Hello World!'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">string</span>          <span class="c"># Prints complete string</span>
@@ -262,9 +257,9 @@
 </code></pre>
 </div>
 
-<p><strong>Lists</strong> are the most versatile data types in Python. A list contains items separated by commas and enclosed within square brackets ([])—similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.</p>
+<p><strong>Lists</strong> are the most versatile data types in Python. A list contains items separated by commas and enclosed in square brackets ([])—similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.</p>
 
-<p>The values stored in a list can be accessed using the slice operator ([] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.</p>
+<p>The values stored in a list can be accessed using the slice operator ([] and [:]) with indexes starting at 0 at the beginning of the list and working their way to ending -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span> <span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tinylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="s">'john'</span><span class="p">]</span>
@@ -278,9 +273,9 @@
 </code></pre>
 </div>
 
-<p>A <strong>tuple</strong> is another sequence data type that is similar to the list. It consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p>
+<p>A <strong>tuple</strong> is another sequence data type that is similar to the list. It consists of some values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p>
 
-<p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated—<strong>immutable</strong>. Tuples can be thought of as read-only lists.</p>
+<p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [] ), and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated—<strong>immutable</strong>. Tuples can be thought of as read-only lists.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">)</span>
 <span class="n">tinytuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s">'john'</span><span class="p">)</span>
@@ -293,7 +288,6 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="nb">tuple</span> <span class="o">+</span> <span class="n">tinytuple</span> <span class="c"># Prints concatenated lists</span>
 </code></pre>
 </div>
-
 <p>Invalid operations on a tuple but valid on a list:</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s">'abcd'</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">'john'</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">)</span>
@@ -303,8 +297,8 @@
 </code></pre>
 </div>
 
-<p>Python’s <strong>dictionaries</strong> are kind of hash table type. They work like associative arrays and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
-Dictionaries are enclosed by curly braces ({}) and values can be assigned and accessed using square braces ([]).</p>
+<p>Python’s <strong>dictionaries</strong> are hash table type. They work like associative arrays and consist of key-value pairs. A dictionary key can be almost any Python type but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+Dictionaries are enclosed by curly braces ({}), and values can be assigned and accessed using square braces ([]).</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="s">'one'</span><span class="p">]</span> <span class="o">=</span> <span class="s">"This is one"</span>
@@ -320,20 +314,21 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 </code></pre>
 </div>
 
-<p>To quit the Python interpreter:
-<code class="highlighter-rouge">python
-&gt;&gt;&gt; quit()
-</code></p>
+<p>To quit the Python interpreter:</p>
 
-<h4 id="scripts">Scripts</h4>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">quit</span><span class="p">()</span>
+</code></pre>
+</div>
 
-<p>A Script is a sequence of statements (lines) into a file using a text editor and tell Python interpreter to execute the statements in the file.</p>
+<h5 id="scripts">Scripts</h5>
+
+<p>A Script is a sequence of statements (lines) into a file using a text editor and tells Python interpreter to execute the statements in the file.</p>
 
 <ul>
-  <li>We can write a program in our script like a recipe or installation of a software. At the end of the day, a program is a <strong>sequence</strong> of steps to be done in order.</li>
-  <li>Some of the steps can be <strong>conditional</strong>, that means that sometimes they can be skiped.</li>
-  <li>Sometimes a step of group of steps are to be <strong>repeated</strong>.</li>
-  <li>Sometimes we store a set of steps that will be use over an over again in several parts of the program (<strong>functions</strong>).</li>
+  <li>We can write a program in our script like a recipe or installation of software. At the end of the day, a program is a <strong>sequence</strong> of steps to be done in order.</li>
+  <li>Some of the steps can be <strong>conditional</strong>, that means that sometimes they can be skipped.</li>
+  <li>Sometimes a step or group of steps are to be <strong>repeated</strong>.</li>
+  <li>Sometimes we store a set of steps that will be used over and over again in several parts of the program (<strong>functions</strong>).</li>
 </ul>
 
 <p><strong>Note:</strong> Have a look on the code <a href="https://www.python.org/dev/peps/pep-0008/#indentation">style guide</a> for a good coding practise. As a fist good practise, do not name files or folders with space in between: Auful! –&gt; example 1.py; Great! –&gt; <strong>example_1.py, exampleOne.py, example_one.py</strong></p>
@@ -347,7 +342,6 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 <span class="gp">$ </span>nano example_fllow.py
 </code></pre>
 </div>
-
 <p>Then you can type in the editor:</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
@@ -358,7 +352,7 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 </code></pre>
 </div>
 
-<p>When a program is running, it flows from one step to the next. As programmers, we set up “paths” for the program to follow.</p>
+<p>When a program is running, it flows from one step to the next.  As programmers, we set up “paths” for the program to follow.</p>
 
 <p><img src="https://starignus.github.io/PythonPractise//assets/Flow_1.png" alt="flow" style="width: 200px;" /></p>
 
@@ -368,13 +362,13 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 </code></pre>
 </div>
 
-<p>The other is to give the script the access permissions to be an executable file through the <a href="https://en.wikipedia.org/wiki/Chmod">chomod</a> linux command:</p>
+<p>The other is to give the script the access permissions to be an executable file through the <a href="https://en.wikipedia.org/wiki/Chmod">chomod</a> Linux command:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_fllow.py
 <span class="gp">$ </span>./example_fllow.py
 </code></pre>
 </div>
-<p>No let’s do an example where we have a <strong>conditional</strong> that implies a decision making about a situation. Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:</p>
+<p>Now let’s do an example where we have a <strong>conditional</strong> that implies a decision-making about a situation. Decision making is the anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:</p>
 
 <p><img src="https://starignus.github.io/PythonPractise//assets/decision_making.jpg" alt="decision" style="width: 200px;" /></p>
 
@@ -435,48 +429,13 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 
 <p><strong>For loop</strong> executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p>
 
-<p>Now let’s add the code to ur script called <em>example_for_loop.py</em>:</p>
+<p>Now let’s add the code to our script called <em>example_for_loop.py</em>:</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
-<span class="s">'Area of a circle = pi * r**2'</span>
+<span class="c"># Area of a circle = pi * r**2</span>
 
-<span class="s">'Library'</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-
-<span class="s">'List are called interables'</span>
-<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
-    <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="k">print</span> <span class="s">"The area of a circle of radius "</span><span class="p">,</span> <span class="n">radius</span>
-    <span class="k">print</span> <span class="s">"cm is"</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="s">"cm^2"</span>
-<span class="k">print</span> <span class="s">"Finished to calculate the areas of circles"</span>
-</code></pre>
-</div>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_for_loop.py
-<span class="gp">$ </span>./example_for_loop.py
-</code></pre>
-</div>
-
-<p>Here we are importing the <a href="http://www.numpy.org/">Numpy library</a>
-that is the fundamental package for scientific computing with Python. We are adding a short alias to the library to call its methods, in this case the value of Pi.</p>
-
-<h5 id="functions">Functions</h5>
-
-<p>A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.</p>
-
-<p>Now, let’s make a function that can be used in the for loop example.</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_function_circle_area.py
-</code></pre>
-</div>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">##!/usr/bin/env python</span>
-<span class="s">'Area of a circle = pi * r**2'</span>
-
-<span class="s">'Library Numpy'</span>
+<span class="c"># Library Numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 
@@ -485,7 +444,7 @@ that is the fundamental package for scientific computing with Python. We are add
     <span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">area</span>
 
-<span class="s">'List are called interables'</span>
+<span class="c"># List are called interables</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
@@ -508,16 +467,15 @@ that is the fundamental package for scientific computing with Python. We are add
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_function_circle_area_user_1.py
 </code></pre>
 </div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Area of a circle = pi * r**2</span>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'Area of a circle = pi * r**2'</span>
-
-<span class="s">'Library Numpy'</span>
+<span class="c"># Library Numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="s">'Library to Safely evaluate an expression node'</span>
-<span class="s">'or a string containing a Python expression'</span>
+<span class="c"># Library to Safely evaluate an expression node</span>
+<span class="c"># or a string containing a Python expression</span>
 <span class="kn">import</span> <span class="nn">ast</span>
 
-<span class="s">'List are called interables'</span>
+<span class="c"># List are called interables</span>
 <span class="n">list_raw</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">'Provide a list of radius in cm like </span><span class="se">\
 </span><span class="s">[3, 2, 12, 6]: </span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
 <span class="nb">list</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">list_raw</span><span class="p">)</span>
@@ -536,36 +494,34 @@ that is the fundamental package for scientific computing with Python. We are add
 <span class="k">print</span> <span class="s">"Finished to calculate the areas of circles"</span>
 </code></pre>
 </div>
-
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_function_circle_area_user_1.py
 <span class="nv">$.</span>/example_function_circle_area_user_1.py
 </code></pre>
 </div>
 
-<p>If we do not use the <a href="https://docs.python.org/2/library/ast.html">ast library</a> to evaluate a string containing a python expression (in this case a list), we will get an error since Python will interpret like a string type and not a list type.</p>
+<p>If we do not use the <a href="https://docs.python.org/2/library/ast.html">ast library</a> to evaluate a string containing a Python expression (in this case a list), we will get an error since Python will interpret as a string type and not a list type.</p>
 
 <p>A second way to do it is by using the <a href="https://docs.python.org/2/library/sys.html">sys module</a> which provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.</p>
 
-<p>Now let’s ask the user to provide a list by passing directly the strings:</p>
+<p>Now let’s ask the user to provide a list by passing the strings directly:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nano example_function_circle_area_user_2.py
 </code></pre>
 </div>
-
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
-<span class="s">''' Usage instructions:
-./example_function_circle_area_user_2.py "[1, 2, 3]'''</span>
+<span class="c"># Usage instructions:</span>
+<span class="c"># ./example_function_circle_area_user_2.py "[1, 2, 3]"</span>
 
-<span class="s">'Area of a circle = pi * r**2'</span>
+<span class="c"># Area of a circle = pi * r**2</span>
 
-<span class="s">'Library Numpy'</span>
+<span class="c"># Library Numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="s">'Library to Safely evaluate an expression node'</span>
-<span class="s">'or a string containing a Python expression'</span>
+<span class="c"># Library to Safely evaluate an expression node</span>
+<span class="c"># or a string containing a Python expression</span>
 <span class="kn">import</span> <span class="nn">ast</span>
-<span class="s">'Module provides access to some variables'</span>
-<span class="s">'used or maintained by the interpreter'</span>
+<span class="c"># Module provides access to some variables</span>
+<span class="c"># used or maintained by the interpreter</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
@@ -587,10 +543,9 @@ that is the fundamental package for scientific computing with Python. We are add
 </code></pre>
 </div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>chmod u+x example_function_circle_area_user_1.py
-<span class="nv">$.</span>/example_function_circle_area_user_2.py <span class="s2">"[1, 2, 3]"</span>
-</code></pre>
-</div>
+<p>``` bash
+$ chmod u+x example_function_circle_area_user_1.py
+$./example_function_circle_area_user_2.py “[1, 2, 3]”</p>
 
 <p>You can download the pdf version <a href="https://github.com/Starignus/PythonPractise/raw/master/Week1/Python/Python_week1.pdf">here</a>.</p>
 
@@ -675,7 +630,7 @@ that is the fundamental package for scientific computing with Python. We are add
                     </li>
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; starignus 2016</p>
+                <p class="copyright text-muted">Copyright &copy; starignus 2017</p>
             </div>
         </div>
     </div>

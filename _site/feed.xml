@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2016-10-26T18:53:36+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo Workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Adafruit DC Motor HAT for Raspberry Pi</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/" rel="alternate" type="text/html" title="Adafruit DC Motor HAT for Raspberry Pi" /><published>2016-10-19T15:00:00+01:00</published><updated>2016-10-19T15:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/">&lt;h1 id=&quot;raspberry-pi-gpio-part-2-adafruit-dc-motor-hat-for-raspberry-pi&quot;&gt;Raspberry Pi GPIO-Part 2: Adafruit DC Motor HAT for Raspberry Pi&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://starignus.github.io/PythonPractise//PythonPractise//feed.xml" rel="self" type="application/atom+xml" /><link href="https://starignus.github.io/PythonPractise//PythonPractise//" rel="alternate" type="text/html" /><updated>2017-01-14T11:27:22+00:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//</id><title>Gizmo Workshop</title><subtitle>Python / Raspberry Pi Learning!&quot;</subtitle><entry><title>Adafruit DC Motor HAT for Raspberry Pi</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/" rel="alternate" type="text/html" title="Adafruit DC Motor HAT for Raspberry Pi" /><published>2016-10-19T15:00:00+01:00</published><updated>2016-10-19T15:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/19/RPi_GPIO_motors/">&lt;h1 id=&quot;raspberry-pi-gpio-part-2-adafruit-dc-motor-hat-for-raspberry-pi&quot;&gt;Raspberry Pi GPIO-Part 2: Adafruit DC Motor HAT for Raspberry Pi&lt;/h1&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
@@ -762,15 +762,15 @@ If you need information in the terminal about an specific Linux/Unix command you
 
 &lt;p&gt;&lt;a href=&quot;https://drive.google.com/drive/u/0/folders/0B_LZEs2baSXxb0FwcXRLeGRrV2c&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;</content><author><name>Ariadna Blanca Romero &amp; Jing Sheng Pang</name></author><summary>Bash Script (Linux commands)</summary></entry><entry><title>Introduction to Python</title><link href="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/intro-python/" rel="alternate" type="text/html" title="Introduction to Python" /><published>2016-10-14T13:00:00+01:00</published><updated>2016-10-14T13:00:00+01:00</updated><id>https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/intro-python</id><content type="html" xml:base="https://starignus.github.io/PythonPractise//PythonPractise//2016/10/14/intro-python/">&lt;h1 id=&quot;introduction-to-python&quot;&gt;Introduction to Python&lt;/h1&gt;
 
-&lt;h4 id=&quot;about-python-language&quot;&gt;About Python Language&lt;/h4&gt;
+&lt;h3 id=&quot;about-python-language&quot;&gt;About Python Language&lt;/h3&gt;
 
-&lt;p&gt;Remember that you are intelligent and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, in order for you to communicate instructions to the computer it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.&lt;/p&gt;
+&lt;p&gt;Remember that you are intelligent, and you can learn, but the computer is simple and very fast, but can not learn by itself. Therefore, for you to communicate instructions on the computer, it is easier for you to learn a computer Language (e.g. Python) than for the computer to learn English.&lt;/p&gt;
 
-&lt;p&gt;Python can be &lt;strong&gt;easy to pick up and friendly to learn&lt;/strong&gt;. &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; is a &lt;strong&gt;general-purpose&lt;/strong&gt; interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course we will use 2.7 since it is the most common or popular used.&lt;/p&gt;
+&lt;p&gt;Python can be &lt;strong&gt;easy to pick up and friendly to learn&lt;/strong&gt;. &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; is a &lt;strong&gt;general-purpose&lt;/strong&gt; interpreted , interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. There are two main python versions: 2.7 and 3. For this course, we will use 2.7 since it is the most common or popular used.&lt;/p&gt;
 
 &lt;h4 id=&quot;basic-practise&quot;&gt;Basic Practise&lt;/h4&gt;
 
-&lt;p&gt;Let’s get familiar with python by playing in the terminal in the interactive mode (you type a line at a time and the interpreter responds). You invoke the interpreter and brings up the following prompt:&lt;/p&gt;
+&lt;p&gt;Let’s get familiar with Python by playing in the terminal in the interactive mode (you type a line at a time, and the interpreter responds). You invoke the interpreter and brings up the following prompt:&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2016&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -780,19 +780,17 @@ If you need information in the terminal about an specific Linux/Unix command you
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Strings, integers, and floating points:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello, Python!&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;         &lt;span class=&quot;c&quot;&gt;# Integer assignment&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1005.00&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# Floating points&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;John&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# A string&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In Python, the &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Basic_Math&quot;&gt;standard order of operations&lt;/a&gt; are evaluated from left to right following order (memorized by many as PEMDAS):&lt;/p&gt;
+&lt;p&gt;Strings, integers, and floating points:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;python
+&amp;gt;&amp;gt;&amp;gt; print &quot;Hello, Python!&quot;
+&amp;gt;&amp;gt;&amp;gt; x = 1         # Integer assignment
+&amp;gt;&amp;gt;&amp;gt; y = 1005.00   # Floating points
+&amp;gt;&amp;gt;&amp;gt; name = &quot;John&quot; # A string
+&amp;gt;&amp;gt;&amp;gt; print x
+&amp;gt;&amp;gt;&amp;gt; print y
+&amp;gt;&amp;gt;&amp;gt; print name
+&lt;/code&gt;
+In Python, the &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Basic_Math&quot;&gt;standard order of operations&lt;/a&gt; are evaluated from left to right following order (memorised by many as PEMDAS):&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -826,25 +824,23 @@ If you need information in the terminal about an specific Linux/Unix command you
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: // is the floor division in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# First division and then Multiplication&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Result floored (rounded away from zero)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Remainder of a division&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'abc'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'fgb'&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# strings&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Comparison operators:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: // is the floor division in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;python
+&amp;gt;&amp;gt;&amp;gt; 3/4 * 5  # First division and then Multiplication
+&amp;gt;&amp;gt;&amp;gt; 3.0 / 4 * 5
+&amp;gt;&amp;gt;&amp;gt; (3.0 / 4) * 4
+&amp;gt;&amp;gt;&amp;gt; 2**8
+&amp;gt;&amp;gt;&amp;gt; -11.0//3
+&amp;gt;&amp;gt;&amp;gt; 11.0//3 # Result floored (rounded away from zero)
+&amp;gt;&amp;gt;&amp;gt; -11.0/3  
+&amp;gt;&amp;gt;&amp;gt; z = float(5)
+&amp;gt;&amp;gt;&amp;gt; z
+&amp;gt;&amp;gt;&amp;gt; z = int(5.25)
+&amp;gt;&amp;gt;&amp;gt; z
+&amp;gt;&amp;gt;&amp;gt; 10%7 # Remainder of a division
+&amp;gt;&amp;gt;&amp;gt; 'abc' + 'fgb' # strings
+&lt;/code&gt;
+Comparison operators:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -892,21 +888,20 @@ If you need information in the terminal about an specific Linux/Unix command you
 &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;p&gt;##### Data Types&lt;/p&gt;
 
-&lt;h4 id=&quot;data-types&quot;&gt;Data Types&lt;/h4&gt;
-&lt;p&gt;The data stored in memory can be of different types, python has 5 types: &lt;strong&gt;Numbers, Strings, List, Tuple, and Dictionary&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The data stored in memory can be of different types; Python has five: &lt;strong&gt;Numbers, Strings, List, Tuple, and Dictionary&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# numbers&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# String&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Strings&lt;/strong&gt; in Python are a set of characters represented by the quotation marks. Python allows for either pair of single or double quotes.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Strings&lt;/strong&gt; in Python are set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes.&lt;/p&gt;
+&lt;p&gt;Subsets of strings can be taken using the slice operator ([] and [:] ) with indexes starting at 0 at the beginning of the string and working their way from -1 to the end.&lt;/p&gt;
 
-&lt;p&gt;A subsets of strings can be taken using the slice operator ([] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.&lt;/p&gt;
-
-&lt;p&gt;The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example:&lt;/p&gt;
+&lt;p&gt;The plus (+) sign is the string concatenation operator, and the asterisk (*) is the repetition operator. For example:&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Hello World!'&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;          &lt;span class=&quot;c&quot;&gt;# Prints complete string&lt;/span&gt;
@@ -918,9 +913,9 @@ If you need information in the terminal about an specific Linux/Unix command you
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Lists&lt;/strong&gt; are the most versatile data types in Python. A list contains items separated by commas and enclosed within square brackets ([])—similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lists&lt;/strong&gt; are the most versatile data types in Python. A list contains items separated by commas and enclosed in square brackets ([])—similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.&lt;/p&gt;
 
-&lt;p&gt;The values stored in a list can be accessed using the slice operator ([] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.&lt;/p&gt;
+&lt;p&gt;The values stored in a list can be accessed using the slice operator ([] and [:]) with indexes starting at 0 at the beginning of the list and working their way to ending -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'abcd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;786&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'john'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;70.2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tinylist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'john'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -934,9 +929,9 @@ If you need information in the terminal about an specific Linux/Unix command you
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;A &lt;strong&gt;tuple&lt;/strong&gt; is another sequence data type that is similar to the list. It consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;tuple&lt;/strong&gt; is another sequence data type that is similar to the list. It consists of some values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.&lt;/p&gt;
 
-&lt;p&gt;The main differences between lists and tuples are: Lists are enclosed in brackets ( [] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated—&lt;strong&gt;immutable&lt;/strong&gt;. Tuples can be thought of as read-only lists.&lt;/p&gt;
+&lt;p&gt;The main differences between lists and tuples are: Lists are enclosed in brackets ( [] ), and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated—&lt;strong&gt;immutable&lt;/strong&gt;. Tuples can be thought of as read-only lists.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'abcd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;786&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'john'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;70.2&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;tinytuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'john'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -949,7 +944,6 @@ If you need information in the terminal about an specific Linux/Unix command you
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tinytuple&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Prints concatenated lists&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
 &lt;p&gt;Invalid operations on a tuple but valid on a list:&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tuple&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'abcd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;786&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'john'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;70.2&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -959,8 +953,8 @@ If you need information in the terminal about an specific Linux/Unix command you
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Python’s &lt;strong&gt;dictionaries&lt;/strong&gt; are kind of hash table type. They work like associative arrays and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
-Dictionaries are enclosed by curly braces ({}) and values can be assigned and accessed using square braces ([]).&lt;/p&gt;
+&lt;p&gt;Python’s &lt;strong&gt;dictionaries&lt;/strong&gt; are hash table type. They work like associative arrays and consist of key-value pairs. A dictionary key can be almost any Python type but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+Dictionaries are enclosed by curly braces ({}), and values can be assigned and accessed using square braces ([]).&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'one'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;This is one&quot;&lt;/span&gt;
@@ -976,20 +970,21 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;To quit the Python interpreter:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;python
-&amp;gt;&amp;gt;&amp;gt; quit()
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To quit the Python interpreter:&lt;/p&gt;
 
-&lt;h4 id=&quot;scripts&quot;&gt;Scripts&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;quit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;A Script is a sequence of statements (lines) into a file using a text editor and tell Python interpreter to execute the statements in the file.&lt;/p&gt;
+&lt;h5 id=&quot;scripts&quot;&gt;Scripts&lt;/h5&gt;
+
+&lt;p&gt;A Script is a sequence of statements (lines) into a file using a text editor and tells Python interpreter to execute the statements in the file.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;We can write a program in our script like a recipe or installation of a software. At the end of the day, a program is a &lt;strong&gt;sequence&lt;/strong&gt; of steps to be done in order.&lt;/li&gt;
-  &lt;li&gt;Some of the steps can be &lt;strong&gt;conditional&lt;/strong&gt;, that means that sometimes they can be skiped.&lt;/li&gt;
-  &lt;li&gt;Sometimes a step of group of steps are to be &lt;strong&gt;repeated&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Sometimes we store a set of steps that will be use over an over again in several parts of the program (&lt;strong&gt;functions&lt;/strong&gt;).&lt;/li&gt;
+  &lt;li&gt;We can write a program in our script like a recipe or installation of software. At the end of the day, a program is a &lt;strong&gt;sequence&lt;/strong&gt; of steps to be done in order.&lt;/li&gt;
+  &lt;li&gt;Some of the steps can be &lt;strong&gt;conditional&lt;/strong&gt;, that means that sometimes they can be skipped.&lt;/li&gt;
+  &lt;li&gt;Sometimes a step or group of steps are to be &lt;strong&gt;repeated&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Sometimes we store a set of steps that will be used over and over again in several parts of the program (&lt;strong&gt;functions&lt;/strong&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Have a look on the code &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/#indentation&quot;&gt;style guide&lt;/a&gt; for a good coding practise. As a fist good practise, do not name files or folders with space in between: Auful! –&amp;gt; example 1.py; Great! –&amp;gt; &lt;strong&gt;example_1.py, exampleOne.py, example_one.py&lt;/strong&gt;&lt;/p&gt;
@@ -1003,7 +998,6 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;nano example_fllow.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
 &lt;p&gt;Then you can type in the editor:&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python&lt;/span&gt;
@@ -1014,7 +1008,7 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;When a program is running, it flows from one step to the next. As programmers, we set up “paths” for the program to follow.&lt;/p&gt;
+&lt;p&gt;When a program is running, it flows from one step to the next.  As programmers, we set up “paths” for the program to follow.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/Flow_1.png&quot; alt=&quot;flow&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
@@ -1024,13 +1018,13 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The other is to give the script the access permissions to be an executable file through the &lt;a href=&quot;https://en.wikipedia.org/wiki/Chmod&quot;&gt;chomod&lt;/a&gt; linux command:&lt;/p&gt;
+&lt;p&gt;The other is to give the script the access permissions to be an executable file through the &lt;a href=&quot;https://en.wikipedia.org/wiki/Chmod&quot;&gt;chomod&lt;/a&gt; Linux command:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod u+x example_fllow.py
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./example_fllow.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;No let’s do an example where we have a &lt;strong&gt;conditional&lt;/strong&gt; that implies a decision making about a situation. Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:&lt;/p&gt;
+&lt;p&gt;Now let’s do an example where we have a &lt;strong&gt;conditional&lt;/strong&gt; that implies a decision-making about a situation. Decision making is the anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://starignus.github.io/PythonPractise//assets/decision_making.jpg&quot; alt=&quot;decision&quot; style=&quot;width: 200px;&quot; /&gt;&lt;/p&gt;
 
@@ -1091,48 +1085,13 @@ Dictionaries are enclosed by curly braces ({}) and values can be assigned and ac
 
 &lt;p&gt;&lt;strong&gt;For loop&lt;/strong&gt; executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.&lt;/p&gt;
 
-&lt;p&gt;Now let’s add the code to ur script called &lt;em&gt;example_for_loop.py&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;Now let’s add the code to our script called &lt;em&gt;example_for_loop.py&lt;/em&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;'Area of a circle = pi * r**2'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Area of a circle = pi * r**2&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;'Library'&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;'List are called interables'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;The area of a circle of radius &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cm is&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cm^2&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Finished to calculate the areas of circles&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod u+x example_for_loop.py
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./example_for_loop.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Here we are importing the &lt;a href=&quot;http://www.numpy.org/&quot;&gt;Numpy library&lt;/a&gt;
-that is the fundamental package for scientific computing with Python. We are adding a short alias to the library to call its methods, in this case the value of Pi.&lt;/p&gt;
-
-&lt;h5 id=&quot;functions&quot;&gt;Functions&lt;/h5&gt;
-
-&lt;p&gt;A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.&lt;/p&gt;
-
-&lt;p&gt;Now, let’s make a function that can be used in the for loop example.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;nano example_function_circle_area.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;##!/usr/bin/env python&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'Area of a circle = pi * r**2'&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;'Library Numpy'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Library Numpy&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
 
 
@@ -1141,7 +1100,7 @@ that is the fundamental package for scientific computing with Python. We are add
     &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;'List are called interables'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# List are called interables&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -1164,16 +1123,15 @@ that is the fundamental package for scientific computing with Python. We are add
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;nano example_function_circle_area_user_1.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Area of a circle = pi * r**2&lt;/span&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'Area of a circle = pi * r**2'&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;'Library Numpy'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Library Numpy&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'Library to Safely evaluate an expression node'&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'or a string containing a Python expression'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Library to Safely evaluate an expression node&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# or a string containing a Python expression&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ast&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;'List are called interables'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# List are called interables&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;list_raw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Provide a list of radius in cm like &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\
 &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[3, 2, 12, 6]: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;literal_eval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list_raw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1192,36 +1150,34 @@ that is the fundamental package for scientific computing with Python. We are add
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Finished to calculate the areas of circles&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod u+x example_function_circle_area_user_1.py
 &lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/example_function_circle_area_user_1.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If we do not use the &lt;a href=&quot;https://docs.python.org/2/library/ast.html&quot;&gt;ast library&lt;/a&gt; to evaluate a string containing a python expression (in this case a list), we will get an error since Python will interpret like a string type and not a list type.&lt;/p&gt;
+&lt;p&gt;If we do not use the &lt;a href=&quot;https://docs.python.org/2/library/ast.html&quot;&gt;ast library&lt;/a&gt; to evaluate a string containing a Python expression (in this case a list), we will get an error since Python will interpret as a string type and not a list type.&lt;/p&gt;
 
 &lt;p&gt;A second way to do it is by using the &lt;a href=&quot;https://docs.python.org/2/library/sys.html&quot;&gt;sys module&lt;/a&gt; which provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.&lt;/p&gt;
 
-&lt;p&gt;Now let’s ask the user to provide a list by passing directly the strings:&lt;/p&gt;
+&lt;p&gt;Now let’s ask the user to provide a list by passing the strings directly:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;nano example_function_circle_area_user_2.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;''' Usage instructions:
-./example_function_circle_area_user_2.py &quot;[1, 2, 3]'''&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Usage instructions:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ./example_function_circle_area_user_2.py &quot;[1, 2, 3]&quot;&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;'Area of a circle = pi * r**2'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Area of a circle = pi * r**2&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;'Library Numpy'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Library Numpy&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'Library to Safely evaluate an expression node'&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'or a string containing a Python expression'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Library to Safely evaluate an expression node&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# or a string containing a Python expression&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ast&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'Module provides access to some variables'&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'used or maintained by the interpreter'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Module provides access to some variables&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# used or maintained by the interpreter&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 
 
@@ -1243,10 +1199,9 @@ that is the fundamental package for scientific computing with Python. We are add
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;chmod u+x example_function_circle_area_user_1.py
-&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/example_function_circle_area_user_2.py &lt;span class=&quot;s2&quot;&gt;&quot;[1, 2, 3]&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;``` bash
+$ chmod u+x example_function_circle_area_user_1.py
+$./example_function_circle_area_user_2.py “[1, 2, 3]”&lt;/p&gt;
 
 &lt;p&gt;You can download the pdf version &lt;a href=&quot;https://github.com/Starignus/PythonPractise/raw/master/Week1/Python/Python_week1.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
