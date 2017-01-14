@@ -10,7 +10,9 @@ To escape from the manual, just type: *q*
 
 ### File Commands
 
-<img src="File_commands.png" alt="File commands" style="width: 300px;"/>
+<p align="center">
+<img src="File_commands.png" alt="File commands" width="400">
+</p>
 
 **Examples - working with directories:**
 ``` bash
@@ -49,27 +51,39 @@ $ cat >file2.txt
 To exit press: **ctrl + d"**.
 ### Directory
 
-<img src="Directory_access.png" alt="Directory Access" style="width: 300px;"/>
+<p align="center">
+<img src="Directory_access.png" alt="Directory Access" width="400">
+</p>
 
 ### Disk usage
 
-<img src="Disk_usage.png" alt="Disk_usage" style="width: 300px;"/>
+<p align="center">
+<img src="Disk_usage.png" alt="Disk_usage" width="400">
+</p>
 
 ### File transfer and Remote Access
 
-<img src="Remote_access.png" alt="Remote_access" style="width: 300px;"/>
+<p align="center">
+<img src="Remote_access.png" alt="Remote_access" width="400">
+</p>
 
 ### Search
 
-<img src="Search.png" alt="Search" style="width: 300px;"/>
+<p align="center">
+<img src="Search.png" alt="Search" width="400">
+</p>
 
 ### System
 
-<img src="System.png" alt="System" style="width: 300px;"/>
+<p align="center">
+<img src="System.png" alt="System" width="400">
+</p>
 
 ### Process Related
 
-<img src="Process_related.png" alt="Process_related" style="width: 300px;"/>
+<p align="center">
+<img src="Process_related.png" alt="Process_related" width="400">
+</p>
 
 ### Virtual terminal (Screen)
 

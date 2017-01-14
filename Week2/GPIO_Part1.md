@@ -1,292 +1,210 @@
-# Raspberry Pi GPIO-Part 1
+# Raspberry Pi GPIO: Adafruit DC Motor HAT
 
-Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has **bi-directional I/O pins**, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi's I/O lines requires a bit or programming. You can use a [variety of programing languages](http://elinux.org/RPi_Low-level_peripherals#GPIO_Code_examples), but we decided to use a really solid, easy tools for driving I/O: **Python**.
+## Overview
 
-## Material needed
+The **DC+Stepper Motor HAT from Adafruit** is a perfect add-on for any motor project as it can drive up to 4 DC or 2 Stepper motors with full PWM speed control. However, the Raspberry Pi does not have a lot of PWM pins; we use a fully-dedicated PWM driver chip onboard to both control motor direction and speed. This chip handles all the motor and speed controls over I2C. Only two GPIO pins (SDA & SCL) are required to drive the multiple motors, and since it is I2C you can also connect any other I2C devices or HATs to the same pins.
 
-* Raspberry Pi 3 B
-* [Breadboard](https://www.sparkfun.com/products/12002?_ga=1.251311686.1915117394.1476705504)
-* [Jumper Wires(M/F)](https://www.sparkfun.com/products/12794)
-* [Momentary Pushbutton Switch](https://www.sparkfun.com/products/9190?_ga=1.213562324.1915117394.1476705504)
-* [2 Resistors](https://www.sparkfun.com/products/11507?_ga=1.213562324.1915117394.1476705504)
-* [2 LEDs](https://www.sparkfun.com/products/9590?_ga=1.213548756.1915117394.1476705504)
+**Note:** [I2C]((https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)) is a very commonly used standard designed to allow one chip to talk to another. So, since the Raspberry Pi can talk I2C we can connect it to a variety of I2C capable chips and modules.
 
-##  GPIO Pinout
+##### Features:
 
-Raspberry has its GPIO over a standard male header on the board. From the first models to the latest, the header has expanded from 26 pins to 40 pins while maintaining the original pinout.
+ * 4 H-Bridges: TB6612 MOSFET chipset provides 1.2A per bridge (3A brief peak) with thermal shutdown protection, internal kickback protection diodes. Can run motors on 4.5VDC to 13.5VDC.
+ * **Up to 4 bi-directional DC motors** with individual 8-bit speed selection (so, about 0.5% resolution).
+ * **Up to 2 stepper motors** (unipolar or bipolar) with single coil, double coil, interleaved or micro-stepping.
+ * Big terminal block connectors to easily hook up wires (18-26AWG) and power.
+ * Polarity protected 2-pin terminal block and jumper to connect external 5-12VDC power.
+ * Install the easy-to-use Python library.
 
-<img src="rpi_old_new_pin.jpg" alt="rpi" style="width: 400px;"/>
+## Assembly
 
-There are (at least) two, different numbering schemes you may encounter when referencing **Pi pin numbers**:
+ **The Motor HAT** comes with an assembled and tested HAT, terminal blocks, and 2x20 plain header. Some soldering is required to assemble the headers on. Here we leave a link with a [step-by-step](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly) guide of how to solder the headers and a video to show you [tips on soldering](
+ https://www.youtube.com/watch?v=QKbJxytERvg).
 
-1. **Broadcom chip-specific** pin numbers.
-2. **P1 physical** pin numbers.
+ <p align="center">
+ <img src="raspberry_pi_2348_top_ORIG.jpg" alt="rpi" width="450">
+ </p>
 
-You can use use either number-system, but when you are programming how to use the pins, it require that you declare which scheme you are using at the very beginning of your program. We will see this later.
+Once the motor HAT is assembled, we place it on top so that the short pins of the 2x20 header line up with the pads on the HAT.
 
-The next table shows all 40 pins on the P1 header, including any special function they may have, and their dual numbers:
+<p align="center">
+<img src="raspberry_pi_place.jpg" alt="rpi-hat" width="450">
+</p>
 
-<img src="header_pinout.jpg" alt="pin" style="width: 400px;"/>
+## Powering Motors
 
-In the next table we show other numbering system  along with the ones we showed above: Pi pin header numbers and element14 given names: wiringPi numbers, Python numbers, and related silkscreen on the wedge. The Broadcom pin numbers in the table are relate to RPi Model 2 and later only.
+Note the HAT does not power the Raspberry Pi, and we strongly recommend having two separate power supplies - one for the RPi and one for the motors, as motors can put a lot of noise onto a power supply and it could cause stability problems.
 
-<img src="Pi_pin_header_numbers.png" alt="pin" style="width: 300px;"/>
+##### Current requirements
 
-This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some [PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) (“analog output”).
+The motor driver chips that come with the kit are designed to provide up to **1.2 A per motor**, with 3A peak current. Note that once you head towards 2A, you will probably want to put a heatsink on the motor driver; otherwise, you will get a thermal failure, possibly burning out the chip.
 
-### Analog vs. Digital
+**Am important thing you can not run motors off of a 9V battery so don't waste your time/batteries!**
 
-Before starting with our practise, we will revise the difference between **analog** and **digital** signals. Both are used to transmit information, usually through **electric signals**. In both these technologies, the information, such as any audio or video, is transformed into electric signals. The **difference between analog and digital**:
+Therefore, you can use a 9V 1A, 12V 1A, or 12V 5A DC regulated switching power adapter. In case you want to make it portable, you can use a big Lead Acid or multiple-AA NiMH battery pack of 4 to 8 batteries to vary the voltage from about 6V to 12V as your motors require.
 
-* In **analog technology**, information is translated into electric pulses of varying amplitude.
+<p align="center">
+<img src="raspberry_pi_powerplug.jpg" alt="hat-power" width="450">
+</p>
 
-* In **digital technology**, translation of information is into binary format (zero or one) where each bit is representative of two distinct amplitudes.
+## Connecting DC Motors
 
-<img src="analog_digital.png" alt="pin" style="width: 300px;"/>
+To connect a motor, simply solder two wires to the terminals and then connect them to either the **M1, M2, M3**, or **M4**. If your motor is running 'backwards' from the way you like, just swap the wires in the terminal block. For this demo, please connect it to **M3**.
 
-#### Comparison chart
+<p align="center">
+<img src="raspberry_pi_dcmotor.jpg" alt="hat-power" width="450">
+</p>
 
-||Analog	|Digital|
-|:------|:-------|:-------|
-|**Signal**| Analog signal is a continuous signal which represents physical measurements.|	Digital signals are discrete time signals generated by digital modulation.|
-|**Waves**|	Denoted by sine waves.|	Denoted by square waves.|
-|**Representation**| Uses continuous range of values to represent information.|	Uses discrete or discontinuous values to represent information.|
-|**Example**|	Human voice in air, analog electronic devices.|	Computers, CDs, DVDs, and other digital electronic devices.|
-|**Technology**| Analog technology records waveforms as they are.|	Samples analog waveforms into a limited set of numbers and records them.|
-|**Data transmissions**|Subjected to deterioration by noise during transmission and write/read cycle.|Can be noise-immune without deterioration during transmission and write/read cycle.|
-|**Response to Noise**|	More likely to get affected reducing accuracy|	Less affected since noise response are analog in nature|
-|**Flexibility**|	Analog hardware is not flexible.|Digital hardware is flexible in implementation.|
-|**Uses**|Can be used in analog devices only. Best suited for audio and video transmission.|	Best suited for Computing and digital electronics.|
-|**Applications**|Thermometer|PCs, PDAs|
-|**Bandwidth**|	Analog signal processing can be done in real time and consumes less bandwidth.|	There is no guarantee that digital signal processing can be done in real time and consumes more bandwidth to carry out the same information.|
-|**Memory**| Stored in the form of wave signal.|Stored in the form of binary bit.|
-|**Power**|	Analog instrument draws large power.|	Digital instrument drawS only negligible power.|
-|**Cost**|Low cost and portable.|	Cost is high and not easily portable.|
-|**Impedance**|	Low	|High order of 100 megaohm|
-|**Errors**|Analog instruments usually have a scale which is cramped at lower end and give considerable observational errors.|	Digital instruments are free from observational errors like parallax and approximation errors.|
+## Installing Software
 
-## Hardware Setup
-
-We start assembling the circuit as show in the diagram bellow. We will use two LEDs to test the output functionality (digital and PWM-Pulse-width Modulation), and a button to test the input.
-
-<img src="pracise_1.png" alt="pinboard" style="width: 400px;"/>
-
-In the next table you will see which RPi's pins we are suing:
-
-##### Leds
-
-| Broadcom chip-specific numbers| P1 Pin Number|
-|:----------|:----------|
-|GPIO 18|12|
-|GPIO 23|16|
-
-##### Button
-
-| Broadcom chip-specific numbers| P1 Pin Number|
-|:----------|:----------|
-|GPIO 17|11|
-
-##### Ground
-| Broadcom chip-specific numbers| P1 Pin Number|
-|:----------|:----------|
-|Ground|6|
-
-
-## Python (RPi.GPIO) API Example
-
-We will use the **RPi.GPIO module** as the driving force behind our Python examples. These Python files and source is included with Raspbian, so assuming you are running the latest Linux distribution, you do not need to download anything to get started. Let's see an example:
-
-1. From your terminal in your laptop connect to your RPi.
-2. Create a folder call "code", then a file call "blinker.py":
+* We can download the Python library to control DC and stepper motors. Before you start, we need to install the **python smbus library** as well as 'git'. For the latter, execute the following command:
 
 ```bash
-$ mkdir code
+$ sudo apt-get install python-smbus
+ ```
+
+* Now, we download the code as:
+
+```bash
 $ cd code
-$ touch blinker.py
+$ git clone https://github.com/adafruit/Adafruit-Motor-HAT-Python-Library.git
+$ cd Adafruit-Motor-HAT-Python-Library
+$ sudo python setup.py install
 ```
-3. Then we open it with our text editor:
+
+* Before going further to the next step, we need to configuring the I2C if it has not been done yet. Run:
+
+``` bash
+sudo raspi-config
+```
+
+ and follow the prompts to install I2C support for the ARM core and Linux kernel:
+
+ <p align="center">
+ <img src="I2C_1.png" alt="I2C_1" width="450">
+ </p>
+
+ <p align="center">
+ <img src="I2C_2.png" alt="I2C_2" width="450">
+ </p>
+
+ <p align="center">
+ <img src="I2C_3.png" alt="I2C_3" width="450">
+ </p>
+
+ <p align="center">
+ <img src="I2C_4.png" alt="I2C_4" width="450">
+ </p>
+
+ <p align="center">
+ <img src="I2C_5.png" alt="I2C_5" width="450">
+ </p>
+
+__Then reboot!__
+
+
+* Now you can get started with testing to watch your motor spin back and forth. First access to:
 
 ```bash
-$ nano blinker.py
+$ cd Adafruit-Motor-HAT-Python/examples
+$ nano DCTest.py
 ```
+Here you will see the code which shows you everything the MotorHAT library can do and how to do it.
 
-4. Then, copy the next code in your text editor. This code assumes we have set up he circuit as we arranged above.
+#### DC motor control
+
+1. Start with importing at least these libraries:
 
 ```python
-#!/usr/bin/env python
+#!/usr/bin/python
+from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
 
-
-# External module imports GPIO
-import RPi.GPIO as GPIO
-# Library to slow or give a rest to the script
 import time
-
-
-# Pin definiton using Broadcom scheme
-# PWM (Analog)
-pwmPin = 18  # Broadcom pin 18 (P1 pin 12)
-# Led
-ledPin = 23  # Broadcom pin 23 (P1 pin 16)
-# Button
-butPin = 17  # Broadcom pin 17 (P1 pin 11)
-
-dc = 95  # duty cycle (0 i.e 0%/LOW and 100 ie.e 100%/HIGH) for PWM pin
-
-
-# Pin Setup:
-GPIO.setmode(GPIO.BCM)  # Broadcom pin-numbering scheme
-GPIO.setup(ledPin, GPIO.OUT)  # LED pin set as output
-GPIO.setup(pwmPin, GPIO.OUT)  # PWM pin set as output
-# PWM (Analog) Output
-pwm = GPIO.PWM(pwmPin, 50)  # Initialize PWM on pwmPin 100Hz frequency
-# Button pin set as input w/ pull-up resistors
-GPIO.setup(butPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-
-# Initial state for LEDs:
-GPIO.output(ledPin, GPIO.LOW)
-# This function set an initial value of the frequency
-pwm.start(dc)
-
-
-print("Here we go! Press CTRL+C to exit")
-try:
-    while 1:
-        # The input() function will return either a True or False
-        # indicating whether the pin is HIGH or LOW.
-        if GPIO.input(butPin):  # button is released
-            pwm.ChangeDutyCycle(dc)  # Adjust the value of the PWM output
-            GPIO.output(ledPin, GPIO.LOW)
-        else:  # button is pressed:
-            pwm.ChangeDutyCycle(100-dc)
-            GPIO.output(ledPin, GPIO.HIGH)
-            # Delay of 75 milliseconds
-            time.sleep(0.075)
-            GPIO.output(ledPin, GPIO.LOW)
-            # Delay of 75 milliseconds
-            time.sleep(0.075)
-except KeyboardInterrupt:  # If CTRL+C is pressed, exit cleanly:
-    pwm.stop()  # stop PWM
-    GPIO.cleanup()  # cleanup all GPIO
-
+import atexit
 ```
 
-5. Running the script needs administrator privileges because the RPi.GPIO module requires it. So we run the following commands:
-
-To make the script an executable:
-
-```bash
-$ sudo chmod u+x blinker.py
-$ ./blinker.py
-```
-With the code running, press the button to turn on the digital LED. The PWM-ing LED will invert its brightness when you press the button as well.
-
-## Python (RPi.GPIO) API: Overview of the basic function calls used in our example.
-
-### Setup Section
-
-* When we use python to control our GPIO pins, we always need to import the corresponding Python module, which goes at the top of the script:
+2. The MotorHAT library contains a few different classes; one is the **MotorHAT class** itself which is the main PWM controller. You always need to create an object, and set the address (or frequency). By default the address is 0x60. We can change this address, but for now, we are not going to do it.
 
 ```python
-import RPi.GPIO as GPIO
+# create a default object, no changes to I2C address or frequency
+mh = Adafruit_MotorHAT(addr=0x60)
 ```
-In here, we are giving a shorter name to the module "GPIO", in order to call the module through our script.
 
-* It is important to define which of the two **pin-numbering schemes** you want to use:
-  1. ```GPIO.BOARD```– **Board numbering scheme**. The pin numbers follow the **pin numbers on header P1**.
-  2. ```GPIO.BCM``` – **Broadcom chip-specific pin numbers**. These pin numbers follow the lower-level numbering system defined by the Raspberry Pi’s Broadcom-chip brain.
-
-To specify in your code which number-system is being used, use the GPIO.setmode() function as:
+3. The PWM driver is 'free running' - that means that even if the python code or Pi Linux kernel crashes, the PWM driver will still continue to work. But it means that the motors **DO NOT STOP** when the python code quits. For that reason, we strongly recommend this 'at exit' code when using DC motors; it will do its best to shut down all the motors.
 
 ```python
-GPIO.setmode(GPIO.BCM)
+# recommended for auto-disabling motors on shutdown!
+def turnOffMotors():
+	mh.getMotor(1).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(2).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(3).run(Adafruit_MotorHAT.RELEASE)
+	mh.getMotor(4).run(Adafruit_MotorHAT.RELEASE)
+
+atexit.register(turnOffMotors)
 ```
-This will activate the Broadcom-chip specific pin numbers.
 
-### Setting a Pin Mode
+#### Creating the DC motor object
 
-You have to declare a “pin mode” before you can use it as either an input or output. To set a pin mode, use the ```setup([pin], [GPIO.IN, GPIO.OUT]``` function. So, if you want to set pin 18 (in the BCM) or 12 (in the BOARD) as an output, for example:
+4. Now that you have the motor HAT object, note that each HAT can control up to 4 motors. That means you can have multiple HATs running.
+To create the actual DC motor object you can request it from the MotorHAT object you created above with ``getMotor(num)`` with a value between 1 and 4, for the terminal number that the motor is attached to
 
 ```python
-GPIO.setup(18, GPIO.OUT)
+# In this case is M3
+myMotor = mh.getMotor(3)
 ```
 
-### Output
+DC motors are simple beasts; you can only set the speed and direction.
 
-#### Digital Output
+#### Setting DC Motor Speed
 
-To write a pin high or low, use the ```GPIO.output([pin], [GPIO.LOW, GPIO.HIGH])``` function. For example, if you want to set pin 18 (in the BCM) high:
+5. To set the speed, call ``setSpeed(speed)`` where speed varies from 0 (off) to 255 (Maximum). This is the PWM duty cycle of the motor.
 
 ```python
-GPIO.output(18, GPIO.HIGH)
+# set the speed to start, from 0 (off) to 255 (max speed)
+myMotor.setSpeed(150)
 ```
 
-Writing a pin to ```GPIO.HIGH``` will drive it to 3.3V, and ```GPIO.LOW``` will set it to 0V. For the lazy, alternative to ```GPIO.HIGH``` and ```GPIO.LOW```, you can use either ```1```, ```True```, ```0``` or ```False``` to set a pin value.
+#### Setting DC Motor Direction
 
-#### Pulse-width Modulation (PWM-“Analog”) Output
-
-To initialize PWM, use ```GPIO.PWM([pin], [frequency])``` function. To make the rest of your script-writing easier you can assign that instance to a variable. Then use ```pwm.start([duty cycle])``` function to set an initial value. For example, we can set PWM pin up with a frequency of 1kHz, and set that output to a 50% duty cycle:
+6. To set the direction, we use the funciton ``run(direction)`` where direction is a constant from one of the following:
+7.
+  * ```Adafruit_MotorHAT.FORWARD``` - DC motor spins forward.
+  * ```Adafruit_MotorHAT.BACKWARD``` - DC motor spins backward.
+  * ```Adafruit_MotorHAT.RELEASE``` - DC motor is 'off', not spinning but will also not hold its place.
 
 ```python
-pwm = GPIO.PWM(18, 1000)
-pwm.start(50)
+while (True):
+	print "Forward! "
+	myMotor.run(Adafruit_MotorHAT.FORWARD)
+
+	print "\tSpeed up..."
+  # This will loop from 0-254
+	for i in range(255):
+		myMotor.setSpeed(i)
+    # It will stop 10 ms
+		time.sleep(0.01)
+
+	print "\tSlow down..."
+  # This will loop from 244-0
+	for i in reversed(range(255)):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "Backward! "
+	myMotor.run(Adafruit_MotorHAT.BACKWARD)
+
+	print "\tSpeed up..."
+	for i in range(255):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "\tSlow down..."
+	for i in reversed(range(255)):
+		myMotor.setSpeed(i)
+		time.sleep(0.01)
+
+	print "Release"
+	myMotor.run(Adafruit_MotorHAT.RELEASE)
+	time.sleep(1.0)
 ```
 
-To adjust the value of the PWM output, use the ```pwm.ChangeDutyCycle([duty cycle])``` function. ```[duty cycle]``` can be any value between 0 (i.e 0%/LOW) and 100 (ie.e 100%/HIGH). So to set a pin to 75% on, for example, you could write:
-
-```python
-pwm.ChangeDutyCycle(75)
-```
-
-To turn PWM on that pin off, use the ```pwm.stop()``` command. Just don’t forget to set the pin as an output before you use it for PWM.
-
-### Inputs
-
-If a pin is configured as an input, you can use the ```GPIO.input([pin])``` function to read its value. The ```input()``` function will return either a ```True``` or ```False``` indicating whether the pin is HIGH or LOW. You can use an if statement to test this. For example, in the next lines of code the GPIO library will read pin 17 (in the BCM) and print whether it is being read as HIGH or LOW:
-
-```python
-if GPIO.input(17):
-    print("Pin 11 is HIGH")
-else:
-    print("Pin 11 is LOW")
-```
-#### Pull-Up/Down Resistors
-
-In the the ```GPIO.setup()``` function, we saw above, where we declared whether a pin was an input or output, we can use a third parameter to set pull-up or pull-down resistors: ```pull_up_down=GPIO.PUD_UP``` or ```pull_up_down=GPIO.PUD_DOWN```. For example, to use a pull-up resistor on GPIO 17 (in the BCM), write this into your setup:
-
-```python
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-```
-
-If nothing is declared in that third value, both pull-resistors will be disabled.
-
-### Others
-
-#### Setting up delays
-
-If you need to slow down your Python script, you can add delays by incorporating the [time module](https://docs.python.org/2/library/time.html) at the top of your script as:
-
-```python
-import time
-```
-
-Then, you can use ```time.sleep([seconds])``` to give your script a rest. You can use decimals to precisely set your delay. For example, to delay 250 milliseconds, write:
-
-```python
-time.sleep(0.25)
-```
-
-### Garbage Collecting
-
-Once your script has run its course, be kind to the next process that might use your GPIOs by cleaning up after yourself. Use the ```GPIO.cleanup()``` command at the end of your script to release any resources your script may be using. Your RPi will survive if you forget to add this command, but it is good practice to include wherever you can.
-
-
-## Suggested readings
-
-* [Pulse-Width Modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation) – You can use PWM to dim LEDs or send signals to servo motors. The RPi has a single PWM-capable pin.
-* [Light-Emitting Diodes (LEDs)](https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds) – To test the output capabilities of the Pi we will use some Leds.
-* [Switch Basics](https://learn.sparkfun.com/tutorials/switch-basics) – To test inputs to the Pi, we will use buttons and switches.
-* [Pull-Up Resistors](https://learn.sparkfun.com/tutorials/pull-up-resistors) – The Pi has internal pull-up (and pull-down) resistors. These are very handy when you are interfacing buttons with the little computer.
-
-
-**References**[[1](http://www.diffen.com/difference/Analog_vs_Digital), [2](https://learn.sparkfun.com/tutorials/raspberry-gpio)]
+Reference[[1](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/overview), [2](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c#installing-kernel-support-manually)]
