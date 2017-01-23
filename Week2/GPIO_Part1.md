@@ -15,24 +15,31 @@ Your Raspberry Pi is more than just a small computer, it is a hardware prototypi
 
 Raspberry has its GPIO over a standard male header on the board. From the first models to the latest, the header has expanded from 26 pins to 40 pins while maintaining the original pinout.
 
-<img src="rpi_old_new_pin.jpg" alt="rpi" style="width: 400px;"/>
+<p align="center">
+<img src="rpi_old_new_pin.jpg" alt="rpi" width="500">
+</p>
 
 There are (at least) two, different numbering schemes you may encounter when referencing **Pi pin numbers**:
 
-1. **Broadcom chip-specific** pin numbers.
+1. **Broadcom (SoC) chip-specific** pin numbers.
 2. **P1 physical** pin numbers.
 
-You can use use either number-system, but when you are programming how to use the pins, it require that you declare which scheme you are using at the very beginning of your program. We will see this later.
+You can use either number-system, but when you are programming how to use the pins, it requires that you declare which scheme you are using at the very beginning of your program. We will see this later.
 
-The next table shows all 40 pins on the P1 header, including any special function they may have, and their dual numbers:
+The next table shows all 40 pins on the P1 header, including any particular function they may have, and their dual numbers:
 
-<img src="header_pinout.jpg" alt="pin" style="width: 400px;"/>
+<p align="center">
+<img src="header_pinout.jpg" alt="pin" width="500">
+</p>
 
-In the next table we show other numbering system  along with the ones we showed above: Pi pin header numbers and element14 given names: wiringPi numbers, Python numbers, and related silkscreen on the wedge. The Broadcom pin numbers in the table are relate to RPi Model 2 and later only.
+In the next table, we show another numbering system along with the ones we showed above: **Pi pin header numbers and element14 given names, wiringPi numbers, Python numbers, and related silkscreen on the wedge**. The Broadcom pin numbers in the table are related to RPi Model 2 and later only.
 
-<img src="Pi_pin_header_numbers.png" alt="pin" style="width: 300px;"/>
+<p align="center">
+<img src="Pi_pin_header_numbers.png" alt="pin" width="500">
+</p>
 
-This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some [PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) (“analog output”).
+This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some Pulse width modulation ([PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) — “analog output”).
+
 
 ### Analog vs. Digital
 
