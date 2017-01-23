@@ -23,3 +23,5 @@ $git clone https://github.com/Starignus/PythonPractise.git
 * [Warming up in Python](Week1/Python/Python_week1.md)
 * [GPIO-Part 1](Week2/GPIO_Part1.md)
 * [GPIO-Part 2: Motor HAT](Week2/GPIO_Part2_MotorHAT.md)
+
+You can read all these practice in the [blog](https://starignus.github.io/PythonPractise//) too.
