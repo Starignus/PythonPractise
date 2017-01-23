@@ -67,9 +67,12 @@ Before starting with our practise, we will revise the difference between **analo
 
 ## Hardware Setup
 
-We start assembling the circuit as show in the diagram bellow. We will use two LEDs to test the output functionality (digital and PWM-Pulse-width Modulation), and a button to test the input.
+We start assembling the circuit as shown in the diagram bellow. We will use two LEDs to test the output functionality (digital and PWM-Pulse-width Modulation), and a button to test the input.
 
-<img src="pracise_1.png" alt="pinboard" style="width: 400px;"/>
+<p align="center">
+<img src="pracise_1.png" alt="pinboard" width="450">
+</p>
+
 
 In the next table you will see which RPi's pins we are suing:
 
@@ -110,7 +113,7 @@ $ touch blinker.py
 $ nano blinker.py
 ```
 
-4. Then, copy the next code in your text editor. This code assumes we have set up he circuit as we arranged above.
+4. Then, copy the next code in your text editor. This code assumes we have set up the circuit as we arranged above.
 
 ```python
 #!/usr/bin/env python
@@ -171,7 +174,7 @@ except KeyboardInterrupt:  # If CTRL+C is pressed, exit cleanly:
 
 ```
 
-5. Running the script needs administrator privileges because the RPi.GPIO module requires it. So we run the following commands:
+5. Running the script needs administrator privileges because of the RPi.GPIO module requires it. So we run the following commands:
 
 To make the script an executable:
 
@@ -179,18 +182,20 @@ To make the script an executable:
 $ sudo chmod u+x blinker.py
 $ ./blinker.py
 ```
+
 With the code running, press the button to turn on the digital LED. The PWM-ing LED will invert its brightness when you press the button as well.
 
 ## Python (RPi.GPIO) API: Overview of the basic function calls used in our example.
 
 ### Setup Section
 
-* When we use python to control our GPIO pins, we always need to import the corresponding Python module, which goes at the top of the script:
+* When we use Python to control our GPIO pins, we always need to import the corresponding Python module, which goes at the top of the script:
 
 ```python
 import RPi.GPIO as GPIO
 ```
-In here, we are giving a shorter name to the module "GPIO", in order to call the module through our script.
+
+In here, we are giving a shorter name to the module "GPIO", to call the module through our script.
 
 * It is important to define which of the two **pin-numbering schemes** you want to use:
   1. ```GPIO.BOARD```– **Board numbering scheme**. The pin numbers follow the **pin numbers on header P1**.
@@ -225,7 +230,7 @@ Writing a pin to ```GPIO.HIGH``` will drive it to 3.3V, and ```GPIO.LOW``` will 
 
 #### Pulse-width Modulation (PWM-“Analog”) Output
 
-To initialize PWM, use ```GPIO.PWM([pin], [frequency])``` function. To make the rest of your script-writing easier you can assign that instance to a variable. Then use ```pwm.start([duty cycle])``` function to set an initial value. For example, we can set PWM pin up with a frequency of 1kHz, and set that output to a 50% duty cycle:
+To initialize PWM, use ```GPIO.PWM([pin], [frequency])``` function. To make the rest of your script-writing easier, you can assign that instance to a variable. Then use ```pwm.start([duty cycle])``` function to set an initial value. For example, we can set PWM to pin up with a frequency of 1kHz, and set that output to a 50% duty cycle:
 
 ```python
 pwm = GPIO.PWM(18, 1000)
@@ -252,7 +257,7 @@ else:
 ```
 #### Pull-Up/Down Resistors
 
-In the the ```GPIO.setup()``` function, we saw above, where we declared whether a pin was an input or output, we can use a third parameter to set pull-up or pull-down resistors: ```pull_up_down=GPIO.PUD_UP``` or ```pull_up_down=GPIO.PUD_DOWN```. For example, to use a pull-up resistor on GPIO 17 (in the BCM), write this into your setup:
+In the ```GPIO.setup()``` function, we saw above, where we declared whether a pin was an input or output, we can use a third parameter to set pull-up or pull-down resistors: ```pull_up_down=GPIO.PUD_UP``` or ```pull_up_down=GPIO.PUD_DOWN```. For example, to use a pull-up resistor on GPIO 17 (in the BCM), write this into your setup:
 
 ```python
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
