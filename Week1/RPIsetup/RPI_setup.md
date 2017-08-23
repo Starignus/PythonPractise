@@ -32,13 +32,13 @@ $ sudo raspi-config
 
 ### Setting WiFi from Imperial College network
 
-* You will see there is no IP assigned to our PRI, therefore to set up the WiFi we need to modify a configuration file, but first we need to back it up:
+1. You will see there is no IP assigned to our PRI, therefore to set up the WiFi we need to modify a configuration file, but first we need to back it up:
 
 ```bash
 $ sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf_backup
 ```
 
-Then we will edit the *wpa_supplicant.conf*:
+2. Then we will edit the *wpa_supplicant.conf*:
 ```bash
 $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
@@ -50,7 +50,7 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 ```
 
-Then we add to the content of *wpa_supplicant.conf* the lines after # IC (**the configuration is case sensitive, so make sure you do not have typos**):
+3. Then we add to the content of *wpa_supplicant.conf* the lines after # IC (**the configuration is case sensitive, so make sure you do not have typos**):
 
 ```bash
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -69,7 +69,35 @@ network={
         password="YOUR_PASSWORD"
 }
 ```
-This is the Imperial College configuration in which you have to replace "COLLEGE_USERNAME" with a valid college username, please do not store your password in plain text, but we will change it after verifying that the WiFi is working. Reboot the system if it is necessary.
+This is the Imperial College configuration in which you have to replace "COLLEGE_USERNAME" with a valid college username and "YOUR_PASSWORD" with the account's password. Please do not store your password in plain text, but we will change it after verifying that the WiFi is working. Reboot the system if it is necessary.
+
+**Note:** In case you are working with your team, and you do not want to show your password, just leave the field blank and follow the next steeps to encrypt your password before setting it up in the *wpa_supplicant.conf*.
+
+### Setting WiFi from eduroam network
+
+If you are not able to connect to the Imperial-WPA network you can also use the eduroam one. We will need to execute steps 1 and 2 of the previous section on how to modify the settings for the Imperial College network. Then in step 3 the informations we need to enter are slightly different:
+
+```bash
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+
+# eduroam
+network={
+        ssid="eduroam"
+        proto=RSN
+        key_mgmt=WPA-EAP
+        pairwise=CCMP
+        auth_alg=OPEN
+        eap=PEAP
+        identity="COLLEGE_USERNAME@ic.ac.uk"
+        password="YOUR_PASSWORD"
+}
+
+**Note:** If you want your RPi to be able to connect to different networks you can include multiple network={⋯} entries.
+
+You will have to replace "COLLEGE_USERNAME" with a valid username. You can change "@ic.ac.uk" with any domain that has accredited access to the eduroam network (e.g "@network.rca.ac.uk"). Replace "YOUR_PASSWORD" with the password related to that account. Please do not store your password in plain text, but we will change it after verifying that the WiFi is working. Reboot the system if it is necessary.
+
 **Note:** In case you are working with your team, and you do not want to show your password, just leave the field blank and follow the next steeps to encrypt your password before setting it up in the *wpa_supplicant.conf*.
 
 **Encrypting Password**
@@ -146,21 +174,22 @@ sudo pip install --upgrade pip
 sudo apt-get -y install vim
 ```
 ### Remote connection to your Raspberry Pi
-**Weaved** services connect you easily and securely to your Pi from a mobile app, browser window and a terminal. Control remote computers using tcp hosts such as SSH. You will be able to connect to your RPi from laptop or desktop at home. The free weaved account allows for 10 registered services and 30 minute connections on up to 1 concurrent service(s).
+**remot3.it** services connect you easily and securely to your Pi from a mobile app, browser window and a terminal. remot3.it is based on weaved. Control remote computers using tcp hosts such as SSH. You will be able to connect to your RPi from laptop or desktop at home. The free remot3.it account allows for multiple registered services and 8 hours connections on up to 1 concurrent service(s).
 
 ##### Installing weaved:
-Manage network devices remotely using [weaved](http://www.weaved.com/) service. To install:
+We need to install weaved to be able to connect our RPi. To install it:
 ```bash
 sudo apt-get -y install weavedconnectd
 ```
 
 ##### Weaved configuration:
 
-* To configure weaved in our RPi, first we need to open an account in [weaved](https://developer.weaved.com/portal/login.php) website. You can register from your laptop or desktop. Once you have it, from your Rpi terminal you will execute a command to link your RPi to your weaved account:
+* To configure weaved in our RPi, first we need to open an account on the [remot3.it](https://www.remot3.it/web/index.html) website. You can register from your laptop or desktop. You could also use the credentials of a weaved account, if you have one already.
+* Once you have it, from your Rpi terminal you will execute a command to link your RPi to your remot3.it account:
 ```bash
 sudo weavedinstaller
 ```
-* Enter your Weaved account username and password. Next, you will see this menu:
+* Enter your remot3.it account username and password. Next, you will see this menu:
 
 <img src="Pi-installer-menu.png" alt="menu1" style="width: 300px;"/>
 
@@ -168,7 +197,7 @@ sudo weavedinstaller
 
 <img src="Pi-installer-menu-02.png" alt="menu2" style="width: 300px;"/>
 
-Enter **1** for SSH.
+* Enter **1** for SSH.
 
 * Next, we accept the default port (**y**).
 
@@ -184,7 +213,7 @@ You will now return to the main menu, where you can see your Weaved Service Conn
 
 ### Accessing from your computer (Linux or Mac OS X)
 
-We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your weaved account,  you will get a list of the services linked to your devices:
+We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your remot3.it account,  you will get a list of the services linked to your devices:
 
 <img src="weaved_connected.png" alt="weaved" style="width: 400px;"/>
 
