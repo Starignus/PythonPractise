@@ -213,17 +213,28 @@ You will now return to the main menu, where you can see your Weaved Service Conn
 
 ### Accessing from your computer (Linux or Mac OS X)
 
-We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your remot3.it account,  you will get a list of the services linked to your devices:
+We sill see here how you can access using your laptop or any other desktop from any terminal. First, if you login to your remot3.it account,  you will get a list of your devices:
 
-<img src="weaved_connected.png" alt="weaved" style="width: 400px;"/>
+<img src="remot3-logged_in.png" alt="remot31" style="width: 400px;"/>
 
-In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:  
+In your case you will have just one item. When you click on the name of you device, a pop-up will open:  
 
-<img src="weaved_ssh.png" alt="weaved" style="width: 400px;"/>
+<img src="remot3-first_pop-up.png" alt="remot32" style="width: 400px;"/>
 
-Then we copy the command after *For pi username*, in this example it is: ```ssh -l pi proxy71.weaved.com -p 34644```. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to [install a SSH and Telnet client](http://www.chiark.greenend.org.uk/~sgtatham/putty/)).
+Click on the name of your ssh service and then "Confirm".
 
-Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore!
+A second pop-up will appear:
+<img src="remot3-third_pop-up.png" alt="remot33" style="width: 400px;"/>
+
+Then we copy the command after *For pi username*, in this example it is: ```ssh -l pi proxy54.yoics.net -p 30015```. For you it will be different. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to [install a SSH and Telnet client](http://www.chiark.greenend.org.uk/~sgtatham/putty/)).
+
+The terminal is going to show you this message:
+<img src="athenticity-check.png" alt="remot34" style="width: 400px;"/>
+Type yes.
+
+Then, you will be prompted to enter a password, you should enter the password of your RPi. If you didn't change it previously, by default is **raspberry**
+
+Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore! 
 
 ### Accessing from your computer (Windows)
 
@@ -235,11 +246,11 @@ Once downloaded, double click on the **putty.exe** and you will see the window l
 
 <img src="PuttyConnect.JPG" alt="weaved" style="width: 400px;"/>
 
-Then, if you login to your weaved account,  you will get a list of the services linked to your devices:
+Then, if you login to your remot3.it account,  you will get a list of the services linked to your devices:
 
-<img src="weaved_connected.png" alt="weaved" style="width: 400px;"/>
+<img src="remot3-logged_in.png" alt="weaved" style="width: 400px;"/>
 
-In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a widow like:  
+In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a window like this:  
 
 <img src="weaved_ssh.png" alt="weaved" style="width: 400px;"/>
 
