@@ -4,7 +4,8 @@
 
  Each team should get a monitor, keyboard and mouse.
 * Insert the mini SD card in the Raspberry Pi , connect the mouse and keyboard in the USB ports, and the display with provided HDMI-DVI cable. Then,  using Y-cable, power it up by plugging in the charger.
-* The operative system starts. Then, click on the __terminal__ icon next to the menu to open it.
+* From the menu select to install Raspbian.
+* Once the operative system starts, click on the __terminal__ icon next to the menu to open it.
 * Then you need to run some commands in the terminal as root user to configure the Raspberry Pi (RPi). The **root user** has the permission to modify files or default settings as administrator providing the root password. The **root user** is **pi** and the default **root password** is **raspberry**. First we will make stronger the password, but first, we will change some default setups:
 
 ``` bash
