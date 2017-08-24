@@ -13,22 +13,22 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Introductory Material
 
-* [Linux (Bash) commands cheat sheet](Week1/Bash_script/Cheat_sheat_bash_Linux.md)
+* [Linux (Bash) commands cheat sheet](...)
 
 ##### Week 1:
 
-* [Raspberry Pi set up](Week1/RPIsetup/RPI_setup.md)
-* [Advanced remote functionalities](Week1/RPIsetup/Advance_remoteconection.md)
+* [Raspberry Pi set up](...)
 * [Arduino setup for Raspberry Pi](...)
 
 ##### Week 2:
 
 * [Introduction to Github](...)
-* [Warming up in Python](Week1/Python/Python_week1.md)
+* [Warming up in Python](...)
 * [Warming up in Arduino](...)
 
 #### Additional Material
 
+* [Advanced remote functionalities](..)
 * GPIO with Raspberry Pi
-    * [GPIO-Part 1](Week2/GPIO_Part1.md)
-    * [GPIO-Part 2: Motor HAT](Week2/GPIO_Part2_MotorHAT.md)
+    * [RPi GPIO-Part 1](...)
+    * [RPi GPIO-Part 2: Motor HAT](...)
