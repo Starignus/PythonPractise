@@ -25,7 +25,35 @@ sudo usermod -a -G dialout pi
 ```
 
 ### Working with the Arduino IDE
+
 If you now connect a keyboard, mouse and screen to your RPi, you can see that in the menu under the "Electronics" section the Arduino IDE has been installed. If you are familiar with the Arduino IDE, you can go ahead and use the Arduino IDE as you would on your laptop. The only difference is that the RPI is a slower to compile the new lines of code from the RPi with respect to a laptop.
+To test if Arduino IDE is working you can connect the Arduino to the RPi using one of the available USB ports like so:
+
+<img src="connected-boards.png" alt="arduino" style="width: 400px;"/>
+
+Then run the Arduino IDE.
+
+<img src="arduino-ide.png" alt="arduino" style="width: 400px;"/>
+
+Click **Tools->Serial Port** and select the USB serial port to which your Arduino is connected (usually /dev/ttyACM0). Then, click **Tools->Board->Arduino Uno**. Then you can open the basic sketch "Blink" by clicking on **File->Example->01. Basics-> Blink. You can then upload the sketch on the Arduino by clicking the "Upload" button (the one with an arrow).
+
+<img src="arduino-blink.png" alt="arduino" style="width: 400px;"/>
+
+Once uploaded you will see the LED on pin 13 blink.
+
+**Note:** If /dev/ttyACM0 doesn't work, you can find out in which serial port your Arduino is plugged by unpluggin it from the RPi. Then on the Rpi terminal type:
+
+```bash
+ls /dev/tty*
+```
+
+This command lists all the connected devices, it should show "/dev/ttyAMA0". Then plug in your Arduino again and enter the same command and you should find the right port popping up.
+
+<img src="arduino-not-on-ttylist.png" alt="arduino" style="width: 400px;"/>
+
+<img src="arduino-on-ttylist.png" alt="arduino" style="width: 400px;"/>
+
+
 
 
 
