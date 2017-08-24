@@ -194,6 +194,10 @@ sudo weavedinstaller
 
 <img src="Pi-installer-menu.png" alt="menu1" style="width: 300px;"/>
 
+* Then enter a name for your RPi (e.g. "myPI").
+
+<img src="remot3-piname.png" alt="menu0" style="width: 300px;"/>
+
 * Initially you won’t have any Weaved services installed, so the upper part is empty.  Enter **1** to attach Weaved to an existing TCP service (host) on your Raspberry Pi.  You should now see the following screen:
 
 <img src="Pi-installer-menu-02.png" alt="menu2" style="width: 300px;"/>
