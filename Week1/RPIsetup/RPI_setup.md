@@ -17,16 +17,16 @@ $ sudo raspi-config
 
 <img src="raspi_config.png" alt="screen" style="width: 400px;"/>
 
-* Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Internationalisation Options --> Change the Keyboard Layout__. Then we choose generic 105 key, and then UK.
+* Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Localisation Options --> Change Keyboard Layout__. Then we choose generic 105 key, and then UK. Then we can choose the default options that the menu is prompting.
 * Also we have option to change the timezone from this menu.
 
 <img src="Internationalisation.png" alt="screen" style="width: 400px;">
 
- * To change the password, we return to the main menu and choose the second option. We have to set the new password and do not reboot the RPi yet.
+ * To change the password, we from the main menu we choose the first option. We have to set the new password and do not reboot the RPi yet.
 
-*  We check that the [ssh](https://en.wikipedia.org/wiki/Secure_Shell) for remote network communications is enabled (security shell cryptographic network protocol). We access to the __Advance Options --> SSH__.
+*  We check that the [ssh](https://en.wikipedia.org/wiki/Secure_Shell) for remote network communications is enabled (security shell cryptographic network protocol). We access to the __Interfacing Options --> SSH__.
 
-<img src="advance_opt.png" alt="screen" style="width: 400px;">
+<img src="ssh-menu.png" alt="screen" style="width: 400px;">
 
 * An optional step is to change the hostname in the same advance menu.
 * Then we restart the RPi.
