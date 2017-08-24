@@ -18,8 +18,8 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 ##### Week 1:
 
 * [Raspberry Pi set up](Week1/RPIsetup/RPI_setup.md)
-  * [Advanced remote functionality](Week1/RPIsetup/Advance_remoteconection.md)
-  * [Raspberry Pi and Arduino](...)
+* [Advanced remote functionalities](Week1/RPIsetup/Advance_remoteconection.md)
+* [Arduino setup for Raspberry Pi](...)
 
 ##### Week 2:
 
