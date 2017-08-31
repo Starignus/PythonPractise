@@ -2,7 +2,7 @@
 
 ## Alternative ways to connect to your Raspberry Pi remotely
 
-We already know how to connect through remot3.it service, but we know that the connection lasts 8 hours and it allows us to work on one terminal session at atime. Therefore, with the help of remot3.it and another commands we can connect to or RPi for longer and using multiple terminals.
+We already know how to connect through remot3.it service, but we know that the connection lasts 8 hours and it allows us to work on one terminal session at a time. Therefore, with the help of remot3.it and another commands we can connect to or RPi for longer and using multiple terminals.
 
 #### Checking your IP address from the terminal
 

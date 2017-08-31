@@ -1,6 +1,6 @@
 # Raspberry Pi GPIO-Part 1
 
-Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has **bi-directional I/O pins**, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi's I/O lines requires a bit or programming. You can use a [variety of programing languages](http://elinux.org/RPi_Low-level_peripherals#GPIO_Code_examples), but we decided to use a really solid, easy tools for driving I/O: **Python**.
+Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has **bi-directional I/O pins**, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi's I/O lines requires a bit or programming. You can use a [variety of programing languages](http://elinux.org/RPi_GPIO_Code_Samples), but we decided to use a really solid, easy tools for driving I/O: **Python**.
 
 ## Material needed
 
@@ -148,7 +148,7 @@ GPIO.setmode(GPIO.BCM)  # Broadcom pin-numbering scheme
 GPIO.setup(ledPin, GPIO.OUT)  # LED pin set as output
 GPIO.setup(pwmPin, GPIO.OUT)  # PWM pin set as output
 # PWM (Analog) Output
-pwm = GPIO.PWM(pwmPin, 50)  # Initialize PWM on pwmPin 100Hz frequency
+pwm = GPIO.PWM(pwmPin, 50)  # Initialize PWM on pwmPin 50Hz frequency
 # Button pin set as input w/ pull-up resistors
 GPIO.setup(butPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 

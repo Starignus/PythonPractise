@@ -1,9 +1,37 @@
 # Setting up your Raspberry Pi 3 Model B
 
-### Starting Set up
+The goal of this session is to set up our Raspberry Pis, so they can run "headless". This means that we will be able to control the RPi remotely from our laptops, without the need to connect the RPi to a screen, keyboard and mouse each time we use it. This initial setup, therefore, reduces the time we spend in setting up our Rpi and minimizes the cabling, this, will be fundamental when our Pi will be inserted in our Pixel.
 
- Each team should get a monitor, keyboard and mouse.
-* Insert the mini SD card in the Raspberry Pi , connect the mouse and keyboard in the USB ports, and the display with provided HDMI-DVI cable. Then,  using Y-cable, power it up by plugging in the charger.
+To setup our RPi we will use the terminal. If you are new to the terminal can be a bit overwhelming at first, don't panic and follow the steps carefully!
+We have created a [cheat sheet](...) to help you out.
+
+### Step 1: General Setup for Raspberry Pi
+
+At first we will setup the RPi using peripherals. Each team should get the following equipment:
+[comment]: <> (TODO: review materials list)
+  * monitor
+  * HDMI-DVI cable
+  * power cable
+  * keyboard
+  * mouse
+  * SD card
+
+[comment]: <> (TODO: add image)
+<img src="" alt="provided-material" style="width: 400px;">
+
+1.1 Connect mouse and keyboard using the USB ports on the Rpi. Connect the display with provided HDMI-DVI cable plugging it in the HDMI port of the RPi.
+
+[comment]: <> (TODO: add image)
+<img src="" alt="pheriperals-setup" style="width: 400px;">
+
+1.2 Insert the micro-SD card in the back of the RPi
+
+[comment]: <> (TODO: add image)
+<img src="" alt="SD-slot" style="width: 400px;">
+
+1.3 Using Y-cable, power the Rpi up by plugging in the charger.
+
+
 * From the menu select to install Raspbian.
 * Once the operative system starts, click on the __terminal__ icon next to the menu to open it.
 * Then you need to run some commands in the terminal as root user to configure the Raspberry Pi (RPi). The **root user** has the permission to modify files or default settings as administrator providing the root password. The **root user** is **pi** and the default **root password** is **raspberry**. First we will make stronger the password, but first, we will change some default setups:
@@ -15,7 +43,7 @@ $ sudo raspi-config
 
 * The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.
 
-<img src="raspi_config.png" alt="screen" style="width: 400px;"/>
+<img src="raspi-config.png" alt="screen" style="width: 400px;"/>
 
 * Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Localisation Options --> Change Keyboard Layout__. Then we choose generic 105 key, and then UK. Then we can choose the default options that the menu is prompting.
 * Also we have option to change the timezone from this menu.
@@ -239,7 +267,7 @@ Type yes.
 
 Then, you will be prompted to enter a password, you should enter the password of your RPi. If you didn't change it previously, by default is **raspberry**
 
-Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore! 
+Then, you are connected from your laptop to your RPi!! You don't need the display and mouse anymore!
 
 ### Accessing from your computer (Windows)
 
