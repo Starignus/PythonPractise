@@ -2,6 +2,8 @@
 
 The goal of this session is to set up our Raspberry Pis, so they can run "headless". This means that we will be able to control the RPi remotely from our laptops, without the need to connect the RPi to a screen, keyboard and mouse each time we use it. This initial setup, therefore, reduces the time we spend in setting up our Rpi and minimizes the cabling, this, will be fundamental when our Pi will be inserted in our Pixel.
 
+We will use the [SSH](https://en.wikipedia.org/wiki/Secure_Shell) protocol to connect from our laptop to the RPi over the Imperial/eduroam WiFi network. It let us establish a secure network communication on an unsecured network.
+
 To setup our RPi we will use the terminal. If you are new to the terminal can be a bit overwhelming at first, don't panic and follow the steps carefully!
 We have created a [cheat sheet](...) to help you out.
 
@@ -31,47 +33,73 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 1.3 Using Y-cable, power the Rpi up by plugging in the charger.
 
+1.4 The Rpi will start the setup and it will ask you which operating system you want to install. From the menu select to install Raspbian.
 
-* From the menu select to install Raspbian.
-* Once the operative system starts, click on the __terminal__ icon next to the menu to open it.
-* Then you need to run some commands in the terminal as root user to configure the Raspberry Pi (RPi). The **root user** has the permission to modify files or default settings as administrator providing the root password. The **root user** is **pi** and the default **root password** is **raspberry**. First we will make stronger the password, but first, we will change some default setups:
+1.5  Once the operating system starts, click on the __terminal__ icon next to the menu to open it.
+
+[comment]: <> (TODO: add image)
+<img src="" alt="terminal-icon" style="width: 400px;">
+
+**Note:** Now we will start running some commands in the terminal.  We will run them as a **root user**, the root has the permission to modify files or default settings as administrator. By default on Raspbian (the operating system of our RPIs) the **root user** is **pi** and the **root password** associated to the root user is **raspberry**.
+To operate as a root user in the terminal every command is preceded by the *sudo* command.
+
+1.6 Type the following command and press 'Enter' to open the configuration menu of the RPi:
 
 ``` bash
 $ sudo raspi-config
 ```
-**Note:** To execute any Linux command as root user, the *sudo* command presides the Linux command.
 
-* The terminal will show a menu which can be navigated with the arrows on your keyboard and accept options with enter.
+The terminal will show a menu. The options can be navigated with the vertical keys of your keyboard, to accept the options press 'Enter', to finish press the lateral keys of the keyboard.
 
 <img src="raspi-config.png" alt="screen" style="width: 400px;"/>
 
-* Then we set up the keyboard to prevent any problem when changing the password, therefore we access the option: __Localisation Options --> Change Keyboard Layout__. Then we choose generic 105 key, and then UK. Then we can choose the default options that the menu is prompting.
-* Also we have option to change the timezone from this menu.
+1.7 First we set up the keyboard to prevent any problem when we will change the root password. We access the option: __4 Localisation Options --> Change Keyboard Layout__. Then we choose generic 105 key, and then UK. Then we can choose the default options that the menu is prompting.
 
+[comment]: <> (TODO: add image, modify the text at 1.7 if required)
+
+<img src="" alt="localisation-options" style="width: 400px;">
+
+
+1.8 We go back to the main menu and change the timezone from the __4 Localisation Options__ menu.
+
+[comment]: <> (TODO: add images, modify the text at 1.7 if required)
 <img src="Internationalisation.png" alt="screen" style="width: 400px;">
 
- * To change the password, we from the main menu we choose the first option. We have to set the new password and do not reboot the RPi yet.
+1.9 Now we will change the root user password. This increases the security of the connection we will establish from our laptop to the RPi. Since you are sharing this RPi with your teammates choose a password together. To change the password we go back to the main menu and  we choose the first option: __1 Change User Password__.
 
-*  We check that the [ssh](https://en.wikipedia.org/wiki/Secure_Shell) for remote network communications is enabled (security shell cryptographic network protocol). We access to the __Interfacing Options --> SSH__.
+[comment]: <> (TODO: add a more verbose explanation)
+<img src="" alt="change-password" style="width: 400px;">
+
+We have set the new password. Do not reboot the RPi yet.
+
+1.10 Now we will check that the SSH is enabled. We need to enable it to connect with the RPi remotely. From the main menu we access: __5 Interfacing Options --> P2 SSH__.
 
 <img src="ssh-menu.png" alt="screen" style="width: 400px;">
 
-* An optional step is to change the hostname in the same advance menu.
-* Then we restart the RPi.
+And we press "Enable".
 
-### Setting WiFi from Imperial College network
+[comment]: <> (TODO: add image)
+<img src="" alt="enable-ssh" style="width: 400px;">
 
-1. You will see there is no IP assigned to our PRI, therefore to set up the WiFi we need to modify a configuration file, but first we need to back it up:
+1.11 Exit the menu, you will re-enter the terminal. Reboot the RPi by entering:
+``` bash
+$ reboot
+```
+
+### Step 2: Setting WiFi from Imperial College network
+
+At the moment there is no IP address assigned to our RPi. Therefore to set up the WiFi, to do so we need to modify a configuration file.
+
+2.1  First we back up the configuration file *wpa_supplicant.conf*, to do so we enter the command:
 
 ```bash
 $ sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf_backup
 ```
 
-2. Then we will edit the *wpa_supplicant.conf*:
+2.2 Then we edit the *wpa_supplicant.conf*. The default text editor installed in the RPi is _nano_. To edit a file with the nano editor is sufficient to enter the command ```nano /path/to/file```. Therefore to edit *wpa_supplicant.conf* we enter the following command with admin user permission:
 ```bash
 $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-The default text editor installed in the RPi is _nano_. We can install also _vim_ or _vi_ to have another option of a text editor.
 
 This file should just have the next line at the beginning:
 ```bash
@@ -79,7 +107,7 @@ ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 ```
 
-3. Then we add to the content of *wpa_supplicant.conf* the lines after # IC (**the configuration is case sensitive, so make sure you do not have typos**):
+2.3 Then we add to the content of *wpa_supplicant.conf* the lines after # IC (**the configuration is case sensitive, so make sure you do not have typos**):
 
 ```bash
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -98,13 +126,15 @@ network={
         password="YOUR_PASSWORD"
 }
 ```
-This is the Imperial College configuration in which you have to replace "COLLEGE_USERNAME" with a valid college username and "YOUR_PASSWORD" with the account's password. Please do not store your password in plain text, but we will change it after verifying that the WiFi is working. Reboot the system if it is necessary.
+**Note:** This is the Imperial College configuration if you want to connect to the eduroam network follow the Alternative Step 2
 
-**Note:** In case you are working with your team, and you do not want to show your password, just leave the field blank and follow the next steeps to encrypt your password before setting it up in the *wpa_supplicant.conf*.
+2.4 Now we have to replace "COLLEGE_USERNAME" with a valid college username and "YOUR_PASSWORD" with the account's password. If you are not comfortable in writing your password in plain text while working with your team, leave the field blank and follow step 3 to encrypt your password before setting it up in the *wpa_supplicant.conf*.
 
-### Setting WiFi from eduroam network
+2.5 (Optional) If you have replaced your password in the previous step you can check if the connection works by rebooting your RPi. One the system starts again the RPi should connect automatically to the WiFi.
 
-If you are not able to connect to the Imperial-WPA network you can also use the eduroam one. We will need to execute steps 1 and 2 of the previous section on how to modify the settings for the Imperial College network. Then in step 3 the informations we need to enter are slightly different:
+### Alternative Step 2: Setting WiFi from eduroam network
+
+If you are not able to connect to the Imperial-WPA network you can also use the eduroam one. We will need to execute steps 2.1 and 2.2 of the previous section on how to modify the settings for the Imperial College network. Then in step 2.3 the informations we need to enter are slightly different:
 
 ```bash
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -122,16 +152,17 @@ network={
         identity="COLLEGE_USERNAME@ic.ac.uk"
         password="YOUR_PASSWORD"
 }
+```
 
 **Note:** If you want your RPi to be able to connect to different networks you can include multiple network={⋯} entries.
 
-You will have to replace "COLLEGE_USERNAME" with a valid username. You can change "@ic.ac.uk" with any domain that has accredited access to the eduroam network (e.g "@network.rca.ac.uk"). Replace "YOUR_PASSWORD" with the password related to that account. Please do not store your password in plain text, but we will change it after verifying that the WiFi is working. Reboot the system if it is necessary.
+2.4a You will have to replace "COLLEGE_USERNAME" with a valid username. You can change "@ic.ac.uk" with any domain that has accredited access to the eduroam network (e.g "@network.rca.ac.uk"). Replace "YOUR_PASSWORD" with the password related to that account. If you are not comfortable in writing your password in plain text while working with your team, leave the field blank and follow step 3 to encrypt your password before setting it up in the *wpa_supplicant.conf*.
 
-**Note:** In case you are working with your team, and you do not want to show your password, just leave the field blank and follow the next steeps to encrypt your password before setting it up in the *wpa_supplicant.conf*.
+2.5 (Optional) If you have replaced your password in the previous step you can check if the connection works by rebooting your RPi. One the system starts again the RPi should connect automatically to the WiFi.
 
-**Encrypting Password**
+### Step 3: Encrypting Your Password
 
-In order to not store the password in a plain text we **encrypt** our password with an **MD4 hash generated** from the corresponding college password. You can generate the hash like this with the next Linux command:
+3.1 In order not to store the password in a plain text we **encrypt** our password with an **MD4 hash generated** one. You can generate the hash like this with the next Linux command:
 
 ```bash
 $ echo -n 'YOUR_PASSWORD' | iconv -t utf16le | openssl md4
