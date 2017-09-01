@@ -12,7 +12,7 @@ We have created a [cheat sheet](...) to help you out.
 At first we will setup the RPi using peripherals. Each team should get the following equipment:
 
 [//]: # (TODO: review materials list)
- 
+
  * monitor
   * HDMI-DVI cable
   * power cable
@@ -294,6 +294,7 @@ Your RPi is now ready to run headless, we just have to connect with it over ssh 
 3. Click on the name of your ssh service and then "Confirm".
 
 4. A second pop-up will appear:
+
 <img src="remot3-third_pop-up.png" alt="remot33" style="width: 400px;"/>
 
 We copy the command after *For pi username*, in this example it is: ```ssh -l pi proxy54.yoics.net -p 30015```. For you it will be different.
@@ -301,7 +302,9 @@ We copy the command after *For pi username*, in this example it is: ```ssh -l pi
 5. Then, paste the command in your laptop or desktop terminal (If you are using a Mac or Linux all will work, but for windows you have to [install a SSH and Telnet client](http://www.chiark.greenend.org.uk/~sgtatham/putty/)).
 
 6. The terminal is going to show you this message:
-<img src="athenticity-check.png" alt="remot34" style="width: 400px;"/>
+
+<img src="authenticity-check.png" alt="remot34" style="width: 400px;"/>
+
 Type yes.
 
 7. Then, you will be prompted to enter a password, you should enter the password of the root user of your RPi. If you didn't change it previously, by default is **raspberry**
@@ -316,21 +319,31 @@ If your computer operative  system is Windows, to access remotely you will need 
 
 <img src="Putty.JPG" alt="weaved" style="width: 400px;"/>
 
-2. Once downloaded, double click on the **putty.exe** and you will see the window looks like below:
+2. Once downloaded, proceed with the standard installation.
+
+3. Once installed double click on the **putty.exe** and you will see a window that looks like the one below:
 
 <img src="PuttyConnect.JPG" alt="weaved" style="width: 400px;"/>
 
-3. Then, if you login to your remot3.it account,  you will get a list of the services linked to your devices:
+4. Then, if you login to your remot3.it account,  you will get a list of the services linked to your devices:
 
 <img src="remot3-logged_in.png" alt="weaved" style="width: 400px;"/>
 
-4. In your case you will have just one item with a Type SSH as in the first line at the screen shoot above. When you click on the name of you device, your browser will open and show you a window like this:  
+5. In your case you will have just one item. When you click on the name of you device, a pop-up will open:  
 
-<img src="weaved_ssh.png" alt="weaved" style="width: 400px;"/>
+<img src="remot3-first_pop-up.png" alt="remot32" style="width: 400px;"/>
 
-5. Insert the server address and port obtained from Weaved.com into Putty and connect!
+6. Click on the name of your ssh service and then "Confirm".
+
+7. A second pop-up will appear:
+
+<img src="remot3-third_pop-up.png" alt="remot33" style="width: 400px;"/>
+
+5. Insert the server address and port obtained from remot3.it into Putty and connect!
 
 6. When asked for username and password, please use your RPi username and password to log-in. (Please note, this is not weaved username and password).
+
+<img src="pi_login_windows.png" alt="remot33" style="width: 400px;"/>
 
 To exit your putty session, type "exit" and enter.
 
