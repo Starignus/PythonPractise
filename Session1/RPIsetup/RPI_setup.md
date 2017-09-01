@@ -10,25 +10,27 @@ We have created a [cheat sheet](...) to help you out.
 ### Step 1: General Setup for Raspberry Pi
 
 At first we will setup the RPi using peripherals. Each team should get the following equipment:
-[comment]: <> (TODO: review materials list)
-  * monitor
+
+[//]: # (TODO: review materials list)
+ 
+ * monitor
   * HDMI-DVI cable
   * power cable
   * keyboard
   * mouse
   * SD card
 
-[comment]: <> (TODO: add image)
+[//]: # (TODO: add image)
 <img src="" alt="provided-material" style="width: 400px;">
 
 **1.1** Connect mouse and keyboard using the USB ports on the Rpi. Connect the display with provided HDMI-DVI cable plugging it in the HDMI port of the RPi.
 
-[comment]: <> (TODO: add image)
+[//]: # (TODO: add image)
 <img src="" alt="pheriperals-setup" style="width: 400px;">
 
 **1.2** Insert the micro-SD card in the back of the RPi
 
-[comment]: <> (TODO: add image)
+[//]: # (TODO: add image)
 <img src="" alt="SD-slot" style="width: 400px;">
 
 **1.3** Using Y-cable, power the Rpi up by plugging in the charger.
@@ -37,7 +39,7 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 **1.5** Once the operating system starts, click on the __terminal__ icon next to the menu to open it.
 
-[comment]: <> (TODO: add image)
+[//]: # (TODO: add image)
 <img src="" alt="terminal-icon" style="width: 400px;">
 
 **Note:** Now we will start running some commands in the terminal.  We will run them as a **root user**, the root has the permission to modify files or default settings as administrator. By default on Raspbian (the operating system of our RPIs) the **root user** is **pi** and the **root password** associated to the root user is **raspberry**.
@@ -55,19 +57,19 @@ The terminal will show a menu. The options can be navigated with the vertical ke
 
 **1.7** First we set up the keyboard to prevent any problem when we will change the root password. We access the option: __4 Localisation Options --> Change Keyboard Layout__. Then we choose generic 105 key, and then UK. Then we can choose the default options that the menu is prompting.
 
-[comment]: <> (TODO: add image, modify the text at 1.7 if required)
+[//]: # (TODO: add image, modify the text at 1.7 if required)
 
 <img src="" alt="localisation-options" style="width: 400px;">
 
 
 **1.8** We go back to the main menu and change the timezone from the __4 Localisation Options__ menu.
 
-[comment]: <> (TODO: add images, modify the text at 1.7 if required)
+[//]: # (TODO: add images, modify the text at 1.7 if required)
 <img src="Internationalisation.png" alt="screen" style="width: 400px;">
 
 **1.9** Now we will change the root user password. This increases the security of the connection we will establish from our laptop to the RPi. Since you are sharing this RPi with your teammates choose a password together. To change the password we go back to the main menu and  we choose the first option: __1 Change User Password__.
 
-[comment]: <> (TODO: add a more verbose explanation)
+[//]: # (TODO: add a more verbose explanation)
 <img src="" alt="change-password" style="width: 400px;">
 
 We have set the new password. Do not reboot the RPi yet.
@@ -78,7 +80,7 @@ We have set the new password. Do not reboot the RPi yet.
 
 And we press "Enable".
 
-[comment]: <> (TODO: add image)
+[//]: # (TODO: add image)
 <img src="" alt="enable-ssh" style="width: 400px;">
 
 **1.11** Exit the menu, you will re-enter the terminal. Reboot the RPi by entering:
