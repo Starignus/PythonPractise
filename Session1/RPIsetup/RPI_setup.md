@@ -283,7 +283,7 @@ Your RPi is now ready to run headless, we just have to connect with it over ssh 
 
 ### Accessing from your computer (Linux or Mac OS X)
 
-1. We will now see how to access using your laptop to your RPi from the temrinal. First, if you login to your remot3.it account,  you will get a list of your devices:
+1. We will now see how to access using your laptop to your RPi from the terminal. First, if you login to your remot3.it account,  you will get a list of your devices:
 
 <img src="remot3-logged_in.png" alt="remot31" style="width: 400px;"/>
 
