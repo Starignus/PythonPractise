@@ -2,7 +2,9 @@
 
 The goal of this session is to set up our Raspberry Pis, so they can run "headless". This means that we will be able to control the RPi remotely from our laptops, without the need to connect the RPi to a screen, keyboard and mouse each time we use it. This initial setup, therefore, reduces the time we spend in setting up our Rpi each time we use it and minimizes the cabling, this, will be fundamental when our Pi will be inserted in our Pixel.
 
-We will use the [SSH](https://en.wikipedia.org/wiki/Secure_Shell) protocol to connect from our laptop to the RPi over the Imperial/eduroam WiFi network. It let us establish a secure network communication on an unsecured network. To achieve this we will rely on remot3.it services as we will later explain.
+We will use the [SSH](https://en.wikipedia.org/wiki/Secure_Shell) protocol to connect from our laptop to the RPi over the Imperial/eduroam WiFi network. It let us establish a secure network communication on an unsecured network. To achieve this we will rely on remot3.it services as we will later explain. 
+
+[//]: # (TODO: remind them not to type directly their password for imperial WPA)
 
 To setup our RPi we will use the terminal. If you are new to the terminal can be a bit overwhelming at first, don't panic and follow the steps carefully!
 We have created a [cheat sheet](...) to help you out.
@@ -132,6 +134,8 @@ network={
 
 **2.4** Now we have to replace "COLLEGE_USERNAME" with a valid college username and "YOUR_PASSWORD" with the account's password. If you are not comfortable in writing your password in plain text while working with your team, leave the field blank and follow step 3 to encrypt your password before setting it up in the *wpa_supplicant.conf*.
 
+[//]: # (TODO: use guest account, and the optional add your college credentials)
+
 **2.5** (Optional) If you have replaced your password in the previous step you can check if the connection works by rebooting your RPi. One the system starts again the RPi should connect automatically to the WiFi.
 
 ### Alternative Step 2: Setting WiFi from eduroam network
@@ -253,6 +257,8 @@ sudo apt-get -y install weavedconnectd
 ```bash
 sudo weavedinstaller
 ```
+[//]: # (TODO: change structure, first register for an account on their laptops online and then setup weaved, Homework)
+
 **5.4** Enter your remot3.it account username and password. Next, you will see this menu:
 
 <img src="Pi-installer-menu.png" alt="menu1" style="width: 300px;"/>
@@ -313,7 +319,7 @@ You will see on your laptop's terminal that now you are user pi. You are connect
 
 ### Accessing from your computer (Windows)
 
-If your computer operative  system is Windows, to access remotely you will need to install PuTTY, which  is a free implementation of SSH and Telnet for Windows and Unix platforms.
+If your computer operative  system is Windows, to access remotely you will need to install PuTTY, which  is a free implementation of SSH and Telnet for Windows and Unix platforms. Feel free to explore other softwares! 
 
 1. To download it click [here]( http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
@@ -382,6 +388,8 @@ sudo apt-get -y install screen
 * We get a list with all the screen IDs. If we want to attach to a particular *screen* we can enter ```screen -r name_of_terminal``` like in the example below:
 
 <img src="Screen_attaching.png" alt="screen4" style="width: 400px;"/>
+
+[//]: # (TODO: remove visrtual terminals and ass screen cheatsheet)
 
 ###### Basic commands to work with the virtual terminals
 
