@@ -133,7 +133,10 @@ messages. When debugging, the text console is very useful.
 11. Board and Serial Port: Shows you what board and the
 serial port selections
 
-#### Anatomy of A Sketch
+#### Anatomy of an Arduino Sketch
+<img src="two-functions.png" alt="arduino-functions" style="width: 200px; display: inline-block;"/>
+
+<img src="arduino-functions.png" alt="arduino-functions" style="width: 200px;display: inline-block;"/>
 
 #### Arduino Language
 https://www.arduino.cc/en/Tutorial/Variables
