@@ -176,7 +176,7 @@ The programming language used in Arduino comes from C++ and it is quite differen
 
 The most visible difference from Python is that Arduino doesn't use dynamic typing. Therefore when we create a variable we have to declare its type:
 
-```int pin = 13; ```
+```int pin = 13;```
 
 We have just created a variable whose type is **int**, whose name is **pin**, whose **value** is 13.
 Later on in the program, you can refer to this variable by its name, at which point its value will be looked up and used. For example, in this statement:
@@ -207,3 +207,8 @@ For further reference you can check these notes:
 https://www.arduino.cc/en/Tutorial/Variables
 https://www.arduino.cc/en/Reference/FunctionDeclaration
 https://www.arduino.cc/en/Reference/HomePage
+
+
+### Running our first Arduino sketch
+
+1. Open the IDE

@@ -15,12 +15,12 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 * [Linux (Bash) commands cheat sheet](...)
 
-##### Week 1:
+#### Week 1:
 
 * [Raspberry Pi set up](...)
 * [Arduino setup for Raspberry Pi](...)
 
-##### Week 2:
+#### Week 2:
 
 * [Introduction to Github](...)
 * [Warming up in Python](...)
