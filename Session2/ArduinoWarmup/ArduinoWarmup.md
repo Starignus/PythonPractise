@@ -134,11 +134,76 @@ messages. When debugging, the text console is very useful.
 serial port selections
 
 #### Anatomy of an Arduino Sketch
-<img src="two-functions.png" alt="arduino-functions" style="width: 200px; display: inline-block;"/>
+<img src="two-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
 
-<img src="arduino-functions.png" alt="arduino-functions" style="width: 200px;display: inline-block;"/>
+<img src="arduino-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
+
+Each Arduino Sketch has two main function ```setup()``` and ```loop()```:
+  + ```setup()``` is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board.
+  + ```loop()``` is called after ```setup()```, and it loops consecutively, allowing your program to change and respond. Use it to actively control the Arduino board.
+
+Here's an example of what an Arduino sketch looks like:
+```
+/*
+  Blink
+  Turns on an LED on for one second, then off for one second, repeatedly.
+
+  This example code is in the public domain.
+ */
+
+// Pin 13 has an LED connected.
+// give it a name:
+int pin = 13;
+
+// the setup routine runs once when you press reset:
+void setup() {                
+  // initialize the digital pin as an output.
+  pinMode(pin, OUTPUT);     
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  digitalWrite(pin, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               // wait for a second
+  digitalWrite(pin, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);               // wait for a second
+}
+```
 
 #### Arduino Language
+
+The programming language used in Arduino comes from C++ and it is quite different from Python. Although the names of the functions are self explanatory as they are written in plain English.
+
+The most visible difference from Python is that Arduino doesn't use dynamic typing. Therefore when we create a variable we have to declare its type:
+
+```int pin = 13; ```
+
+We have just created a variable whose type is **int**, whose name is **pin**, whose **value** is 13.
+Later on in the program, you can refer to this variable by its name, at which point its value will be looked up and used. For example, in this statement:
+
+```pinMode(pin, OUTPUT);```
+
+We are setting the pin 13 as an OUTPUT pin, what we have written would be equivalent to ```pinMode(13, OUTPUT);```.
+You can change the value of a variable using an assignment (indicated by an equals sign). For example:
+
+```pin = 12;```
+
+will change the value of the variable to 12. Notice that we don't specify the type of the variable: it's not changed by the assignment. That is, the name of the variable is permanently associated with a type; only its value changes.
+
+When you assign one variable to another, you're making a copy of its value and storing that copy in the location in memory associated with the other variable. Changing one has no effect on the other. For example, after:
+
+```
+int pin = 13;
+int pin2 = pin;
+pin = 12;
+```
+
+only pin has the value 12; pin2 is still 13.
+
+[//]: # (TODO: in-depth analysis of syntax?)
+
+
+For further reference you can check these notes:
 https://www.arduino.cc/en/Tutorial/Variables
 https://www.arduino.cc/en/Reference/FunctionDeclaration
 https://www.arduino.cc/en/Reference/HomePage
