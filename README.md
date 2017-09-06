@@ -15,20 +15,29 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 * [Linux (Bash) commands cheat sheet](...)
 
-#### Week 1:
+#### Session 1:
 
 * [Raspberry Pi set up](...)
-* [Arduino setup for Raspberry Pi](...)
-
-#### Week 2:
-
-* [Introduction to Github](...)
+* [Remote connection to your Raspberry Pi](...)
 * [Warming up in Python](...)
-* [Warming up in Arduino](...)
+* [Introduction to Github](...)
 
-#### Additional Material
+#### Session 2:
+
+* [RPi GPIOzero](...)
+* [Warming up in Arduino](...)
+* [RPi & Arduino](...)
+
+#### Session 3
+
+* [Actuators](...)
+* [ADC](...)
+
+#### Supplementary Material
 
 * [Advanced remote functionalities](..)
-* GPIO with Raspberry Pi
-    * [RPi GPIO-Part 1](...)
-    * [RPi GPIO-Part 2: Motor HAT](...)
+* [RPi GPIO: Motor HAT](...)
+* [Screen Cheatsheet](...)
+* [Github Cheatsheet](...)
+* [Markdown Cheatsheet](...)
+* [FAQ & Troubleshooting](...)
