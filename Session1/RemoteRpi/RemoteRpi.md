@@ -155,6 +155,4 @@ sudo apt-get -y install screen
 | Press “Ctrl-A” and “n“ | Switching to the next virtual terminal or screen.|
 |Press “Ctrl-A” and “p“ | Switching to the previous virtual terminal or screen|
 
-For more examples go to the [link](http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/) or ask the instructors.
-
 To know more about more advance details of how connect remotely go to the [advanced guide](Advance_remoteconection.md):
