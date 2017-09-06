@@ -101,7 +101,7 @@ sudo apt-get update
 sudo apt-get -y install libffi-dev
 sudo apt-get -y install libssl-dev
 ```
-3. Installing Python
+3. Installing Pythons
 ```bash
 sudo apt-get -y install build-essential python-dev python-openssl
 sudo apt-get -y install python-setuptools
