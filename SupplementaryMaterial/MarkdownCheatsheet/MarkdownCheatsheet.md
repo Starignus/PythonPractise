@@ -112,12 +112,6 @@ Or leave it empty and use the [link text itself].
 URLs and URLs in angle brackets will automatically get turned into links.
 http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
 ```
 
 There are two ways to create links.
@@ -138,63 +132,53 @@ URLs and URLs in angle brackets will automatically get turned into links.
 http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
 ### Images
 
 Here's Github mark (hover to see the title text):
 ```
-Inline-style:
-![alt text](/img/githubmark.png "Logo Title Text 1")
-
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![alt text](https://octodex.github.com/images/yaktocat.png "Logo Title Text 1")
 ```
 
-Inline-style:
-![alt text](/img/github-mark.png "Logo Title Text 1")
+![alt text](https://octodex.github.com/images/yaktocat.png "Logo Title Text 1")
 
-Reference-style:
-![alt text][github-mark]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ### Code and Syntax Highlighting
 
-Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and Markdown Here -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. Markdown Here supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the highlight.js demo page.
+Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. 
 
+Inline \`code\` has \`back-ticks around\` it.
 Inline `code` has `back-ticks around` it.
-Inline code has back-ticks around it.
 
-Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+Blocks of code are either fenced by lines with three back-ticks \`\`\`, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+
+\`\`\`javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+\`\`\`
+\`\`\`python
+s = "Python syntax highlighting"
+print s
+\`\`\`
+\`\`\`
+No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
+But let's throw in a <b>tag</b>.
+\`\`\`
 
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
-
 ```python
 s = "Python syntax highlighting"
 print s
 ```
-
 ```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-var s = "JavaScript syntax highlighting";
-alert(s);
-s = "Python syntax highlighting"
-print s
 No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
 But let's throw in a <b>tag</b>.
-Tables
+```
+
+### Tables
 
 Tables aren't part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
 
