@@ -138,7 +138,7 @@ serial port selections
 
 <img src="arduino-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
 
-Each Arduino Sketch has two main function ```setup()``` and ```loop()```:
+Each Arduino program is called a "sketch". Each Sketch has two main function ```setup()``` and ```loop()```:
   + ```setup()``` is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board.
   + ```loop()``` is called after ```setup()```, and it loops consecutively, allowing your program to change and respond. Use it to actively control the Arduino board.
 
@@ -210,5 +210,7 @@ https://www.arduino.cc/en/Reference/HomePage
 
 
 ### Running our first Arduino sketch
+
+We are going to run the "blink" sketch we have seen early on in this tutorial. It is the most basic sketch a sort of "Hello World!" for Arduino. It makes the built-in LED on pin 13 blink in intervals of 1 second.
 
 1. Open the IDE
