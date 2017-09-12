@@ -1,8 +1,23 @@
 # Advanced Remote Functionalities
 
+1. [Alternative ways to connect to your Raspberry Pi remotely](#alternative-ways-to-connect-to-your-raspberry-pi-remotely)
+2. [Transferring files](#transferring-files)
+3. [Managing Users on your Raspberry Pi](#managing-users-on-your-raspberry-pi)
+4. [Suggested Workflow for Optional Upgrades](#suggested-workflow-for-optional-upgrades)
+
+
 ## Alternative ways to connect to your Raspberry Pi remotely
 
-We already know how to connect through remot3.it service, but we know that the connection lasts 8 hours and it allows us to work on one terminal session at a time. Therefore, with the help of remot3.it and another commands we can connect to or RPi for longer and using multiple terminals.
+We already know how to connect through remot3.it service, but we know that the connection lasts 8 hours and it allows us to work on one terminal session at a time. Therefore, with the help of remot3.it and another commands we can connect to or RPi for longer and using multiple terminals. In this section we are going to connect to our RPi using its IP address.
+
+If you do not know what is an IP address, please go to the [this link](https://www.youtube.com/watch?v=7_-qWlvQQtY) for a quick explanation. The IPs can be dynamic or static, but what is the difference? When a device is assigned a static IP address, the address does not change. Most devices use dynamic IP addresses, which are assigned by the network when they connect and change over time (which is the case for our RPi on the Imperial-WPA).
+
+#### Checking your IP address from remot3.it
+remot3.it displays the external IP of the devices you have registered. You can get your RPi's one in the *External IP* Tab:
+
+<img src="img/remot3-it-ip.jpg" alt="weaved" style="width: 400px;"/>
+
+**Note:** If you are connected with your laptop to the same network of your RPi the internal and external IP addresses will be the same like in the example above.
 
 #### Checking your IP address from the terminal
 
@@ -15,14 +30,8 @@ This command allows to know the IP addresses assigned to our RPi. The _wlan0_, i
 <img src="img/ifconfig.png" alt="ifconfig" style="width: 400px;"/>
 
 You can find your IP address for the WiFi connection in the corresponding _wlan0_ inet addr field.
-If you do not know what is an **IP address**, please go to the next [link](https://www.youtube.com/watch?v=7_-qWlvQQtY) for a quick explanation. The IPs can be dynamic or static, but what is the difference? When a device is assigned a static IP address, the address does not change. Most devices use dynamic IP addresses, which are assigned by the network when they connect and change over time.
 
-* First connect as usual to your remot3.it account and then connect to your RPi using the terminal of your laptop of desktop as you already did when you [set up remot3.it](RPI_setup.md).
-* Then, you need to know the IP address assigned to your RPi:
-*
-```bash
-$ ifconfig
-```
+#### Connecting via ssh knowing your IP
 
 Once you know the IP (e.g. your IP is 192.31.123.122), you can access using your laptop terminal to the RPi as:
 
@@ -33,7 +42,7 @@ Remember that the **root username** is **pi**, the syntax for the ssh command is
 
 **Note:** Since at Imperial network the IPs are dynamic, the IP is constantly changing, so could be that the IP changes in a day or hours (could be sometimes longer) and you need to repeat the last steps on your laptop of the remot3.it setup procedure.
 
-## Copying files from my laptop to my RPi
+## Transferring files
 
 #### Using terminal
 
@@ -76,7 +85,7 @@ Instead a terminal, we can use to transfer files using a software that mounts an
 
 <img src="img/WinSCPPortable.png" alt="weaved" style="width: 400px;"/>
 
-# Creating and deleting a new user
+## Managing Users on your Raspberry Pi
 
 You can create additional users on your Raspbian installation with the ```adduser``` command.
 
