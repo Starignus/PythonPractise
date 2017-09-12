@@ -206,6 +206,89 @@ What we have just done is ‘cross-compiled’ an executable. That is we have co
 
 ## Arduino and Raspberry Pi Talking Over Serial
 
+To communicate between the Raspberry Pi and the Arduino over a serial connection, we’ll use the built-in Serial library on the Arduino side, and the Python pySerial module on the Raspberry Pi side.
+
+1. To install the serial module, run the following commands on your RPi terminal:
+```bash
+sudo apt-get install python-serial python3-serial
+```
+
+2. Now we want to upload a new sketch on the Arduino. You can upload it from your computer using the IDE or using Arduino-mk as we did in the previous step. The code is the following:
+```
+void setup() {
+Serial.begin(9600);
+}
+
+void loop() {
+   for(byte n=0; n<255; n++){
+     Serial.write(n);
+     delay(50);
+   }
+}
+```
+This code counts upward and sends each number over the serial connection.
+Note that in Arduino, Serial.write() sends the actual number in the byte type, the actual 8-bit representation of the number.
+
+3. Now plug the Arduino to the USB of the Raspberry if you have unplugged it. Then in the RPi terminal let's open the Python shell by typing:
+```bash
+  python
+```
+This will launch the Python interpreter and the `>>>` prompt should appear.
+
+4. Now we type:
+```python
+from serial import Serial
+```
+If successful, when you press enter you should see no errors, and the cursor will return to the `>>>` prompt. Now we can use the class Serial to connect to our Arduino.
+
+5. We create a variable of type Serial that represents the serial connection with our Arduino:
+```python
+serialFromArduino = Serial('/dev/ttyACM0')
+```
+6. We can read one bit at a time what the Arduino has written over serial like this:
+```python
+input = serialFromArduino.read(1)
+```
+7. Then we print it in the console like this:
+```python
+print(ord(input))
+```  
+`ord`, given a string of length one, returns the value of the byte when the argument is an 8-bit string.
+You should see a *0* being printed.
+
+8. Now that we have tested that the connection works we want to write a Python script that reads the messages from serial.
+so we type:
+```
+cd home/pi/
+touch serialEcho.py
+nano serialEcho.py
+```
+And we paste this code:
+```python
+import serial
+port = "/dev/ttyACM0"
+serialFromArduino = serial.Serial(port, 9600)
+serialFromArduino.flushInput()
+while True:
+ if (serialFromArduino.in_Waiting() > 0):
+   input = serialFromArduino.read(1)
+   print(ord(input))
+```
+
+The meaning of each line is as follows:
+  * `import serial`: just like before we import the serial library
+  * `port = "/dev/ttyACM0"`: this time we save the port path in a variable
+  * `serialFromArduino = serial.Serial(port, 9600)`: we create an object of the class Serial, this time we specify the baud rate of our serial connection
+  * `serialFromArduino.flushInput()`: we clear out the input buffer
+  * `while True:`:we put the reading functions in a loop so we keep on reading the values written by the Arduino constantly
+  * `if (serialFromArduino.in_Waiting() > 0):`: we check that we are receiving bytes (i.e. that the input buffer is not empty)
+  * `input = serialFromArduino.read(1)`:we read the content of the input buffer one byte at a time
+  * `print(ord(input))`: we change the incoming byte in a readable number and we print it in the console
+
+
+You won’t be able to upload to Arduino when Python has the serial port open, so make sure you kill the Python program with Ctrl-C before you upload the sketch again. You will be able to upload to an Arduino Leonardo or Arduino Micro, but doing so will break the connection with the Python script, so you’ll need to restart it anyhow.
+The Arduino is sending a number to the Python script, which interprets that number as a string. The input variable will contain whatever character maps to that number in the ASCII table. To get a better idea, try replacing the last line of the Python script with this:
+print(str(ord(input)) + " = the ASCII charactcter " + input + ".")
 
 ## Ino
 
