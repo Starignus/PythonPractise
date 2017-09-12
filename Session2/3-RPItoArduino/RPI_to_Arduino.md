@@ -1,13 +1,10 @@
-# Setting up Arduino on your headless Raspberry Pi
+# Setting up Arduino for the Raspberry Pi
 
-### In case you are wondering why...
-RPi and Arduino are complementary platforms and one doesn't exclude the other. If you combine their capabilities you can achieve amazing results. But why?
-  * The community! Arduino has a lot of materials readily available online, from libraries, to examples. If you have something in mind probabily someone has already done it and shared the documentation.
-  * You might have a project that is already working on Arduino, but you might need just a bit more processing power, so the Raspberry can come to the rescue.
-  * The RPi doesn't go well with 5V logic levels, it only operates with 3.3V and its pins do not accomodate 5V.
-  * If you fry an Arduino you can replace the damaged microcontroller chip easily for less than £10. That gives you the freedom to experiment a bit more, without damaging the RPi.
-  * Raspbian operating system doesn't have real-time control capabilities, whereas a microcontroller like Arduino can handle those operations.
+In this tutorial we will see how to connect your Raspberry Pi to your Arduino. We will start by installing the Arduino IDE that you have already seen and then move to some command line tools. These tools don't need a graphical interface and you can use them without a monitor. The last section will give you some advices on how to install these tools on your laptop.
 
+1. [Arduino IDE](#installing-arduino)
+2. [Arduino Makefile](#controlling-arduino-from-the-command-line)
+2. [ino](#ino)
 
 ### Installing Arduino
 From the terminal of your computer connected to the RPi via ssh type:
@@ -163,9 +160,14 @@ $ make
 You will see a warning fly past about depends.mk not existing. This file will be created on the first compile.
 If this all works there will now be a sub-directory called ‘build-command line’, in which there are a whole bunch of files.
 
-These files are hidden, to see them we can enter the command `ls -a` or `ls -ld .?*`
+These files are inside the *build-uno* folder so we change our directory:
+```
+$ cd build-uno
+```
 
-There are loads of .o files, including a lot which bear no resemblance to any source we have created. These are standard library files which have been compiled and which are linked into the result.
+Then to see al the files, even the hidden ones we can enter the command `ls -a` or `ls -ld .?*`
+
+There are loads of files, including a lot which bear no resemblance to any source we have created. These are standard library files which have been compiled and which are linked into the result.
 
 The files which are crucial to us now are:
 
@@ -175,33 +177,27 @@ The files which are crucial to us now are:
 **Note:** even if your source file was called differently from its containing directory, these two files will be named after the directory in which we are working. This will still work if you build your sketch with arduino-mk but not with the Arduino IDE.
 
 The .hex file is an ASCII file which contains a dump of the operation codes written into the .elf file.
-If you now use the Linux ‘file’ command to inspect blink1.elf, you get this result:
+If you now use ```file blink.elf``` command to inspect blink.elf, you get this result:
+```
 blink1.elf: ELF 32-bit LSB executable, Atmel AVR 8-bit, version 1 (SYSV), statically linked, not stripped
-
-the build process will yield two files which have the same name as the directory and the extensions .elf and .hex.
-
+```
 As you can see, this is an Atmel 8-bit executable, not a Linux executable.
 The blink.hex file is ASCII but it is the values in this file which get written into the programmable chip on the Arduino board.
-4. Upload
-To upload the compiled code to the Arduino:
+
+#### Upload
+Now we are going to upload the compiled code to the Arduino. If you have unplugged it from your Raspberry, please connect it again with the provided USB cable.
+To upload the sketch simply type:
+```
 $ sudo make upload
-
-
+```
 We need to use sudo for this to get permissions to the serial device.
-Obviously the Arduino needs to be connected to your Linux machine via USB. The USB port will also provide power.
-When you connect the Arduino to your machine, check the allocation of the port device like this:
-$ dmesg tail
+Now your Arduino will start blinking!!
 
+**Note:** If it doesn't work you may have selected the wrong port. You can check to which port the Arduino is connected with the command ```ls /dev/ttyACM*``` or as we have illustrated before in the note to **Working with the Arduino IDE**.
 
-You should see which device has been allocated. You could also:
-$ ls /dev/ttyACM*
-
-
-I think the port will be different on a Mac. And of course if you have more than one Arduino plugged in, the ports will be numbered; /dev/ttyACM0, /dev/ttyACM1 etc.
-Once the upload is complete, press the reset switch in the corner of theUno board and the LED will, if all was well, and with a following wind, begin to flash.
-A Final Note
 What we have just done is ‘cross-compiled’ an executable. That is we have compiled some code on one platform, for running on another platform, or ‘flavour’ of processor.
-Using Ino
+
+Ino
 In the first part of this tutorial we installed the core Arduino development tools and the first of the tools we were using for working at the command line.
 Now we are going to install another tool; ino.
 Recap
@@ -282,9 +278,13 @@ Hang on a second…some of the messages that flew past looked suspiciously simil
 Well yes, all that both Arduino-mk and ino are doing in both parts of this tutorial is to call the same Arduino AVR tools.
 Again, press that reset button after the upload and the LED on pin 13 will start to blink.
 
-Raspberry VI is not connected with, or affiliated to The Raspberry Pi Foundation. Any opinions, practices or products mentioned herein are not endorsed by the Foundation.
 
-Site last updated: 2017-03-23 18:46 by Mike
-Powered by Nikola
-Unless otherwise stated all content released under the
-Hosted by falcoda.com
+#### A note about these Command Line tools for your computer
+If you would like to use the same tools on your computer we encourage you to do so. If you have a Linux computer you can follow exactly the same steps.
+
+If you have Windows???
+
+If you have Mac special attention to USB port
+
+<small>Based on [Raspberry VI Tutorial] (http://www.raspberryvi.org/stories/arduino-cli.html#)
+</small>
