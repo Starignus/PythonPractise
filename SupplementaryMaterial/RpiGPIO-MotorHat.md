@@ -20,11 +20,11 @@
  **The Motor HAT** comes with an assembled and tested HAT, terminal blocks, and 2x20 plain header. Some soldering is required to assemble the headers on. Here we leave a link with a [step-by-step](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi/assembly) guide of how to solder the headers and a video to show you [tips on soldering](
  https://www.youtube.com/watch?v=QKbJxytERvg).
 
- <img src="img/raspberry_pi_2348_top_ORIG.jpg" alt="rpi" style="width: 400px;"/>
+ <img src="../img/raspberry_pi_2348_top_ORIG.jpg" alt="rpi" style="width: 400px;"/>
 
 Once the motor HAT is assembled, we place it on top so that the short pins of the 2x20 header line up with the pads on the HAT.
 
- <img src="img/raspberry_pi_place.jpg" alt="rpi-hat" style="width: 400px;"/>
+ <img src="../img/raspberry_pi_place.jpg" alt="rpi-hat" style="width: 400px;"/>
 
 ## Powering Motors
 
@@ -42,13 +42,13 @@ The motor driver chips that come with the kit are designed to provide up to **1.
 
 Therefore, you can use a 9V 1A, 12V 1A, or 12V 5A DC regulated switching power adapter. In case you want to make it portable, you can use a big Lead Acid or multiple-AA NiMH battery pack of 4 to 8 batteries to vary the voltage from about 6V to 12V as your motors require.
 
-<img src="img/raspberry_pi_powerplug.jpg" alt="hat-power" style="width: 400px;"/>
+<img src="../img/raspberry_pi_powerplug.jpg" alt="hat-power" style="width: 400px;"/>
 
 ## Connecting DC Motors
 
 To connect a motor, simply solder two wires to the terminals and then connect them to either the **M1, M2, M3**, or **M4**. If your motor is running 'backwards' from the way you like, just swap the wires in the terminal block. For this demo, please connect it to **M3**.
 
-<img src="img/raspberry_pi_dcmotor.jpg" alt="hat-power" style="width: 400px;"/>
+<img src="../img/raspberry_pi_dcmotor.jpg" alt="hat-power" style="width: 400px;"/>
 
 ## Installing Software
 
@@ -75,15 +75,15 @@ sudo raspi-config
 
  and follow the prompts to install I2C support for the ARM core and linux kernel:
 
- <img src="img/I2C_1.png" alt="I2C_1" style="width: 400px;"/>
+ <img src="../img/I2C_1.png" alt="I2C_1" style="width: 400px;"/>
 
- <img src="img/I2C_2.png" alt="I2C_2" style="width: 400px;"/>
+ <img src="../img/I2C_2.png" alt="I2C_2" style="width: 400px;"/>
 
- <img src="img/I2C_3.png" alt="I2C_3" style="width: 400px;"/>
+ <img src="../img/I2C_3.png" alt="I2C_3" style="width: 400px;"/>
 
- <img src="img/I2C_4.png" alt="I2C_4" style="width: 400px;"/>
+ <img src="../img/I2C_4.png" alt="I2C_4" style="width: 400px;"/>
 
- <img src="img/I2C_5.png" alt="I2C_5" style="width: 400px;"/>
+ <img src="../img/I2C_5.png" alt="I2C_5" style="width: 400px;"/>
 
 __Then reboot!__
 

@@ -2,9 +2,12 @@
 
 If you don't have access to a guest account for the Imperial-WPA network or you would like to connect your Raspberry Pi  to any eduroam network, we have prepared a step by step guide to help you.
 
+  + [Imperial WPA](#step-1:-setting-the-wifi-from-imperial-college-network-with-your-credentials)
+  + [eduroam](#alternative-step-1:-setting-wifi-from-eduroam-network)
+
 **Note:** In this guide you will have to type your password in clear and then encrypt it. If you are working with your teammates, especially, be careful. However we have provided an option that involves typing the password only once.
 
-## Section 1: Setting the WiFi from Imperial College network with your credentials
+### Step 1: Setting the WiFi from Imperial College network with your credentials
 
 1. To set up the WiFi we need to modify a configuration file. First we back up the configuration file *wpa_supplicant.conf*, to do so we enter the command:
 
@@ -48,7 +51,7 @@ network={
 
 5. (Optional) If you have replaced your password in the previous step you can check if the connection works by rebooting your RPi. One the system starts again the RPi should connect automatically to the WiFi.
 
-### Alternative Section 1: Setting WiFi from eduroam network
+### Alternative Step 1: Setting WiFi from eduroam network
 
 To connect to the eduroam network we will need to execute steps 1 and 2 of the previous section on how to modify the settings for the Imperial College network. Then in step 3 the informations we need to enter are slightly different:
 
@@ -76,7 +79,7 @@ network={
 
 5. (Optional) If you have replaced your password in the previous step you can check if the connection works by rebooting your RPi. One the system starts again the RPi should connect automatically to the WiFi.
 
-### Section 2: Encrypting Your Password
+### Step 2: Encrypting Your Password
 
 1. In order not to store the password in a plain text we substitute our password with an **encrypted** one using  a **MD4 hash generator**. You can generate the hash with the following Linux command:
 
@@ -130,4 +133,4 @@ $ history -c
 ```bash
 $ reboot
 ```
-7. And you are done! 
+7. And you are done!

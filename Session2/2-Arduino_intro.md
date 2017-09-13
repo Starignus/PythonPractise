@@ -1,6 +1,6 @@
 # What is Arduino?
 
-<img src="arduino-environment.png" alt="arduino-environment" style="width: 400px;"/>
+<img src="../img/arduino-environment.png" alt="arduino-environment" style="width: 400px;"/>
 
 ### What is Arduino: Hardware
 An Arduino is essentially a microcontroller. That is a small "computer" (SoC - System on a Chip) on a single integrated
@@ -8,7 +8,7 @@ circuit containing a processor core, memory and programmable input/output periph
 
 #### Physical structure of an Arduino UNO board
 
-<img src="board_anatomy.png" alt="arduino-anatomy" style="width: 400px;"/>
+<img src="../img/board_anatomy.png" alt="arduino-anatomy" style="width: 400px;"/>
 
 1. Digital pins Use these pins with digitalRead(), digitalWrite(), and analogWrite(). analogWrite() works only on the pins with the PWM symbol.
 2. Pin 13 LED The only actuator built-in to your board. Besides being a handy target for your first blink sketch, this LED is very useful for debugging.
@@ -29,7 +29,7 @@ Before seeing how Arduino deals with them, we will revise the difference between
 
 * In **digital technology**, translation of information is into binary format (zero or one) where each bit is representative of two distinct amplitudes.
 
-<img src="analog_digital.png" alt="pin" style="width: 300px;"/>
+<img src="../img/analog_digital.png" alt="pin" style="width: 300px;"/>
 
 #### Comparison chart
 
@@ -98,7 +98,7 @@ Pulse Width Modulation, or PWM, is a technique for getting analog results with d
 
 In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
 
-<img src="pwm.png" alt="pwm" style="width: 400px;"/>
+<img src="../img/pwm.png" alt="pwm" style="width: 400px;"/>
 
 **Note:** For more informations you can check the Arduino [Microcontroller section](https://www.arduino.cc/en/Tutorial/Foundations) of their Foundations.
 
@@ -110,7 +110,7 @@ Arduino has it's own integrated development environment that simplifies some of 
 
 Here is a screnshot of how the IDE looks like and all its functionalities:
 
-<img src="arduino_ide.png" alt="arduino-ide" style="width: 400px;"/>
+<img src="../img/arduino_ide.png" alt="arduino-ide" style="width: 400px;"/>
 
 1. Verify: Compiles and approves your code. It will catch
 errors in syntax (like missing semi-colons or parenthesis).
@@ -134,9 +134,9 @@ messages. When debugging, the text console is very useful.
 serial port selections
 
 #### Anatomy of an Arduino Sketch
-<img src="two-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
+<img src="../img/two-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
 
-<img src="arduino-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
+<img src="../img/arduino-functions.png" alt="arduino-functions" style="max-width: 200px; display: inline-block;"/>
 
 Each Arduino program is called a "sketch". Each Sketch has two main function ```setup()``` and ```loop()```:
   + ```setup()``` is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board.

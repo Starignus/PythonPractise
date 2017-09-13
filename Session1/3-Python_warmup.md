@@ -200,7 +200,7 @@ print x
 When a program is running, it flows from one step to the next.  As programmers, we set up “paths” for the program to follow.
 
 <p align="center">
-<img src="img/Flow_1.png" alt="Drawing" width="300">
+<img src="../img/Flow_1.png" alt="Drawing" width="300">
 </p>
 
 Close the text editor, and then you can execute it in two ways:
@@ -219,7 +219,7 @@ $ ./example_fllow.py
 Now let's do an example where we have a __conditional__ that implies a decision-making about a situation. Decision making is the anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions. The following diagram illustrates the conditional:
 
 <p align="center">
-<img src="img/decision_making.jpg" alt="Conditional" width="300">
+<img src="../img/decision_making.jpg" alt="Conditional" width="300">
 </p>
 
 ``` bash
@@ -245,13 +245,13 @@ $ ./example_conditional.py
 Flow of the code:
 
 <p align="center">
-<img src="img/Flow_Conditional.png" alt="Conditional" width="300">
+<img src="../img/Flow_Conditional.png" alt="Conditional" width="300">
 </p>
 
 A __loop statement__ allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement:
 
 <p align="center">
-<img src="img/loop_architecture.jpg" alt="Conditional" width="300">
+<img src="../img/loop_architecture.jpg" alt="Conditional" width="300">
 </p>
 
 __While loop__ repeats a statement or group of statements while a given condition is _TRUE_. It tests the condition before executing the loop body.
@@ -277,7 +277,7 @@ $ ./example_while_loop.py
 Flow of the code:
 
 <p align="center">
-<img src="img/while_loop.png" alt="Conditional" width="300">
+<img src="../img/while_loop.png" alt="Conditional" width="300">
 </p>
 
 Loops (repeated steps) ha‰ve _iteration variables_ that change each time through a loop (like _n_).  Often these _iteration variables_ go through a sequence of numbers.

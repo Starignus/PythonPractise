@@ -33,15 +33,15 @@ sudo usermod -a -G dialout pi
 If you now connect a keyboard, mouse and screen to your RPi, you can see that in the RPi menu under the "Electronics" section, Arduino IDE has been installed.  You can go ahead and use the Arduino IDE as you would on your laptop. The only difference is that the RPI is a slower to compile the new lines of code from the RPi with respect to a laptop.
 To test if Arduino IDE is working you can connect the Arduino to the RPi using one of the available USB ports like so:
 
-<img src="img/connected-boards.png" alt="arduino" style="width: 400px;"/>
+<img src="../img/connected-boards.png" alt="arduino" style="width: 400px;"/>
 
 Then run the Arduino IDE.
 
-<img src="img/arduino-ide.png" alt="arduino" style="width: 400px;"/>
+<img src="../img/arduino-ide.png" alt="arduino" style="width: 400px;"/>
 
 Click **Tools->Serial Port** and select the USB serial port to which your Arduino is connected (usually /dev/ttyACM0). Then, click **Tools->Board->Arduino Uno**. Then you can open the basic sketch "Blink" by clicking on **File->Example->01. Basics-> Blink**. You can then upload the sketch on the Arduino by clicking the "Upload" button (the one with an arrow).
 
-<img src="img/arduino-blink.png" alt="arduino" style="width: 400px;"/>
+<img src="../img/arduino-blink.png" alt="arduino" style="width: 400px;"/>
 
 Once uploaded you will see the LED on pin 13 blink.
 
@@ -53,9 +53,9 @@ ls /dev/tty*
 
 This command lists all the connected devices, it should show "/dev/ttyAMA0". Then plug in your Arduino again and enter the same command and you should find the right port popping up.
 
-<img src="img/arduino-not-on-ttylist.png" alt="arduino" style="width: 400px;"/>
+<img src="../img/arduino-not-on-ttylist.png" alt="arduino" style="width: 400px;"/>
 
-<img src="img/arduino-on-ttylist.png" alt="arduino" style="width: 400px;"/>
+<img src="../img/arduino-on-ttylist.png" alt="arduino" style="width: 400px;"/>
 
 ## Arduino Makefile
 
@@ -84,9 +84,9 @@ sudo apt-get install arduino-core arduino-mk
 When we installed the Arduino IDE it created a directory called "sketchbook". This folder is made to store all your Arduino files tidily and to have them readily available for the IDE. We are going to use this folder even with our Makefile to maintain the compatibility with the IDE.
 
 **Note:** Each Arduino sketch has the extension .ino, these are the "source files", the instructions to be built into an executable program. These source files to be built correctly with the IDE need to be contained in a folder that has the same name as the sketch i.e. with a directory tree as follows:
-../sketchbook
-└── blink
-    └── blink.ino
+../sketchbook  
+└── blink  
+    └── blink.ino  
 
 Using arduino-mk we are going to create a Makefile inside the source file directory; some other auxiliary files are going to be generated during the build process as we will see.
 
@@ -103,15 +103,11 @@ cd /home/pi/sketchbook
 mkdir blink
 cd blink
 ```
-3. Now we are going to create the .ino file with:
-```bash
-touch blink.ino
-```
-4. Then we want to edit the file with nano and write our sketch, so we type:
+3. Now we are going to create the .ino fie with nano and write our sketch, so we type:
 ```bash
 nano blink.ino
 ```
-5. Now we want to copy/paste these lines of code (feel free to tweak the delay values to play with the blinking time):
+4. Now we want to copy/paste these lines of code (feel free to tweak the delay values to play with the blinking time):
 
 ```
 #define LED_PIN 13
@@ -132,15 +128,11 @@ We save and exit.
 #### The Makefile
 Now we will write a Makefile in the same directory as our .ino sketch. With   this file we can compile and ultimately upload the blink program we have just written.
 
-1. We are still in the same "blink" directory (/home/pi/sketchbook/blink), if you have changed it simply change back with `cd`. We create another file like we did before, therefore we type:
-```bash
-touch Makefile
-```
-2. And then we edit it with nano again with:
+1. We are still in the same "blink" directory (/home/pi/sketchbook/blink), if you have changed it simply change back with `cd`. We create another file like we did before:
 ```bash
 nano Makefile
 ```
-3. Now we will write our Makefile. Here is the source of the Makefile that you can copy-paste:
+2. Now we will write our Makefile. Here is the source of the Makefile that you can copy-paste:
 ```
 ARDUINO_DIR  = /usr/share/arduino
 #ARDUINO_LIBS = Ethernet Ethernet/utility SPI
@@ -282,13 +274,13 @@ The meaning of each line is as follows:
   * `serialFromArduino.flushInput()`: we clear out the input buffer
   * `while True:`:we put the reading functions in a loop so we keep on reading the values written by the Arduino constantly
   * `if (serialFromArduino.in_Waiting() > 0):`: we check that we are receiving bytes (i.e. that the input buffer is not empty)
-  * `input = serialFromArduino.read(1)`:we read the content of the input buffer one byte at a time
-  * `print(ord(input))`: we change the incoming byte in a readable number and we print it in the console
+  * `input = serialFromArduino.read(1)`:w e read the content of the input buffer one byte at a time
+  * `print(ord(input))`: we interpret the incoming byte and we print it in the console
 
-
-You won’t be able to upload to Arduino when Python has the serial port open, so make sure you kill the Python program with Ctrl-C before you upload the sketch again. You will be able to upload to an Arduino Leonardo or Arduino Micro, but doing so will break the connection with the Python script, so you’ll need to restart it anyhow.
 The Arduino is sending a number to the Python script, which interprets that number as a string. The input variable will contain whatever character maps to that number in the ASCII table. To get a better idea, try replacing the last line of the Python script with this:
-print(str(ord(input)) + " = the ASCII charactcter " + input + ".")
+```
+print(str(ord(input)) + " = the ASCII character " + input + ".")
+```
 
 ## Ino
 
@@ -319,9 +311,9 @@ ino init -t blink
 
 This will create two sub-directories in our project directory:
 ../sketchbook
-└── blink2
-    ├── lib/
-    └── src/
+└── blink2  
+    ├── lib/  
+    └── src/  
 
 In the src directory there is our source file, or ‘sketch’, called:
 sketch.ino

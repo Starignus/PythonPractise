@@ -15,7 +15,7 @@ If you do not know what is an IP address, please go to the [this link](https://w
 #### Checking your IP address from remot3.it
 remot3.it displays the external IP of the devices you have registered. You can get your RPi's one in the *External IP* Tab:
 
-<img src="img/remot3-it-ip.jpg" alt="weaved" style="width: 400px;"/>
+<img src="../img/remot3-it-ip.jpg" alt="weaved" style="width: 400px;"/>
 
 **Note:** If you are connected with your laptop to the same network of your RPi the internal and external IP addresses will be the same like in the example above.
 
@@ -27,7 +27,7 @@ $ ifconfig
 ```
 This command allows to know the IP addresses assigned to our RPi. The _wlan0_, indicates the status of the WiFi, and _eth0_ shows the status of the Ethernet (wired) connection). In the next screen shoot shows an example of a RPi connected to the internet using the ethernet port. The red oval shows where to find the IP address assigned to the RPi for the Ethernet connection.
 
-<img src="img/ifconfig.png" alt="ifconfig" style="width: 400px;"/>
+<img src="../img/ifconfig.png" alt="ifconfig" style="width: 400px;"/>
 
 You can find your IP address for the WiFi connection in the corresponding _wlan0_ inet addr field.
 
@@ -79,11 +79,11 @@ Instead a terminal, we can use to transfer files using a software that mounts an
 
 * [Cyberduck](https://cyberduck.io/?l=en)
 
-<img src="img/cyberduck.png" alt="weaved" style="width: 400px;"/>
+<img src="../img/cyberduck.png" alt="weaved" style="width: 400px;"/>
 
 * For just Windows you can use: [WinSCP](https://winscp.net/eng/index.php)
 
-<img src="img/WinSCPPortable.png" alt="weaved" style="width: 400px;"/>
+<img src="../img/WinSCPPortable.png" alt="weaved" style="width: 400px;"/>
 
 ## Managing Users on your Raspberry Pi
 
