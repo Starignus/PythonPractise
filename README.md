@@ -18,13 +18,13 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Raspberry Pi set up](Chapter1/1-RPI_setup.md)
 * [Remote connection to your Raspberry Pi](Chapter1/2-Remote_Rpi.md)
 * [Warming up in Python](Chapter1/3-Python_warmup.md)
-* [Introduction to Github](...)
+* [Introduction to Github](SupplementaryMaterial/Links/#git-related)
 
 #### Chapter 2:
 
 * [RPi Introduction and GPIOzero](Chapter2/1-RPi_intro.md)
 * [Arduino Introduction and GPIO](Chapter2/2-Arduino_intro.md)
-* [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md))
+* [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md)
 
 #### Chapter 3
 

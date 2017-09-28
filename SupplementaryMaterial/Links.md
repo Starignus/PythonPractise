@@ -1,6 +1,6 @@
 # Links
 
-Here is a list of useful links for external resources.Please feel free to make additional suggestions!
+Here is a list of useful links for external resources. Please feel free to make additional suggestions!
 
 ## Editors Related
 
@@ -39,7 +39,7 @@ Here is a list of useful links for external resources.Please feel free to make a
 | Github Student Developer Pack | https://education.github.com/pack |
 
 
-## Raspbeery Pi
+## Raspberry Pi
 
 |Title| Links   |
 |---|---|
