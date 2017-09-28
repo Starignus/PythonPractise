@@ -24,13 +24,13 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 * [RPi GPIOzero](Chapter2/1-RPi_intro.md)
 
-#### Chapter 3: Arduiono
+#### Chapter 3: Arduino
 
 * [Warming up in Arduino](Chapter2/2-Arduino_intro.md)
 
 #### Chapter 4: Arduino + Raspberry Pi Combo!
 
-* [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md))
+* [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md)
 
 #### Chapter 5: Remote Connection
 
