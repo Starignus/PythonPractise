@@ -2,7 +2,7 @@
 
 The goal of this first session is to set up our Raspberry Pis, so they can run "headless". This means that we will be able to control the RPi remotely from our laptops, without the need to connect the RPi to a screen, keyboard and mouse each time we use it. This initial setup, therefore, reduces the time we spend in setting up our Rpi each time we use it and minimizes the cabling, this, will be fundamental when our Pi will be inserted in our Pixel.
 
-We will use the [SSH](https://en.wikipedia.org/wiki/Secure_Shell) protocol to connect from our laptop to the RPi over the Imperial/eduroam WiFi network. It let us establish a secure network communication on an unsecured network. To achieve this we will rely on remot3.it services as we will later explain.
+We will use the [SSH](https://en.wikipedia.org/wiki/Secure_Shell) protocol to connect from our laptop to the RPi over the Imperial/eduroam WiFi network. It let us establish a secure network communication on an unsecured network. To achieve this we will rely on [remot3.it services](https://www.remot3.it) as we will later explain.
 
 To setup our RPi we will use the terminal. If you are new to the terminal can be a bit overwhelming at first, don't panic and follow the steps carefully!
 We have created a [cheat sheet](...) to help you out.
@@ -13,11 +13,11 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 [//]: # (TODO: review materials list)
 
-  * monitor
+  * monitor/touch screen
   * HDMI-DVI cable
   * power cable
-  * keyboard
-  * mouse
+  * keyboard (optional)
+  * mouse (optional)
   * SD card
 
 [//]: # (TODO: add image)
@@ -35,7 +35,7 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 3. Using Y-cable, power the Rpi up by plugging in the charger.
 
-4. The RPi will start the setup and it will ask you which operating system you want to install. From the menu select to install Raspbian.
+4. If you are using a NOOBS SD card: The RPi will start the setup and it will ask you which operating system you want to install. From the menu select to install Raspbian.
 
 5. Once the operating system starts, click on the __terminal__ icon next to the menu to open it.
 
@@ -72,7 +72,7 @@ The terminal will show a menu. The options can be navigated with the vertical ke
 [//]: # (TODO: add a more verbose explanation)
 <img src="../img/" alt="change-password" style="width: 400px;">
 
-We have set the new password. Do not reboot the RPi yet.
+We have set the new password, please remember this password and keep it safe. Do not reboot the RPi yet.
 
 10. Now we will check that the SSH is enabled. We need to enable it to connect with the RPi remotely. From the main menu we access: __5 Interfacing Options --> P2 SSH__.
 
