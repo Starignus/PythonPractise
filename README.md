@@ -16,12 +16,13 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Chapter 1: Basic Electronics and Programming
 
-* [Raspberry Pi set up](Chapter1/1-RPI_setup.md)
+* Basic electronics
 * [Warming up in Python](Chapter1/3-Python_warmup.md)
 
 
 #### Chapter 2: Raspberry Pi
 
+* [Raspberry Pi set up](Chapter1/1-RPI_setup.md)
 * [RPi GPIOzero](Chapter2/1-RPi_intro.md)
 
 #### Chapter 3: Arduino
