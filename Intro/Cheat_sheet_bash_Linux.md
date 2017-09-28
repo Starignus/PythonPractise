@@ -11,7 +11,7 @@ To escape from the manual, just type: *q*
 ### File Commands
 
 <p align="center">
-<img src="File_commands.png" alt="File commands" width="400">
+<img src="../img/File_commands.png" alt="File commands" width="400">
 </p>
 
 **Examples - working with directories:**
@@ -52,37 +52,37 @@ To exit press: **ctrl + d"**.
 ### Directory
 
 <p align="center">
-<img src="Directory_access.png" alt="Directory Access" width="400">
+<img src="../img/Directory_access.png" alt="Directory Access" width="400">
 </p>
 
 ### Disk usage
 
 <p align="center">
-<img src="Disk_usage.png" alt="Disk_usage" width="400">
+<img src="../img/Disk_usage.png" alt="Disk_usage" width="400">
 </p>
 
 ### File transfer and Remote Access
 
 <p align="center">
-<img src="Remote_access.png" alt="Remote_access" width="400">
+<img src="../img/Remote_access.png" alt="Remote_access" width="400">
 </p>
 
 ### Search
 
 <p align="center">
-<img src="Search.png" alt="Search" width="400">
+<img src="../img/Search.png" alt="Search" width="400">
 </p>
 
 ### System
 
 <p align="center">
-<img src="System.png" alt="System" width="400">
+<img src="../img/System.png" alt="System" width="400">
 </p>
 
 ### Process Related
 
 <p align="center">
-<img src="Process_related.png" alt="Process_related" width="400">
+<img src="../img/Process_related.png" alt="Process_related" width="400">
 </p>
 
 ### Virtual terminal (Screen)

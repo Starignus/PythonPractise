@@ -1,37 +1,48 @@
-# Remote connection to your Raspberry Pi
+# Advanced Remote Functionalities
 
-### Checking your IP address from the terminal
+1. [Alternative ways to connect to your Raspberry Pi remotely](#alternative-ways-to-connect-to-your-raspberry-pi-remotely)
+2. [Transferring files](#transferring-files)
+3. [Managing Users on your Raspberry Pi](#managing-users-on-your-raspberry-pi)
+4. [Suggested Workflow for Optional Upgrades](#suggested-workflow-for-optional-upgrades)
+
+
+## Alternative ways to connect to your Raspberry Pi remotely
+
+We already know how to connect through remot3.it service, but we know that the connection lasts 8 hours and it allows us to work on one terminal session at a time. Therefore, with the help of remot3.it and another commands we can connect to or RPi for longer and using multiple terminals. In this section we are going to connect to our RPi using its IP address.
+
+If you do not know what is an IP address, please go to the [this link](https://www.youtube.com/watch?v=7_-qWlvQQtY) for a quick explanation. The IPs can be dynamic or static, but what is the difference? When a device is assigned a static IP address, the address does not change. Most devices use dynamic IP addresses, which are assigned by the network when they connect and change over time (which is the case for our RPi on the Imperial-WPA).
+
+#### Checking your IP address from remot3.it
+remot3.it displays the external IP of the devices you have registered. You can get your RPi's one in the *External IP* Tab:
+
+<img src="../img/remot3-it-ip.png" alt="weaved" style="width: 400px;"/>
+
+**Note:** If you are connected with your laptop to the same network of your RPi the internal and external IP addresses will be the same like in the example above.
+
+#### Checking your IP address from the terminal
 
 We can use a command to check the different internet connections available on our system: _ifconfig_ or _ifconfig -a_.
 ```bash
 $ ifconfig
 ```
-This command allows to know the IP addresses assigned to our RPi. The _wlan0_, indicates the status of the WiFi, and _eth0_ shows the status of the Ethernet (wired) connection). In the next screen shoot shows an example of a RPi connected to the internet using the ethernet port. The red oval shows where to find the IP address assigned to the RPi.
+This command allows to know the IP addresses assigned to our RPi. The _wlan0_, indicates the status of the WiFi, and _eth0_ shows the status of the Ethernet (wired) connection). In the next screen shoot shows an example of a RPi connected to the internet using the ethernet port. The red oval shows where to find the IP address assigned to the RPi for the Ethernet connection.
 
-<img src="ifconfig.png" alt="ifconfig" style="width: 400px;"/>
+<img src="../img/ifconfig.png" alt="ifconfig" style="width: 400px;"/>
 
-If you do not know what is an **IP address**, please go to the next [link](https://www.youtube.com/watch?v=7_-qWlvQQtY) for a quick explanation. The IPs can be dynamic or static, but what is the difference? When a device is assigned a static IP address, the address does not change. Most devices use dynamic IP addresses, which are assigned by the network when they connect and change over time.
+You can find your IP address for the WiFi connection in the corresponding _wlan0_ inet addr field.
 
-### Why do I need to know my IP address?
-We already know how to connect through weaved service, but we know the connection last just 30 minutes and lets just to work on a terminal session at the time. Therefore, with the help of weave and another command we can connect to or RPi for longer and using multiple terminals.
+#### Connecting via ssh knowing your IP
 
-* First connect as usual to your weaved account and then connect to your RPi using the terminal of your laptop of desktop as you already did when you [set up weaved](RPI_setup.md).
-* Then, you need to know the IP address assigned to your RPi:
-*
-```bash
-$ ifconfig
-```
-
-Once you know the IP (e.g. your IP is 192.31.123.122), you can access using other terminal to the RPi as:
+Once you know the IP (e.g. your IP is 192.31.123.122), you can access using your laptop terminal to the RPi as:
 
 ```bash
 $ ssh pi@192.31.123.122
 ```
 Remember that the **root username** is **pi**, the syntax for the ssh command is: ```ssh username@IP``` or ```ssh username@machine_name```.
 
-**Note:** Since at Imperial network the IPs are dynamic, the IP is constantly changing, so could be that the IP changes in a day or hours (could be sometimes longer) and you need to repeat the procedure using weaved.
+**Note:** Since at Imperial network the IPs are dynamic, the IP is constantly changing, so could be that the IP changes in a day or hours (could be sometimes longer) and you need to repeat the last steps on your laptop of the remot3.it setup procedure.
 
-### Copying files from my laptop to my RPi
+## Transferring files
 
 #### Using terminal
 
@@ -68,13 +79,13 @@ Instead a terminal, we can use to transfer files using a software that mounts an
 
 * [Cyberduck](https://cyberduck.io/?l=en)
 
-<img src="cyberduck.png" alt="weaved" style="width: 400px;"/>
+<img src="../img/cyberduck.png" alt="weaved" style="width: 400px;"/>
 
 * For just Windows you can use: [WinSCP](https://winscp.net/eng/index.php)
 
-<img src="WinSCPPortable.png" alt="weaved" style="width: 400px;"/>
+<img src="../img/WinSCPPortable.png" alt="weaved" style="width: 400px;"/>
 
-## Creating and deleting a new user
+## Managing Users on your Raspberry Pi
 
 You can create additional users on your Raspbian installation with the ```adduser``` command.
 
@@ -92,7 +103,7 @@ sudo userdel -r bob
 
 The default ```pi``` user on Raspbian is a sudoer. This gives the ability to run commands as root when preceded by ```sudo```, and to switch to the root user with ```sudo su```.
 
-## Optional
+## Suggested Workflow for Optional Upgrades
 
 The next command is for updating and upgrading the Linux packages in the operative system, but it won't be executed during the workshop since it can take a while. It is always good to keep the system up to date.
 
