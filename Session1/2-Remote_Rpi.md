@@ -50,7 +50,7 @@ Your RPi is now ready to run headless, we just have to connect with it over ssh 
 
 <img src="../img/remot3-first_pop-up.png" alt="remot32" style="width: 400px;"/>
 
-Tips: You can also see the IP addresses of your devices directly from the dashboard. Within the same college network or if you have configured your raspberry pi to be accessible by public network, you can connect to your devices directly using the associated IP addresses.
+Tips: You can also see the IP addresses of your devices directly from the dashboard. Within the same college network or if you have configured your raspberry pi to be accessible by public network, you can connect to your devices directly using the associated IP addresses. For more details and other tips, please visit this [link](https://github.com/ICL-DE/Gizmo/blob/master/SupplementaryMaterial/Advanced_remote_functionalities.md).
 
 3. Click on the name of your ssh service and then "Confirm".
 
