@@ -66,7 +66,7 @@ Arduino (Atmega) pins default to inputs, so they don't need to be explicitly dec
 
 This also means however, that pins configured as pinMode(pin, INPUT) with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.
 
-##### Pins Configured as INPUT with Pullup Resistors
+##### Pins Configured as INPUT with Pullup/Pulldown Resistors
 
 Often it is useful to steer an input pin to a known state if no input is present. In doing so you cancel the random values of the pin when nothing is connected to it. This can be done by adding a pullup resistor (to +5V), or a pulldown resistor (resistor to ground) on the input. A 10K resistor is a good value for a pullup or pulldown resistor.
 
@@ -74,6 +74,7 @@ Often it is useful to steer an input pin to a known state if no input is present
 
 When connecting a sensor to a pin configured with INPUT_PULLUP, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read HIGH when the switch is open, and LOW when the switch is pressed.
 
+You can find more information about pullup/pulldown resistors [here](https://playground.arduino.cc/CommonTopics/PullUpDownResistor).
 
 ##### Pins configured as OUTPUT
 
@@ -174,19 +175,23 @@ void loop() {
 
 The programming language used in Arduino comes from C++ and it is quite different from Python. Although the names of the functions are self explanatory as they are written in plain English.
 
-The most visible difference from Python is that Arduino doesn't use dynamic typing. Therefore when we create a variable we have to declare its type:
+The most visible difference is that you have to terminate each line with a semicolon (`;`) to end a statement, if you forget one the compiler will warn you about it.
 
-```int pin = 13;```
+###### Variables
+
+The fundamental difference from Python is that Arduino doesn't use dynamic typing. Therefore when we create a variable we have to declare its type:
+
+`int pin = 13;`  
 
 We have just created a variable whose type is **int**, whose name is **pin**, whose **value** is 13.
 Later on in the program, you can refer to this variable by its name, at which point its value will be looked up and used. For example, in this statement:
 
-```pinMode(pin, OUTPUT);```
+`pinMode(pin, OUTPUT);`  
 
-We are setting the pin 13 as an OUTPUT pin, what we have written would be equivalent to ```pinMode(13, OUTPUT);```.
+We are setting the pin 13 as an OUTPUT pin, what we have written would be equivalent to `pinMode(13, OUTPUT);`.
 You can change the value of a variable using an assignment (indicated by an equals sign). For example:
 
-```pin = 12;```
+`pin = 12;`  
 
 will change the value of the variable to 12. Notice that we don't specify the type of the variable: it's not changed by the assignment. That is, the name of the variable is permanently associated with a type; only its value changes.
 
@@ -200,17 +205,82 @@ pin = 12;
 
 only pin has the value 12; pin2 is still 13.
 
-[//]: # (TODO: in-depth analysis of syntax?)
+Arduino has many types. Too name a few: int, float, string, boolean, char, ... To learn more about the specificities about each type we invite you to look at the [Arduino Reference Page](https://www.arduino.cc/en/Reference/HomePage)
+
+#### Further Arduino Syntax
+
+We have collected useful examples of Arduino syntax for some major functions you are familiar with in Python.
+
+###### If
+```
+if (pinFiveInput < 500){
+    // action A
+} else {
+    // action B
+}
+```
+###### While
+```
+for (initialization; condition; increment) {
+    //statement(s);
+}
+```
+###### For
+```
+for (int i=0; i <= 255; i++){
+      analogWrite(PWMpin, i);
+      delay(10);
+}
+```
+That can be translated in pseudocode as:
+```
+for (initialization; condition; increment) {
+    //statement(s);
+}
+```
+###### Comments
+For inline comments you can use `//` for multiple-lines comments instead use `/*` at the beginning and `*/` at the end.
+```
+//this is an inline comment  
+```
+```
+/*this is a comment  
+on multiple lines*/
+```
+###### Comparison Operators
++ `x == y (x is equal to y)`
++ `x != y (x is not equal to y)`
++ `x <  y (x is less than y)`
++ `x >  y (x is greater than y)`
++ `x <= y (x is less than or equal to y)`
++ `x >= y (x is greater than or equal to y)`
+###### Arithmetic Operations
+* = (assignment operator)
+* +  (addition)
+* - (subtraction)
+* * (multiplication)
+* / (division)
+* % (modulo)
+
+###### Boolean Operations
+* && (and)
+* || (or)
+* ! (not)
+
+###### Functions
+To declare your own function
+[//]: # (TODO: finish the section with this https://www.arduino.cc/en/Reference/FunctionDeclaration)
 
 
-For further reference you can check these notes:
+For further reference about the syntax and language you can check these notes:
 https://www.arduino.cc/en/Tutorial/Variables
-https://www.arduino.cc/en/Reference/FunctionDeclaration
 https://www.arduino.cc/en/Reference/HomePage
 
 
 ### Running our first Arduino sketch
 
 We are going to run the "blink" sketch we have seen early on in this tutorial. It is the most basic sketch a sort of "Hello World!" for Arduino. It makes the built-in LED on pin 13 blink in intervals of 1 second.
+
+[//]: # (TODO: finish this section)
 
 1. Open the IDE

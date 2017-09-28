@@ -15,7 +15,7 @@ If you do not know what is an IP address, please go to the [this link](https://w
 #### Checking your IP address from remot3.it
 remot3.it displays the external IP of the devices you have registered. You can get your RPi's one in the *External IP* Tab:
 
-<img src="../img/remot3-it-ip.jpg" alt="weaved" style="width: 400px;"/>
+<img src="../img/remot3-it-ip.png" alt="weaved" style="width: 400px;"/>
 
 **Note:** If you are connected with your laptop to the same network of your RPi the internal and external IP addresses will be the same like in the example above.
 

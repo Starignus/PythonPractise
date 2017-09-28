@@ -5,7 +5,7 @@ In this tutorial we will see how to connect your Raspberry Pi to your Arduino. W
 1. [Arduino IDE](#arduino-ide)
 2. [Arduino Makefile](#arduino-makefile)
 3. [Arduino and Raspberry Pi Talking Over Serial](#arduino-and-raspberry-pi-talking-over-serial)
-4. [ino](#ino)
+4. [Suggested workflow](#suggested-workflow)
 5. [Other tools to make Arduino and Raspberry communicate](#other-tools-to-make-arduino-and-raspberry-communicate)
 6. [Command Line tools for your laptop](#command-line-tools-for-your-laptop)
 
@@ -45,7 +45,7 @@ Click **Tools->Serial Port** and select the USB serial port to which your Arduin
 
 Once uploaded you will see the LED on pin 13 blink.
 
-**Note:** If /dev/ttyACM0 doesn't work, you can find out in which serial port your Arduino is plugged by unpluggin it from the RPi. Then on the Rpi terminal type:
+**Note:** If /dev/ttyACM0 doesn't work, you can find out in which serial port your Arduino is plugged by unplugging it from the RPi. Then on the Rpi terminal type:
 
 ```bash
 ls /dev/tty*
@@ -252,7 +252,6 @@ You should see a *0* being printed.
 so we type:
 ```
 cd home/pi/
-touch serialEcho.py
 nano serialEcho.py
 ```
 And we paste this code:
@@ -281,6 +280,29 @@ The Arduino is sending a number to the Python script, which interprets that numb
 ```
 print(str(ord(input)) + " = the ASCII character " + input + ".")
 ```
+
+## Suggested workflow
+We have prepared a schematic workflow chart to represent the suggested usage of the tools we have just introduced and how can these be tied together with the usage of Github.
+
+![workflow](../img/git-arduino-rpi-workflow.png "Workflow")
+
+## Other tools to make Arduino and Raspberry communicate
+Sometimes the communication over Serial is not the best option for your project or you might want to make your RPi and Arduino communicate in another way, or maybe communicate to other boards, so we have prepared a list of possible alternatives. They are just brief introductions with links for a more in-depth knowledge. We leave this exploration to your curiosity!
+
+#### Hardware Protocols
+* [Serial over GPIO](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) with this method you can use the same cod we have used before, the only difference is the physical connection. You will need a voltage converter to operate this method safely. Otherwise there is an other risky option which is creating your own voltage divider, however we do not recommend you to do so.
+* [I2C](https://www.youtube.com/watch?v=DsSBTYbXAKg)
+* miso
+* clk
+* sli
+* uart
+
+#### Software
+* [Ino](#ino) is a command line tool that uses makefiles as well, is a simplified version of arduino-mk, but it has a big caveat which is that it modifies the directory structure, making it not compatible for the Arduino IDE.
+* *Firmata*
+* *Instrumentino*
+* *Noduino*
+* [More examples here](http://www.pd-tutorial.com/english/index.html)
 
 ## Ino
 
@@ -324,10 +346,10 @@ cd src
 cat sketch.ino
 ```
 The terminal will show you the content of the file. As you can see it is exactly the same as the blink.ino source file we created for the blink project in the Arduino-mk section.
-ino has created this file automatically for us when we initialized the project with `ino init -t blink`.
+ino has created this file automatically for us when we initialised the project with `ino init -t blink`.
 Feel free to tweak it with *nano* to change the blinking pattern.
 
-**Note:** ino has two templates we can use: blink and empty. "empty" is a simple sketch with the setup and loop function already created. You can choose to initialize you sketch as empty by running `ino init -t blink` in a new folder.
+**Note:** ino has two templates we can use: blink and empty. "empty" is a simple sketch with the setup and loop function already created. You can choose to initialise you sketch as empty by running `ino init -t blink` in a new folder.
 
 In the lib directory there is one file, called .holder, which appears to be empty.
 We are not using any libraries other than the defaults in this sketch so there will be nothing in lib. If we were using libraries the files would automatically be added here.
@@ -372,16 +394,12 @@ sudo ino upload
 Some of the messages that flew past will look familiar to you as they are the same of Arduino-mk.
 Now your sketch is uploaded and you should see your Arduino blinking again!
 
-## Other tools to make Arduino and Raspberry communicate
 
 ## Command Line tools for your computer
-If you would like to use the same tools on your computer we encourage you to do so. If you have a Linux computer you can follow exactly the same steps.
+If you would like to use the same tools on your computer you can do so if you have either a Mac or Linux computer. If you have a Linux computer you can follow exactly the same steps.
 
-If you have Windows???
-
-If you have Mac special attention to USB port
+If you have Mac special attention to the path of the USB port. It is going to look like this */dev/tty.usbmodem411* to find your port name you can enter the command `ls /dev/tty.usb*`.
+Also on Mac there is no `apt-get` command. You have to install another package manager, we recommend using [Homebrew](https://brew.sh/) and to install any package use `brew install PACKAGE_NAME`
 
 <small>Based on [Raspberry VI Tutorial] (http://www.raspberryvi.org/stories/arduino-cli.html#)
 </small>
-5. [Arduino and Raspberry Pi Talking Over Serial]()
-6.
