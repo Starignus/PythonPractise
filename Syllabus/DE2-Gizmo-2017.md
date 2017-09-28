@@ -1,37 +1,22 @@
-## Programming material for Gizmo workshop
-
-All the students will have access to the programming material shown in the workshop.
-
-To copy the repo in your computer just execute the following command line in the terminal:
-
-``` bash
-$cd /path/to/folder
-$git clone https://github.com/ICL-DE/Gizmo.git
-```
+# Syllabus for Design Engineering's Gizmo 2017
 
 #### Introductory Material
 
 * [Linux (Bash) commands cheat sheet](Intro/Cheat_sheet_bash_Linux.md)
 
-#### Chapter 1:
+### Chapter 1
 
 * [Raspberry Pi set up](Chapter1/1-RPI_setup.md)
 * [Remote connection to your Raspberry Pi](Chapter1/2-Remote_Rpi.md)
 * [Warming up in Python](Chapter1/3-Python_warmup.md)
-* [Introduction to Github](...)
 
-#### Chapter 2:
+### Chapter 2
 
 * [RPi GPIOzero](Chapter2/1-RPi_intro.md)
 * [Warming up in Arduino](Chapter2/2-Arduino_intro.md)
 * [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md))
 
-#### Chapter 3
-
-* [Actuators](...)
-* [ADC](...)
-
-#### Supplementary Material
+### Supplementary Material
 
 * [Alternative Network's Settings](SupplementaryMaterial/AlternativeNetworwSettings.md)
 * [Advanced remote functionalities](SupplementaryMaterial/Advanced_remote_functionalities.md)
