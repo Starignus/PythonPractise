@@ -85,9 +85,7 @@ And we press "Enable".
 
 11. Exit the menu, you will re-enter the terminal.
 
-## WiFi setup
-
-#### Step 1: Setting the WiFi from Imperial College network with a guest account
+## Setting up the WiFi from Imperial College network with a guest account
 
 In the classroom you will be given a guest username (i.e *guest000000*, 'guest' followed by a sequence of 6 digits) and a guest password (8 characters long, alphanumeric).
 The guest account is valid for 90 days only. So you should change the setting with your personal college credentials. We have prepared a step by step tutorial to assist you in the process. You can find the tutorial [here](...). The tutorial also includes setup for the **eduroam** network.

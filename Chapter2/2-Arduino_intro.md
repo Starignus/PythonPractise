@@ -104,6 +104,7 @@ In the graphic below, the green lines represent a regular time period. This dura
 **Note:** For more informations you can check the Arduino [Microcontroller section](https://www.arduino.cc/en/Tutorial/Foundations) of their Foundations.
 
 ### What is Arduino: Software
+Please download the Arduino IDE from [Arduino's website](https://www.arduino.cc/en/Main/Software) if you are having any trouble there are setup guides for every operating system on [his page](https://www.arduino.cc/en/Guide/HomePage).
 
 #### Quick tour of the Arduino IDE
 
@@ -219,12 +220,14 @@ if (pinFiveInput < 500){
     // action B
 }
 ```
+
 ###### While
 ```
-for (initialization; condition; increment) {
-    //statement(s);
+while(expression){
+  // statement(s)
 }
 ```
+
 ###### For
 ```
 for (int i=0; i <= 255; i++){
@@ -238,6 +241,7 @@ for (initialization; condition; increment) {
     //statement(s);
 }
 ```
+
 ###### Comments
 For inline comments you can use `//` for multiple-lines comments instead use `/*` at the beginning and `*/` at the end.
 ```
@@ -247,6 +251,7 @@ For inline comments you can use `//` for multiple-lines comments instead use `/*
 /*this is a comment  
 on multiple lines*/
 ```
+
 ###### Comparison Operators
 + `x == y (x is equal to y)`
 + `x != y (x is not equal to y)`
@@ -254,6 +259,7 @@ on multiple lines*/
 + `x >  y (x is greater than y)`
 + `x <= y (x is less than or equal to y)`
 + `x >= y (x is greater than or equal to y)`
+
 ###### Arithmetic Operations
 * = (assignment operator)
 * +  (addition)
@@ -269,7 +275,7 @@ on multiple lines*/
 
 ###### Functions
 To declare your own function
-[//]: # (TODO: finish the section with this https://www.arduino.cc/en/Reference/FunctionDeclaration)
+[//]: # (TODO: finish the section with this https://www.arduino.cc/en/Reference/FunctionDeclaration if Makefile works)
 
 
 For further reference about the syntax and language you can check these notes:
@@ -281,6 +287,23 @@ https://www.arduino.cc/en/Reference/HomePage
 
 We are going to run the "blink" sketch we have seen early on in this tutorial. It is the most basic sketch a sort of "Hello World!" for Arduino. It makes the built-in LED on pin 13 blink in intervals of 1 second.
 
-[//]: # (TODO: finish this section)
+1. Connect the Arduino to your laptop with the USB cable
+[//]: # (TODO: add photo)
 
-1. Open the IDE
+2. Open the IDE
+[//]: # (TODO: add photo)
+
+3. Click **Tools->Serial Port** and select the USB serial port to which your Arduino is connected to (the path changes with operating system and USB port you are using, so the name might be different for you).
+[//]: # (TODO: add photo)
+
+4. Then, select the right board: click **Tools->Board->Arduino Uno**.
+[//]: # (TODO: add photo)
+
+5. Then you can open the basic sketch "Blink" by clicking on **File->Example->01. Basics-> Blink**.
+[//]: # (TODO: add photo)
+
+6. You can then upload the sketch on the Arduino by clicking the "Upload" button (the one with an arrow).
+<img src="../img/arduino-blink.png" alt="arduino" style="width: 400px;"/>
+
+7. Once uploaded you will see the LED on pin 13 blink.
+[//]: # (TODO: add GIF)
