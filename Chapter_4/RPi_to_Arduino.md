@@ -287,21 +287,17 @@ We have prepared a schematic workflow chart to represent the suggested usage of 
 ![workflow](../img/git-arduino-rpi-workflow.png "Workflow")
 
 ## Other tools to make Arduino and Raspberry communicate
-Sometimes the communication over Serial is not the best option for your project or you might want to make your RPi and Arduino communicate in another way, or maybe communicate to other boards, so we have prepared a list of possible alternatives. They are just brief introductions with links for a more in-depth knowledge. We leave this exploration to your curiosity!
+Sometimes the communication over Serial is not the best option for your project or you might want to make your RPi and Arduino communicate in another way, or maybe communicate to other boards, so we have prepared a list of possible alternatives, but don't limit yourself to the ones listed. They are just brief introductions with links for a more in-depth knowledge. We leave this exploration to your curiosity!
 
-#### Hardware Protocols
+#### Protocols
 * [Serial over GPIO](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) with this method you can use the same cod we have used before, the only difference is the physical connection. You will need a voltage converter to operate this method safely. Otherwise there is an other risky option which is creating your own voltage divider, however we do not recommend you to do so.
 * [I2C](https://www.youtube.com/watch?v=DsSBTYbXAKg) is protocol that allows two devices to talk to each other using only two buses: a clock one (SCL bus) and a data on (SDA bus). It can allow up to 127 slaves connected to one master to exchange information. It is a very common protocol for Arduino as it is used to communicate with various sensors. There is a [dedicated library called Wire](https://www.arduino.cc/en/Reference/Wire) in Arduino that you can readily use.  
-* SPI ()is a synchronous serial communication interface specification used for short distance communication, primarily in embedded systems
-* clk
-* sli
-* uart
+* [SPI](http://radiostud.io/understanding-spi-in-raspberry-pi/) is a synchronous serial communication interface specification used for short distance communication, primarily in embedded systems. It uses four buses: clock (SCK), two data lines (MISO: Master Output Slave Input, MOSI: Master Input Slave Output) and a select line(SS) to choose among the multiple slave devices.
 
 #### Software
 * [Ino](#ino) is a command line tool that uses makefiles as well, is a simplified version of arduino-mk, but it has a big caveat which is that it modifies the directory structure, making it not compatible for the Arduino IDE.
-* *Firmata*
-* *Instrumentino*
-* *Noduino*
+* [pyFirmata](https://pypi.python.org/pypi/pyFirmata) is Python interface for the Firmata procotol. It allows you to control an Arduino implementing the Firmata protocol with Python.
+* [Noduino](https://sbstjn.com/noduino/) is a JavaScript and Node.js framework for accessing basic Arduino controls from web applications using HTML5, Socket.IO and Node.js.
 * [More examples here](http://www.pd-tutorial.com/english/index.html)
 
 ## Ino
