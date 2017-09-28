@@ -50,6 +50,8 @@ Your RPi is now ready to run headless, we just have to connect with it over ssh 
 
 <img src="../img/remot3-first_pop-up.png" alt="remot32" style="width: 400px;"/>
 
+Tips: You can also see the IP addresses of your devices directly from the dashboard. Within the same college network or if you have configured your raspberry pi to be accessible by public network, you can connect to your devices directly using the associated IP addresses. This method is also recommended as Remot3.it only allows 30 mins access per session using the free account.
+
 3. Click on the name of your ssh service and then "Confirm".
 
 4. A second pop-up will appear:
