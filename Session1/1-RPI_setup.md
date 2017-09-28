@@ -16,7 +16,7 @@ At first we will setup the RPi using peripherals. Each team should get the follo
   * monitor/touch screen
   * HDMI-DVI cable
   * power cable
-  * keyboard (optional)
+  * keyboard (optional after RPi is setup for remote networking)
   * mouse (optional)
   * SD card
 
