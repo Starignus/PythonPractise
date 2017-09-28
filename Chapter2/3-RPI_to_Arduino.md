@@ -291,8 +291,8 @@ Sometimes the communication over Serial is not the best option for your project 
 
 #### Hardware Protocols
 * [Serial over GPIO](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) with this method you can use the same cod we have used before, the only difference is the physical connection. You will need a voltage converter to operate this method safely. Otherwise there is an other risky option which is creating your own voltage divider, however we do not recommend you to do so.
-* [I2C](https://www.youtube.com/watch?v=DsSBTYbXAKg)
-* miso
+* [I2C](https://www.youtube.com/watch?v=DsSBTYbXAKg) I2C 
+* MISO
 * clk
 * sli
 * uart
