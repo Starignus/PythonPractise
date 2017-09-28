@@ -26,3 +26,4 @@
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown-Cheatsheet.md)
 * [FAQ & Troubleshooting](SupplementaryMaterial/FAQ_Troubleshooting.md)
+* [Links](SupplementaryMaterial/Links)

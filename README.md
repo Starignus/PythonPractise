@@ -22,8 +22,8 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Chapter 2:
 
-* [RPi GPIOzero](Chapter2/1-RPi_intro.md)
-* [Warming up in Arduino](Chapter2/2-Arduino_intro.md)
+* [RPi Introduction and GPIOzero](Chapter2/1-RPi_intro.md)
+* [Arduino Introduction and GPIO](Chapter2/2-Arduino_intro.md)
 * [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md))
 
 #### Chapter 3
@@ -41,3 +41,4 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown-Cheatsheet.md)
 * [FAQ & Troubleshooting](SupplementaryMaterial/FAQ_Troubleshooting.md)
+* [Links](SupplementaryMaterial/Links)
