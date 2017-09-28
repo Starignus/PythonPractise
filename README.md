@@ -12,24 +12,38 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 #### Introductory Material
 
 * [Linux (Bash) commands cheat sheet](Intro/Cheat_sheet_bash_Linux.md)
+* [Introduction to Github](...)
 
-#### Chapter 1:
+#### Chapter 1: Basic Electronics and Programming
 
 * [Raspberry Pi set up](Chapter1/1-RPI_setup.md)
-* [Remote connection to your Raspberry Pi](Chapter1/2-Remote_Rpi.md)
 * [Warming up in Python](Chapter1/3-Python_warmup.md)
-* [Introduction to Github](SupplementaryMaterial/Links.md/#git-related)
 
-#### Chapter 2:
 
-* [RPi Introduction and GPIOzero](Chapter2/1-RPi_intro.md)
-* [Arduino Introduction and GPIO](Chapter2/2-Arduino_intro.md)
-* [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md)
+#### Chapter 2: Raspberry Pi
 
-#### Chapter 3
+* [RPi GPIOzero](Chapter2/1-RPi_intro.md)
+
+#### Chapter 3: Arduiono
+
+* [Warming up in Arduino](Chapter2/2-Arduino_intro.md)
+
+#### Chapter 4: Arduino + Raspberry Pi Combo!
+
+* [RPi & Arduino](Chapter2/3-RPI_to_Arduino.md))
+
+#### Chapter 5: Remote Connection
+
+* [Remote connection to your Raspberry Pi](Chapter1/2-Remote_Rpi.md)
+
+#### Chapter 6: Sensors
+
+ * [ADC](...)
+
+#### Chapter 7: Making things move
 
 * [Actuators](...)
-* [ADC](...)
+
 
 #### Supplementary Material
 
@@ -41,4 +55,3 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown-Cheatsheet.md)
 * [FAQ & Troubleshooting](SupplementaryMaterial/FAQ_Troubleshooting.md)
-* [Links](SupplementaryMaterial/Links)
