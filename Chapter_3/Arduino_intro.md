@@ -21,6 +21,10 @@ circuit containing a processor core, memory and programmable input/output periph
 9. USB port Used for powering your Arduino Uno, uploading your sketches to your Arduino, and for communicating with your Arduino sketch (via Serial. println() etc.).
 10. Reset button Resets the ATmega microcontroller.
 
+Here's a scheme of it's pin's functionalities:
+
+![Arduino GPIO](../img/ArduinoUNO-GPIO.jpg)
+
 #### Analog vs. Digital
 
 Before seeing how Arduino deals with them, we will revise the difference between **analog** and **digital** signals. Both are used to transmit information, usually through **electric signals**. In both these technologies, the information, such as any audio or video, is transformed into electric signals. The **difference between analog and digital**:

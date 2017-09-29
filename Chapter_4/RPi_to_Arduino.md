@@ -297,7 +297,7 @@ Sometimes the communication over Serial is not the best option for your project 
 #### Software
 * [Ino](#ino) is a command line tool that uses makefiles as well, is a simplified version of arduino-mk, but it has a big caveat which is that it modifies the directory structure, making it not compatible for the Arduino IDE.
 * [pyFirmata](https://pypi.python.org/pypi/pyFirmata) is Python interface for the Firmata procotol. It allows you to control an Arduino implementing the Firmata protocol with Python.
-* [Noduino](https://sbstjn.com/noduino/) is a JavaScript and Node.js framework for accessing basic Arduino controls from web applications using HTML5, Socket.IO and Node.js.
+* [Noduino](https://sbstjn.com/noduino/) is a JavaScript and Node.js framework for accessing basic Arduino controls from web pplications using HTML5, Socket.IO and Node.js.
 * [More examples here](http://www.pd-tutorial.com/english/index.html)
 
 ## Ino
