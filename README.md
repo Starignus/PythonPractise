@@ -16,7 +16,7 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Chapter 1: Basic Electronics and Programming
 
-* [Basic electronics](...)
+* [Basic electronics](..)
 [//]: # (TODO: get basic electronics notes from Andy)
 * [Warming up in Python](Chapter_1/Python_warmup.md)
 
@@ -44,7 +44,7 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Chapter 7: Making things move
 
-* [Actuators](...)
+* [Actuators](Chapter_7/Actuators)
 
 
 #### Supplementary Material

@@ -31,6 +31,7 @@ Here is a list of useful links for external resources. Please feel free to make 
 
 |Title| Links   |
 |---|---|
+| Setting up a Github Account @ IC | http://www.imperial.ac.uk/admin-services/ict/self-service/research-support/research-support-systems/github/working-with-githubcom/ |
 | GitHub Basic Course | https://services.github.com/on-demand/  |
 | Try Git  | https://try.github.io/levels/1/challenges/1  |
 | Collaboration Workflow (Short) | https://code.tutsplus.com/tutorials/how-to-collaborate-on-github--net-34267  |

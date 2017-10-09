@@ -2,24 +2,24 @@
 
 ### Introduction
 
-* [Linux (Bash) commands cheat sheet](...)
+* [Linux (Bash) commands cheat sheet](../Introductory_Material/Cheatsheet_bash_Linux.md)
 
 ### Lab Session 1 (11 Oct 2017)
 
-* [Raspberry Pi set up](...)
-* [Remote connection to your Raspberry Pi](...)
-* [Warming up in Python](...)
+* [Raspberry Pi set up](../Chapter_2/RPi_setup.md)
+* [Remote connection to your Raspberry Pi](../Chapter_5/Remote_Rpi.md)
+* [Warming up in Python](../Chapter_1/Python_warmup.md)
 
 ### Lab Session 2 (18 Oct 2017)
 
-* [RPi GPIOzero](...)
-* [Warming up in Arduino](...)
-* [RPi & Arduino](...)
+* [RPi GPIOzero](../Chapter_2/RPi_GPIO_intro.md)
+* [Warming up in Arduino](../Chapter_3/Arduino_intro.md)
+* [RPi & Arduino](../Chapter_4/RPi_to_Arduino.md)
 
 ### Lab Session 3 (25 Oct 2017)
 
- * [Sensors (Digital, ADC, LEDs, etc)](...)
- * [Actuators (Motor Driver, ADC, etc)](...)
+ * [Sensors (Digital, ADC, LEDs, etc)](../Chapter_6/Sensors)
+ * [Actuators (Motor Driver, ADC, etc)](../Chapter_7/Actuators)
 
 ### Lab Session 4 (1 Nov 2017)
 

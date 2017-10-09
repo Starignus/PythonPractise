@@ -11,8 +11,6 @@ We have created a [cheat sheet](../Introductory_Material/Cheat_sheet_bash_Linux.
 
 At first we will setup the RPi using peripherals. Each team should get the following equipment:
 
-[//]: # (TODO: review materials list)
-
   * 1 Touchscreen
   * 1 Raspberry to touchscreen HDMI-HDMI plug
   * 1 Touchscreen pen
@@ -39,7 +37,7 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 [//]: # (TODO: add image)
 <img src="../img/" alt="pheriperals-setup" style="width: 400px;">
 
-2. Repeat the same operation with the Arduino using 4 M3 spacers, 4 M3 nuts and 3 M3 bolts.  
+2. Repeat the same operation with the Arduino using 4 M3 spacers, 4 M3 nuts and 3 M3 bolts.
 [//]: # (TODO: add image)
 <img src="../img/" alt="pheriperals-setup" style="width: 400px;">
 
@@ -83,7 +81,7 @@ The terminal will show a menu. The options can be navigated with the vertical ke
 <img src="../img/raspi-config.png" alt="screen" style="width: 400px;"/>
 
 2. First we set up the keyboard to prevent any problem when we will change the root password. We access the option: __4 Localisation Options__:
-<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px;">
+<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; align: center;">
 
 Then __Change Keyboard Layout__:
 <img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px;">
