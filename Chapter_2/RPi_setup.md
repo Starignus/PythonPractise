@@ -84,52 +84,52 @@ The terminal will show a menu. The options can be navigated with the vertical ke
 <img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then __Change Keyboard Layout__:
-<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then we choose __Generic 105 key__:
-<img src="../img/generic-105.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/generic-105.png" alt="localisation-options" style="width: 400px; display: block;">
 
 And then __English (UK)__:
-<img src="../img/english-uk.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/english-uk.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then we can choose the default options that the menu is prompting by pressing enter:
-<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; display: block;"">
-<img src="../img/no-compose.png" alt="localisation-options" style="width: 400px; display: block;"">
-<img src="../img/terminate-server.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; display: block;">
+<img src="../img/no-compose.png" alt="localisation-options" style="width: 400px; display: block;">
+<img src="../img/terminate-server.png" alt="localisation-options" style="width: 400px; display: block;">
 
 3. Then we are re-directed to the main menu, now we change the timezone from the __4 Localisation Options__ menu.
-<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then we choose __Change Timezone__:
-<img src="../img/change-timezone.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/change-timezone.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then __Europe__:
-<img src="../img/europe.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/europe.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then __London__:
-<img src="../img/london.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/london.png" alt="localisation-options" style="width: 400px; display: block;">
 
 4. Now we will change the root user password. This increases the security of the connection we will establish from our laptop to the RPi. Since you are sharing this RPi with your teammates choose a password together. To change the password we are re-directed to the main menu and here we choose the first option: __1 Change User Password__:
-<img src="../img/change-password.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/change-password.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then we agree to change the password:
-<img src="../img/password-ok.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/password-ok.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Type the new password twice:
-<img src="../img/password-changed-ok.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/password-changed-ok.png" alt="localisation-options" style="width: 400px; display: block;">
 We have set the new password. Do not reboot the RPi yet.
 
 5. Lastly we will check that the SSH is enabled. We need to enable it to connect with the RPi remotely. From the main menu we access: __5 Interfacing Options__:
-<img src="../img/interfacing-options.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/interfacing-options.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then we select __SSH__:
-<img src="../img/ssh.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/ssh.png" alt="localisation-options" style="width: 400px; display: block;">
 
 Then we confirm that we want to enable the SSH server:
-<img src="../img/ssh-enabling.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/ssh-enabling.png" alt="localisation-options" style="width: 400px; display: block;">
 
 We confirm again:
-<img src="../img/ssh-is-enabled.png" alt="localisation-options" style="width: 400px; display: block;"">
+<img src="../img/ssh-is-enabled.png" alt="localisation-options" style="width: 400px; display: block;">
 
 6. Exit the menu by pressing the right arrow twice to select __Finish__ and enter. You will re-enter the terminal.
 
