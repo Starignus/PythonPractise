@@ -31,35 +31,43 @@ At first we will setup the RPi using peripherals. Each team should get the follo
   * 1 Pair of Pliers
 
 [//]: # (TODO: add image)
-<img src="../img/" alt="provided-material" style="width: 400px;">
+
+<img src="../img/" alt="provided-material" style="width: 400px;block; align: left;
 
 1. Attach the Raspberry Pi to the wooden plate with 4 M2.5 Standoffs and 8 M2.5 bolts:
 [//]: # (TODO: add image)
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;">
+
+<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
 
 2. Repeat the same operation with the Arduino using 4 M3 spacers, 4 M3 nuts and 3 M3 bolts.
 [//]: # (TODO: add image)
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;">
+
+<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
 
 3. To attach the breadboard to the wooden plate, peel off the back of it to expose the adhesive strip and glue it to the wooden plate:
 [//]: # (TODO: add image)
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;">
+
+<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
 
 4. Insert the micro-SD card in the back of the RPi, like so:
 [//]: # (TODO: add image)
-<img src="../img/" alt="SD-slot" style="width: 400px;">
+
+<img src="../img/" alt="SD-slot" style="width: 400px;"/>
 
 5. Connect the touchscreen to the RPi, connecting it to the pins and with the HDMI plug, like so:
 [//]: # (TODO: add image)
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;">
+
+<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
 
 6. Connect the keyboard with the USB.
 [//]: # (TODO: add image)
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;">
+
+<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
 
 7. Using the power cable, power up the RPi and the screen:
 [//]: # (TODO: add image)
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;">
+
+<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
 
 8. The RPi will start the setup, if the screen doesn't illuminate check that it is on.
 
@@ -81,55 +89,73 @@ The terminal will show a menu. The options can be navigated with the vertical ke
 <img src="../img/raspi-config.png" alt="screen" style="width: 400px;"/>
 
 2. First we set up the keyboard to prevent any problem when we will change the root password. We access the option: __4 Localisation Options__:
-<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px;"/>
 
 Then __Change Keyboard Layout__:
-<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px;"/>
 
 Then we choose __Generic 105 key__:
-<img src="../img/generic-105.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/generic-105.png" alt="localisation-options" style="width: 400px;"/>
 
 And then __English (UK)__:
-<img src="../img/english-uk.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/english-uk.png" alt="localisation-options" style="width: 400px;"/>
 
 Then we can choose the default options that the menu is prompting by pressing enter:
-<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
-<img src="../img/no-compose.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
-<img src="../img/terminate-server.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; "/>
+
+<img src="../img/no-compose.png" alt="localisation-options" style="width: 400px; "/>
+
+<img src="../img/terminate-server.png" alt="localisation-options" style="width: 400px; "/>
 
 3. Then we are re-directed to the main menu, now we change the timezone from the __4 Localisation Options__ menu.
-<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+<img src="../img/localisation-options.png" alt="localisation-options" style="width: 400px; "/>
 
 Then we choose __Change Timezone__:
-<img src="../img/change-timezone.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/change-timezone.png" alt="localisation-options" style="width: 400px; "/>
 
 Then __Europe__:
-<img src="../img/europe.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/europe.png" alt="localisation-options" style="width: 400px; "/>
 
 Then __London__:
-<img src="../img/london.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/london.png" alt="localisation-options" style="width: 400px; "/>
 
 4. Now we will change the root user password. This increases the security of the connection we will establish from our laptop to the RPi. Since you are sharing this RPi with your teammates choose a password together. To change the password we are re-directed to the main menu and here we choose the first option: __1 Change User Password__:
-<img src="../img/change-password.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/change-password.png" alt="localisation-options" style="width: 400px; "/>
 
 Then we agree to change the password:
-<img src="../img/password-ok.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/password-ok.png" alt="localisation-options" style="width: 400px; "/>
 
 Type the new password twice:
-<img src="../img/password-changed-ok.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/password-changed-ok.png" alt="localisation-options" style="width: 400px; "/>
+
 We have set the new password. Do not reboot the RPi yet.
 
 5. Lastly we will check that the SSH is enabled. We need to enable it to connect with the RPi remotely. From the main menu we access: __5 Interfacing Options__:
-<img src="../img/interfacing-options.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/interfacing-options.png" alt="localisation-options" style="width: 400px; "/>
 
 Then we select __SSH__:
-<img src="../img/ssh.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/ssh.png" alt="localisation-options" style="width: 400px; "/>
 
 Then we confirm that we want to enable the SSH server:
-<img src="../img/ssh-enabling.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/ssh-enabling.png" alt="localisation-options" style="width: 400px; "/>
 
 We confirm again:
-<img src="../img/ssh-is-enabled.png" alt="localisation-options" style="width: 400px; display: block; align: left;">
+
+<img src="../img/ssh-is-enabled.png" alt="localisation-options" style="width: 400px; block; align: left;
 
 6. Exit the menu by pressing the right arrow twice to select __Finish__ and enter. You will re-enter the terminal.
 
