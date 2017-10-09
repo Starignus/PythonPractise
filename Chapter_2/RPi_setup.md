@@ -137,6 +137,8 @@ Then we agree to change the password:
 
 Type the new password twice:
 
+<img src="../img/typing-password.png" alt="localisation-options" style="width: 400px; "/>
+
 <img src="../img/password-changed-ok.png" alt="localisation-options" style="width: 400px; "/>
 
 We have set the new password. Do not reboot the RPi yet.
@@ -155,7 +157,7 @@ Then we confirm that we want to enable the SSH server:
 
 We confirm again:
 
-<img src="../img/ssh-is-enabled.png" alt="localisation-options" style="width: 400px; block; align: left;
+<img src="../img/ssh-is-enabled.png" alt="localisation-options" style="width: 400px;"/>
 
 6. Exit the menu by pressing the right arrow twice to select __Finish__ and enter. You will re-enter the terminal.
 
