@@ -4,32 +4,36 @@
 
 * [Linux (Bash) commands cheat sheet](...)
 
-### Session 1 (11 Oct 2017)
+### Lab Session 1 (11 Oct 2017)
 
 * [Raspberry Pi set up](...)
 * [Remote connection to your Raspberry Pi](...)
 * [Warming up in Python](...)
 
-### Session 2 (18 Oct 2017)
+### Lab Session 2 (18 Oct 2017)
 
 * [RPi GPIOzero](...)
 * [Warming up in Arduino](...)
 * [RPi & Arduino](...)
 
-### Session 3 (25 Oct 2017)
+### Lab Session 3 (25 Oct 2017)
 
  * [Sensors (Digital, ADC, LEDs, etc)](...)
  * [Actuators (Motor Driver, ADC, etc)](...)
 
-### Session 4 (1 Nov 2017)
+### Lab Session 4 (1 Nov 2017)
 
 * Ideation
 
-### Session 5, 6, 7 (15, 22, 29 Nov 2017)
+### Interim review (7 Nov 2017)
+
+* Interim review
+
+### Lab Session 5, 6, 7 (15, 22, 29 Nov 2017)
 
 * Tutorials
 
-### Session 8 (6 Dec 2017)
+### Lab Session 8 (6 Dec 2017)
 
 * Demo and presentation
 
