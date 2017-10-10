@@ -30,7 +30,7 @@ At first we will setup the RPi using peripherals. Each team should get the follo
   * 1 Screwdriver
   * 1 Pair of Pliers
 
-![Provided Material](../img/provided-material)
+![Provided Material](../img/provided-material.jpg)
 
 1. Attach the Raspberry Pi to the wooden plate, first bolt the 4 M2.5 Standoffs to the plate and then attach the RPi to the plate with 4 more bolts (don't tighten them too much):
 

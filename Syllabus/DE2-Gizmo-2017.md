@@ -2,7 +2,7 @@
 
 ### Introduction
 
-* [Linux (Bash) commands cheat sheet](../Introductory_Material/Cheatsheet_bash_Linux.md)
+* [Linux (Bash) commands cheat sheet](../Introductory_Material/Cheat_sheet_bash_Linux.md)
 
 ### Lab Session 1 (11 Oct 2017)
 
