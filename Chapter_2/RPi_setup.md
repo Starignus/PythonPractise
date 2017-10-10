@@ -44,6 +44,8 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 <img src="../img/assembly-sticky_back.JPG" alt="pheriperals-setup" style="width: 400px;"/>
 
+![Full assembly](../img/assembly-final.JPG)
+
 4. Insert the micro-SD card in the back of the RPi, like so:
 
 <img src="../img/assembly-rpi_sd.JPG" alt="SD-slot" style="width: 400px;"/>
@@ -51,8 +53,6 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 5. Connect the touchscreen to the RPi, connecting it to the pins and with the HDMI plug, like so:
 
 <img src="../img/assembly-screen.jpg" alt="pheriperals-setup" style="width: 400px;"/>
-
-![Full assembly](../img/assembly-final.JPG)
 
 6. Connect the keyboard with the USB.
 
@@ -99,7 +99,7 @@ And then __English (UK)__:
 
 Then we can choose the default options that the menu is prompting by pressing enter:
 
-<img src="../img/keyboard-layout.png" alt="localisation-options" style="width: 400px; "/>
+<img src="../img/default-layout.png" alt="localisation-options" style="width: 400px; "/>
 
 <img src="../img/no-compose.png" alt="localisation-options" style="width: 400px; "/>
 
@@ -285,3 +285,6 @@ sudo pip install --upgrade pip
 ```
 
 We suggest that after this lesson you back up the image of your RPi at home to have a copy af this . In order to do so we have prepared a [guide](/SupplementaryMaterial/BackingUpRPi/BackingUpRPi.md).
+
+
+#### (Next Step)[../Chapter_5/Remote_Rpi.md]
