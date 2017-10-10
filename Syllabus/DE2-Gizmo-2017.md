@@ -45,5 +45,5 @@
 * [RPi GPIO: Motor HAT](../SupplementaryMaterial/RPi_GPIO_MotorHat.md)
 * [Screen Cheatsheet](../SupplementaryMaterial/Screen_cheatsheet.md)
 * [Github Cheatsheet](../SupplementaryMaterial/git-cheat-sheet-education.pdf)
-* [Markdown Cheatsheet](../SupplementaryMaterial/Markdown-cheatsheet.md)
+* [Markdown Cheatsheet](../SupplementaryMaterial/Markdown_cheatsheet.md)
 * [Links](../SupplementaryMaterial/Links)
