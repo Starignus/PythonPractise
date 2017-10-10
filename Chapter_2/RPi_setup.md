@@ -287,4 +287,4 @@ sudo pip install --upgrade pip
 We suggest that after this lesson you back up the image of your RPi at home to have a copy af this . In order to do so we have prepared a [guide](/SupplementaryMaterial/BackingUpRPi/BackingUpRPi.md).
 
 
-#### (Next Step)[../Chapter_5/Remote_Rpi.md]
+#### [Next Step](../Chapter_5/Remote_Rpi.md)
