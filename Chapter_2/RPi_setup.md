@@ -42,11 +42,11 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 3. To attach the breadboard to the wooden plate, peel off the back of it to expose the adhesive strip and glue it to the wooden plate:
 
-<img src="../img/assembly-sticky_back.jpg" alt="pheriperals-setup" style="width: 400px;"/>
+<img src="../img/assembly-sticky_back.JPG" alt="pheriperals-setup" style="width: 400px;"/>
 
 4. Insert the micro-SD card in the back of the RPi, like so:
 
-<img src="../img/assembly-rpi_sd.jpg" alt="SD-slot" style="width: 400px;"/>
+<img src="../img/assembly-rpi_sd.JPG" alt="SD-slot" style="width: 400px;"/>
 
 5. Connect the touchscreen to the RPi, connecting it to the pins and with the HDMI plug, like so:
 
@@ -60,11 +60,11 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 7. Using the power cable, power up the RPi and the screen:
 
-![Keyboard](../img/assembly-power.JPG)
+![Power](../img/assembly-power.JPG)
 
 8. The RPi will start the setup, if the screen doesn't illuminate check that it is on.
 
-**Note:** The SD we have provided has [NOOBS](https://www.raspberrypi.org/downloads/noobs/) with the [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/) already installed. We have also added the drivers for the touchscreen. [Here] (https://www.waveshare.com/wiki/5inch_HDMI_LCD) you can find additional steps to modify the configuration of the touchscreen.
+**Note:** The SD we have provided has [NOOBS](https://www.raspberrypi.org/downloads/noobs/) with the [Raspbian OS](https://www.raspberrypi.org/downloads/raspbian/) already installed. We have also added the drivers for the touchscreen. [Here](https://www.waveshare.com/wiki/5inch_HDMI_LCD) you can find additional steps to modify the configuration of the touchscreen.
 
 ## System setup for Raspberry Pi
 
