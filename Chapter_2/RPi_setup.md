@@ -52,15 +52,15 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 
 <img src="../img/assembly-screen.jpg" alt="pheriperals-setup" style="width: 400px;"/>
 
-![Full assembly](./img/assembly-final.JPG)
+![Full assembly](../img/assembly-final.JPG)
 
 6. Connect the keyboard with the USB.
 
-![Keyboard](./img/assembly-keyboard.JPG)
+![Keyboard](../img/assembly-keyboard.JPG)
 
 7. Using the power cable, power up the RPi and the screen:
 
-![Keyboard](./img/assembly-power.JPG)
+![Keyboard](../img/assembly-power.JPG)
 
 8. The RPi will start the setup, if the screen doesn't illuminate check that it is on.
 
