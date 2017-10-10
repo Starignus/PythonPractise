@@ -11,13 +11,12 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Introductory Material
 
-* [Linux (Bash) commands cheat sheet](Introductory_Material/Cheatsheet_bash_Linux.md)
+* [Linux (Bash) commands cheat sheet](Introductory_Material/Cheat_sheet_bash_Linux.md)
 * [Introduction to Github](SupplementaryMaterial/Links.md/#git-related)
 
 #### Chapter 1: Basic Electronics and Programming
 
 * [Basic electronics](..)
-[//]: # (TODO: get basic electronics notes from Andy)
 * [Warming up in Python](Chapter_1/Python_warmup.md)
 
 

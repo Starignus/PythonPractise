@@ -12,14 +12,14 @@
 
 ### Lab Session 2 (18 Oct 2017)
 
-* [RPi GPIOzero](../Chapter_2/RPi_GPIO_intro.md)
-* [Warming up in Arduino](../Chapter_3/Arduino_intro.md)
-* [RPi & Arduino](../Chapter_4/RPi_to_Arduino.md)
+* [RPi GPIOzero](...)
+* [Warming up in Arduino](...)
+* [RPi & Arduino](...)
 
 ### Lab Session 3 (25 Oct 2017)
 
- * [Sensors (Digital, ADC, LEDs, etc)](../Chapter_6/Sensors)
- * [Actuators (Motor Driver, ADC, etc)](../Chapter_7/Actuators)
+ * [Sensors (Digital, ADC, LEDs, etc)](...)
+ * [Actuators (Motor Driver, ADC, etc)](...)
 
 ### Lab Session 4 (1 Nov 2017)
 
