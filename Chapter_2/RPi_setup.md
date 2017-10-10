@@ -30,44 +30,37 @@ At first we will setup the RPi using peripherals. Each team should get the follo
   * 1 Screwdriver
   * 1 Pair of Pliers
 
-[//]: # (TODO: add image)
+![Provided Material](../img/provided-material)
 
-<img src="../img/" alt="provided-material" style="width: 400px;block; align: left;
+1. Attach the Raspberry Pi to the wooden plate, first bolt the 4 M2.5 Standoffs to the plate and then attach the RPi to the plate with 4 more bolts (don't tighten them too much):
 
-1. Attach the Raspberry Pi to the wooden plate with 4 M2.5 Standoffs and 8 M2.5 bolts:
-[//]: # (TODO: add image)
+<img src="../img/assembly-rspi.jpg" alt="pheriperals-setup" style="width: 400px;"/>
 
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
+2. Repeat the same operation with the Arduino using the M3 spacers, nuts and bolts. You will be able only to secure it with three bolts, remember not to tighten them too much:
 
-2. Repeat the same operation with the Arduino using 4 M3 spacers, 4 M3 nuts and 3 M3 bolts.
-[//]: # (TODO: add image)
-
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
+<img src="../img/assembly-arduino.jpg" alt="pheriperals-setup" style="width: 400px;"/>
 
 3. To attach the breadboard to the wooden plate, peel off the back of it to expose the adhesive strip and glue it to the wooden plate:
-[//]: # (TODO: add image)
 
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
+<img src="../img/assembly-sticky_back.jpg" alt="pheriperals-setup" style="width: 400px;"/>
 
 4. Insert the micro-SD card in the back of the RPi, like so:
-[//]: # (TODO: add image)
 
-<img src="../img/" alt="SD-slot" style="width: 400px;"/>
+<img src="../img/assembly-rpi_sd.jpg" alt="SD-slot" style="width: 400px;"/>
 
 5. Connect the touchscreen to the RPi, connecting it to the pins and with the HDMI plug, like so:
-[//]: # (TODO: add image)
 
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
+<img src="../img/assembly-screen.jpg" alt="pheriperals-setup" style="width: 400px;"/>
+
+![Full assembly](./img/assembly-final.JPG)
 
 6. Connect the keyboard with the USB.
-[//]: # (TODO: add image)
 
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
+![Keyboard](./img/assembly-keyboard.JPG)
 
 7. Using the power cable, power up the RPi and the screen:
-[//]: # (TODO: add image)
 
-<img src="../img/" alt="pheriperals-setup" style="width: 400px;"/>
+![Keyboard](./img/assembly-power.JPG)
 
 8. The RPi will start the setup, if the screen doesn't illuminate check that it is on.
 
