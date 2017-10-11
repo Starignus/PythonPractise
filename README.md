@@ -9,35 +9,50 @@ $cd /path/to/folder
 $git clone https://github.com/ICL-DE/Gizmo.git
 ```
 
-#### Direct links to access guides from the browser:
-
 #### Introductory Material
 
-* [Linux (Bash) commands cheat sheet](...)
+* [Linux (Bash) commands cheat sheet](Introductory_Material/Cheat_sheet_bash_Linux.md)
+* [Introduction to Github](SupplementaryMaterial/Links.md/#git-related)
 
-#### Session 1:
+#### Chapter 1: Basic Electronics and Programming
 
-* [Raspberry Pi set up](...)
-* [Remote connection to your Raspberry Pi](...)
-* [Warming up in Python](...)
-* [Introduction to Github](...)
+* Basic electronics
+* [Warming up in Python](Chapter_1/Python_warmup.md)
 
-#### Session 2:
 
-* [RPi GPIOzero](...)
-* [Warming up in Arduino](...)
-* [RPi & Arduino](...)
+#### Chapter 2: Raspberry Pi
 
-#### Session 3
+* [Raspberry Pi set up](Chapter_2/RPi_setup.md)
+* RPi GPIOzero
 
-* [Actuators](...)
-* [ADC](...)
+#### Chapter 3: Arduino
+
+* Warming up in Arduino
+
+#### Chapter 4: Arduino + Raspberry Pi Combo!
+
+* RPi & Arduino
+
+#### Chapter 5: Remote Connection
+
+* Remote connection to your Raspberry Pi
+
+#### Chapter 6: Sensors
+
+ * ADC
+ 
+#### Chapter 7: Making things move
+
+* Actuators
+
 
 #### Supplementary Material
 
-* [Advanced remote functionalities](..)
-* [RPi GPIO: Motor HAT](...)
-* [Screen Cheatsheet](...)
-* [Github Cheatsheet](...)
-* [Markdown Cheatsheet](...)
-* [FAQ & Troubleshooting](...)
+* [Alternative Network's Settings](SupplementaryMaterial/Alternative_network_settings.md)
+* [Advanced remote functionalities](SupplementaryMaterial/Advanced_remote_functionalities.md)
+* [Backing up your Raspberry Pi](SupplementaryMaterial/Backing_up_RPi.md)
+* [RPi GPIO: Motor HAT](SupplementaryMaterial/RPi_GPIO_MotorHat.md)
+* [Screen Cheatsheet](SupplementaryMaterial/Screen_cheatsheet.md)
+* [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
+* [Markdown Cheatsheet](SupplementaryMaterial/Markdown_cheatsheet.md)
+* [Links](SupplementaryMaterial/Links.md)
