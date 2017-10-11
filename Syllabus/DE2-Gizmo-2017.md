@@ -9,6 +9,7 @@
 * [Raspberry Pi set up](../Chapter_2/RPi_setup.md)
 * [Remote connection to your Raspberry Pi](../Chapter_5/Remote_Rpi.md)
 * [Warming up in Python](../Chapter_1/Python_warmup.md)
+* [Slides](./DE2-Gizmo-2017-Week1.pdf)
 
 ### Lab Session 2 (18 Oct 2017)
 
