@@ -71,6 +71,8 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 Now we will start running some commands in the terminal.  We will run them as a **root user**, the root has the permission to modify files or default settings as administrator. By default on Raspbian (the operating system of our RPIs) the **root user** is **pi** and the **root password** associated to the root user is **raspberry**.
 To operate as a root user in the terminal every command is preceded by the ```sudo``` command.
 
+Note: Following the new kernal update "Stretched" released in September. Some user has found that their settings get resetted after reboot. If so, please setup your Raspi Configuration using within the X-Environment -> Click on Raspbian Icon -> Preference -> Raspberry Pi Settings.
+
 1. Type the following command and press 'Enter' to open the configuration menu of the RPi:
 
 ``` bash
