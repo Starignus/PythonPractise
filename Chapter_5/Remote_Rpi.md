@@ -38,7 +38,7 @@ sudo weavedinstaller
 
 <img src="../img/Pi-installer-menu-051.png" alt="menu5" style="width: 300px;"/>
 
-Your RPi is now ready to run headless, we just have to connect with it over ssh on our laptop to control it from the terminal. We have created two access guide one for Linux and Mac Users and the other for Windows.
+Your RPi is now ready to run headless, we just have to connect with it over ssh on our laptop to control it from the terminal. We have created two access guide one for Linux and Mac Users and the other for Windows (please scroll further down for windows).
 
 ## Accessing from your computer (Linux or Mac OS X)
 
@@ -72,7 +72,7 @@ You will see on your laptop's terminal that now you are user pi. You are connect
 
 <small>To manage remote terminal sessions we suggest you use Screen, check out the tutorial [here](../SupplementaryMaterial/Screen.md).</small>
 
-o know more about more advance details of how connect remotely go to the [advanced guide](SupplementaryMaterial/Advanced_remote_functionalities.md).
+To know more about more advance details of how connect remotely go to the [advanced guide](SupplementaryMaterial/Advanced_remote_functionalities.md).
 
 #### [Next Step](../Chapter_1/Python_warmup.md)
 
@@ -106,7 +106,9 @@ If your computer operative  system is Windows, to access remotely you will need 
 
 5. Insert the server address and port obtained from remot3.it into Putty and connect!
 
-6. When asked for username and password, please use your RPi username and password to log-in. (Please note, this is not weaved username and password).
+Note for Windows Putty user: Rather than typing in "ssh -l pi <server> -p <port>", you just need to insert the server url and port from remot3.it.
+
+6. When asked for username and password, please use your RPi username and password to log-in. (Please note, this is not weaved username and password, The default password for RPi is "raspberry" and it is advisable to change this to something else).
 
 <img src="../img/pi_login_windows.PNG" alt="remot33" style="width: 400px;"/>
 
