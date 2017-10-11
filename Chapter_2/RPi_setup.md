@@ -199,6 +199,8 @@ In the classroom you will be given a guest username (i.e *guest000000*, 'guest' 
  ```
 
  Where *guest000000* has to be replaced with the actual guest account and YOUR_PASSWORD with the password associated to it.
+ 
+ In nano editor, to ext, press "ctrl + x". The editor will then present you with different options such as save the file or exit without modifying the file.
 
  5. Now we can check if the connection works by rebooting your RPi. Reboot it by entering:
  ``` bash
@@ -266,7 +268,7 @@ In the classroom you will be given a guest username (i.e *guest000000*, 'guest' 
 
 ## Installing Python
 
-To install Linux packages in our RPi system we use the command: ```sudo apt-get install name_of_package``` in the terminal. Each installation could take some minutes.
+To install Linux packages in our RPi system we use the command: ```sudo apt-get install <name_of_package>``` in the terminal. Each installation could take some minutes.
 
 1. Updating operative system
 ```bash
