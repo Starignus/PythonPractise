@@ -246,7 +246,19 @@ while True:
 Here we are using the [class Button](https://gpiozero.readthedocs.io/en/stable/api_input.html#button) from GPIOzero.
 This class has many functions and parameter, so make sure you check out the reference. Here we are using the `is_pressed` property of the class. `is_pressed` returns True if the device is currently active and False otherwise.
 
+### Combining Everything
 
+Now we challenge you to combine all the previous three scripts to create one. Make the script in order that
+* when the button is pressed one of the two leds fades to 25% of its brightness and the other one blinks once
+* when the button is released the pwmled goes back to 100% brightness.
 
+##### Hardware Setup
+We start assembling the circuit as shown in the diagram below.
+
+![Wiring](../img/combining-everything.png)
+
+##### Code Tips
+Use the `when_pressed` and `when_released` properties of the [Button class](https://gpiozero.readthedocs.io/en/stable/api_input.html#button)
+[Here](https://gpiozero.readthedocs.io/en/stable/recipes.html#button-controlled-led) you can find the code to control one LED with the button.
 
 <small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio) </small>
