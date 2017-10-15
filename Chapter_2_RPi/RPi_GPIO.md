@@ -197,7 +197,7 @@ Pulse Width Modulation, or PWM, is a technique for getting analog results with d
 For more information check out [this link](https://learn.sparkfun.com/tutorials/pulse-width-modulation)
 
 ##### Code
-Repeat the same steps of "Blink" to upload the code, this time call the file *led-pwm.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
+Repeat the same steps of "Blink" to upload the code below, this time call the file *led-pwm.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
 ```
 #!/usr/bin/env python
 
@@ -218,6 +218,34 @@ while True:
 ##### Understanding "LED PWM" code
 
 The main difference here is that we are using the [class PWMLED](https://gpiozero.readthedocs.io/en/stable/api_output.html#gpiozero.PWMLED) instead of the class LED. The PWMLED class has an extra parameter that we can tweak which is `value`. `value` indicates the duty cycle of this PWM device. 0.0 is off, 1.0 is fully on. Values in between may be specified for varying levels of power in the device.
+
+### Button
+
+##### Hardware Setup
+We start assembling the circuit as shown in the diagram below.
+
+![Wiring](../img/button-wiring.png)
+
+##### Code
+Repeat the same steps of "Blink" to upload the code below, this time call the file *button.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
+```
+#!/usr/bin/env python
+
+from gpiozero import Button
+
+button = Button(2)
+
+while True:
+    if button.is_pressed:
+        print("Button is pressed")
+    else:
+        print("Button is not pressed")
+```
+
+##### Understanding "Button" code
+Here we are using the [class Button](https://gpiozero.readthedocs.io/en/stable/api_input.html#button) from GPIOzero.
+This class has many functions and parameter, so make sure you check out the reference. Here we are using the `is_pressed` property of the class. `is_pressed` returns True if the device is currently active and False otherwise.
+
 
 
 
