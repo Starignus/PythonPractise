@@ -188,5 +188,5 @@ sleep(1)
 ```
 Here we are using two methods of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led) pf GPIOzero. `on()` switches the device on and `off` turns it off. We are calling the two functions with a 1 second interval, in fact the function `sleep` suspends execution for the given number of seconds.
 
-
-2
+### LED PWM
+Use the same layout for the electronics as before

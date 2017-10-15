@@ -40,7 +40,7 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 #### Chapter 6: Sensors
 
  * ADC
- 
+
 #### Chapter 7: Making things move
 
 * Actuators
