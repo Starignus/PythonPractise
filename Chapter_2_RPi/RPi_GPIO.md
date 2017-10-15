@@ -83,12 +83,12 @@ Before starting with our practise, we will revise the difference between **analo
 ### Blink
 We will start with a very easy example, the classic "Blink" example, later we will do the same with our Arduino and see the differences.
 
-###### Hardware Setup
+##### Hardware Setup
 We start assembling the circuit as shown in the diagram below.
 
 ![Wiring](../img/raspi-blink-wiring.png)
 
-###### Code
+##### Code
 For the code we are going to use the [GPIOzero](https://gpiozero.readthedocs.io/en/stable/) library which is a  on the GPIO library (https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/)
 1. From your laptop's terminal connect to the RPi
 2. Create a folder called "code" and inside it a file called "blinker.py":
@@ -167,7 +167,7 @@ Here we are just importing the function sleep from the [time library](https://ww
 ```
 led = LED(17)
 ```
-Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as an input the pin number to which the LED is connected to, in our case the pin number is 17.
+Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17.
 **Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:
 ![Broadcom](../img/broadcom_pin_layout.svg)
 
@@ -189,4 +189,36 @@ sleep(1)
 Here we are using two methods of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led) pf GPIOzero. `on()` switches the device on and `off` turns it off. We are calling the two functions with a 1 second interval, in fact the function `sleep` suspends execution for the given number of seconds.
 
 ### LED PWM
-Use the same layout for the electronics as before
+Use the same layout for the electronics as before.
+
+##### What is PWM?
+Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (3.3 Volts for RPi and 5 Volts for Arduino) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
+
+For more information check out [this link](https://learn.sparkfun.com/tutorials/pulse-width-modulation)
+
+##### Code
+Repeat the same steps of "Blink" to upload the code, this time call the file *led-pwm.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
+```
+#!/usr/bin/env python
+
+from gpiozero import PWMLED
+from time import sleep
+
+led = PWMLED(17)
+
+while True:
+    led.value = 0  # off
+    sleep(1)
+    led.value = 0.5  # half brightness
+    sleep(1)
+    led.value = 1  # full brightness
+    sleep(1)
+```
+
+##### Understanding "LED PWM" code
+
+The main difference here is that we are using the [class PWMLED](https://gpiozero.readthedocs.io/en/stable/api_output.html#gpiozero.PWMLED) instead of the class LED. The PWMLED class has an extra parameter that we can tweak which is `value`. `value` indicates the duty cycle of this PWM device. 0.0 is off, 1.0 is fully on. Values in between may be specified for varying levels of power in the device.
+
+
+
+<small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio) </small>

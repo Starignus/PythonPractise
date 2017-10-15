@@ -25,16 +25,6 @@ Here's a scheme of it's pin's functionalities:
 
 ![Arduino GPIO](../img/ArduinoUNO-GPIO.jpg)
 
-#### Analog vs. Digital
-
-Before seeing how Arduino deals with them, we will revise the difference between **analog** and **digital** signals. Both are used to transmit information, usually through **electric signals**. In both these technologies, the information, such as any audio or video, is transformed into electric signals. The **difference between analog and digital**:
-
-* In **analog technology**, information is translated into electric pulses of varying amplitude.
-
-* In **digital technology**, translation of information is into binary format (zero or one) where each bit is representative of two distinct amplitudes.
-
-<img src="../img/analog_digital.png" alt="pin" style="width: 300px;"/>
-
 #### GPIO on Arduino
 
 General Purpose Input Output is a generic pin whose behavior can be controlled via code. All the pins on the Arduino are programmable. They can be configured as either inputs or outputs using the ```pinMode()``` function.
@@ -77,8 +67,6 @@ While the main function of the analog pins for most Arduino users is to read ana
 The Atmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (analogRead) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using analogRead() to read other analog pins.
 
 #### PWM
-
-Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
 
 In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
 
