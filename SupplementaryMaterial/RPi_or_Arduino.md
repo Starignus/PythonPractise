@@ -1,6 +1,6 @@
-[//]: # (TODO: contextualise)
+# Alternatives/Comparison between Arudino and Raspberry PI
 
-# Why Arduino?
+### Why Arduino?
 
 RPi and Arduino are complementary platforms and one doesn't exclude the other. If you combine their capabilities you can achieve amazing results. But why?
   * The community! Arduino has a lot of materials readily available online, from libraries, to examples. If you have something in mind probably someone has already done it and shared the documentation.
@@ -8,55 +8,28 @@ RPi and Arduino are complementary platforms and one doesn't exclude the other. I
   * The RPi doesn't go well with 5V logic levels, it only operates with 3.3V and its pins do not accommodate 5V.
   * If you fry an Arduino you can replace the damaged microcontroller chip easily for less than £10. That gives you the freedom to experiment a bit more, without damaging the RPi.
   * Raspbian operating system doesn't have real-time control capabilities, whereas a microcontroller like Arduino can handle those operations.
+  * Arduino is very easy to start up
 
+### Why Raspberry PI?
+
+The Raspberry Pi definitely performs best when there are heavy calculations into play but also is great for:
+* Internet or network connectivity projects (IoT)
+* Graphical applications
+* The need for USB peripherals such as a web cam
+* Big Data projects
+* ... and many more applications!
 
 To chose between the two there's is this [Make:zine article](http://makezine.com/2015/12/04/admittedly-simplistic-guide-raspberry-pi-vs-arduino/) that can help you out.
 
+### What are some alternatives to Raspberry Pi for the IoT?
+- [Arduino Yun](https://store.arduino.cc/arduino-yun) it is an Arduino with WiFi connection capabilities ideal for Iot
+- [Intel IoT Developer Kit](https://software.intel.com/en-us/iot/hardware/dev-kit)
+- [Photon](https://store.particle.io/) very tiny Wifi enabled board
+- [Beaglebone](http://beagleboard.org/bone) it is a Raspberry Pi competitor with some analog pins functionality
+- [ESP8266](http://espressif.com/en/products/hardware/esp8266ex/overview)
 
-# What is more advanced than an Arduino?
-
-[//]: # (TODO: expand)
-
-  - Arduino
-      - ATMega / ATTiny / SAMD21 ARM M0
-  - Raspberry Pi
-
-  - Beaglebone
-  - ARM mBed
-  - STM32
-  - ESP8266
-  - Teensy
-  - pyboard
-      - STM32 ARM Cortex M4
-      - 168MHz
-      - Runs microPython (comparison and guide with microPython vs. Arduino)
-
-  Specific enhanced capabilities
-
-  - Bluetooth - integration with smartphone apps
-  - Wifi - integration with web apps
-  - True analog output (DAC)
-  - Lower power
-  - Higher clock speed (~10–100 MHz) / running more powerful tasks (e.g. computer vision)
-
-  What are ‘advanced’ applications?
-  https://www.futureagenda.org/insight/everything-connected
-
-  - Computer vision
-      - openCV
-  - Robotics / drones / autonomous vehicles
-      - ROS.org
-  - Rich multimedia interactions
-      - Raspberry Pi
-      - Python
-      - Brain computer interfaces
-      - Gesture control
-  - Online connectivity / IoT
-      - Raspberry Pi
-      - Python
-      - 'Digital twins’ - physical / digital avatars / Software defined anything (link)
-      - transparency between people, businesses and things
-  - Applied AI and Machine Learning, big data analytics
-  - VR and AR "Transparently immersive experiences"
-  - Blockchain
-  - Conversational systems / virtual personal assistants "the perceptual smart machine age"
+### What are some alternative micro-controllers to Arduino?
+- [ARM mBed](https://os.mbed.com/platforms/mbed-LPC1768/)
+- [STM32](http://www.st.com/en/microcontrollers/stm32-32-bit-arm-cortex-mcus.html)
+- [Teensy](https://www.pjrc.com/teensy/)
+- [pyboard](https://store.micropython.org/#/store) runs microPython (comparison and guide with microPython vs. Arduino)

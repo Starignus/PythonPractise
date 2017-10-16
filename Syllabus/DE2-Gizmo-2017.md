@@ -6,14 +6,15 @@
 
 ### Lab Session 1 (11 Oct 2017)
 
-* [Raspberry Pi set up](../Chapter_2/RPi_setup.md)
-* [Remote connection to your Raspberry Pi](../Chapter_5/Remote_Rpi.md)
-* [Warming up in Python](../Chapter_1/Python_warmup.md)
+* [Raspberry Pi set up](../Chapter_2_Rpi/RPi_setup.md)
+* [Remote connection to your Raspberry Pi](../Chapter_5_Remote/Remote_Rpi.md)
+* [Warming up in Python](../Chapter_1_Python/Python_warmup.md)
 * [Slides](./DE2-Gizmo-2017-Week1.pdf)
 
 ### Lab Session 2 (18 Oct 2017)
 
-* RPi GPIOzero
+* RPi GPIOzero(../Chapter_2_RPi/RPi_setup.md)
+* Intro to Arduino
 * Warming up in Arduino
 * RPi & Arduino
 
@@ -48,3 +49,4 @@
 * [Github Cheatsheet](../SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](../SupplementaryMaterial/Markdown_cheatsheet.md)
 * [Links](../SupplementaryMaterial/Links)
+* [Raspberry Pi or Arduino?](SupplementaryMaterial/RPi_or_Arduino.md)

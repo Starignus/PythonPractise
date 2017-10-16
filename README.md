@@ -56,3 +56,4 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown_cheatsheet.md)
 * [Links](SupplementaryMaterial/Links.md)
+* [Raspberry Pi or Arduino?](SupplementaryMaterial/RPi_or_Arduino.md)
