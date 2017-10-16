@@ -56,3 +56,14 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown_cheatsheet.md)
 * [Links](SupplementaryMaterial/Links.md)
+
+
+#### Acknowledgement and Credits
+
+* Dr. Ariadna Blanca Romero
+* Dr. Jing Sheng Pang
+* Elena Falomo
+* Benedict Greenberg
+* Sparkfun Learn
+* Raspberry Pi Foundation
+* Raspberry Pi GPIO developers
