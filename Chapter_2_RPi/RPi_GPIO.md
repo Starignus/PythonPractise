@@ -255,7 +255,7 @@ Now we challenge you to combine all the previous three scripts to create one. Ma
 ##### Hardware Setup
 We start assembling the circuit as shown in the diagram below.
 
-![Wiring](../img/combining-everything.png)
+![Wiring](../img/practise_1.png)
 
 ##### Code Tips
 Use the `when_pressed` and `when_released` properties of the [Button class](https://gpiozero.readthedocs.io/en/stable/api_input.html#button)
