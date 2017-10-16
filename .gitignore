@@ -1,1 +1,7 @@
 _site
+.idea/misc.xml
+.idea/encodings.xml
+.idea/modules.xml
+.idea/Gizmo.iml
+.idea/workspace.xml
+.idea/vcs.xml
