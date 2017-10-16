@@ -32,7 +32,7 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 #### Chapter 4: Arduino + Raspberry Pi Combo!
 
-* [RPi & Arduino]
+* [RPi & Arduino](Chapter_4_Arduino+RPi/RPi_to_Arduino.md)
 
 #### Chapter 5: Remote Connection
 
