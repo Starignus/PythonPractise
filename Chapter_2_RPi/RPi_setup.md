@@ -288,7 +288,7 @@ sudo apt-get -y install python-pip
 sudo pip install --upgrade pip
 ```
 
-We suggest that after this lesson you back up the image of your RPi at home to have a copy af this . In order to do so we have prepared a [guide](../SupplementaryMaterial/BackingUpRPi.md).
+We suggest that after this lesson you back up the image of your RPi at home to have a copy af this . In order to do so we have prepared a [guide](../SupplementaryMaterial/Backing_up_RPi.md).
 
 
 #### [Next Step](../Chapter_5/Remote_Rpi.md)
