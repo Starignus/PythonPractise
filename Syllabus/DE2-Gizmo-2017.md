@@ -13,7 +13,7 @@
 
 ### Lab Session 2 (18 Oct 2017)
 
-* [RPi GPIOzero](../Chapter_2_RPi/RPi_setup.md)
+* [RPi GPIOzero](../Chapter_2_RPi/RPi_GPIO.md)
 * [Intro to Arduino](../Chapter_3_Arduino/Arduino_intro.md)
 * [Warming up in Arduino](../Chapter_3_Arduino/Arduino_warmup.md)
 * [RPi & Arduino](../Chapter_4_Arduino+RPi/RPi_to_Arduino.md)

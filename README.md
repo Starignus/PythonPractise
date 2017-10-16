@@ -57,9 +57,7 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown_cheatsheet.md)
 * [Links](SupplementaryMaterial/Links.md)
-<<<<<<< HEAD
 * [Raspberry Pi or Arduino?](SupplementaryMaterial/RPi_or_Arduino.md)
-=======
 
 
 #### Acknowledgement and Credits
@@ -71,4 +69,3 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * Sparkfun Learn
 * Raspberry Pi Foundation
 * Raspberry Pi GPIO developers
->>>>>>> 7a0140dad4c8f593558d55703b8b812d98c5d28d
