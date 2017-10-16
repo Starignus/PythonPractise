@@ -96,12 +96,14 @@ void loop() {
 * `int fadeAmount = 5;` here we are storing the amount we want the LED to fade for each interval in the "fadeAmount" variable
 * `pinMode(led, OUTPUT);` here we are declaring the led pin as an output note that this would be equivalent to this `pinMode(9, OUTPUT);`
 * `analogWrite(led, brightness);` here we are writing on pin 9 ("led") the brightness values
-* `brightness = brightness + fadeAmount;`
-
-
-
+* `brightness = brightness + fadeAmount;` here we are adding a fadeAmount to the brightness level
+* `if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
+  }` checks that the brightness level never takes invalid values (below 0 or above 255)
+* `delay(30);` a short delay to make the dimming effect more visible
 
 ### Button
+
 
 
 ### Combining everything-connected
