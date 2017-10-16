@@ -61,6 +61,7 @@ Try to tweak the delays to see how the timing differs.
 
 ### Led PWM
 Here we will see how to do pulse-width modulation with the Arduino using a LED.
+
 ##### Hardware
 ![Wiring](../img/arduino-fade_wiring.png)
 
@@ -81,7 +82,6 @@ void setup() {
 void loop() {
 
   analogWrite(led, brightness);
-
   brightness = brightness + fadeAmount;
 
   if (brightness <= 0 || brightness >= 255) {
@@ -103,7 +103,41 @@ void loop() {
 * `delay(30);` a short delay to make the dimming effect more visible
 
 ### Button
+Here we are going to see how Arduino receives signals from input devices using a button.
+
+##### Hardware
+![Wiring](../img/arduino-button_wiring.png)
+
+##### Code
+For the code you can copy and paste the following code:
+```
+int pushButton = 2;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pushButton, INPUT);
+}
 
 
+void loop() {
+  int buttonState = digitalRead(pushButton);
+  Serial.println(buttonState);
+  delay(1);        
+}
+```
+* `Serial.begin(9600);` here we are opening the [serial communication](https://www.arduino.cc/en/Reference/Serial) with a baud rate of 9600 Bauds
+* `pinMode(pushButton, INPUT);` here we are setting the button's pin as input
+* `int buttonState = digitalRead(pushButton);` here we are reading the voltage of the button and memorising it in the variable buttonState
+* `Serial.println(buttonState);` here we are printing the values in the Serial Monitor
+* `delay(1);` a short delay to stabilise the readings
 
-### Combining everything-connected
+To monitor what your Arduino is printing open the serial monitor by clicking on the serial monitor button:
+![Serial](../img/arduino-serial_monitor.png)
+
+### Combining everything
+As with the Raspberry Pi we challenge you to combine all three previous sketches to create one that with the press of the button controls 2 LEDs.
+
+[Here](https://www.arduino.cc/en/tutorial/pushbutton) you can find further help.
+
+
+<small>Some material was taken from Arduino's [website](https://www.arduino.cc/)</small>
