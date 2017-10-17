@@ -6,7 +6,7 @@
 
 ### Lab Session 1 (11 Oct 2017)
 
-* [Raspberry Pi set up](../Chapter_2_Rpi/RPi_setup.md)
+* [Raspberry Pi set up](../Chapter_2_RPi/RPi_setup.md)
 * [Remote connection to your Raspberry Pi](../Chapter_5_Remote/Remote_Rpi.md)
 * [Warming up in Python](../Chapter_1_Python/Python_warmup.md)
 * [Slides](./DE2-Gizmo-2017-Week1.pdf)
