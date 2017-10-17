@@ -5,7 +5,7 @@ In this section we are going to see the Arduino equivalent of the scripts we ran
 1. [Blink](#blink)
 2. [LED PWM](#led_pwm)
 3. [Button](#button)
-4. [Combining everything](#combining_everything)
+4. [Combining everything](#combining-everything)
 
 ### Blink
 
@@ -134,7 +134,7 @@ void loop() {
 To monitor what your Arduino is printing open the serial monitor by clicking on the serial monitor button:
 ![Serial](../img/arduino-serial_monitor.png)
 
-### Combining_everything
+### Combining everything
 As with the Raspberry Pi we challenge you to combine all three previous sketches to create one that with the press of the button controls 2 LEDs.
 
 [Here](https://www.arduino.cc/en/tutorial/pushbutton) you can find further help.
