@@ -59,7 +59,7 @@ We have inserted all the functions in the main loop so that they can be repeated
 
 Try to tweak the delays to see how the timing differs.
 
-### Led PWM
+### Led_PWM
 Here we will see how to do pulse-width modulation with the Arduino using a LED.
 
 ##### Hardware
@@ -134,10 +134,10 @@ void loop() {
 To monitor what your Arduino is printing open the serial monitor by clicking on the serial monitor button:
 ![Serial](../img/arduino-serial_monitor.png)
 
-### Combining everything
+### Combining_everything
 As with the Raspberry Pi we challenge you to combine all three previous sketches to create one that with the press of the button controls 2 LEDs.
 
 [Here](https://www.arduino.cc/en/tutorial/pushbutton) you can find further help.
 
-
+##### Acknowledgement
 <small>Some material was taken from Arduino's [website](https://www.arduino.cc/)</small>
