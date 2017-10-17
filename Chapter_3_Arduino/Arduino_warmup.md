@@ -140,4 +140,4 @@ As with the Raspberry Pi we challenge you to combine all three previous sketches
 [Here](https://www.arduino.cc/en/tutorial/pushbutton) you can find further help.
 
 ##### Acknowledgement
-<small>Some material was taken from Arduino's [website](https://www.arduino.cc/)</small>
+<small>Some material was taken from Arduino's [website](https://www.arduino.cc/).</small>

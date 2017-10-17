@@ -1,10 +1,10 @@
 # What is Arduino?
 
-1. [Arduino UNO Board Structure](#physical_structure_of_an_arduino_uno_board)
-2. [Configuring the pins on Arduino](#configuring_the_pins_on_arduino)
-3. [Quick tour of the Arduino IDE](#quick_tour_of_the_arduino_ide)
-4. [Anatomy of an Arduino Sketch](#anatomy_of_an_arduino_sketch)
-5. [Arduino Language and Syntax](#arduino_language)
+1. [Arduino UNO Board Structure](#physical-structure-of-an-arduino-uno-board)
+2. [Configuring the pins on Arduino](#configuring-the-pins-on-arduino)
+3. [Quick tour of the Arduino IDE](#quick-tour-of-the-arduino-ide)
+4. [Anatomy of an Arduino Sketch](#anatomy-of-an-arduino-sketch)
+5. [Arduino Language and Syntax](#arduino-language)
 
 <img src="../img/arduino-environment.png" alt="arduino-environment" style="width: 400px;"/>
 
@@ -45,13 +45,13 @@ We will see in detail how to control them later on.
 
 Arduino (Atmega) pins default to inputs, so they don't need to be explicitly declared as inputs with pinMode() when you're using them as inputs. Pins configured this way are said to be in a high-impedance state. Input pins make extremely small demands on the circuit that they are sampling. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing a capacitive touch sensor, reading an LED as a photodiode, or reading an analog sensor with a scheme such as RCTime.
 
-This also means however, that pins configured as pinMode(pin, INPUT) with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.
+This also means however, that pins configured as `pinMode(pin, INPUT)` with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.
 
 ###### Pins Configured as INPUT with Pullup/Pulldown Resistors
 
 Often it is useful to steer an input pin to a known state if no input is present. In doing so you cancel the random values of the pin when nothing is connected to it. This can be done by adding a pullup resistor (to +5V), or a pulldown resistor (resistor to ground) on the input. A 10K resistor is a good value for a pullup or pulldown resistor.
 
-**Note:** On the Arduino there are built-in pullup resistors that can be activate via code setting pinMode() as INPUT_PULLUP. This effectively inverts the behavior of the INPUT mode, where HIGH means the sensor is off, and LOW means the sensor is on.
+**Note:** On the Arduino there are built-in pullup resistors that can be activate via code setting `pinMode()` as INPUT_PULLUP. This effectively inverts the behavior of the INPUT mode, where HIGH means the sensor is off, and LOW means the sensor is on.
 
 When connecting a sensor to a pin configured with INPUT_PULLUP, the other end should be connected to ground. In the case of a simple switch, this causes the pin to read HIGH when the switch is open, and LOW when the switch is pressed.
 
@@ -72,11 +72,11 @@ The analog pins can be controlled with two functions:
 
 While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0 - 13). Therefor they can used as digital pins with the digital functions.
 
-The Atmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (analogRead) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using analogRead() to read other analog pins.
+The Atmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (analogRead) on other analog pins. This can cause electrical noise and introduce jitter in the analog system. It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using `analogRead()` to read other analog pins.
 
 #### PWM
 
-In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
+In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to `analogWrite()` is on a scale of 0 - 255, such that `analogWrite(255)` requests a 100% duty cycle (always on), and `analogWrite(127)` is a 50% duty cycle (on half the time) for example.
 
 <img src="../img/pwm.png" alt="pwm" style="width: 400px;"/>
 
@@ -185,7 +185,7 @@ pin = 12;
 
 only pin has the value 12; pin2 is still 13.
 
-Arduino has many types. Too name a few: int, float, string, boolean, char, ... To learn more about the specificities about each type we invite you to look at the [Arduino Reference Page](https://www.arduino.cc/en/Reference/HomePage)
+Arduino has many types. To name a few: int, float, string, boolean, char. To learn more about the specificities about each type we invite you to look at the [Arduino Reference Page](https://www.arduino.cc/en/Reference/HomePage).
 
 #### Further Arduino Syntax
 
@@ -241,9 +241,9 @@ on multiple lines*/
 
 ###### Arithmetic Operations
 * = (assignment operator)
-* +  (addition)
-* - (subtraction)
-* * (multiplication)
+* \+  (addition)
+* \- (subtraction)
+* \* (multiplication)
 * / (division)
 * % (modulo)
 

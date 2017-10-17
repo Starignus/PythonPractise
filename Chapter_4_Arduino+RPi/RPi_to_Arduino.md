@@ -86,10 +86,10 @@ sudo apt-get install arduino-core arduino-mk
 
 When we installed the Arduino IDE it created a directory called "sketchbook". This folder is made to store all your Arduino files tidily and to have them readily available for the IDE. We are going to use this folder even with our Makefile to maintain the compatibility with the IDE.
 
-**Note:** Each Arduino sketch has the extension .ino, these are the "source files", the instructions to be built into an executable program. These source files to be built correctly with the IDE need to be contained in a folder that has the same name as the sketch i.e. with a directory tree as follows:
-../sketchbook  
-└── blink  
-    └── blink.ino  
+**Note:** Each Arduino sketch has the extension .ino, these are the "source files", the instructions to be built into an executable program. These source files to be built correctly with the IDE need to be contained in a folder that has the same name as the sketch i.e. with a directory tree as follows:  
+> ../sketchbook/  
+> └── blink/  
+> └──── blink.ino  
 
 Using arduino-mk we are going to create a Makefile inside the source file directory; some other auxiliary files are going to be generated during the build process as we will see.
 
@@ -331,11 +331,11 @@ cd blink2
 ino init -t blink
 ```
 
-This will create two sub-directories in our project directory:
-../sketchbook
-└── blink2  
-    ├── lib/  
-    └── src/  
+This will create two sub-directories in our project directory:  
+> ../sketchbook/  
+> └── blink2  
+> ├──── lib/  
+> └──── src/  
 
 In the src directory there is our source file, or ‘sketch’, called:
 sketch.ino
@@ -401,5 +401,5 @@ If you would like to use the same tools on your computer you can do so if you ha
 If you have Mac special attention to the path of the USB port. It is going to look like this */dev/tty.usbmodem411* to find your port name you can enter the command `ls /dev/tty.usb*`.
 Also on Mac there is no `apt-get` command. You have to install another package manager, we recommend using [Homebrew](https://brew.sh/) and to install any package use `brew install PACKAGE_NAME`
 
-<small>Based on [Raspberry VI Tutorial] (http://www.raspberryvi.org/stories/arduino-cli.html#)
+<small>Based on [Raspberry VI Tutorial](http://www.raspberryvi.org/stories/arduino-cli.html).
 </small>

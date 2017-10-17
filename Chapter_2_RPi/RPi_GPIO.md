@@ -1,12 +1,12 @@
 # Raspberry Pi GPIOzero
 
-1. [Materials needed](#materials_needed)
+1. [Materials needed](#materials-needed)
 2. [GPIO pinout](#gpio_pinout)
-3. [Analog vs. Digital](#analog_vs._digital)
+3. [Analog vs. Digital](#analog-vs-digital)
 4. [Blink](#blink)
-5. [LED PWM](#led_pwm)
+5. [LED PWM](#led-pwm)
 6. [Button](#button)
-7. [Combining everything](#combining_everything)
+7. [Combining everything](#combining-everything)
 
 Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has **bi-directional I/O pins**, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi's I/O lines requires a bit or programming. You can use a [variety of programing languages](http://elinux.org/RPi_GPIO_Code_Samples), but we decided to use a really solid, easy tools for driving I/O: **Python**.
 
@@ -46,8 +46,9 @@ In the next table, we show another numbering system along with the ones we showe
 <img src="../img/Pi_pin_header_numbers.png" alt="pin" width="500">
 </p>
 
-This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some Pulse width modulation ([PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) — “analog output”).
+This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some Pulse width modulation ([PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) — “analog output”).  
 
+There is a useful online guide for finding the assignment and numbering of each pin, along with other guides, that you may find useful at: [pinout.xyz](pinout.xyz)
 
 ##### Analog vs. Digital
 
@@ -89,7 +90,8 @@ We start assembling the circuit as shown in the diagram below.
 ![Wiring](../img/raspi-blink-wiring.png)
 
 ##### Code
-For the code we are going to use the [GPIOzero](https://gpiozero.readthedocs.io/en/stable/) library which is a  on the GPIO library (https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/)
+For the code we are going to use the [GPIOzero](https://gpiozero.readthedocs.io/en/stable/) library which is a  on the GPIO library (https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/).
+
 1. From your laptop's terminal connect to the RPi
 2. Create a folder called "code" and inside it a file called "blinker.py":
 ```
@@ -163,7 +165,8 @@ In the next line:
 led = LED(17)
 ```
 Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17 (GPIO17, not physical pin number 17).
-**Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering, instead of physical pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:
+**Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering, instead of physical pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:  
+
 ![Broadcom](../img/broadcom_pin_layout.svg)
 
 
@@ -189,7 +192,7 @@ Use the same layout for the electronics as before.
 ##### What is PWM?
 Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (3.3 Volts for RPi and 5 Volts for Arduino) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
 
-For more information check out [this link](https://learn.sparkfun.com/tutorials/pulse-width-modulation)
+For more information check out [this link](https://learn.sparkfun.com/tutorials/pulse-width-modulation).
 
 ##### Code
 Repeat the same steps of "Blink" to upload the code below, this time call the file *led-pwm.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
@@ -257,4 +260,4 @@ Use the `when_pressed` and `when_released` properties of the [Button class](http
 [Here](https://gpiozero.readthedocs.io/en/stable/recipes.html#button-controlled-led) you can find the code to control one LED with the button.
 
 ###### Acknowledgement:
-<small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio) </small>
+<small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio). </small>
