@@ -2,12 +2,15 @@
 
 In this tutorial we will see how to connect your Raspberry Pi to your Arduino. We will start by installing the Arduino IDE that you have already seen and then move to some command line tools. These tools don't need a graphical interface and you can use them without a monitor. The last section will give you some advices on how to install these tools on your laptop.
 
+You have to think of the Raspberry Pi as a computer that offers computational power and network capabilities, whereas Arduino communicates with sensors and actuators:
+![Rpi-Arduino](../img/rpi-arduino-scheme.png)
+
 1. [Arduino IDE](#arduino-ide)
 2. [Arduino Makefile](#arduino-makefile)
 3. [Arduino and Raspberry Pi Talking Over Serial](#arduino-and-raspberry-pi-talking-over-serial)
 4. [Suggested workflow](#suggested-workflow)
 5. [Other tools to make Arduino and Raspberry communicate](#other-tools-to-make-arduino-and-raspberry-communicate)
-6. [Command Line tools for your laptop](#command-line-tools-for-your-laptop)
+6. [Command Line tools for your computer](#command-line-tools-for-your-computer)
 
 ## Arduino IDE
 
@@ -288,6 +291,7 @@ We have prepared a schematic workflow chart to represent the suggested usage of 
 
 ## Other tools to make Arduino and Raspberry communicate
 Sometimes the communication over Serial is not the best option for your project or you might want to make your RPi and Arduino communicate in another way, or maybe communicate to other boards, so we have prepared a list of possible alternatives, but don't limit yourself to the ones listed. They are just brief introductions with links for a more in-depth knowledge. We leave this exploration to your curiosity!
+
 
 #### Protocols
 * [Serial over GPIO](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) with this method you can use the same cod we have used before, the only difference is the physical connection. You will need a voltage converter to operate this method safely. Otherwise there is an other risky option which is creating your own voltage divider, however we do not recommend you to do so.

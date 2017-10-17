@@ -1,5 +1,11 @@
 # What is Arduino?
 
+1. [Arduino UNO Board Structure](#physical_structure_of_an_arduino_uno_board)
+2. [Configuring the pins on Arduino](#configuring_the_pins_on_arduino)
+3. [Quick tour of the Arduino IDE](#quick_tour_of_the_arduino_ide)
+4. [Anatomy of an Arduino Sketch](#anatomy_of_an_arduino_sketch)
+5. [Arduino Language and Syntax](#arduino_language)
+
 <img src="../img/arduino-environment.png" alt="arduino-environment" style="width: 400px;"/>
 
 ### What is Arduino: Hardware
@@ -25,31 +31,23 @@ Here's a scheme of it's pin's functionalities:
 
 ![Arduino GPIO](../img/ArduinoUNO-GPIO.jpg)
 
-#### Analog vs. Digital
+### Configuring the pins on Arduino
 
-Before seeing how Arduino deals with them, we will revise the difference between **analog** and **digital** signals. Both are used to transmit information, usually through **electric signals**. In both these technologies, the information, such as any audio or video, is transformed into electric signals. The **difference between analog and digital**:
+##### Digital Pins (GPIO)
 
-* In **analog technology**, information is translated into electric pulses of varying amplitude.
-
-* In **digital technology**, translation of information is into binary format (zero or one) where each bit is representative of two distinct amplitudes.
-
-<img src="../img/analog_digital.png" alt="pin" style="width: 300px;"/>
-
-#### GPIO on Arduino
-
-General Purpose Input Output is a generic pin whose behavior can be controlled via code. All the pins on the Arduino are programmable. They can be configured as either inputs or outputs using the ```pinMode()``` function.
+All the pins on the Arduino are programmable. They can be configured as either inputs or outputs using the ```pinMode()``` function.
 They can be controlled with two functions:
   + ```digitalRead()```: reads the value of the pin
   + ```digitalWrite()```: sets the output of the pin to either HIGH (1, drives the pin to 5V) or LOW (0, drives the pin to 0V)
 We will see in detail how to control them later on.
 
-##### Pins Configured as INPUT
+###### Pins Configured as INPUT
 
 Arduino (Atmega) pins default to inputs, so they don't need to be explicitly declared as inputs with pinMode() when you're using them as inputs. Pins configured this way are said to be in a high-impedance state. Input pins make extremely small demands on the circuit that they are sampling. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing a capacitive touch sensor, reading an LED as a photodiode, or reading an analog sensor with a scheme such as RCTime.
 
 This also means however, that pins configured as pinMode(pin, INPUT) with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.
 
-##### Pins Configured as INPUT with Pullup/Pulldown Resistors
+###### Pins Configured as INPUT with Pullup/Pulldown Resistors
 
 Often it is useful to steer an input pin to a known state if no input is present. In doing so you cancel the random values of the pin when nothing is connected to it. This can be done by adding a pullup resistor (to +5V), or a pulldown resistor (resistor to ground) on the input. A 10K resistor is a good value for a pullup or pulldown resistor.
 
@@ -59,7 +57,7 @@ When connecting a sensor to a pin configured with INPUT_PULLUP, the other end sh
 
 You can find more information about pullup/pulldown resistors [here](https://playground.arduino.cc/CommonTopics/PullUpDownResistor).
 
-##### Pins configured as OUTPUT
+###### Pins configured as OUTPUT
 
 Pins configured as OUTPUT with pinMode() are said to be in a low-impedance state. This means that they can provide a substantial amount of current to other circuits. Atmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED (don't forget the series resistor), or run many sensors, for example, but not enough current to run most relays, solenoids, or motors.
 
@@ -78,8 +76,6 @@ The Atmega datasheet also cautions against switching analog pins in close tempor
 
 #### PWM
 
-Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
-
 In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
 
 <img src="../img/pwm.png" alt="pwm" style="width: 400px;"/>
@@ -95,7 +91,7 @@ Arduino has it's own integrated development environment that simplifies some of 
 
 Here is a screnshot of how the IDE looks like and all its functionalities:
 
-<img src="../img/arduino_ide.png" alt="arduino-ide" style="width: 400px;"/>
+<img src="../img/arduino_ide_annotated.png" alt="arduino-ide" style="width: 400px;"/>
 
 1. Verify: Compiles and approves your code. It will catch
 errors in syntax (like missing semi-colons or parenthesis).
@@ -257,36 +253,65 @@ on multiple lines*/
 * ! (not)
 
 ###### Functions
-To declare your own function
-[//]: # (TODO: finish the section with this https://www.arduino.cc/en/Reference/FunctionDeclaration if Makefile works)
+Segmenting code into functions allows a programmer to create modular pieces of code that perform a defined task and then return to the area of code from which the function was "called". The typical case for creating a function is when one needs to perform the same action multiple times in a program.
+Standardising code fragments into functions has several advantages:
 
+- Functions help the programmer stay organised. Often this helps to conceptualise the program.
+- Functions codify one action in one place so that the function only has to be thought out and debugged once.
+- This also reduces chances for errors in modification, if the code needs to be changed.
+- Functions make the whole sketch smaller and more compact because sections of code are reused many times.
+- They make it easier to reuse code in other programs by making it more modular, and as a nice side effect, using functions also often makes the code more readable.
+There are two required functions in an Arduino sketch, setup() and loop(). Other functions must be created outside the brackets of those two functions. As an example, we will create a simple function to multiply two numbers.
+
+![Function Anatomy](../img/function-anatomy.png)
+
+Our function needs to be declared outside any other function, so "myMultiplyFunction()" can go either above or below the "loop()" function.
+
+```
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop() {
+  int i = 2;
+  int j = 3;
+  int k;
+
+  k = myMultiplyFunction(i, j); // k now contains 6
+  Serial.println(k);
+  delay(500);
+}
+
+int myMultiplyFunction(int x, int y){
+  int result;
+  result = x * y;
+  return result;
+}
+```
+**Another Example**
+This function will read a sensor five times with analogRead() and calculate the average of five readings. It then scales the data to 8 bits (0-255), and inverts it, returning the inverted result.
+```
+int ReadSens_and_Condition(){
+  int i;
+  int sval = 0;
+
+  for (i = 0; i < 5; i++){
+    sval = sval + analogRead(0);    // sensor on analog pin 0
+  }
+
+  sval = sval / 5;    // average
+  sval = sval / 4;    // scale to 8 bits (0 - 255)
+  sval = 255 - sval;  // invert output
+  return sval;
+}
+```
+
+To call our function we just assign it to a variable, the following code should be placed inside `loop`.
+```
+int sens;
+sens = ReadSens_and_Condition();
+```
 
 For further reference about the syntax and language you can check these notes:
 https://www.arduino.cc/en/Tutorial/Variables
 https://www.arduino.cc/en/Reference/HomePage
-
-
-### Running our first Arduino sketch
-
-We are going to run the "blink" sketch we have seen early on in this tutorial. It is the most basic sketch a sort of "Hello World!" for Arduino. It makes the built-in LED on pin 13 blink in intervals of 1 second.
-
-1. Connect the Arduino to your laptop with the USB cable
-[//]: # (TODO: add photo)
-
-2. Open the IDE
-[//]: # (TODO: add photo)
-
-3. Click **Tools->Serial Port** and select the USB serial port to which your Arduino is connected to (the path changes with operating system and USB port you are using, so the name might be different for you).
-[//]: # (TODO: add photo)
-
-4. Then, select the right board: click **Tools->Board->Arduino Uno**.
-[//]: # (TODO: add photo)
-
-5. Then you can open the basic sketch "Blink" by clicking on **File->Example->01. Basics-> Blink**.
-[//]: # (TODO: add photo)
-
-6. You can then upload the sketch on the Arduino by clicking the "Upload" button (the one with an arrow).
-<img src="../img/arduino-blink.png" alt="arduino" style="width: 400px;"/>
-
-7. Once uploaded you will see the LED on pin 13 blink.
-[//]: # (TODO: add GIF)

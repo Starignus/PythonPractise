@@ -17,21 +17,22 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 #### Chapter 1: Basic Electronics and Programming
 
 * Basic electronics
-* [Warming up in Python](Chapter_1/Python_warmup.md)
+* [Warming up in Python](Chapter_1_Python/Python_warmup.md)
 
 
 #### Chapter 2: Raspberry Pi
 
-* [Raspberry Pi set up](Chapter_2/RPi_setup.md)
-* RPi GPIOzero
+* [Raspberry Pi set up](Chapter_2_RPi/RPi_setup.md)
+* [RPi GPIOzero](Chapter_2_RPi/RPi_GPIO.md)
 
 #### Chapter 3: Arduino
 
-* Warming up in Arduino
+* [Intro to Arduino](Chapter_3_Arduino/Arduino_intro.md)
+* [Warming up in Arduino](Chapter_3_Arduino/Arduino_warmup.md)
 
 #### Chapter 4: Arduino + Raspberry Pi Combo!
 
-* RPi & Arduino
+* [RPi & Arduino](Chapter_4_Arduino+RPi/RPi_to_Arduino.md)
 
 #### Chapter 5: Remote Connection
 
@@ -40,7 +41,7 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 #### Chapter 6: Sensors
 
  * ADC
- 
+
 #### Chapter 7: Making things move
 
 * Actuators
@@ -56,3 +57,15 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 * [Github Cheatsheet](SupplementaryMaterial/git-cheat-sheet-education.pdf)
 * [Markdown Cheatsheet](SupplementaryMaterial/Markdown_cheatsheet.md)
 * [Links](SupplementaryMaterial/Links.md)
+* [Raspberry Pi or Arduino?](SupplementaryMaterial/RPi_or_Arduino.md)
+
+
+#### Acknowledgement and Credits
+
+* Dr. Ariadna Blanca Romero
+* Dr. Jing Sheng Pang
+* Elena Falomo
+* Benedict Greenberg
+* Sparkfun Learn
+* Raspberry Pi Foundation
+* Raspberry Pi GPIO developers
