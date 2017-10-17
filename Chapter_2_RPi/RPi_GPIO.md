@@ -145,30 +145,25 @@ When we use Python to control our GPIO pins, we always need to import the corres
 ```
 import gpiozero as gpio
 ```
-Here, we are giving a shorter name to the module “GPIOzero”, in order to call the module through our script. This line is fundamental for every script requiring GPIO functions. If you want to import only certain classes from GPIOzero you could also use:
+Here, we are giving a shorter name to the module “GPIOzero”, in order to call the module through our script. This line is fundamental for every script requiring GPIO functions. If you want to import only certain classes from GPIOzero you could also sepcify the components. As an example, let's say if you are interested in only the LED:
 ```
 from gpiozero import LED
 ```
-If, for example, you are interested in using the class LED solely. Or
+Or if want to use the Button and LED class.
 ```
 from gpiozero import LED, Button
 ```
-If want to use the Button and LED class.
-
-
-
+And if we are just importing the function sleep from the [time library](https://www.tutorialspoint.com/python/time_sleep.htm), we will later use it to make the LED blink.
 ```
 from time import sleep
 ```
-Here we are just importing the function sleep from the [time library](https://www.tutorialspoint.com/python/time_sleep.htm), we will later use it to make the LED blink.
 
-
-
+In the next line:
 ```
 led = LED(17)
 ```
-Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17.
-**Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:
+Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17 (GPIO17, not physical pin number 17).
+**Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering, instead of physical pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:
 ![Broadcom](../img/broadcom_pin_layout.svg)
 
 
@@ -258,7 +253,8 @@ We start assembling the circuit as shown in the diagram below.
 ![Wiring](../img/practise_1.png)
 
 ##### Code Tips
-Use the `when_pressed` and `when_released` properties of the [Button class](https://gpiozero.readthedocs.io/en/stable/api_input.html#button)
+Use the `when_pressed` and `when_released` properties of the [Button class](https://gpiozero.readthedocs.io/en/stable/api_input.html#button).
 [Here](https://gpiozero.readthedocs.io/en/stable/recipes.html#button-controlled-led) you can find the code to control one LED with the button.
 
+###### Acknowledgement:
 <small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio) </small>
