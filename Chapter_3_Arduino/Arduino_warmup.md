@@ -3,7 +3,7 @@
 In this section we are going to see the Arduino equivalent of the scripts we ran from the Raspberry Pi.
 
 1. [Blink](#blink)
-2. [LED PWM](#led_pwm)
+2. [LED PWM](#led-pwm)
 3. [Button](#button)
 4. [Combining everything](#combining-everything)
 
@@ -59,7 +59,7 @@ We have inserted all the functions in the main loop so that they can be repeated
 
 Try to tweak the delays to see how the timing differs.
 
-### Led_PWM
+### Led PWM
 Here we will see how to do pulse-width modulation with the Arduino using a LED.
 
 ##### Hardware
