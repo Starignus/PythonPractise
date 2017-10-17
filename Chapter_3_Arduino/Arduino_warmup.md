@@ -67,7 +67,7 @@ Here we will see how to do pulse-width modulation with the Arduino using a LED.
 
 ##### Code
 For the code you can upload the built-in example "Fade" from **File->Example->01. Basics-> Fade**.
-![Fade Choice](../img/arudino-fade_choice.png)
+![Fade Choice](../img/arduino-fade_choice.png)
 
 ##### Understanding the "Fade" code
 ```
