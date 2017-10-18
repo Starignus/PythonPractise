@@ -16,7 +16,10 @@ You have to think of the Raspberry Pi as a computer that offers computational po
 
 In this section we will se how to install the Arduino IDE from the command line of your RPi. This installation will be useful as it installs libraries that are used by the command line tools.
 
+
 ### Installing Arduino on the Raspberry
+Note: This subsection takes you through to setup arduino IDE using Raspberry Pi. It is not necessary if you are only using your computer to program the Arduino code, and using Raspberry Pi to upload the code to Arduino.
+
 From the terminal of your computer connected to the RPi via ssh type:
 ```bash
 sudo apt-get install arduino
@@ -192,6 +195,8 @@ To upload the sketch simply type:
 ```bash
 sudo make upload
 ```
+Note: Please make sure you are running the above command in the same folder containing Makefile you created earlier.
+
 We need to use sudo for this to get permissions to the serial device.
 Now your Arduino will start blinking!!
 
