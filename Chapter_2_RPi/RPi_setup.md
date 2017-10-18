@@ -71,7 +71,7 @@ At first we will setup the RPi using peripherals. Each team should get the follo
 Now we will start running some commands in the terminal.  We will run them as a **root user**, the root has the permission to modify files or default settings as administrator. By default on Raspbian (the operating system of our RPIs) the **root user** is **pi** and the **root password** associated to the root user is **raspberry**.
 To operate as a root user in the terminal every command is preceded by the ```sudo``` command.
 
-Note: Following the new kernal update "Stretched" released in September. Some user has found that their settings get resetted after reboot. If so, please setup your Raspi Configuration using within the X-Environment -> Click on Raspbian Icon -> Preference -> Raspberry Pi Settings.
+> _**TIP:** Following the new kernal update "Stretched" released in September. Some user has found that their settings get resetted after reboot. If so, please setup your Raspi Configuration using within the X-Environment -> Click on Raspbian Icon -> Preference -> Raspberry Pi Settings._
 
 1. Type the following command and press 'Enter' to open the configuration menu of the RPi:
 
@@ -162,7 +162,7 @@ In the classroom you will be given a guest username (i.e *guest000000*, 'guest' 
 
 **Note:** The guest account is valid for 90 days only. So you should change the setting with your personal college credentials. The steps are similar to the following ones and we have prepared a tutorial [here](../SupplementaryMaterial/AlternativeNetworkSettings.md). It also includes setup for the **eduroam** network.
 
-1. First we back up the configuration file *wpa_supplicant.conf*, to do so we enter the command:
+1. First we back up the configuration file *wpa_supplicant.conf*. We create the backup file *wpa_supplicant.conf_backup* in case we need to restore it later. _It's important that you don't edit this backup after creating it_. To do so we enter the command:
 ```
   $ sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf_backup
 ```
@@ -199,8 +199,8 @@ In the classroom you will be given a guest username (i.e *guest000000*, 'guest' 
  ```
 
  Where *guest000000* has to be replaced with the actual guest account and YOUR_PASSWORD with the password associated to it.
- 
- In nano editor, to ext, press "ctrl + x". The editor will then present you with different options such as save the file or exit without modifying the file.
+
+ In the nano editor, to exit, press _"ctrl + x"_. The editor will then present you with different options such as save the file or exit without modifying the file: _y/n_. We type _"y"_ and then press _enter_. The editor now asks us for the name of the file we are saving, but as it already fills out the previous name for us, we press _enter_ again.
 
  5. Now we can check if the connection works by rebooting your RPi. Reboot it by entering:
  ``` bash

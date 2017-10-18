@@ -116,6 +116,6 @@ To exit your putty session, type "exit" and enter.
 
 <small>To manage remote terminal sessions we suggest you use Screen, check out the tutorial [here](../SupplementaryMaterial/Screen.md).</small>
 
-To know more about more advance details of how connect remotely go to the [advanced guide](SupplementaryMaterial/Advanced_remote_functionalities.md).
+To know more about more advance details of how connect remotely go to the [advanced guide](../SupplementaryMaterial/Advanced_remote_functionalities.md).
 
-#### [Next Step](../Chapter_1/Python_warmup.md)
+#### [Next Step](../Chapter_1_Python/Python_warmup.md)
