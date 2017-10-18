@@ -99,6 +99,8 @@ $ mkdir code
 $ cd code
 $ nano blinker.py
 ```
+Note: you may not need to create a new folder everytime for the script. I.e. once you have created the folder code, you can create the scripts within the folder with nano <script name>. The command nano in this case is to open the nano editor.
+
 3. Copy and paste this code:
 ```
 #!/usr/bin/env python
