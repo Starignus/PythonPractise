@@ -16,7 +16,7 @@ Your Raspberry Pi is more than just a small computer, it is a hardware prototypi
 * [Breadboard](https://www.sparkfun.com/products/12002?_ga=1.251311686.1915117394.1476705504)
 * [Jumper Wires(M/F)](https://www.sparkfun.com/products/12794)
 * [Momentary Pushbutton Switch](https://www.sparkfun.com/products/9190?_ga=1.213562324.1915117394.1476705504)
-* [2 10KΩ Resistors](https://www.sparkfun.com/products/11507?_ga=1.213562324.1915117394.1476705504)
+* [Resistors](https://www.sparkfun.com/products/11507?_ga=1.213562324.1915117394.1476705504)
 * [2 LEDs](https://www.sparkfun.com/products/9590?_ga=1.213548756.1915117394.1476705504)
 
 ###  GPIO Pinout
