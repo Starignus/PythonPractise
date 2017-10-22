@@ -86,6 +86,7 @@ void loop() {
 You can also try to control this servo motor from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo) you can find the GPIOzero API Reference.
 
 ### Dc Motor
+A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
 
 ##### Example Circuit
 * Stepper Motor
@@ -96,6 +97,69 @@ You can also try to control this servo motor from your Raspberry Pi [here](http:
 ![DC Wiring](../img/)
 
 ##### Code
+For this sketch copy and paste the following code:
+```
+/*
++ ain1 to pin 8
++ ain2 to pin 9
++ motorA to DC motor
++ pwma to 5V
+*/
+
+int ain1 = 8;
+int ain2 = 9;
+
+void setup(){
+  pinMode(ain1,OUTPUT);  //Logic pins are also set as output
+  pinMode(ain2,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+
+  /*CLOCKWISE MOTION:
+     + ain1 = HIGH
+     + ain2 = LOW
+  */
+  digitalWrite(ain1,HIGH);
+  digitalWrite(ain2,LOW);
+
+  Serial.println("Clockwise");
+
+  //Clockwise for 3 secs
+  delay(3000);     
+
+  /*STOPPING:
+     + ain1 = HIGH
+     + ain2 = LOW
+  */
+  digitalWrite(ain1,HIGH);
+  digitalWrite(ain2,HIGH);
+
+  Serial.println("Braking");
+
+  delay(1000);
+
+  /*STOPPING:
+     + ain1 = LOW
+     + ain2 = HIGH
+  */
+  digitalWrite(ain1,LOW);
+  digitalWrite(ain2,HIGH);
+
+  Serial.println("Anti-Clockwise");
+
+  delay(3000);
+
+  //TO PAUSE THE MOTOR
+  digitalWrite(ain1,HIGH);
+  digitalWrite(ain2,HIGH);
+
+  Serial.println("On Pause");
+
+  delay(1000);
+ }
+```
 
 ### Stepper Motor
 A [stepper motor](https://www.wikiwand.com/en/Stepper_motor) or step motor or stepping motor is a brushless DC electric motor that divides a full rotation into a number of equal steps. The motor's position can then be commanded to move and hold at one of these steps without any position sensor for feedback (an open-loop controller), as long as the motor is carefully sized to the application in respect to torque and speed.
