@@ -2,16 +2,64 @@
 
 In this section we are going to see how  to receive data from different sensors on the Arduino. The sensors we are going to use are:
 
-1. [Force Sensor](#flex-sensor)
+1. [Force Sensitive Resistor](#force-sensitive-resistor)
 2. [Light Sensor](#light-sensor)
 
 At the beginning of this session you should have collected a kit that is made of:
 * Arduino
 * 10kΩ Resistors
-* 1 SoftPot Flex Sensor
+* 1 Force Sensitive Resistor
 * 1 Photo-resistor
 
+### Force Sensitive Resistor
 
+The resistance of an force sensor varies as the force on the sensor increases or decreases. When no pressure is being applied to the force sensor, its resistance will be larger than 1MΩ. The harder you press on the sensor’s head, the lower the resistance between the two terminals drops. By combining the force sensor with a static resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers)(or pull-down resistor), you can produce a variable voltage that can be read by a microcontroller’s analog-to-digital converter.
+
+##### Example Circuit
+![Force Resistor Wiring](../img/force-resistor-wiring.png)
+
+##### Code
+```
+/* FSR simple testing sketch.
+
+Connect one end of FSR to power, the other end to Analog 0.
+Then connect one end of a 10K resistor from Analog 0 to ground
+
+For more information see www.ladyada.net/learn/sensors/fsr.html */
+
+int fsrPin = 0;     // the FSR and 10K pulldown are connected to a0
+int fsrReading;     // the analog reading from the FSR resistor divider
+
+void setup(void) {
+  // We'll send debugging information via the Serial monitor
+  Serial.begin(9600);   
+}
+
+void loop(void) {
+  fsrReading = analogRead(fsrPin);  
+
+  Serial.print("Analog reading = ");
+  Serial.print(fsrReading);     // the raw analog reading
+
+  // We'll have a few threshholds, qualitatively determined
+  if (fsrReading < 10) {
+    Serial.println(" - No pressure");
+  } else if (fsrReading < 200) {
+    Serial.println(" - Light touch");
+  } else if (fsrReading < 500) {
+    Serial.println(" - Light squeeze");
+  } else if (fsrReading < 800) {
+    Serial.println(" - Medium squeeze");
+  } else {
+    Serial.println(" - Big squeeze");
+  }
+  delay(1000);
+}
+```
+
+For other functionalities and more precise calibration make sure to check out [Adafruit's website](https://learn.adafruit.com/force-sensitive-resistor-fsr/using-an-fsr)
+
+<small>Based on [this](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide) Sparkfun guide and [this](https://learn.adafruit.com/force-sensitive-resistor-fsr/using-an-fsr) Adafruit tutorial.</small>
 
 ### Light Sensor
 For the light sensing are going to use a photo-resistor or Cadmium-sulfide cell. CdS cells are little light sensors. As the squiggly face is exposed to more light, the resistance goes down. When its light, the resistance is about 5-10KΩ, when dark it goes up to 200KΩ.
