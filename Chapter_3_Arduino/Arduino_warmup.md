@@ -3,9 +3,9 @@
 In this section we are going to see the Arduino equivalent of the scripts we ran from the Raspberry Pi.
 
 1. [Blink](#blink)
-2. [LED PWM](#led_pwm)
+2. [LED PWM](#led-pwm)
 3. [Button](#button)
-4. [Combining everything](#combining_everything)
+4. [Combining everything](#combining-everything)
 
 ### Blink
 
@@ -139,5 +139,5 @@ As with the Raspberry Pi we challenge you to combine all three previous sketches
 
 [Here](https://www.arduino.cc/en/tutorial/pushbutton) you can find further help.
 
-
-<small>Some material was taken from Arduino's [website](https://www.arduino.cc/)</small>
+##### Acknowledgement
+<small>Some material was taken from Arduino's [website](https://www.arduino.cc/).</small>

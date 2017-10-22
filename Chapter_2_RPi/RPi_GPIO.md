@@ -1,12 +1,12 @@
 # Raspberry Pi GPIOzero
 
-1. [Materials needed](#materials_needed)
+1. [Materials needed](#materials-needed)
 2. [GPIO pinout](#gpio_pinout)
-3. [Analog vs. Digital](#analog_vs._digital)
+3. [Analog vs. Digital](#analog-vs-digital)
 4. [Blink](#blink)
-5. [LED PWM](#led_pwm)
+5. [LED PWM](#led-pwm)
 6. [Button](#button)
-7. [Combining everything](#combining_everything)
+7. [Combining everything](#combining-everything)
 
 Your Raspberry Pi is more than just a small computer, it is a hardware prototyping tool! The RPi has **bi-directional I/O pins**, which you can use to drive LEDs, spin motors, or read button presses. To drive the RPi's I/O lines requires a bit or programming. You can use a [variety of programing languages](http://elinux.org/RPi_GPIO_Code_Samples), but we decided to use a really solid, easy tools for driving I/O: **Python**.
 
@@ -46,8 +46,9 @@ In the next table, we show another numbering system along with the ones we showe
 <img src="../img/Pi_pin_header_numbers.png" alt="pin" width="500">
 </p>
 
-This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some Pulse width modulation ([PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) — “analog output”).
+This table shows that the RPi not only gives you access to the bi-directional I/O pins, but also [Serial (UART)](https://learn.sparkfun.com/tutorials/serial-communication), [I2C](https://learn.sparkfun.com/tutorials/i2c), [SPI](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi), and even some Pulse width modulation ([PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation) — “analog output”).  
 
+There is a useful online guide for finding the assignment and numbering of each pin, along with other guides, that you may find useful at: [pinout.xyz](pinout.xyz)
 
 ##### Analog vs. Digital
 
@@ -89,16 +90,19 @@ We start assembling the circuit as shown in the diagram below.
 ![Wiring](../img/raspi-blink-wiring.png)
 
 ##### Code
-For the code we are going to use the [GPIOzero](https://gpiozero.readthedocs.io/en/stable/) library which is a  on the GPIO library (https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/)
+For the code we are going to use the [GPIOzero](https://gpiozero.readthedocs.io/en/stable/) library which is a  on the GPIO library (https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/).
+
 1. From your laptop's terminal connect to the RPi
 2. Create a folder called "code" and inside it a file called "blinker.py":
-```
+```bash
 $ mkdir code
 $ cd code
 $ nano blinker.py
 ```
+Note: you may not need to create a new folder everytime for the script. I.e. once you have created the folder code, you can create the scripts within the folder with nano <script name>. The command nano in this case is to open the nano editor.
+
 3. Copy and paste this code:
-```
+```python
 #!/usr/bin/env python
 
 from gpiozero import LED
@@ -117,24 +121,24 @@ while True:
 4. Save and exit
 
 5. Run this script with the command:
-```
+```bash
 sudo python ./blinker.py
 ```
 6. To stop the script from running press CTRL+C
 
 7. To make the script an executable run:
-```
+```bash
 $ sudo chmod u+x blinker.py
 ```
 Now you can execute it with just this command:
-```
+```bash
 $ ./blinker.py
 ```
 8. Yay! The LED is blinking!
 
 ##### Understanding the "Blink" example
 
-```
+```python
 #!/usr/bin/env python
 ```
 This line is used to tell which interpreter (in our case Python) to use when the file is made into an executable.
@@ -142,45 +146,41 @@ This line is used to tell which interpreter (in our case Python) to use when the
 
 
 When we use Python to control our GPIO pins, we always need to import the corresponding Python module, which goes at the top of the script:
-```
+```python
 import gpiozero as gpio
 ```
-Here, we are giving a shorter name to the module “GPIOzero”, in order to call the module through our script. This line is fundamental for every script requiring GPIO functions. If you want to import only certain classes from GPIOzero you could also use:
-```
+Here, we are giving a shorter name to the module “GPIOzero”, in order to call the module through our script. This line is fundamental for every script requiring GPIO functions. If you want to import only certain classes from GPIOzero you could also sepcify the components. As an example, let's say if you are interested in only the LED:
+```python
 from gpiozero import LED
 ```
-If, for example, you are interested in using the class LED solely. Or
-```
+Or if want to use the Button and LED class.
+```python
 from gpiozero import LED, Button
 ```
-If want to use the Button and LED class.
-
-
-
-```
+And if we are just importing the function sleep from the [time library](https://www.tutorialspoint.com/python/time_sleep.htm), we will later use it to make the LED blink.
+```python
 from time import sleep
 ```
-Here we are just importing the function sleep from the [time library](https://www.tutorialspoint.com/python/time_sleep.htm), we will later use it to make the LED blink.
 
-
-
-```
+In the next line:
+```python
 led = LED(17)
 ```
-Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17.
-**Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:
+Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17 (GPIO17, not physical pin number 17).
+**Note:** GPIOzero uses ONLY Broadcom (BCM) pin numbering, instead of physical pin numbering and it is not configurable, so when referring to pins in one of your scripts always use this numbering:  
+
 ![Broadcom](../img/broadcom_pin_layout.svg)
 
 
 
-```
+```python
 while True:
 ```
 Here we are are basically asking to Python to loop forever. In fact the `while` statements loops through its code until the initial condition becomes false, in our case never.
 
 
 
-```
+```python
 led.on()
 sleep(1)
 led.off()
@@ -194,11 +194,11 @@ Use the same layout for the electronics as before.
 ##### What is PWM?
 Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (3.3 Volts for RPi and 5 Volts for Arduino) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
 
-For more information check out [this link](https://learn.sparkfun.com/tutorials/pulse-width-modulation)
+For more information check out [this link](https://learn.sparkfun.com/tutorials/pulse-width-modulation).
 
 ##### Code
 Repeat the same steps of "Blink" to upload the code below, this time call the file *led-pwm.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
-```
+```python
 #!/usr/bin/env python
 
 from gpiozero import PWMLED
@@ -228,27 +228,44 @@ We start assembling the circuit as shown in the diagram below.
 
 ##### Code
 Repeat the same steps of "Blink" to upload the code below, this time call the file *button.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
-```
+
+```python
 #!/usr/bin/env python
 
 from gpiozero import Button
 
 button = Button(2)
+buttonWasPressed = False # 1st flag
+buttonWasReleased = False # 2nd flag
 
 while True:
     if button.is_pressed:
-        print("Button is pressed")
+        buttonWasReleased = False
+        if not buttonWasPressed:
+            print("Button is pressed")
+            buttonWasPressed = True
     else:
-        print("Button is not pressed")
+        buttonWasPressed = False
+        if not buttonWasReleased:
+            print("Button is released")
+            buttonWasReleased = True
 ```
 
 ##### Understanding "Button" code
-Here we are using the [class Button](https://gpiozero.readthedocs.io/en/stable/api_input.html#button) from GPIOzero.
-This class has many functions and parameter, so make sure you check out the reference. Here we are using the `is_pressed` property of the class. `is_pressed` returns True if the device is currently active and False otherwise.
+Here we are using the [class Button](https://gpiozero.readthedocs.io/en/stable/api_input.html#button) from GPIOzero. This class has many functions and parameter, so make sure you check out the reference. Here we are using the `is_pressed` property of the class. `is_pressed` returns True if the device is currently active and False otherwise.
+
+In this example, we also introduce the concept of flags. Flags are a way to help us keep track of the binary state of a particular thing by storing them as boolean variables (1/0 or True/False). In this case, we need to keep track of the binary state of whether the button is was pressed, and the binary state of whether the button was released.  
+
+> **Note** that we need to keep track of the _actions_ that occured, not the state of the button itself as this is already monitored `is_pressed` property of the `Button()` class.
+
+In the code above, we use these flags to prevent the repetition of a print statement. i.e. If we did not have them, then the _"Button is released"_ statement would print repetitively until the button was pressed, and vice versa.
+
+Flags allow us to ensure the print statement is only _printed_ on the first iteration of the loop. Every iteration thereafter will skip the print statement. This occurs until there is a change in the `is_pressed` property, at which point the respective flag is reset to `False`.
+
 
 ### Combining Everything
 
-Now we challenge you to combine all the previous three scripts to create one. Make the script in order that
+Now we challenge you to combine all the previous three scripts to create one. Make the script in order that:
 * when the button is pressed one of the two leds fades to 25% of its brightness and the other one blinks once
 * when the button is released the pwmled goes back to 100% brightness.
 
@@ -258,7 +275,8 @@ We start assembling the circuit as shown in the diagram below.
 ![Wiring](../img/practise_1.png)
 
 ##### Code Tips
-Use the `when_pressed` and `when_released` properties of the [Button class](https://gpiozero.readthedocs.io/en/stable/api_input.html#button)
+Use the `when_pressed` and `when_released` properties of the [Button class](https://gpiozero.readthedocs.io/en/stable/api_input.html#button).
 [Here](https://gpiozero.readthedocs.io/en/stable/recipes.html#button-controlled-led) you can find the code to control one LED with the button.
 
-<small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio) </small>
+###### Acknowledgement:
+<small>Based on the GPIOzero library [notes](https://gpiozero.readthedocs.io/en/stable/index.html) and [this reference](http://www.diffen.com/difference/Analog_vs_Digital) and [this intro](https://learn.sparkfun.com/tutorials/raspberry-gpio). </small>
