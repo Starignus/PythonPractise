@@ -57,9 +57,7 @@ void loop(void) {
 }
 ```
 
-For other functionalities and more precise calibration make sure to check out [Adafruit's website](https://learn.adafruit.com/force-sensitive-resistor-fsr/using-an-fsr)
-
-<small>Based on [this](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide) Sparkfun guide and [this](https://learn.adafruit.com/force-sensitive-resistor-fsr/using-an-fsr) Adafruit tutorial.</small>
+For other functionalities and more precise calibration make sure to check out [Adafruit's website](https://learn.adafruit.com/force-sensitive-resistor-fsr/using-an-fsr).
 
 ### Light Sensor
 For the light sensing are going to use a photo-resistor or Cadmium-sulfide cell. CdS cells are little light sensors. As the squiggly face is exposed to more light, the resistance goes down. When its light, the resistance is about 5-10KΩ, when dark it goes up to 200KΩ.
