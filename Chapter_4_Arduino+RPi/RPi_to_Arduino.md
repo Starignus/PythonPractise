@@ -233,6 +233,7 @@ What we have just done is ‘cross-compiled’ an executable. That is we have co
 
 ## Arduino and Raspberry Pi Talking Over Serial
 
+#### Arduino to Raspberry Pi
 To communicate between the Raspberry Pi and the Arduino over a serial connection, we’ll use the built-in Serial library on the Arduino side, and the Python pySerial module on the Raspberry Pi side.
 
 1. To install the serial module, run the following commands on your RPi terminal:
@@ -241,7 +242,7 @@ sudo apt-get install python-serial python3-serial
 ```
 
 2. Now we want to upload a new sketch on the Arduino. You can upload it from your computer using the IDE or using Arduino-mk as we did in the previous step. The code is the following:
-```C
+```
 void setup() {
 Serial.begin(9600);
 }
@@ -314,6 +315,46 @@ The meaning of each line is as follows:
 The Arduino is sending a number to the Python script, which interprets that number as a string. The input variable will contain whatever character maps to that number in the ASCII table. To get a better idea, try replacing the last line of the Python script with this:
 ```python
 print(str(ord(input)) + " = the ASCII character " + input + ".")
+```
+In Python to check if what you are getting is a string you can use the method explained [here](https://stackoverflow.com/questions/5319922/python-check-if-word-is-in-a-string)
+
+#### Raspberry Pi to Arduino
+
+To have the Raspberry Pi write and Arduino read (and turn on the built-in LED) you can use this code:
+
+1. On the Arduino side upload this code:
+```
+const int ledPin = 13;
+
+void setup(){
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+
+  if (Serial.available()) {
+    light(Serial.read() – ‘0’);
+  }
+
+  delay(500);
+}
+
+void light(int n){
+  for (int i = 0; i < n; i++) {
+    digitalWrite(ledPin, HIGH);
+    delay(100);
+    digitalWrite(ledPin, LOW);
+    delay(100);
+  }
+}
+```
+
+2. On the Raspberry Pi run this code:
+```
+import serial
+serialToArduino = serial.Serial('/dev/ttyACM0', 9600)
+serialToArduino.write('3')
 ```
 
 ## Suggested workflow
