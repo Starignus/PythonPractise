@@ -177,4 +177,5 @@ void loop() {
 }
 ```
 
+### Acknowledgement
 <small>Based on [this](https://learn.adafruit.com/photocells/using-a-photocell) Adafruit guide and Adafruit's [Photocell's page](https://www.adafruit.com/product/161).</small>
