@@ -114,6 +114,8 @@ These are 'Vmotor level' power outputs
 * Motor A - these are the two outputs for motor A, controlled by INA1, INA2 and PWMA
 * Motor B - these are the two outputs for motor B, controlled by INB1, INB2 and PWMB
 
+<small>Based on [Adafruit's Pinouts](https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts)</small>
+
 ### Dc Motor
 A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
 
