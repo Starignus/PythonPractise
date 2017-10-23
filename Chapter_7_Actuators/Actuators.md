@@ -4,8 +4,9 @@ In this section we are going to learn about actuators and how to control them .
 
 1. [Piezo Buzzer](#piezo_buzzer)
 2. [Servo Motor](#servo_motor)
-3. [DC Motor](#dc_motor)
-4. [Stepper Motor](#stepper_motor)
+3. [About the Adafruit TB6612 Driver](#about_the_adafruit_tb6612_driver)
+4. [DC Motor](#dc_motor)
+5. [Stepper Motor](#stepper_motor)
 
 
 At the beginning of this session you should have collected a kit that is made of:
@@ -84,6 +85,34 @@ void loop() {
 ```
 
 You can also try to control this servo motor from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo) you can find the GPIOzero API Reference.
+
+### About the Adafruit TB6612 Driver
+A motor driver is a little current amplifier; the function of motor drivers is to take a low-current control signal and then turn it into a higher-current signal that can drive a motor.
+
+The [Adafruit TB6612 Driver](https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts) contains two full H-bridges (four half H-bridges). That means you can drive four solenoids, two DC motors bi-directionally, or one stepper motor. Just make sure they're good for 1.2 Amp or less of current, since that's the limit of this chip.
+It comes with built in kick-back diodes internally so you don't have to worry about the inductive kick damaging your project or driver.
+
+There's two digital inputs per H-bridge (one for each half of the bridge) as well as a PWM input per driver so you can control motor speed. Runs at 2.7V-5V logic. The motor voltage is separate from the logic voltage. Good for motor voltages from 4.5V up to 13.5V! This wont work well for 3V motors.
+
+##### Pinouts
+
+**Power Pins**
+* Vmotor - This is the voltage for the motors, not for the logic level. Keep this voltage between 4.5V and 13.5V. This power supply will get noisy so if you have a system with analog readings or RF other noise-sensitive parts, you may need to keep the power supplies separate (or filtered!)
+* Vcc - this is the voltage for the logic levels. Set to the voltage logic you'll be using on your micro-controller. E.g. for Arduinos, 5V is probably what you want. Can be 2.7V to 5.5V so good for 3V or 5V logic
+* GND - This is the shared logic and motor ground. All grounds are connected
+
+**Signal in Pins**
+These are all 'Vcc logic level' inputs
+* INA1, INA2 - these are the two inputs to the Motor A H-bridges
+* PWMA - this is the PWM input for the Motor A H-bridges, if you dont need PWM control, connect this to logic high.
+* INB1, INB2 - these are the two inputs to the Motor B H-bridges
+* PWMB - this is the PWM input for the Motor B H-bridges, if you dont need PWM control, connect this to logic high.
+* STBY - this is the standby pin for quickly disabling both motors, pulled up to Vcc thru a 10K resistor. Connect to ground to disable.
+
+**Motor Out Pins**
+These are 'Vmotor level' power outputs
+* Motor A - these are the two outputs for motor A, controlled by INA1, INA2 and PWMA
+* Motor B - these are the two outputs for motor B, controlled by INB1, INB2 and PWMB
 
 ### Dc Motor
 A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
@@ -168,6 +197,7 @@ A [stepper motor](https://www.wikiwand.com/en/Stepper_motor) or step motor or st
 From the kit you are going to need:
 * Stepper Motor
 * Adafruit TB6612 Driver
+* Crocodile Clips
 * Jumper Wires
 * Arduino
 
