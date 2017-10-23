@@ -2,11 +2,11 @@
 
 In this section we are going to learn about actuators and how to control them .
 
-1. [Piezo Buzzer](#piezo_buzzer)
-2. [Servo Motor](#servo_motor)
-3. [About the Adafruit TB6612 Driver](#about_the_adafruit_tb6612_driver)
-4. [DC Motor](#dc_motor)
-5. [Stepper Motor](#stepper_motor)
+1. [Piezo Buzzer](#Piezo-Buzzer)
+2. [Servo Motor](#servo-motor)
+3. [About the Adafruit TB6612 Driver](#about-the-adafruit-tb6612-driver)
+4. [DC Motor](#dc-motor)
+5. [Stepper Motor](#stepper-motor)
 
 
 At the beginning of this session you should have collected a kit that is made of:
@@ -32,7 +32,7 @@ From the kit you are going to need:
 ##### Code
 For the code you can use the **Example->2.Digital->toneMelody**. Feel free to play around with it.
 
-You can also try to control this buzzer from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo#buzzer) you can find the GPIOzero API Reference.
+Pi Route: You can also try to control this buzzer from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo#buzzer) you can find the GPIOzero API Reference.
 
 ### Servo Motor
 A [servo motor](https://www.wikiwand.com/en/Servomotor#/RC_servos) is a rotary actuator or linear actuator that allows for precise control of angular or linear position, velocity and acceleration. It consists of a suitable motor coupled to a sensor for position feedback. It also requires a relatively sophisticated controller, often a dedicated module designed specifically for use with servomotors.
@@ -84,7 +84,7 @@ void loop() {
 
 ```
 
-You can also try to control this servo motor from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo) you can find the GPIOzero API Reference.
+Pi Route: You can also try to control this servo motor from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo) you can find the GPIOzero API Reference.
 
 ### About the Adafruit TB6612 Driver
 A motor driver is a little current amplifier; the function of motor drivers is to take a low-current control signal and then turn it into a higher-current signal that can drive a motor.
@@ -253,3 +253,8 @@ void loop() {
 }
 
 ```
+
+### Acknowledgement
+[Adafruit Learn](https://learn.adafruit.com/)
+[Wikiwand Piezoelectric Speaker](https://www.wikiwand.com/en/Piezoelectric_speaker)
+
