@@ -125,17 +125,20 @@ A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary e
 * Jumper Wires
 * Arduino
 
-![DC Wiring](../img/)
+![DC Wiring](../img/arduino-dc_wiring.JPG)
+
++ AIN1 to pin 8
++ AIN2 to pin 9
++ PWMA to 5V
++ GND to Arduino GND
++ Vcc to 5V
++ Vm to 5V
++ motorA to DC motor
+
 
 ##### Code
 For this sketch copy and paste the following code:
 ```
-/*
-+ ain1 to pin 8
-+ ain2 to pin 9
-+ motorA to DC motor
-+ pwma to 5V
-*/
 
 int ain1 = 8;
 int ain2 = 9;
@@ -203,7 +206,19 @@ From the kit you are going to need:
 * Jumper Wires
 * Arduino
 
-![Stepper Wiring](../img/)
+![Stepper Wiring](../img/arduino-stepper_wiring.JPG)
+
++ AIN1 to pin 8
++ AIN2 to pin 9
++ PWMA to 5V
++ BIN1 to pin 10
++ BIN2 to pin 11
++ PWMB to 5V
++ GND to Arduino GND
++ Vcc to 5V
++ Vm to 5V
++ motorA to Stepper motor
++ motorB to Stepper motor
 
 ##### Code
 For this example you are going to use the built-in [stepper library](https://www.arduino.cc/en/Reference/Stepper) by Arduino and we are going to use the built-in sketch **Example->Stepper->stepper_oneRevolution**
