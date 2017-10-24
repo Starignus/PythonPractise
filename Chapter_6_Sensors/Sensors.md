@@ -19,7 +19,7 @@ The resistance of an force sensor varies as the force on the sensor increases or
 ![Force Resistor Wiring](../img/force-resistor-wiring.png)
 
 ##### Code
-```
+```C
 /* FSR simple testing sketch.
 
 Connect one end of FSR to power, the other end to Analog 0.
@@ -74,10 +74,10 @@ To use, connect one side of the photo cell (either one, its symmetric) to power 
 ![Photocell wiring](../img/light-wiring.png)
 
 ##### Code
-In the Arduino IDE you will find under *File->Examples->10.StarterKit_BasicKit->p04ColorMixingLamp* an example sketch that uses three photo-resistors to control three LEDs to create a colour-changing lamp. We challenge you to tweak the code to fit your needs and to read the value from one photo-resistor.
+In the Arduino IDE you will find under *File → Examples → 10.StarterKit_BasicKit → p04ColorMixingLamp* an example sketch that uses three photo-resistors to control three LEDs to create a colour-changing lamp. We challenge you to tweak the code to fit your needs and to read the value from one photo-resistor.
 
 Color Mixing Lamp Code
-```
+```C
 /*
   Arduino Starter Kit example
  Project 4  - Color Mixing Lamp
@@ -156,6 +156,7 @@ void loop() {
   but analogWrite() uses 8 bits. You'll want to divide your
   sensor readings by 4 to keep them in range of the output.
   */
+
   redValue = redSensorValue / 4;
   greenValue = greenSensorValue / 4;
   blueValue = blueSensorValue / 4;
