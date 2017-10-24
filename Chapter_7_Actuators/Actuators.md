@@ -195,6 +195,8 @@ void loop(){
  }
 ```
 
+You can also try to control this DC motor from your Raspberry Pi [here](https://gpiozero.readthedocs.io/en/stable/api_output.html#motor) you can find the GPIOzero API Reference.
+
 ### Stepper Motor
 A [stepper motor](https://www.wikiwand.com/en/Stepper_motor) or step motor or stepping motor is a brushless DC electric motor that divides a full rotation into a number of equal steps. The motor's position can then be commanded to move and hold at one of these steps without any position sensor for feedback (an open-loop controller), as long as the motor is carefully sized to the application in respect to torque and speed.
 
