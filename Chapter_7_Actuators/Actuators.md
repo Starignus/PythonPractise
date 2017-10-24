@@ -30,7 +30,7 @@ From the kit you are going to need:
 ![Buzzer Wiring](../img/piezo-buzzer-wiring.png)
 
 ##### Code
-For the code you can use the **Example->2.Digital->toneMelody**. Feel free to play around with it.
+For the code you can use the **Example → 2.Digital → toneMelody**. Feel free to play around with it.
 
 Pi Route: You can also try to control this buzzer from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo#buzzer) you can find the GPIOzero API Reference.
 
@@ -46,10 +46,10 @@ From the kit you are going to need:
 ![Servo Wiring](../img/servo-sweep-wiring.png)
 
 ##### Code
-For this example you are going to use the built-in [servo library](https://www.arduino.cc/en/Reference/Servo) by Arduino and we are going to use the built-in sketch **Example->Servo->Sweep**
+For this example you are going to use the built-in [servo library](https://www.arduino.cc/en/Reference/Servo) by Arduino and we are going to use the built-in sketch **Example → Servo → Sweep**
 ![Servo Sketch](../img/arduino-servo_choice.png)
 
-```
+```C
 /* Sweep
  by BARRAGAN <http://barraganstudio.com>
  This example code is in the public domain.
@@ -114,7 +114,7 @@ These are 'Vmotor level' power outputs
 * Motor A - these are the two outputs for motor A, controlled by INA1, INA2 and PWMA
 * Motor B - these are the two outputs for motor B, controlled by INB1, INB2 and PWMB
 
-### Dc Motor
+### DC Motor
 A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
 
 ##### Example Circuit
@@ -127,7 +127,7 @@ A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary e
 
 ##### Code
 For this sketch copy and paste the following code:
-```
+```C
 /*
 + ain1 to pin 8
 + ain2 to pin 9
@@ -204,11 +204,11 @@ From the kit you are going to need:
 ![Stepper Wiring](../img/)
 
 ##### Code
-For this example you are going to use the built-in [stepper library](https://www.arduino.cc/en/Reference/Stepper) by Arduino and we are going to use the built-in sketch **Example->Stepper->stepper_oneRevolution**
+For this example you are going to use the built-in [stepper library](https://www.arduino.cc/en/Reference/Stepper) by Arduino and we are going to use the built-in sketch **Example → Stepper → stepper_oneRevolution**
 
 ![Stepper Selection](../img/arduino-stepper_choice.png )
 
-```
+```C
 /*
  Stepper Motor Control - one revolution
 
@@ -255,7 +255,5 @@ void loop() {
 ```
 
 ### Acknowledgement
-[Adafruit Learn](https://learn.adafruit.com/)
-
+[Adafruit Learn](https://learn.adafruit.com/)  
 [Wikiwand Piezoelectric Speaker](https://www.wikiwand.com/en/Piezoelectric_speaker)
-
