@@ -18,7 +18,7 @@ In this section we will se how to install the Arduino IDE from the command line 
 
 
 ### Installing Arduino on the Raspberry
-Note: This subsection takes you through to setup arduino IDE using Raspberry Pi. It is not necessary if you are only using your computer to program the Arduino code, and using Raspberry Pi to upload the code to Arduino.
+Note: This subsection takes you through to setup Arduino IDE using Raspberry Pi. It is not necessary if you are only using your computer to program the Arduino code, and using Raspberry Pi to upload the code to Arduino.
 
 From the terminal of your computer connected to the RPi via ssh type:
 ```bash
@@ -44,6 +44,8 @@ To test if Arduino IDE is working you can connect the Arduino to the RPi using o
 Then run the Arduino IDE.
 
 <img src="../img/arduino-ide.png" alt="arduino" style="width: 400px;"/>
+
+At this point, the sketch window above will pop up, however if you are using a small screen such as the touchscreen peripheral from earlier tutorials, you may not be able to view the top of the window. To maximise the window, use the keyboard shortcut **Alt + Space** to get to the window management menu and then use the arrow keys and enter key to enter maximised window view.
 
 Click **Tools->Serial Port** and select the USB serial port to which your Arduino is connected (usually /dev/ttyACM0). Then, click **Tools->Board->Arduino Uno**. Then you can open the basic sketch "Blink" by clicking on **File->Example->01. Basics-> Blink**. You can then upload the sketch on the Arduino by clicking the "Upload" button (the one with an arrow).
 
@@ -71,7 +73,7 @@ First we are going to see how to do so using a [Makefile](https://en.wikipedia.o
 
 #### Installation
 
-1. First we are going to need to install the core Arduino development tools. We will need the ‘build-essential’ package that includes all the [GNU binutils](https://en.wikipedia.org/wiki/GNU_Binutils) including make etc... So, from the terminal of your computer connected to the RPi, type:
+1. First we are going to need to install the core Arduino development tools. We will need the ‘build-essential’ package that includes all the [GNU binutils](https://en.wikipedia.org/wiki/GNU_Binutils) including 'make' etc. so, from the terminal of your computer connected to the RPi, type:
 
 ```bash
 sudo apt-get install build-essential
@@ -82,16 +84,17 @@ sudo apt-get install build-essential
 ```bash
 sudo apt-get install arduino-core arduino-mk
 ```
-`arduino-core` provides all the Core Arduino libraries etc., and the Atmel AVR tool-chain (the libraries and tools designed for AVR microcontrollers, like Arduino).  
-`arduino-mk` is a generic Makefile which conforms to the Gnu make syntax and which we can include into any Makefile we construct to build our code from the command line.
+
+* `arduino-core` provides all the Core Arduino libraries etc., and the Atmel AVR tool-chain (the libraries and tools designed for AVR microcontrollers, like Arduino).  
+* `arduino-mk` is a generic Makefile which conforms to the Gnu make syntax and which we can include into any Makefile we construct to build our code from the command line.
 
 #### Creating an Arduino Sketch without the IDE
 
 When we installed the Arduino IDE it created a directory called "sketchbook". This folder is made to store all your Arduino files tidily and to have them readily available for the IDE. We are going to use this folder even with our Makefile to maintain the compatibility with the IDE.
 
 **Note:** Each Arduino sketch has the extension .ino, these are the "source files", the instructions to be built into an executable program. These source files to be built correctly with the IDE need to be contained in a folder that has the same name as the sketch i.e. with a directory tree as follows:  
-> ../sketchbook/  
-> └── blink/  
+> **/home/pi/sketchbook/**  
+> └── **blink/**  
 > └──── blink.ino  
 
 Using arduino-mk we are going to create a Makefile inside the source file directory; some other auxiliary files are going to be generated during the build process as we will see.
@@ -115,7 +118,7 @@ nano blink.ino
 ```
 4. Now we want to copy/paste these lines of code (feel free to tweak the delay values to play with the blinking time):
 
-```
+```C
 #define LED_PIN 13
 
 void setup() {
@@ -132,12 +135,19 @@ void loop() {
 We save and exit.
 
 #### The Makefile
-Now we will write a Makefile in the same directory as our .ino sketch. With   this file we can compile and ultimately upload the blink program we have just written.
+Now we will write a Makefile in the same directory as our .ino sketch. With this file we can compile and ultimately upload the blink program we have just written.
 
 1. We are still in the same "blink" directory (/home/pi/sketchbook/blink), if you have changed it simply change back with `cd`. We create another file like we did before:
+
 ```bash
 nano Makefile
 ```
+
+> **/home/pi/sketchbook/**  
+> └── **blink/**  
+> └──── blink.ino  
+> └──── Makefile  
+
 2. Now we will write our Makefile. Here is the source of the Makefile that you can copy-paste:
 ```
 ARDUINO_DIR  = /usr/share/arduino
@@ -155,7 +165,7 @@ include /usr/share/arduino/Arduino.mk
 
 
 #### Building our Project
-Now we are going to build our sketch. This means that we are going to create an executable version of our Sketch. The Makefile tells the compiler how to assemble all the instruction blocks. Moreover the compiler will translate what we have written in Arduino language into C++.
+Now we are going to build our sketch. This means that we are going to create an executable version of our Sketch. The Makefile tells the compiler how to assemble all the instruction blocks. Moreover the compiler will translate what we have written in the Arduino sketch (C/C++) into machine code. More information on how the Arduino IDE compiles the code can be found [here](https://github.com/arduino/Arduino/wiki/Build-Process).
 
 To build our file we simply enter:
 ```bash
@@ -164,6 +174,20 @@ make
 
 You will see a warning fly past about depends.mk not existing. This file will be created on the first compile.
 If this all works there will now be a sub-directory called ‘build-command line’, in which there are a whole bunch of files.
+
+> **/home/pi/sketchbook/**  
+> └── **blink/**  
+> └──── blink.ino  
+> └──── Makefile  
+> └──── **build-uno/**  
+> └────── blink.eep  
+> └────── blink.elf  
+> └────── blink.hex  
+> └────── blink.hex.sizeok  
+> └────── blink.ino.d  
+> └────── blink.ino.o  
+> └────── **core/**  
+> └────── libcore.a  
 
 These files are inside the *build-uno* folder so we change our directory:
 ```bash
@@ -193,19 +217,23 @@ The blink.hex file is ASCII but it is the values in this file which get written 
 Now we are going to upload the compiled code to the Arduino. If you have unplugged it from your Raspberry, please connect it again with the provided USB cable.
 To upload the sketch simply type:
 ```bash
+cd /home/pi/sketchbook/blink
 sudo make upload
 ```
-Note: Please make sure you are running the above command in the same folder containing Makefile you created earlier.
 
-We need to use sudo for this to get permissions to the serial device.
+> **Note:** We run the cd command to ensure we are in the correct directory to run the `make` command. Alternatively if you are in a child folder, you could run the command `cd ..` to go to the parent folder.
+
+We need to use `sudo` for `make` to get permission to communicate with to the serial device.
+
 Now your Arduino will start blinking!!
 
-**Note:** If it doesn't work you may have selected the wrong port. You can check to which port the Arduino is connected with the command ```ls /dev/ttyACM*``` or as we have illustrated before in the note to **Working with the Arduino IDE**.
+**Note:** If it doesn't work you may have selected the wrong port. You can check to which port the Arduino is connected with the command ```ls /dev/ttyACM*``` or as we have illustrated before in the section to [**Working with the Arduino IDE**](#working-with-the-arduino-ide).
 
 What we have just done is ‘cross-compiled’ an executable. That is we have compiled some code on one platform, for running on another platform, or ‘flavour’ of processor.
 
 ## Arduino and Raspberry Pi Talking Over Serial
 
+#### Arduino to Raspberry Pi
 To communicate between the Raspberry Pi and the Arduino over a serial connection, we’ll use the built-in Serial library on the Arduino side, and the Python pySerial module on the Raspberry Pi side.
 
 1. To install the serial module, run the following commands on your RPi terminal:
@@ -214,7 +242,7 @@ sudo apt-get install python-serial python3-serial
 ```
 
 2. Now we want to upload a new sketch on the Arduino. You can upload it from your computer using the IDE or using Arduino-mk as we did in the previous step. The code is the following:
-```
+```C
 void setup() {
 Serial.begin(9600);
 }
@@ -227,7 +255,7 @@ void loop() {
 }
 ```
 This code counts upward and sends each number over the serial connection.
-Note that in Arduino, Serial.write() sends the actual number in the byte type, the actual 8-bit representation of the number.
+Note that in Arduino, `Serial.write()` sends the actual number in the byte type, the actual 8-bit representation of the number.
 
 3. Now plug the Arduino to the USB of the Raspberry if you have unplugged it. Then in the RPi terminal let's open the Python shell by typing:
 ```bash
@@ -258,7 +286,7 @@ You should see a *0* being printed.
 
 8. Now that we have tested that the connection works we want to write a Python script that reads the messages from serial.
 so we type:
-```
+```bash
 cd home/pi/
 nano serialEcho.py
 ```
@@ -285,8 +313,48 @@ The meaning of each line is as follows:
   * `print(ord(input))`: we interpret the incoming byte and we print it in the console
 
 The Arduino is sending a number to the Python script, which interprets that number as a string. The input variable will contain whatever character maps to that number in the ASCII table. To get a better idea, try replacing the last line of the Python script with this:
-```
+```python
 print(str(ord(input)) + " = the ASCII character " + input + ".")
+```
+In Python to check if what you are getting is a string you can use the method explained [here](https://stackoverflow.com/questions/5319922/python-check-if-word-is-in-a-string).
+
+#### Raspberry Pi to Arduino
+
+To have the Raspberry Pi write and Arduino read (and turn on the built-in LED) you can use this code:
+
+1. On the Arduino side upload this code:
+```C
+const int ledPin = 13;
+
+void setup(){
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+
+  if (Serial.available()) {
+    light(Serial.read() – ‘0’);
+  }
+
+  delay(500);
+}
+
+void light(int n){
+  for (int i = 0; i < n; i++) {
+    digitalWrite(ledPin, HIGH);
+    delay(100);
+    digitalWrite(ledPin, LOW);
+    delay(100);
+  }
+}
+```
+
+2. On the Raspberry Pi run this code:
+```python
+import serial
+serialToArduino = serial.Serial('/dev/ttyACM0', 9600)
+serialToArduino.write('3')
 ```
 
 ## Suggested workflow
@@ -337,10 +405,11 @@ ino init -t blink
 ```
 
 This will create two sub-directories in our project directory:  
-> ../sketchbook/  
-> └── blink2  
-> ├──── lib/  
-> └──── src/  
+> **/home/pi/sketchbook/**  
+> └── **blink2/**  
+> └──── **lib/**  
+> └──── **src/**  
+> └────── sketch.ino  
 
 In the src directory there is our source file, or ‘sketch’, called:
 sketch.ino
@@ -354,9 +423,9 @@ The terminal will show you the content of the file. As you can see it is exactly
 ino has created this file automatically for us when we initialised the project with `ino init -t blink`.
 Feel free to tweak it with *nano* to change the blinking pattern.
 
-**Note:** ino has two templates we can use: blink and empty. "empty" is a simple sketch with the setup and loop function already created. You can choose to initialise you sketch as empty by running `ino init -t blink` in a new folder.
+> **Note:** ino has two templates we can use: blink and empty. "empty" is a simple sketch with the setup and loop function already created. You can choose to initialise you sketch as empty by running `ino init -t blink` in a new folder.
 
-In the lib directory there is one file, called .holder, which appears to be empty.
+In the lib directory there is one file, called `.holder/`, which appears to be empty.
 We are not using any libraries other than the defaults in this sketch so there will be nothing in lib. If we were using libraries the files would automatically be added here.
 
 5. Now we build the project by typing:
@@ -364,24 +433,33 @@ We are not using any libraries other than the defaults in this sketch so there w
 ino build
 ```
 
-This will create a directory called .build.
-In .build there are two things now:
+This will create a directory called `.build/`.
+In `.build/` there are two things now:
 
 * environment.pickle
 * uno/
 
-The .pickle file is a Python mechanism for taking a snap-shot of the build environment at build time.
+The _.pickle_ file is a Python mechanism for taking a snap-shot of the build environment at build time.
 The directory uno, is where you will find similar files to the ones created before.
 Note that the uno directory is only called uno because it is an Arduino Uno for which we are developing, and because it is the default board type. If we chose to use a different Arduino version, this directory would be named the same way as the board type.
 
-Looking in the uno directory we see a bunch of files:
-* arduino/
-* firmware.elf*
-* firmware.hex
-* Makefile
-* Makefile.deps
-* Makefile.sketch
-* src/
+Looking in the uno directory we see a bunch of files, which take the structure as follows:
+
+> **/home/pi/sketchbook/**  
+> └── **blink2/**  
+> └──── **lib/**  
+> └──── **src/**  
+> └────── sketch.ino  
+> └──── **.build/**  
+> └────── environment.pickle  
+> └────── **uno/**  
+> └──────── **arduino/**  
+> └──────── firmware.elf  
+> └──────── firmware.hex  
+> └──────── Makefile  
+> └──────── Makefile.deps  
+> └──────── Makefile.sketch  
+> └──────── **src/**  
 
 If you looked in arduino/, you would see files which should be familiar to you.
 Now in this directory, we also see:
@@ -401,10 +479,10 @@ Now your sketch is uploaded and you should see your Arduino blinking again!
 
 
 ## Command Line tools for your computer
-If you would like to use the same tools on your computer you can do so if you have either a Mac or Linux computer. If you have a Linux computer you can follow exactly the same steps.
+If you would like to use the same tools on your computer you can do so if you have either a Mac or Linux computer. This is because both Mac and Linux have Unix based operating systems. If you have a Linux computer you can follow exactly the same steps.
 
-If you have Mac special attention to the path of the USB port. It is going to look like this */dev/tty.usbmodem411* to find your port name you can enter the command `ls /dev/tty.usb*`.
-Also on Mac there is no `apt-get` command. You have to install another package manager, we recommend using [Homebrew](https://brew.sh/) and to install any package use `brew install PACKAGE_NAME`
+If you have Mac special attention to the path of the USB port. It is going to look like this `/dev/tty.usbmodem411` to find your port name you can enter the command `ls /dev/tty.usb*`.
+Also on Mac there is no `apt-get` command. You have to install another package manager, the most common one which we also recommend using [Homebrew](https://brew.sh/) and to install any package use `brew install PACKAGE_NAME`
 
-<small>Based on [Raspberry VI Tutorial](http://www.raspberryvi.org/stories/arduino-cli.html).
-</small>
+_<small>Based on [Raspberry VI Tutorial](http://www.raspberryvi.org/stories/arduino-cli.html).
+</small>_

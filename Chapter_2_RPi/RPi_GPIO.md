@@ -16,7 +16,7 @@ Your Raspberry Pi is more than just a small computer, it is a hardware prototypi
 * [Breadboard](https://www.sparkfun.com/products/12002?_ga=1.251311686.1915117394.1476705504)
 * [Jumper Wires(M/F)](https://www.sparkfun.com/products/12794)
 * [Momentary Pushbutton Switch](https://www.sparkfun.com/products/9190?_ga=1.213562324.1915117394.1476705504)
-* [2 10KΩ Resistors](https://www.sparkfun.com/products/11507?_ga=1.213562324.1915117394.1476705504)
+* [Resistors](https://www.sparkfun.com/products/11507?_ga=1.213562324.1915117394.1476705504)
 * [2 LEDs](https://www.sparkfun.com/products/9590?_ga=1.213548756.1915117394.1476705504)
 
 ###  GPIO Pinout
@@ -94,7 +94,7 @@ For the code we are going to use the [GPIOzero](https://gpiozero.readthedocs.io/
 
 1. From your laptop's terminal connect to the RPi
 2. Create a folder called "code" and inside it a file called "blinker.py":
-```
+```bash
 $ mkdir code
 $ cd code
 $ nano blinker.py
@@ -102,7 +102,7 @@ $ nano blinker.py
 Note: you may not need to create a new folder everytime for the script. I.e. once you have created the folder code, you can create the scripts within the folder with nano <script name>. The command nano in this case is to open the nano editor.
 
 3. Copy and paste this code:
-```
+```python
 #!/usr/bin/env python
 
 from gpiozero import LED
@@ -121,24 +121,24 @@ while True:
 4. Save and exit
 
 5. Run this script with the command:
-```
+```bash
 sudo python ./blinker.py
 ```
 6. To stop the script from running press CTRL+C
 
 7. To make the script an executable run:
-```
+```bash
 $ sudo chmod u+x blinker.py
 ```
 Now you can execute it with just this command:
-```
+```bash
 $ ./blinker.py
 ```
 8. Yay! The LED is blinking!
 
 ##### Understanding the "Blink" example
 
-```
+```python
 #!/usr/bin/env python
 ```
 This line is used to tell which interpreter (in our case Python) to use when the file is made into an executable.
@@ -146,24 +146,24 @@ This line is used to tell which interpreter (in our case Python) to use when the
 
 
 When we use Python to control our GPIO pins, we always need to import the corresponding Python module, which goes at the top of the script:
-```
+```python
 import gpiozero as gpio
 ```
 Here, we are giving a shorter name to the module “GPIOzero”, in order to call the module through our script. This line is fundamental for every script requiring GPIO functions. If you want to import only certain classes from GPIOzero you could also sepcify the components. As an example, let's say if you are interested in only the LED:
-```
+```python
 from gpiozero import LED
 ```
 Or if want to use the Button and LED class.
-```
+```python
 from gpiozero import LED, Button
 ```
 And if we are just importing the function sleep from the [time library](https://www.tutorialspoint.com/python/time_sleep.htm), we will later use it to make the LED blink.
-```
+```python
 from time import sleep
 ```
 
 In the next line:
-```
+```python
 led = LED(17)
 ```
 Here we are creating a variable called `led` and we are initialising it with an object of the class [LED](https://gpiozero.readthedocs.io/en/stable/api_output.html#led). On object of the class LED to be initialised takes as a parameter the pin number to which the LED is connected to, in our case the pin number is 17 (GPIO17, not physical pin number 17).
@@ -173,14 +173,14 @@ Here we are creating a variable called `led` and we are initialising it with an 
 
 
 
-```
+```python
 while True:
 ```
 Here we are are basically asking to Python to loop forever. In fact the `while` statements loops through its code until the initial condition becomes false, in our case never.
 
 
 
-```
+```python
 led.on()
 sleep(1)
 led.off()
@@ -198,7 +198,7 @@ For more information check out [this link](https://learn.sparkfun.com/tutorials/
 
 ##### Code
 Repeat the same steps of "Blink" to upload the code below, this time call the file *led-pwm.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
-```
+```python
 #!/usr/bin/env python
 
 from gpiozero import PWMLED
@@ -228,27 +228,44 @@ We start assembling the circuit as shown in the diagram below.
 
 ##### Code
 Repeat the same steps of "Blink" to upload the code below, this time call the file *button.py* and save it in the *code* folder that we have previously created. It's up to you to make the code executable or not.
-```
+
+```python
 #!/usr/bin/env python
 
 from gpiozero import Button
 
 button = Button(2)
+buttonWasPressed = False # 1st flag
+buttonWasReleased = False # 2nd flag
 
 while True:
     if button.is_pressed:
-        print("Button is pressed")
+        buttonWasReleased = False
+        if not buttonWasPressed:
+            print("Button is pressed")
+            buttonWasPressed = True
     else:
-        print("Button is not pressed")
+        buttonWasPressed = False
+        if not buttonWasReleased:
+            print("Button is released")
+            buttonWasReleased = True
 ```
 
 ##### Understanding "Button" code
-Here we are using the [class Button](https://gpiozero.readthedocs.io/en/stable/api_input.html#button) from GPIOzero.
-This class has many functions and parameter, so make sure you check out the reference. Here we are using the `is_pressed` property of the class. `is_pressed` returns True if the device is currently active and False otherwise.
+Here we are using the [class Button](https://gpiozero.readthedocs.io/en/stable/api_input.html#button) from GPIOzero. This class has many functions and parameter, so make sure you check out the reference. Here we are using the `is_pressed` property of the class. `is_pressed` returns True if the device is currently active and False otherwise.
+
+In this example, we also introduce the concept of flags. Flags are a way to help us keep track of the binary state of a particular thing by storing them as boolean variables (1/0 or True/False). In this case, we need to keep track of the binary state of whether the button is was pressed, and the binary state of whether the button was released.  
+
+> **Note** that we need to keep track of the _actions_ that occured, not the state of the button itself as this is already monitored `is_pressed` property of the `Button()` class.
+
+In the code above, we use these flags to prevent the repetition of a print statement. i.e. If we did not have them, then the _"Button is released"_ statement would print repetitively until the button was pressed, and vice versa.
+
+Flags allow us to ensure the print statement is only _printed_ on the first iteration of the loop. Every iteration thereafter will skip the print statement. This occurs until there is a change in the `is_pressed` property, at which point the respective flag is reset to `False`.
+
 
 ### Combining Everything
 
-Now we challenge you to combine all the previous three scripts to create one. Make the script in order that
+Now we challenge you to combine all the previous three scripts to create one. Make the script in order that:
 * when the button is pressed one of the two leds fades to 25% of its brightness and the other one blinks once
 * when the button is released the pwmled goes back to 100% brightness.
 

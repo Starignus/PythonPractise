@@ -34,17 +34,17 @@ $git clone https://github.com/ICL-DE/Gizmo.git
 
 * [RPi & Arduino](Chapter_4_Arduino+RPi/RPi_to_Arduino.md)
 
-#### Chapter 5: Remote Connection
+#### Chapter 5: Remote Connection to Raspberry Pi
 
-* Remote connection to your Raspberry Pi
+* [Remote connection to your Raspberry Pi](Chapter_5_Remote/Remote_Rpi.md)
 
 #### Chapter 6: Sensors
 
- * ADC
+* [Sensors (Digital, ADC, LEDs, etc)](../Chapter_6_Sensors/Sensors.md)
 
 #### Chapter 7: Making things move
 
-* Actuators
+* [Actuators (Motor Driver, ADC, etc)](../Chapter_7_Actuators/Actuators.md)
 
 
 #### Supplementary Material

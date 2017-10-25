@@ -21,8 +21,8 @@
 
 ### Lab Session 3 (25 Oct 2017)
 
- * Sensors (Digital, ADC, LEDs, etc)
- * Actuators (Motor Driver, ADC, etc)
+* [Sensors (Digital, ADC, LEDs, etc)](../Chapter_6_Sensors/Sensors.md)
+* [Actuators (Motor Driver, ADC, etc)](../Chapter_7_Actuators/Actuators.md)
 
 ### Lab Session 4 (1 Nov 2017)
 
