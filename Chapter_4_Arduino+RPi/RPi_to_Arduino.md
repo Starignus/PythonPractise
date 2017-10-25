@@ -103,7 +103,7 @@ For this example we are going to upload the same "blink" sketch we have seen bef
 
 To set up our project we follow these steps:
 
-1. We are going to change the directory where we are and enter the sketchbook directory with this command:
+1. We are going to change the directory where we are and enter the sketchbook directory with this command (**NB** if the pi says there is no such directory, make one using the `mkdir sketchbook` command):
 ```bash
 cd /home/pi/sketchbook
 ```
@@ -428,9 +428,8 @@ Feel free to tweak it with *nano* to change the blinking pattern.
 In the lib directory there is one file, called `.holder/`, which appears to be empty.
 We are not using any libraries other than the defaults in this sketch so there will be nothing in lib. If we were using libraries the files would automatically be added here.
 
-5. Now we change our directory back to the parent folder (this can be done with `cd ..`) and then build the project:
+5. Now we change our directory back to the parent folder (this can be done with `cd ..` or `cd /home/pi/sketchbook/blink2/`) and then build the project:
 ```bash
-cd /home/pi/sketchbook/blink2/
 ino build
 ```
 
