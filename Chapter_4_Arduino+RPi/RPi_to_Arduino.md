@@ -286,6 +286,8 @@ You should see a *0* being printed.
 
 > **Note:** If you have problems with this step, make sure you have properly done step 2 (uploading the new sketch to Arduino).
 
+> **Note:** For the next step, you need to use **Ctrl+D** to exit the Python prompt.
+
 8. Now that we have tested that the connection works we want to write a Python script that reads the messages from serial.
 so we type:
 ```bash
