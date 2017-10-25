@@ -2,7 +2,7 @@
 
 In this section we are going to learn about actuators and how to control them .
 
-1. [Piezo Buzzer](#Piezo-Buzzer)
+1. [Piezo Buzzer](#piezo-buzzer)
 2. [Servo Motor](#servo-motor)
 3. [About the Adafruit TB6612 Driver](#about-the-adafruit-tb6612-driver)
 4. [DC Motor](#dc-motor)
@@ -114,13 +114,11 @@ These are 'Vmotor level' power outputs
 * Motor A - these are the two outputs for motor A, controlled by INA1, INA2 and PWMA
 * Motor B - these are the two outputs for motor B, controlled by INB1, INB2 and PWMB
 
-<<<<<<< HEAD
 <small>Based on [Adafruit's Pinouts](https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts)</small>
 
 ### Dc Motor
-=======
+
 ### DC Motor
->>>>>>> 3d099c2c6e8f18bbf8daff2cfa7a52412e1de1e8
 A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
 
 ##### Example Circuit
@@ -142,17 +140,8 @@ A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary e
 
 ##### Code
 For this sketch copy and paste the following code:
-<<<<<<< HEAD
-```
-=======
+
 ```C
-/*
-+ ain1 to pin 8
-+ ain2 to pin 9
-+ motorA to DC motor
-+ pwma to 5V
-*/
->>>>>>> 3d099c2c6e8f18bbf8daff2cfa7a52412e1de1e8
 
 int ain1 = 8;
 int ain2 = 9;
