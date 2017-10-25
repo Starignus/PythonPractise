@@ -242,7 +242,7 @@ sudo apt-get install python-serial python3-serial
 ```
 
 2. Now we want to upload a new sketch on the Arduino. You can upload it from your computer using the IDE or using Arduino-mk as we did in the previous step. The code is the following:
-```
+```C
 void setup() {
 Serial.begin(9600);
 }
@@ -316,14 +316,14 @@ The Arduino is sending a number to the Python script, which interprets that numb
 ```python
 print(str(ord(input)) + " = the ASCII character " + input + ".")
 ```
-In Python to check if what you are getting is a string you can use the method explained [here](https://stackoverflow.com/questions/5319922/python-check-if-word-is-in-a-string)
+In Python to check if what you are getting is a string you can use the method explained [here](https://stackoverflow.com/questions/5319922/python-check-if-word-is-in-a-string).
 
 #### Raspberry Pi to Arduino
 
 To have the Raspberry Pi write and Arduino read (and turn on the built-in LED) you can use this code:
 
 1. On the Arduino side upload this code:
-```
+```C
 const int ledPin = 13;
 
 void setup(){
@@ -351,7 +351,7 @@ void light(int n){
 ```
 
 2. On the Raspberry Pi run this code:
-```
+```python
 import serial
 serialToArduino = serial.Serial('/dev/ttyACM0', 9600)
 serialToArduino.write('3')

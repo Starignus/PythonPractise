@@ -2,11 +2,11 @@
 
 In this section we are going to learn about actuators and how to control them .
 
-1. [Piezo Buzzer](#piezo_buzzer)
-2. [Servo Motor](#servo_motor)
-3. [About the Adafruit TB6612 Driver](#about_the_adafruit_tb6612_driver)
-4. [DC Motor](#dc_motor)
-5. [Stepper Motor](#stepper_motor)
+1. [Piezo Buzzer](#Piezo-Buzzer)
+2. [Servo Motor](#servo-motor)
+3. [About the Adafruit TB6612 Driver](#about-the-adafruit-tb6612-driver)
+4. [DC Motor](#dc-motor)
+5. [Stepper Motor](#stepper-motor)
 
 
 At the beginning of this session you should have collected a kit that is made of:
@@ -30,9 +30,9 @@ From the kit you are going to need:
 ![Buzzer Wiring](../img/piezo-buzzer-wiring.png)
 
 ##### Code
-For the code you can use the **Example->2.Digital->toneMelody**. Feel free to play around with it.
+For the code you can use the **Example → 2.Digital → toneMelody**. Feel free to play around with it.
 
-You can also try to control this buzzer from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo#buzzer) you can find the GPIOzero API Reference.
+Pi Route: You can also try to control this buzzer from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo#buzzer) you can find the GPIOzero API Reference.
 
 ### Servo Motor
 A [servo motor](https://www.wikiwand.com/en/Servomotor#/RC_servos) is a rotary actuator or linear actuator that allows for precise control of angular or linear position, velocity and acceleration. It consists of a suitable motor coupled to a sensor for position feedback. It also requires a relatively sophisticated controller, often a dedicated module designed specifically for use with servomotors.
@@ -46,10 +46,10 @@ From the kit you are going to need:
 ![Servo Wiring](../img/servo-sweep-wiring.png)
 
 ##### Code
-For this example you are going to use the built-in [servo library](https://www.arduino.cc/en/Reference/Servo) by Arduino and we are going to use the built-in sketch **Example->Servo->Sweep**
+For this example you are going to use the built-in [servo library](https://www.arduino.cc/en/Reference/Servo) by Arduino and we are going to use the built-in sketch **Example → Servo → Sweep**
 ![Servo Sketch](../img/arduino-servo_choice.png)
 
-```
+```C
 /* Sweep
  by BARRAGAN <http://barraganstudio.com>
  This example code is in the public domain.
@@ -84,7 +84,7 @@ void loop() {
 
 ```
 
-You can also try to control this servo motor from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo) you can find the GPIOzero API Reference.
+Pi Route: You can also try to control this servo motor from your Raspberry Pi [here](http://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=servo) you can find the GPIOzero API Reference.
 
 ### About the Adafruit TB6612 Driver
 A motor driver is a little current amplifier; the function of motor drivers is to take a low-current control signal and then turn it into a higher-current signal that can drive a motor.
@@ -114,9 +114,13 @@ These are 'Vmotor level' power outputs
 * Motor A - these are the two outputs for motor A, controlled by INA1, INA2 and PWMA
 * Motor B - these are the two outputs for motor B, controlled by INB1, INB2 and PWMB
 
+<<<<<<< HEAD
 <small>Based on [Adafruit's Pinouts](https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts)</small>
 
 ### Dc Motor
+=======
+### DC Motor
+>>>>>>> 3d099c2c6e8f18bbf8daff2cfa7a52412e1de1e8
 A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
 
 ##### Example Circuit
@@ -138,7 +142,17 @@ A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary e
 
 ##### Code
 For this sketch copy and paste the following code:
+<<<<<<< HEAD
 ```
+=======
+```C
+/*
++ ain1 to pin 8
++ ain2 to pin 9
++ motorA to DC motor
++ pwma to 5V
+*/
+>>>>>>> 3d099c2c6e8f18bbf8daff2cfa7a52412e1de1e8
 
 int ain1 = 8;
 int ain2 = 9;
@@ -223,11 +237,11 @@ From the kit you are going to need:
 + motorB to Stepper motor
 
 ##### Code
-For this example you are going to use the built-in [stepper library](https://www.arduino.cc/en/Reference/Stepper) by Arduino and we are going to use the built-in sketch **Example->Stepper->stepper_oneRevolution**
+For this example you are going to use the built-in [stepper library](https://www.arduino.cc/en/Reference/Stepper) by Arduino and we are going to use the built-in sketch **Example → Stepper → stepper_oneRevolution**
 
 ![Stepper Selection](../img/arduino-stepper_choice.png )
 
-```
+```C
 /*
  Stepper Motor Control - one revolution
 
@@ -272,3 +286,7 @@ void loop() {
 }
 
 ```
+
+### Acknowledgement
+[Adafruit Learn](https://learn.adafruit.com/)  
+[Wikiwand Piezoelectric Speaker](https://www.wikiwand.com/en/Piezoelectric_speaker)
