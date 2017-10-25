@@ -13,11 +13,12 @@ At the beginning of this session you should have collected a kit that is made of
 
 #### Reading the sensor information
 
-For these exercises, there are two approaches to reading the sensor data. Firstly, you could use your computer (Windows/Mac) and run the Arduino IDE on it. For this approach you need to view your output from the Arduino with the Serial Monitor. This can be found with the image below:
+For these exercises, there are two approaches to reading the sensor data.  
+**The easy approach:** You could use your computer (Windows/Mac) to run the Arduino IDE. For this approach you need to view your output from the Arduino with the Serial Monitor. This can be found with the image below:
 
 ![Serial Monitor button Arduino IDE](https://cdn.sparkfun.com/assets/7/d/2/7/c/521f8cf9757b7f68778b456c.jpg)
 
-Alternatively, if you are running the Arduino sketches from the headless (no screen) Raspberry Pi and controlling over Putty/Terminal then you could use the Python script to read the Serial port and print out to your command line on the Pi.
+**The challenge:** Alternatively, if you are running the Arduino sketches from the headless (no screen) Raspberry Pi and controlling over Putty/Terminal then you could use the Python script to read the Serial port and print out to your command line on the Pi.
 
 Your sensor information will be output here when the `Serial.println()` / `Serial.print()` / `Serial.write()` function is used.
 
