@@ -369,7 +369,7 @@ Sometimes the communication over Serial is not the best option for your project 
 
 
 #### Protocols
-* [Serial over GPIO](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) with this method you can use the same cod we have used before, the only difference is the physical connection. You will need a voltage converter to operate this method safely. Otherwise there is an other risky option which is creating your own voltage divider, however we do not recommend you to do so.
+* [Serial over GPIO](https://oscarliang.com/raspberry-pi-and-arduino-connected-serial-gpio/) with this method you can use the same code we have used before, the only difference is the physical connection. You will need a voltage converter to operate this method safely. Otherwise there is an other risky option which is creating your own voltage divider, however we do not recommend you to do so.
 * [I2C](https://www.youtube.com/watch?v=DsSBTYbXAKg) is protocol that allows two devices to talk to each other using only two buses: a clock one (SCL bus) and a data on (SDA bus). It can allow up to 127 slaves connected to one master to exchange information. It is a very common protocol for Arduino as it is used to communicate with various sensors. There is a [dedicated library called Wire](https://www.arduino.cc/en/Reference/Wire) in Arduino that you can readily use.  
 * [SPI](http://radiostud.io/understanding-spi-in-raspberry-pi/) is a synchronous serial communication interface specification used for short distance communication, primarily in embedded systems. It uses four buses: clock (SCK), two data lines (MISO: Master Output Slave Input, MOSI: Master Input Slave Output) and a select line(SS) to choose among the multiple slave devices.
 
