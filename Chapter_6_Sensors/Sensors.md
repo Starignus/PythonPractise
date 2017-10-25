@@ -14,13 +14,11 @@ At the beginning of this session you should have collected a kit that is made of
 #### Reading the sensor information
 
 For these exercises, there are two approaches to reading the sensor data.  
-**The easy approach:** You could use your computer (Windows/Mac) to run the Arduino IDE. For this approach you need to view your output from the Arduino with the Serial Monitor. This can be found with the image below:
+**The easy approach:** You could use your computer (Windows/Mac) to run the Arduino IDE. For this approach you need to view your output from the Arduino with the Serial Monitor. Your sensor information will be output here when the `Serial.println()` / `Serial.print()` / `Serial.write()` function is used. This can be found with the image below:
 
 <p align="center"><img src="../img/serial_monitor_button.jpg" alt="Serial Monitor button Arduino IDE"></p>
 
-**The challenge:** Alternatively, if you are running the Arduino sketches from the headless (no screen) Raspberry Pi and controlling over Putty/Terminal then you could use the Python script to read the Serial port and print out to your command line on the Pi.
-
-Your sensor information will be output here when the `Serial.println()` / `Serial.print()` / `Serial.write()` function is used.
+**The challenge:** Alternatively, if you are running the Arduino sketches from the headless (no screen) Raspberry Pi and controlling over Putty/Terminal then you could use the Python script to read the Serial port and print out to your command line on the Pi. Your sensor information will be output here when the `Serial.write()` function is used from the Arduino.
 
 ### Force Sensitive Resistor
 
