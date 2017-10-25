@@ -241,7 +241,7 @@ To communicate between the Raspberry Pi and the Arduino over a serial connection
 sudo apt-get install python-serial python3-serial
 ```
 
-2. Now we want to upload a new sketch on the Arduino. You can upload it from your computer using the IDE or using Arduino-mk as we did in the previous step. The code is the following:
+2. Now we want to **upload a new sketch on the Arduino**. You could upload it from your computer using the IDE, but we recommend using Arduino-mk as we did in the [previous exercise](#creating-an-arduino-sketch-without-the-ide). This means all the code can be written on the Pi via Putty or Terminal. The code is the following:
 ```C
 void setup() {
 Serial.begin(9600);
@@ -281,8 +281,10 @@ input = serialFromArduino.read(1)
 ```python
 print(ord(input))
 ```  
-`ord`, given a string of length one, returns the value of the byte when the argument is an 8-bit string.
+The function `ord`, given a string of length one, returns the value of the byte when the argument is an 8-bit string.
 You should see a *0* being printed.
+
+> **Note:** If you have problems with this step, make sure you have properly done step 2 (uploading the new sketch to Arduino).
 
 8. Now that we have tested that the connection works we want to write a Python script that reads the messages from serial.
 so we type:
