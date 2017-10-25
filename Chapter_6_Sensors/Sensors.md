@@ -11,6 +11,16 @@ At the beginning of this session you should have collected a kit that is made of
 * 1 Force Sensitive Resistor
 * 1 Photo-resistor
 
+#### Reading the sensor information
+
+For these exercises, there are two approaches to reading the sensor data. Firstly, you could use your computer (Windows/Mac) and run the Arduino IDE on it. For this approach you need to view your output from the Arduino with the Serial Monitor. This can be found with the image below:
+
+![Serial Monitor button Arduino IDE](https://cdn.sparkfun.com/assets/7/d/2/7/c/521f8cf9757b7f68778b456c.jpg)
+
+Alternatively, if you are running the Arduino sketches from the headless (no screen) Raspberry Pi and controlling over Putty/Terminal then you could use the Python script to read the Serial port and print out to your command line on the Pi.
+
+Your sensor information will be output here when the `Serial.println()` / `Serial.print()` / `Serial.write()` function is used.
+
 ### Force Sensitive Resistor
 
 The resistance of an force sensor varies as the force on the sensor increases or decreases. When no pressure is being applied to the force sensor, its resistance will be larger than 1MΩ. The harder you press on the sensor’s head, the lower the resistance between the two terminals drops. By combining the force sensor with a static resistor to create a [voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers)(or pull-down resistor), you can produce a variable voltage that can be read by a microcontroller’s analog-to-digital converter.
