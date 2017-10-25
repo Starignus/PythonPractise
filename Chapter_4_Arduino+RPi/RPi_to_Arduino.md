@@ -169,7 +169,7 @@ Now we are going to build our sketch. This means that we are going to create an 
 
 To build our file we simply enter:
 ```bash
-make
+sudo make
 ```
 
 You will see a warning fly past about depends.mk not existing. This file will be created on the first compile.
