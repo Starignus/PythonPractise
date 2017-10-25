@@ -2,7 +2,7 @@
 
 In this section we are going to learn about actuators and how to control them .
 
-1. [Piezo Buzzer](#Piezo-Buzzer)
+1. [Piezo Buzzer](#piezo-buzzer)
 2. [Servo Motor](#servo-motor)
 3. [About the Adafruit TB6612 Driver](#about-the-adafruit-tb6612-driver)
 4. [DC Motor](#dc-motor)
@@ -114,6 +114,10 @@ These are 'Vmotor level' power outputs
 * Motor A - these are the two outputs for motor A, controlled by INA1, INA2 and PWMA
 * Motor B - these are the two outputs for motor B, controlled by INB1, INB2 and PWMB
 
+<small>Based on [Adafruit's Pinouts](https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts)</small>
+
+### Dc Motor
+
 ### DC Motor
 A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary electrical machines that converts direct current electrical energy into mechanical energy. The most common types rely on the forces produced by magnetic fields. Nearly all types of DC motors have some internal mechanism, either electromechanical or electronic, to periodically change the direction of current flow in part of the motor.
 
@@ -123,17 +127,21 @@ A [DC motor](https://www.wikiwand.com/en/DC_motor) is any of a class of rotary e
 * Jumper Wires
 * Arduino
 
-![DC Wiring](../img/)
+![DC Wiring](../img/arduino-dc_wiring.JPG)
+
++ AIN1 to pin 8
++ AIN2 to pin 9
++ PWMA to 5V
++ GND to Arduino GND
++ Vcc to 5V
++ Vm to 5V
++ motorA to DC motor
+
 
 ##### Code
 For this sketch copy and paste the following code:
+
 ```C
-/*
-+ ain1 to pin 8
-+ ain2 to pin 9
-+ motorA to DC motor
-+ pwma to 5V
-*/
 
 int ain1 = 8;
 int ain2 = 9;
@@ -190,6 +198,8 @@ void loop(){
  }
 ```
 
+You can also try to control this DC motor from your Raspberry Pi [here](https://gpiozero.readthedocs.io/en/stable/api_output.html#motor) you can find the GPIOzero API Reference.
+
 ### Stepper Motor
 A [stepper motor](https://www.wikiwand.com/en/Stepper_motor) or step motor or stepping motor is a brushless DC electric motor that divides a full rotation into a number of equal steps. The motor's position can then be commanded to move and hold at one of these steps without any position sensor for feedback (an open-loop controller), as long as the motor is carefully sized to the application in respect to torque and speed.
 
@@ -201,7 +211,19 @@ From the kit you are going to need:
 * Jumper Wires
 * Arduino
 
-![Stepper Wiring](../img/)
+![Stepper Wiring](../img/arduino-stepper_wiring.JPG)
+
++ AIN1 to pin 8
++ AIN2 to pin 9
++ PWMA to 5V
++ BIN1 to pin 10
++ BIN2 to pin 11
++ PWMB to 5V
++ GND to Arduino GND
++ Vcc to 5V
++ Vm to 5V
++ motorA to Stepper motor
++ motorB to Stepper motor
 
 ##### Code
 For this example you are going to use the built-in [stepper library](https://www.arduino.cc/en/Reference/Stepper) by Arduino and we are going to use the built-in sketch **Example → Stepper → stepper_oneRevolution**
