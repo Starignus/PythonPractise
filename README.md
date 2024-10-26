@@ -2,7 +2,7 @@
 
 All the students (GD1 and DE2) will have access to the programming material shown in the workshop.
 
-To copy the repo in your computer just execute the following command line in the terminal ( you must be in the path where you want to save the folder in your computer):
+To copy the repo to your computer, just execute the following command line in the terminal ( you must be in the path where you want to save the folder on your computer):
 
 ``` bash
 $cd /name/of/folder
@@ -24,4 +24,6 @@ $git clone https://github.com/Starignus/PythonPractise.git
 * [GPIO-Part 1](Week2/GPIO_Part1.md)
 * [GPIO-Part 2: Motor HAT](Week2/GPIO_Part2_MotorHAT.md)
 
-You can read all these practice in the [blog](https://starignus.github.io/PythonPractise//) too.
+You can also read all these practices in the [blog](https://starignus.github.io/PythonPractise//).
+
+Notes: I produced the initial online teaching material for the Gizmo module run by the Dyson School of Design Engineering at Imperial College London. An updated version of the material is now available on this [repository](https://github.com/ImperialDyson/Gizmo) in its [GitHub space](https://github.com/ImperialDyson).  
